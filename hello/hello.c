@@ -2,5 +2,5 @@
 
 int main(void)
 {
-    get_string("What's your name?  ");
+    answer = get_string("What's your name?  ");
 }
