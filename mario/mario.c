@@ -11,7 +11,7 @@ int main(void)
     {
         for (int i > 8; i++)
         {
-            printf("what?");
+            printf("what\n?");
         }
     }
 }
