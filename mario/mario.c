@@ -8,6 +8,6 @@ int main(void)
 
     if n > 8
     {
-        return
+       
     }
 }
