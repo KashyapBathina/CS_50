@@ -3,10 +3,7 @@
 
 int main(void)
 {
-    // Promt user for x
-    int x = get_int("x: ");
-    // Prompt user for y
-    int y = get_int("y: ");
-    // Perform math
+    // Promt user for height
+    int x = get_int("height: ");
     printf("%i\n", x + y);
 }
