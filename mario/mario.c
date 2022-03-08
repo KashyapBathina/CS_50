@@ -6,8 +6,11 @@ int main(void)
     int answer = get_int("How tall is the pyramid?  ");
     printf("Height = %i\n", answer);
 
-    if n > 8
+    int n;
+    do
     {
-       
+        n = get_int("How tall is the pyramid?  ");
     }
+    while 
+    for (int i = 0; i > 8)
 }
