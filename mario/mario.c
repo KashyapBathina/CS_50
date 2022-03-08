@@ -11,6 +11,4 @@ int main(void)
     {
         n = get_int("How tall is the pyramid?  ");
     }
-    while 
-    for (int i = 0; i > 8)
 }
