@@ -4,5 +4,6 @@
 int main(void)
 {
     int answer = get_int("How tall is the pyramid?  ");
-    printf("hello, %i\n", answer);
+    printf("Height = %i\n", answer);
+
 }
