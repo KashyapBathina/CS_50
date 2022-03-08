@@ -10,4 +10,9 @@ int main(void)
     printf("Height = %i\n", answer);
 }
 
-
+{
+    for (int i > 8)
+    {
+        printf("what?");
+    }
+}
