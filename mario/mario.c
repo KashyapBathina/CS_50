@@ -17,6 +17,8 @@ int main(void)
         // column
             for (int j = 0; j < n; j++)
             {
+                if ( i + j < n - 1)
+                    printf(" ");
                 printf("#");
             }
         // next row
