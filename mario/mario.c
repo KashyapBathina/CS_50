@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <cs50.h>
 
-void number(void);
-
 int main(void)
 
 {
