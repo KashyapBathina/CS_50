@@ -21,4 +21,5 @@ int main(void)
             }
         // next row
         printf("\n");
+    }
 }
