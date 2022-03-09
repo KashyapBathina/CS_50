@@ -12,9 +12,13 @@ int main(void)
     while ( n > 8 || n < 1);
 
 // row
-    for ( int i = 0; i < n; i++);
+    for ( int i = 0; i < n; i++)
     {
         // column
-            for (int j = 0; j < n; j++);
-
+            for (int j = 0; j < n; j++)
+            {
+                printf("#");
+            }
+        // next row
+        printf("\n");
 }
