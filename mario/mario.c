@@ -3,6 +3,8 @@
 
 int main(void)
 
+void answer (int n);
+
 {
     int n;
     do
