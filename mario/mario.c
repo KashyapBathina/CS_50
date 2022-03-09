@@ -6,12 +6,12 @@ void number(void);
 int main(void)
 
 {
-    int answer = get_int("How tall is the pyramid?  ");
-    printf("Height = %i\n", answer);
+    int i = get_int("How tall is the pyramid?  ");
+    printf("Height = %i\n", i);
 
-    if (answer>8 || answer<1)
+    if (i > 8 || i <1)
     {
         int answer = get_int("How tall is the pyramid?  ");
-    printf("Height = %i\n", answer);
+    printf("Height = %i\n", i);
     }
 }
