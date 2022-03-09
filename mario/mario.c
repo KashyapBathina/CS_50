@@ -9,9 +9,9 @@ int main(void)
     int n;
     do
     {
-        n = get_int("How tall is the pyramid?  ");
+        i = get_int("How tall is the pyramid?  ");
     }
-    while ( i > 8 || i < 1);
+    while ( i > 8);
 
     for (int i = 8);
     {
