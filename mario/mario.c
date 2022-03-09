@@ -7,7 +7,7 @@ int main(void)
     int n;
     do
     {
-        i = get_int("How tall is the pyramid?  ");
+        n = get_int("How tall is the pyramid?  ");
     }
     while ( n > 8 || n < 1);
 
