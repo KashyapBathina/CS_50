@@ -9,11 +9,11 @@ int main(void)
     int n;
     do
     {
-        i = get_int("How tall is the pyramid?  ");
+        n = get_int("How tall is the pyramid?  ");
     }
-    while ( i > 8);
+    while ( n > 8);
 
-    for (int i = 8);
+    for (int i = 0; i > );
     {
         printf("Hello\n");
     }
