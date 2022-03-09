@@ -13,7 +13,7 @@ int main(void)
     }
     while ( n > 8);
 
-    for (int i = 0; i > );
+    if(n < 8);
     {
         printf("Hello\n");
     }
