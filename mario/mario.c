@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    (n)
+    answer(n)
 }
 
 void answer(int n);
