@@ -11,7 +11,7 @@ int main(void)
     }
     while ( n > 8 || n < 1);
 
-    if(n < 8)
+    if(n <= 8 || n >=1)
     {
         printf("Hello\n");
     }
