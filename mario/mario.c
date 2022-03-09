@@ -6,14 +6,13 @@ void number(void);
 int main(void)
 
 {
-    int i = get_int("How tall is the pyramid?  ");
-    printf("Height = %i\n", i);
-
-    int i;
+    int n;
     do
     {
-        i = get_int("How tall is the pyramid?  ");
+        n = get_int("How tall is the pyramid?  ");
     }
-    while ( i > 8 || i < 1)
+    while ( i > 8 || i < 1);
+
+    for (int i = 8; i = 1; i < 8; i > 1);
 
 }
