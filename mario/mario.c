@@ -9,9 +9,11 @@ int main(void)
     int i = get_int("How tall is the pyramid?  ");
     printf("Height = %i\n", i);
 
-    if (i > 8 || i <1)
+    int i;
+    do
     {
-        int answer = get_int("How tall is the pyramid?  ");
-    printf("Height = %i\n", i);
+        i = get_int("How tall is the pyramid?  ");
     }
+    while ( i > 8 || i < 1)
+
 }
