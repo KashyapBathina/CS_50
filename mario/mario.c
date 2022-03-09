@@ -2,11 +2,7 @@
 #include <cs50.h>
 
 int main(void)
-{
-    answer(n)
-}
 
-void answer(int n);
 {
     int n;
     do
