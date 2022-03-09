@@ -19,6 +19,7 @@ int main(void)
             {
                 if ( i + j < n - 1)
                     printf(" ");
+                else
                 printf("#");
             }
         // next row
