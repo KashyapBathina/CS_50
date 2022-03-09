@@ -2,7 +2,11 @@
 #include <cs50.h>
 
 int main(void)
+{
+    (n)
+}
 
+void answer(int n);
 {
     int n;
     do
