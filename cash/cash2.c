@@ -10,5 +10,6 @@ int main(void)
     }
     while ( n <= 0)
 
-    for
+    int coins = 0
+    
 }
