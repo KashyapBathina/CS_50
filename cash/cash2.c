@@ -18,4 +18,20 @@ int main(void)
             coins ++;
         }
     while (int cents > 10)
+        {
+            cents = cents - 10
+            coins++
+        }
+    while (int cents > 5)
+        {
+            cents = cents - 5
+            coins++
+        }
+    while (int cents > 1)
+        {
+            cents = cents - 1
+            coins++
+        }
+
+        printf("You have, %coins", int)
 }
