@@ -11,5 +11,9 @@ int main(void)
     while ( n <= 0)
 
     int coins = 0
-    
+
+    for (int n > 0)
+        {
+            int n = n - q * 25
+        }
 }
