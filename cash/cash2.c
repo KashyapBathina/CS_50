@@ -14,7 +14,8 @@ int main(void)
     int coins = 0
     while (int cents > 25)
         {
-            cents = cents - 25
-            
+            cents = cents - 25;
+            coins ++;
         }
+    while (int cents > 10)
 }
