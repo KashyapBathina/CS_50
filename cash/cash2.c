@@ -14,7 +14,7 @@ int main(void)
     int coins = 0
     while (int cents > 25)
         {
-            int quarters = calculate_quarters(cents)
-            cents = cents - quarters * 25
+            cents = cents - 25
+            
         }
 }
