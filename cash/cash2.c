@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <cs50.h>
-int cents(void)
+int get_cents(void)
+int calculate_quarters(void)
 int main(void)
 {
     float dollar
@@ -14,7 +15,7 @@ int main(void)
 
     for (int cents > 0)
         {
-            int quarters = calculate_quarters(n)
-            n = n - quarters
+            int quarters = calculate_quarters(cents)
+            cents = cents - quarters * 25;
         }
 }
