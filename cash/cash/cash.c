@@ -1,10 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int get_cents(int cents)
-{
-     = get_cents("Amount owed:  \n");
-}
+int get_cents(int cents);
 int calculate_quarters(int cents);
 int calculate_dimes(int cents);
 int calculate_nickels(int cents);
@@ -40,16 +37,16 @@ int main(void)
 
 int get_cents(void)
 {
-    int cents = get_int("Enter your change: ");
-}
-
-int calculate_quarters(int cents)
-{
     do
     {
          int cents = get_int("Enter your change: ");
     }
     while (int cents <= 0);
+}
+
+int calculate_quarters(int cents)
+{
+
 }
 
 int calculate_dimes(int cents)
