@@ -6,7 +6,7 @@ int main(void)
     float dollar
     do
     {
-    int cents = get_int("Amount owed\n");
+    int cents = get_cents("Amount owed\n");
     }
     while ( cents <= 0)
 
