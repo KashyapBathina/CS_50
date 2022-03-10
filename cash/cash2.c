@@ -33,5 +33,5 @@ int main(void)
             coins++
         }
 
-        printf("You have, %i", answer)
+        printf("You will need at least %i", coins);
 }
