@@ -8,7 +8,7 @@ int calculate_pennies(int cents);
 
 int main(void);
 
-void get_cents(void);
+void get_cents(void)
 {
     int cents = get_cents("Amount owed:  \n");
 }
