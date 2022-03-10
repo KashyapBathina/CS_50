@@ -47,9 +47,9 @@ int calculate_quarters(int cents)
 {
     do
     {
-         cents = get_int("Enter your change: ");
+         int cents = get_int("Enter your change: ");
     }
-    while (cents <= 0);
+    while (int cents <= 0);
 }
 
 int calculate_dimes(int cents)
