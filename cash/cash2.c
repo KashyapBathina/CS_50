@@ -1,19 +1,20 @@
 #include <stdio.h>
 #include <cs50.h>
-
+int cents(void)
 int main(void)
 {
     float dollar
     do
     {
-    n = get_float("Amount owed\n");
+    int cents = get_int("Amount owed\n");
     }
-    while ( n <= 0)
+    while ( cents <= 0)
 
     int coins = 0
 
-    for (int n > 0)
+    for (int cents > 0)
         {
-            int n = n - q * 25
+            int quarters = calculate_quarters(n)
+            n = n - quarters
         }
 }
