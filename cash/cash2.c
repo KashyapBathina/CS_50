@@ -7,7 +7,7 @@ int main(void)
     float dollar
     do
     {
-    int cents = get_cents("Amount owed\n");
+    int cents = get_cents("Enter your change"\n);
     }
     while ( cents <= 0)
 
@@ -33,5 +33,5 @@ int main(void)
             coins++
         }
 
-        printf("You have, %coins", int)
+        printf("You have, %i", answer)
 }
