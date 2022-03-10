@@ -6,7 +6,7 @@ int main(void)
     int cents;
     do
     {
-        int cents = get_int("Enter your change: ");
+         cents = get_int("Enter your change: ");
     }
     while (cents <= 0);
 
