@@ -4,5 +4,8 @@
 int main(void)
 {
     do
-    dollar = get_float("Amount owed\n");
+    {
+    n = get_float("Amount owed\n");
+    }
+    while ( n > 0)
 }
