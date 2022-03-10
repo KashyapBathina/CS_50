@@ -37,7 +37,13 @@ int main(void)
 
 int get_cents(void)
 {
-
+    int cets;
+    do
+    {
+        cents = get_cents("Amount owed:  ");
+    }
+    while (cents < 0);
+    return cents
 }
 
 int calculate_quarters(int cents)
