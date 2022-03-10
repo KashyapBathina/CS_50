@@ -45,7 +45,11 @@ int get_cents(void)
 
 int calculate_quarters(int cents)
 {
-    int quarters = 
+    do
+    {
+         cents = get_int("Enter your change: ");
+    }
+    while (cents <= 0);
 }
 
 int calculate_dimes(int cents)
