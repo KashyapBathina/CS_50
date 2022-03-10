@@ -37,7 +37,7 @@ int main(void)
 
 int get_cents(void)
 {
-    int cets;
+    int cents;
     do
     {
         cents = get_cents("Amount owed:  ");
