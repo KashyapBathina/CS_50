@@ -3,9 +3,12 @@
 
 int main(void)
 {
+    float dollar
     do
     {
     n = get_float("Amount owed\n");
     }
-    while ( n > 0)
+    while ( n <= 0)
+
+    for
 }
