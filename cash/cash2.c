@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include <cs50.h>
-int get_cents(void)
-int main(void)
 
+int main(void)
 {
-    int cents
+    int cents;
     do
     {
         cents = get_int("Enter your change"\n);
