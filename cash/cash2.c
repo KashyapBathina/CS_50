@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <cs50.h>
 int get_cents(void)
-int calculate_quarters(void)
 int main(void)
+
 {
-    float dollar
+    int cents
     do
     {
-    int cents = get_cents("Enter your change"\n);
+        cents = get_int("Enter your change"\n);
     }
     while ( cents <= 0)
 
