@@ -40,14 +40,12 @@ int main(void)
 
 int get_cents(void)
 {
-    // TODO
-    return 0;
+    int cents = get_int("Enter your change: ");
 }
 
 int calculate_quarters(int cents)
 {
-    // TODO
-    return 0;
+    int quarters = 
 }
 
 int calculate_dimes(int cents)
