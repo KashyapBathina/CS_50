@@ -24,9 +24,21 @@ int L calculate_length(text)
     {
         L++
     }
-    L + 1
-    return l;
+    return L;
+    L = L + 1
+    return L;
+    L = L/100
+    return L;
 }
 
 int S calculate_sentences(text)
-    int S =
+{
+    int S = 0;
+    while (text[s] != '.' || '!' || '?')
+    {
+        S++
+    }
+    return S;
+    S = S / 100
+    return S;
+}
