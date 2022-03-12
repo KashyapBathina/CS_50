@@ -17,7 +17,7 @@ int main(void)
     printf("%i\n", GradeLevel);
 }
 
-int calculate_length(void)
+int calculate_length(text)
 {
     int L = 0;
     while (text[L] != " ")
