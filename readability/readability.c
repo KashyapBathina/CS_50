@@ -20,10 +20,11 @@ int main(void)
 int L calculate_length(text)
 {
     int L = 0;
-    while (i[0] !=  )
+    int isspace(char space)
     {
         L++
     }
+    L + 1
     return l;
 }
 
