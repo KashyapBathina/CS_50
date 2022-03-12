@@ -13,5 +13,8 @@ int main(void)
     }
     return l;
 
-    s = 
+    s =
+
+    Grade Level = 0.0588 * l - 0.296 * s = 15.8
+    printf("%i", Grade Level)
 }
