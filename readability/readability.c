@@ -13,14 +13,14 @@ int main(void)
 
     int S = calculate_sentences();
 
-    int GradeLevel = 0.0588 * L - 0.296 * S = 15.8;
+    int GradeLevel = 0.0588 * L - 0.296 * S - 15.8;
     printf("%i\n", GradeLevel);
 }
 
-int L calculate_length(text)
+int calculate_length(void)
 {
     int L = 0;
-    int isspace(char space)
+    int isspace(char text)
     {
         L++;
     }
@@ -31,7 +31,7 @@ int L calculate_length(text)
     return L;
 }
 
-int S calculate_sentences(text)
+int calculate_sentences(void)
 {
     int S = 0;
     while (text[s] != '.' || '!' || '?')
