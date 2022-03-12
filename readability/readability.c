@@ -20,7 +20,7 @@ int main(void)
 int L calculate_length(text)
 {
     int L = 0;
-    while (i[0] !=  "\0" || "." || "!" || "?")
+    while (i[0] !=  "\0" || "." || "!" || "?" || "'" || )
     {
         L++
     }
