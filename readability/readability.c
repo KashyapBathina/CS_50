@@ -3,7 +3,7 @@
 #include <string.h>
 
 int calculate_length(void);
-int calculate_sentence(void);
+int calculate_sentences(void);
 
 int main(void)
 {
@@ -13,8 +13,8 @@ int main(void)
 
     int S = calculate_sentences();
 
-    Grade Level = 0.0588 * L - 0.296 * S = 15.8;
-    printf("%i", Grade Level);
+    int GradeLevel = 0.0588 * L - 0.296 * S = 15.8;
+    printf("%i\n", GradeLevel);
 }
 
 int L calculate_length(text)
