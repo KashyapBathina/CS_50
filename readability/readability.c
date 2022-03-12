@@ -5,6 +5,13 @@
 int main(void)
 {
     i = get_string("Text: ");
-    l =
-    s =
+
+    int l = 0
+    while (i[0] !=  "\0" || "." || "!" || "?")
+    {
+        l++
+    }
+    return l;
+
+    s = 
 }
