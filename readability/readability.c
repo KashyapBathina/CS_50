@@ -20,7 +20,7 @@ int main(void)
 int calculate_length(void)
 {
     int L = 0;
-    int isspace(char text)
+    while (text[L] != " ")
     {
         L++;
     }
