@@ -22,11 +22,10 @@ int L calculate_length(text)
     int L = 0;
     while (i[0] !=  "\0" || "." || "!" || "?")
     {
-        strlen(text);
         L++
     }
     return l;
 }
 
 int S calculate_sentences(text)
-    int S = 
+    int S =
