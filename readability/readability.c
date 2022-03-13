@@ -17,5 +17,6 @@ int main(void)
     {
         Sentences ++;
     }
+    return Sentences;
     printf("%i sentences\n", Sentences);
 }
