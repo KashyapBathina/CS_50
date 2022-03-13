@@ -21,7 +21,7 @@ int calculate_length(void)
 {
     int L = 0;
     string text = text;
-    while isalpha(char text);
+    while (text = isalpha(char text));
     {
         L++;
     }
