@@ -8,7 +8,6 @@ int main(void)
     string text = get_string("Text: ");
 
     // letters
-    while (text != "\n" )
     int Letters = strlen(text);
     printf("%i letters\n", Letters);
 
