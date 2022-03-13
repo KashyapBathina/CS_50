@@ -15,10 +15,8 @@ int main(void)
     int Sentences = 0;
     for (int i = 0; i < strlen(text); i++)
     {
-        if (text[i] == ".")
-        {
+        if (text[i] == '.')
         Sentences ++;
-        }
     }
     printf("%i sentences\n", Sentences);
 }
