@@ -9,16 +9,7 @@ int main(void)
 {
     string text = get_string("Text: ");
 
-    int L = calculate_length();
-
-    int S = calculate_sentences();
-
-    int GradeLevel = 0.0588 * L - 0.296 * S - 15.8;
-    printf("%i\n", GradeLevel);
-}
-
-int calculate_length(void)
-{
+    // letters
     int L = 0;
     int count_letters(string text);
         L++;
@@ -27,10 +18,8 @@ int calculate_length(void)
     return L;
     L = L/100;
     return L;
-}
 
-int calculate_sentences(void)
-{
+    // sentences
     int S = 0;
     while (text[S] == '.' || text[S] == '!' || text[S] == '?')
     {
@@ -39,4 +28,7 @@ int calculate_sentences(void)
     return S;
     S = S / 100;
     return S;
-}
+
+    //prototype
+    printf("%i\n", L);
+    printf("%i\n", S);
