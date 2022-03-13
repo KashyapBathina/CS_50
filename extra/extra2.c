@@ -6,7 +6,7 @@ int main(void)
     string name = get_string("name: ");
 
     int i = 0;
-    while (name[i] == '.')
+    if (name[i] == '.')
     {
         i ++;
     }
