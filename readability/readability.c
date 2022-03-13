@@ -2,34 +2,23 @@
 #include <stdio.h>
 #include <string.h>
 
-int calculate_length(void);
-int calculate_sentences(void);
 
 int main(void)
 {
     string text = get_string("Text: ");
 
     // letters
-    int L = 0;
+    int Letters = 0;
     int count_letters(string text);
-        L++;
-    return L;
-    L = L + 1;
-    return L;
-    L = L/100;
-    return L;
+        Letters++;
+    printf("%i letters\n", Letters);
 
     // sentences
-    int S = 0;
-    while (text[S] == '.' || text[S] == '!' || text[S] == '?')
+    int Sentences = 0;
+    while (text[Sentences] = '.')
     {
-        S++;
+        Sentences++;
     }
-    return S;
-    S = S / 100;
-    return S;
-
-    //prototype
-    printf("%i\n", L);
-    printf("%i\n", S);
+    return Sentences;
+    printf("%i sentences\n", Sentences);
 }
