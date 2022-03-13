@@ -15,7 +15,7 @@ int main(void)
     int Sentences = 0;
     while (text[Sentences] == '.')
     {
-        Sentences++;
+        Sentences ++;
     }
     printf("%i sentences\n", Sentences);
 }
