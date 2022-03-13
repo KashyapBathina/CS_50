@@ -20,7 +20,6 @@ int main(void)
 int calculate_length(void)
 {
     int L = 0;
-    string text = text;
     int count_letters(string text);
         L++;
     return L;
@@ -32,11 +31,10 @@ int calculate_length(void)
 
 int calculate_sentences(void)
 {
-    string text = text;
     int S = 0;
-    while (text[S] = '.' || text[S] = '!' || text[S] = '?')
+    while (text[S] == '.' || text[S] == '!' || text[S] == '?')
     {
-        S++
+        S++;
     }
     return S;
     S = S / 100;
