@@ -13,7 +13,7 @@ int main(void)
 
     // sentences
     int Sentences = 0;
-    if (text[Sentences] == '.')
+    while (text[Sentences] == '.')
     {
         Sentences ++;
     }
