@@ -34,7 +34,7 @@ int calculate_sentences(void)
 {
     string text = text;
     int S = 0;
-    while (text[S] = '.' || '!' || '?')
+    while (text[S] = '.' || text[S] = '!' || text[S] = '?')
     {
         S++
     }
