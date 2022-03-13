@@ -15,10 +15,9 @@ int main(void)
 
     // sentences
     int Sentences = 0;
-    while (text[Sentences] = '.')
+    while (text[Sentences] == '.')
     {
         Sentences++;
     }
-    return Sentences;
     printf("%i sentences\n", Sentences);
 }
