@@ -13,7 +13,7 @@ int main(void)
 
     // sentences
     int Sentences = 0;
-    int sentences = count_cente
+    while (text[Sentences] == '.')
     {
         Sentences ++;
     }
