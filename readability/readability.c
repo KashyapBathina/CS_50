@@ -8,9 +8,7 @@ int main(void)
     string text = get_string("Text: ");
 
     // letters
-    int Letters = 0;
-    int count_letters(text)
-        Letters++;
+    int Letters = strlen(text);
     printf("%i letters\n", Letters);
 
     // sentences
