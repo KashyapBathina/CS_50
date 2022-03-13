@@ -12,16 +12,3 @@ int main(void)
     }
     printf("%i\n", i);
 }
-
-
-int calculate_sentences(void)
-{
-    int S = 0;
-    while (text[s] != '.' || '!' || '?')
-    {
-        S++
-    }
-    return S;
-    S = S / 100;
-    return S;
-}
