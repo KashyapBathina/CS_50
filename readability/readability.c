@@ -9,7 +9,7 @@ int main(void)
 
     // letters
     int Letters = 0;
-    int count_letters(text);
+    int count_letters(text)
         Letters++;
     printf("%i letters\n", Letters);
 
