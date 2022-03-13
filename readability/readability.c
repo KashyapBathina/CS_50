@@ -32,3 +32,4 @@ int main(void)
     //prototype
     printf("%i\n", L);
     printf("%i\n", S);
+}
