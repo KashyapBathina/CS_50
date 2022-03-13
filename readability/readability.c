@@ -13,10 +13,12 @@ int main(void)
 
     // sentences
     int Sentences = 0;
-    while (text[Sentences] == '?')
+    for (int i = 0; i < strlen(text); i++)
     {
+        if (text[i] == ".")
+        {
         Sentences ++;
+        }
     }
-    return Sentences;
     printf("%i sentences\n", Sentences);
 }
