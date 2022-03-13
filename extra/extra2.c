@@ -5,12 +5,13 @@ int main(void)
 {
     string name = get_string("name: ");
 
-    for (int i = 0; i < strlen (name); i++)
+    int punctuation = 0;
+    for (int i = 0; i < strlen(name); i++)
     {
         if (name[i] == '.')
         {
-            i ++;
+            punctuation++;
         }
     }
-    printf("%i\n", i);
+    printf("%i\n", punctuation);
 }
