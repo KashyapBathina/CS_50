@@ -21,10 +21,8 @@ int calculate_length(void)
 {
     int L = 0;
     string text = text;
-    while (text = isalpha(char text));
-    {
+    int count_letters(string text);
         L++;
-    }
     return L;
     L = L + 1;
     return L;
@@ -34,9 +32,9 @@ int calculate_length(void)
 
 int calculate_sentences(void)
 {
-    string text = text
+    string text = text;
     int S = 0;
-    while (text[s] != '.' || '!' || '?')
+    while (text[S] = '.' || '!' || '?')
     {
         S++
     }
