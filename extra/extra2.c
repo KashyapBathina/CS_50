@@ -5,10 +5,12 @@ int main(void)
 {
     string name = get_string("name: ");
 
-    int i = 0;
-    if (name[i] == '.')
+    for (int i = 0; i < strlen (name); i++)
     {
-        i ++;
+        if (name[i] == '.')
+        {
+            i ++;
+        }
     }
     printf("%i\n", i);
 }
