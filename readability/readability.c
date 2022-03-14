@@ -31,9 +31,8 @@ int main(void)
             Words++;
         }
     }
-    return Words;
     Words = Words + 1;
-    printf("%i words\n", Words);
+    printf("%i Words\n", Words);
 
 
     // sentences
@@ -45,7 +44,8 @@ int main(void)
          Sentences ++;
         }
     }
-    printf("%i sentences\n", Sentences);
+    printf("%i Sentences\n", Sentences);
 
-
+    // calculations
+    
 }
