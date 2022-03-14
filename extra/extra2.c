@@ -6,14 +6,11 @@
 int main(void)
 {
     string name = get_string("name: ");
-    int i = strlen(name);
-    int letters = 0;
-    for (int x = 0; x < i; i++)
-    {
-            if (isalpha(name) != 0)
-            {
-                letters++;
-            }
-    }
-    printf("%i\n", letters);
+    int Sentences = 0;
+    for (int i = 0; i < strlen(name); i++)
+        {
+            if (name[i] == '.' || name[i] == '?' || name[i] == '!')
+            Sentences ++;
+        }
+    printf("%i\n", Sentences);
 }
