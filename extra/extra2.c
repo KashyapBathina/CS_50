@@ -5,7 +5,7 @@
 
 int main(void)
 {
-    string name = get_string("name: ");
+    stir name = get_string("name: ");
     int letters = 0;
         if (isalpha(name) != 0)
         {
