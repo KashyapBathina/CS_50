@@ -5,11 +5,16 @@
 
 int main(void)
 {
-    stir name = get_string("name: ");
-    int letters = 0;
-        if (isalpha(name) != 0)
-        {
-            letters++;
-        }
+    string name = get_string("name: ");
+    int i = strlen(name);
+    char c = name[i];
+    for (int i = 0; x < i; i++)
+    {
+        int letters = 0;
+            if (isalpha(name) != 0)
+            {
+                letters++;
+            }
+    }
     printf("%i\n", letters);
 }
