@@ -1,18 +1,19 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 int main(void)
 {
     string name = get_string("name: ");
 
-    int punctuation = 0;
+    int letters = 0;
     for (int i = 0; i < strlen(name); i++)
     {
-        if (name[i] == '.')
+        if (isalpha(name))
         {
-            punctuation++;
+            letters++;
         }
     }
-    printf("%i\n", punctuation);
+    printf("%i\n", letters);
 }
