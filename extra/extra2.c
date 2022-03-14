@@ -7,8 +7,7 @@ int main(void)
 {
     string name = get_string("name: ");
     int i = strlen(name);
-    char c = name[i];
-    for (int i = 0; x < i; i++)
+    for (int x = 0; x < i; i++)
     {
         int letters = 0;
             if (isalpha(name) != 0)
