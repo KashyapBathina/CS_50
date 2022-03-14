@@ -15,7 +15,9 @@ int main(void)
     {
         char c = text[i]
         if (isalpha(c) != 0)
+        {
         Letters++;
+        }
     }
     printf("%i letters\n", Letters);
 
