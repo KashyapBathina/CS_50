@@ -10,9 +10,11 @@ int main(void)
 
     // letters
     int Letters = 0;
-    for (int i = 0; i < strlen(text); i++)
+    char c = text[i]
+    for (int i = 0; i < strlen(c); i++)
     {
-        if (isalpha(text) != 0)
+        char c = text[i]
+        if (isalpha(c) != 0)
         Letters++;
     }
     printf("%i letters\n", Letters);
