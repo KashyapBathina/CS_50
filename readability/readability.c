@@ -12,7 +12,7 @@ int main(void)
     int Letters = 0;
     for (int i = 0; i < strlen(text); i++)
     {
-        if text = (isalpha(text))
+        if (isalpha(text))
         Letters++;
     }
     printf("%i letters\n", Letters);
