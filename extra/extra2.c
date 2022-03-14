@@ -7,6 +7,7 @@ int main(void)
 {
     string name = get_string("name: ");
     int i = strlen(name);
+    int letters = 0;
     for (int x = 0; x < i; i++)
     {
         int letters = 0;
