@@ -10,7 +10,6 @@ int main(void)
     int letters = 0;
     for (int x = 0; x < i; i++)
     {
-        int letters = 0;
             if (isalpha(name) != 0)
             {
                 letters++;
