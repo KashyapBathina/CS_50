@@ -21,6 +21,18 @@ int main(void)
     }
     printf("%i letters\n", Letters);
 
+    // words
+    int Words = 0;
+    for (int i = 0; i < strlen(text); i++)
+    {
+        if (text[i] == " ")
+        {
+            Words++;
+        }
+    }
+    return Words;
+    Words = Words + 1;
+    printf("%i words\n", Words)
 
     // sentences
     int Sentences = 0;
@@ -28,7 +40,7 @@ int main(void)
     {
         if (text[i] == '.' || text[i] == '?' || text[i] == '!')
         {
-        Sentences ++;
+         Sentences ++;
         }
     }
     printf("%i sentences\n", Sentences);
