@@ -10,11 +10,13 @@ int main(void)
     string text = get_string("Text: ");
 
     // letters
+    int i = strlen(text);
     int Letters = 0;
-    char c = text[i]
-    for (int i = 0; i < strlen(c); i++)
+    char c = text[x]
+
+    for (int x = 0; x < i; i++)
     {
-        char c = text[i]
+        char c = text[x]
         if (isalpha(c) != 0)
         {
         Letters++;
@@ -23,10 +25,12 @@ int main(void)
     printf("%i letters\n", Letters);
 
     // sentences
+    int i = strlen(text);
     int Sentences = 0;
-    for (int i = 0; i < strlen(text); i++)
+    
+    for (int x = 0; x < i); x++)
     {
-        if (text[i] == '.' || text[i] == '?' || text[i] == '!')
+        if (text[x] == '.' || text[x] == '?' || text[x] == '!')
         Sentences ++;
     }
     printf("%i sentences\n", Sentences);
