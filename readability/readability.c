@@ -8,15 +8,12 @@ int main(void)
 {
     // promt
     string text = get_string("Text: ");
-    int i = strlen(text);
-    int Letters = 0;
-    int Sentences = 0;
-
 
     // letters
-    for (int x = 0; x < i; i++)
+    int Letters = 0;
+    for (int i = 0; i < strlen(text); i++)
     {
-        char c = text[x];
+        char c = text[i];
         if (isalpha(c) != 0)
         {
         Letters++;
@@ -26,9 +23,10 @@ int main(void)
 
 
     // sentences
-    for (int x = 0; x < i; x++)
+    int Sentences = 0;
+    for (int i = 0; i < strlen(text); i++)
     {
-        if (text[x] == '.' || text[x] == '?' || text[x] == '!')
+        if (text[i] == '.' || text[i] == '?' || text[i] == '!')
         {
         Sentences ++;
         }
