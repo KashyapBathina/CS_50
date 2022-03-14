@@ -6,14 +6,10 @@
 int main(void)
 {
     string name = get_string("name: ");
-
     int letters = 0;
-    for (int i = 0; i < strlen(name); i++)
-    {
         if (isalpha(name))
         {
             letters++;
         }
-    }
     printf("%i\n", letters);
 }
