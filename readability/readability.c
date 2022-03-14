@@ -6,6 +6,7 @@
 
 int main(void)
 {
+    // answer
     string text = get_string("Text: ");
 
     // letters
