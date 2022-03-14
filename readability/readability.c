@@ -6,12 +6,12 @@
 
 int main(void)
 {
+    // promt
+    string text = get_string("Text: ");
+
     int i = strlen(text);
     int Letters = 0;
     int Sentences = 0;
-
-    // answer
-    string text = get_string("Text: ");
 
     // letters
     for (int x = 0; x < i; i++)
@@ -25,7 +25,7 @@ int main(void)
     printf("%i letters\n", Letters);
 
     // sentences
-    for (int x = 0; x < i); x++)
+    for (int x = 0; x < i; x++)
     {
         if (text[x] == '.' || text[x] == '?' || text[x] == '!')
         Sentences ++;
