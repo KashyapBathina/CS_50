@@ -4,6 +4,7 @@
 #include <ctype.h>
 
 
+
 int main(void)
 {
     string text = get_string("Text: ");
