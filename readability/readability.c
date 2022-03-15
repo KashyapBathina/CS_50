@@ -16,10 +16,9 @@ int main(void)
         char c = text[i];
         if (isalpha(c) != 0)
         {
-        Letters++;
+            Letters++;
         }
     }
-    printf("%i letters\n", Letters);
 
 
     // words
@@ -32,7 +31,6 @@ int main(void)
         }
     }
     Words = Words + 1;
-    printf("%i Words\n", Words);
 
 
     // sentences
@@ -41,12 +39,25 @@ int main(void)
     {
         if (text[i] == '.' || text[i] == '?' || text[i] == '!')
         {
-         Sentences ++;
+            Sentences ++;
         }
     }
-    printf("%i Sentences\n", Sentences);
 
     // calculations
-    int gradelevel = 0.0588 * L - 0.296 * S - 15.8
+    float L = ((float)Letters / (float)Words) * 100;
+    float S = ((float)Sentences / (float)Words) * 100;
+    int gradelevel = 0.0588 * L - 0.296 * S - 15.8;
+    if (gradelevel > 16)
+    {
+        printf("Grade 16+\n");
+    }
+    if (gradelevel < 1)
+    {
+        printf("Before Grade 1\n");
+    }
+    else
+    {
+        printf("Grade %i\n", gradelevel);
+    }
 
 }
