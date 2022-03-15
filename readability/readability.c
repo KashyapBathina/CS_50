@@ -22,7 +22,7 @@ int main(void)
 
 
     // words
-    int Words = 0;
+    int Words = 1;
     for (int i = 0; i < strlen(text); i++)
     {
         if (text[i] == ' ')
@@ -30,7 +30,7 @@ int main(void)
             Words++;
         }
     }
-    Words = Words + 1;
+
 
 
     // sentences
