@@ -19,17 +19,17 @@ int main(void)
 
     //printing average
     float average(int length, int array[]);
-    printf ("Average: %d\n", sum / n);
+    printf ("Average: %i\n", average);
 
 }
 
 float average(int length, int array[])
 {
     //average
-    float sum = 0;
+    int sum = 0;
     for(int i = 0; i < length; i++)
     {
         sum = sum + array[i];
     }
-    return sum;
+    return sum / n;
 }
