@@ -16,16 +16,18 @@ int main(void)
         scores[i] = get_int("Score: ");
     }
 
+    float sum = 0;
+
     //printing average
     float average(int length, int array[]);
-    printf ("Average: %f\n", sum / n);
+    printf ("Average: %d\n", sum / n);
 
 }
 
 float average(int length, int array[])
 {
     //average
-    int sum = 0
+    float sum = 0;
     for(int i = 0; i < length; i++)
     {
         sum = sum + array[i];
