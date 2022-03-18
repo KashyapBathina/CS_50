@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <cs50.h>
 
+float average(int length, int array[]);
+
 int main(void)
 {
     //getting number of scores
@@ -15,7 +17,10 @@ int main(void)
 
     //average
     int sum = 0
-    for(int i = 0; i < length)
+    for(int i = 0; i < length; i++)
+    {
+        sum = sum + array[i];
+    }
 
     printf ("Average: %f\n", ) / n);
 
