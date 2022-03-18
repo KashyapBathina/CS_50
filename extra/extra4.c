@@ -14,6 +14,10 @@ int main(void)
     {
         scores[i] = get_int("Score: ");
     }
+
+    //printing average
+    printf ("Average: %f\n", sum / n);
+
 }
 
 float average(int length, int array[])
@@ -24,7 +28,5 @@ float average(int length, int array[])
     {
         sum = sum + array[i];
     }
-
-    printf ("Average: %f\n", ) / n);
-
+    return sum;
 }
