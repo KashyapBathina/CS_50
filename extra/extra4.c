@@ -14,7 +14,10 @@ int main(void)
     {
         scores[i] = get_int("Score: ");
     }
+}
 
+float average(int length, int array[])
+{
     //average
     int sum = 0
     for(int i = 0; i < length; i++)
