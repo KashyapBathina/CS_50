@@ -3,15 +3,20 @@
 
 int main(void)
 {
+    //getting number of scores
     int n = get_int("How many scores: ");
-
     float scores[n];
 
+    //promting for scores
     for (int i = 0; i < n; i++)
     {
         scores[i] = get_int("Score: ");
     }
 
-    printf ("Average: %f\n", (scores[0] + scores[1] + scores[2]) / n);
+    //average
+    int sum = 0
+    for(int i = 0; i < length)
+
+    printf ("Average: %f\n", ) / n);
 
 }
