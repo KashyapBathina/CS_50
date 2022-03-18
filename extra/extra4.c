@@ -16,7 +16,6 @@ int main(void)
         scores[i] = get_int("Score: ");
     }
 
-    float sum = 0;
 
     //printing average
     float average(int length, int array[]);
