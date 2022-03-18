@@ -8,6 +8,8 @@ int main(void)
     //getting number of scores
     int n = get_int("How many scores: ");
 
+    int scores[n];
+
     //promting for scores
     for (int i = 0; i < n; i++)
     {
