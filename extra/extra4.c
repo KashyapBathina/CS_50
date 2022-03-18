@@ -7,7 +7,6 @@ int main(void)
 {
     //getting number of scores
     int n = get_int("How many scores: ");
-    float scores[n];
 
     //promting for scores
     for (int i = 0; i < n; i++)
@@ -16,6 +15,7 @@ int main(void)
     }
 
     //printing average
+    float average(int length, int array[]);
     printf ("Average: %f\n", sum / n);
 
 }
