@@ -21,8 +21,7 @@ int main(void)
     {
         sum = sum + scores[i];
     }
-    return sum;
 
     //printing average
-    printf("%f\n", sum / n);
+    printf("%i\n", sum);
 }
