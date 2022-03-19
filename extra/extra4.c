@@ -23,5 +23,5 @@ int main(void)
     }
 
     //printing average
-    printf("%i\n", sum);
+    printf("%f\n", sum / n);
 }
