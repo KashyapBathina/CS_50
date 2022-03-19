@@ -22,7 +22,7 @@ int main(void)
         sum = sum + scores[i];
     }
 
-    float average = sum / n;
+    float average = (float) sum / (float) n;
 
     //printing average
     printf("%f\n", average);
