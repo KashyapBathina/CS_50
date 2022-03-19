@@ -23,7 +23,6 @@ int main(void)
     }
     return sum;
 
-
     //printing average
-    printf ("Average: %i\n", sum);
+    printf("Average: %i\n", sum);
 }
