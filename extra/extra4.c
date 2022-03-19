@@ -16,7 +16,7 @@ int main(void)
 
 
     //average
-    int sum = 0;
+    float sum = 0;
     for(int i = 0; i < n; i++)
     {
         sum = sum + scores[i];
@@ -24,5 +24,5 @@ int main(void)
     return sum;
 
     //printing average
-    printf("Average: %i\n", sum);
+    printf("Average: %f\n", sum);
 }
