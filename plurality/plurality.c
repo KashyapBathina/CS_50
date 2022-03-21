@@ -82,4 +82,5 @@ void print_winner(void)
         {
             printf("Candidate %s\n is the winner", candidate[0].name);
         }
+        return true;
 }
