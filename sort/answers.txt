@@ -6,6 +6,6 @@ sort2 uses: TODO
 
 How do you know?: TODO
 
-sort3 uses: TODO
+sort3 uses: Merger
 
-How do you know?: TODO
+How do you know?: Since it is the fastest.
