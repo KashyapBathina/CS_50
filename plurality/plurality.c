@@ -68,7 +68,7 @@ bool vote(string name)
 {
     for(int i = 0; i < argc; i++)
     {
-        if (strcmp(people[i].name, "Raj") == 0)
+        if (strcmp(candidates[i].name, "") == 0)
     return false;
 }
 
