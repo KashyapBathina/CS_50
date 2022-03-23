@@ -83,7 +83,7 @@ int main(int argc, string argv[])
     }
 
     // Keep holding runoffs until winner exists
-    while ( )
+    while (true)
     {
         // Calculate votes given remaining candidates
         tabulate();
