@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 // Max voters and candidates
 #define MAX_VOTERS 100
@@ -129,10 +130,10 @@ bool vote(int voter, int rank, string name)
 {
     for (int i = 0; i < candidate_count; i++)
     {
-        if(stcmp(candidates[i].name, name) == 0)
+        if(strcmp(candidates[i].name, name) == 0)
         {
             preferences[voter][rank] = i;
-            return true,
+            return true;
         }
     }
     return false;
@@ -173,7 +174,7 @@ bool print_winner(void)
 // Return the minimum number of votes any remaining candidate has
 int find_min(void)
 {
-    int min = voter_count
+    int min = voter_count;
     for (int j = 0; j < candidate_count; j++)
     {
         if (candidates[i].votes < min && candidates[i].eliminated == false);
