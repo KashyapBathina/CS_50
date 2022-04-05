@@ -19,4 +19,7 @@ int main(int argc, char *argv[])
         printf("Could not open file");
         return 2;
     }
+
+    unsigned char =
+    int count_image = 0;
 }
