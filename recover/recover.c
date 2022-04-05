@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
+typedef unit8_t BYTE;
 
 int main(int argc, char *argv[])
 {
@@ -20,6 +22,17 @@ int main(int argc, char *argv[])
         return 2;
     }
 
-    unsigned char =
+    //store blocks of 512 blocks into arrays
+    unsigned char buffer[512];
+
+    //track number of images generated
     int count_image = 0;
+
+    //file pointer for recovered images
+    FILE *output_file = NULL:
+
+    //char filename[8]
+    char *filename = malloc(8 * sizeof(char))
+
+    fread
 }
