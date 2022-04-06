@@ -53,8 +53,8 @@ int main(int argc, char *argv[])
     {
         fwrite(buffer, sizeof(char), 512, output_file);
     }
-}
-free(filename);
-fclose(output_file);
-fclose(input_file);
+    }
+    free(filename);
+    fclose(output_file);
+    fclose(input_file);
 }
