@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
-typedef unit8_t BYTE;
+typedef uint8_t BYTE;
 
 int main(int argc, char *argv[])
 {
@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
     FILE *input_file = fopen(argv[1], "r");
 
     //check that the input_file is valid
-    if (input_file = NULL)
+    if (input_file == NULL)
     {
         printf("Could not open file");
         return 2;
@@ -29,14 +29,14 @@ int main(int argc, char *argv[])
     int count_image = 0;
 
     //file pointer for recovered images
-    FILE *output_file = NULL:
+    FILE *output_file = NULL;
 
     //char filename[8]
-    char *filename = malloc(8 * sizeof(char))
+    char *filename = malloc(8 * sizeof(char));
 
     fread (buffer, sizeof(char), 512, input_file);
 
-    if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] 0xff && (buffer[3] & 0xf0) = 0xe0)
+    if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) = 0xe0)
     {
         //write jepg filenames
         sprintf(filename, "%03i.jpg", count_image);
