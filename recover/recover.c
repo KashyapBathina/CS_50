@@ -34,5 +34,7 @@ int main(int argc, char *argv[])
     //char filename[8]
     char *filename = malloc(8 * sizeof(char))
 
-    fread
+    fread (buffer, sizeof(char), 512, input_file);
+
+    if (buffer[0] ==)
 }
