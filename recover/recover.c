@@ -37,4 +37,24 @@ int main(int argc, char *argv[])
     fread (buffer, sizeof(char), 512, input_file);
 
     if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] 0xff && (buffer[3] & 0xf0) = 0xe0)
+    {
+        //write jepg filenames
+        sprintf(filename, "%03i.jpg", count_image);
+
+        //open output file for writiing
+        output_file = fopen(filename, "w");
+
+        //count number of images found
+        count_image++;
+    }
+
+    //check if output has not been used
+    if (outputput_file != NULL)
+    {
+        fwrite(buffer, sizeof(char), 512, output_file);
+    }
+}
+free(filename);
+fclose(output_file);
+fclose(input_file);
 }
