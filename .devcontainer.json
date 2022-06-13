@@ -6,11 +6,11 @@
     "ms-python.python", 
     "ms-vscode.cpptools", 
     "ms-vscode.hexeditor", 
-    "ms-vsliveshare.vsliveshare-audio", 
-    "MS-vsliveshare.vsliveshare-pack", 
+    "ms-vsliveshare.vsliveshare-pack", 
+    "tomoki1207.pdf", 
     "vsls-contrib.gitdoc"
   ], 
-  "image": "ghcr.io/cs50/codespace:8abf2bbcfe2874adc4da96930edcad78ca45a8e9", 
+  "image": "ghcr.io/cs50/codespace:4c997a9f4675f10232d5a316e2f15eed4ea57905", 
   "postCreateCommand": "/opt/cs50/bin/postCreateCommand", 
   "settings": {
     "C_Cpp.autocomplete": "Disabled", 

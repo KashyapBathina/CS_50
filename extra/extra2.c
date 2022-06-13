@@ -12,5 +12,5 @@ int main(void)
             if (name[i] == '.' || name[i] == '?' || name[i] == '!')
             Sentences ++;
         }
-    printf("%i\n", Sentences);
+    printf("%i sentences\n", Sentences);
 }
