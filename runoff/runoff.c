@@ -6,7 +6,7 @@
 #define MAX_VOTERS 100
 #define MAX_CANDIDATES 9
 
-// preferences[i][j] is jth preference for voter i
+// preferences[i][j] is jth preference for voter ii
 int preferences[MAX_VOTERS][MAX_CANDIDATES];
 
 // Candidates have name, vote count, eliminated status
