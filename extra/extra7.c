@@ -3,8 +3,8 @@
 
 int main(void)
 {
-    int i = get_int("i: ");
-    int j = get_int("j: ");
+    char *i = get_string("i: ");
+    char *j = get_string("j: ");
 
     if (i == j)
     {
