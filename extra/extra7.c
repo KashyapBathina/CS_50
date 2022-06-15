@@ -1,29 +1,18 @@
-#include <cs50.h>
-#include <ctype.h>
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+
+void add(int *a, int *b);
 
 int main(void)
 {
-    char *s = get_string("s: ");
+    int x = 1;
+    int y = 2;
 
-    char *t = malloc(strlen(s) + 1);
+    printf("x is %i, y is %i\n", x, y);
+    add(&x, &y);
+    printf("x is %i, y is %i\n", x, y);
+}
 
-    if (t == NULL)
-    {
-        return 1;
-    }
+void add(int *a, int *b)
+{
 
-    strcpy(t, s);
-
-    if (strlen(t) > 0)
-    {
-        t[0] = toupper(t[0]);
-    }
-    
-    printf("s: %s\n", s);
-    printf("t: %s\n", t);
-
-    free(t);
 }
