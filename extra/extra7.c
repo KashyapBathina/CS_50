@@ -1,21 +1,16 @@
 #include <stdio.h>
 
-void add(int *a, int *b);
 
 int main(void)
 {
     int x = 1;
     int y = 2;
-
+    int *p = &x
     printf("x is %i, y is %i\n", x, y);
-    add(&x, &y);
-    printf("x is %i, y is %i\n", x, y);
-}
-
-void add(int *a, int *b)
-{
     
+    printf("x is %i, y is %i\n", x, y);
 }
+
 
 int main()
 {
