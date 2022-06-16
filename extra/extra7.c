@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <cs50.h>
 
 int main(void)
 {
@@ -8,3 +8,4 @@ int main(void)
 
     printf("p%\n", s);
     printf("p%\n", t);
+}
