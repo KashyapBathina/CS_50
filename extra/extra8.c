@@ -4,8 +4,11 @@ void swap(int *a, int *b);
 
 int main(void)
 {
-    int x = 1;
-    int y = 2;
+    int x;
+    int y;
+
+    scanf("%i", &x);
+    scanf("%i", &y);
 
     printf("x is %i, y is %i\n", x, y);
     swap(&x, &y);
