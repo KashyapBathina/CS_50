@@ -1,14 +1,13 @@
 #include <stdio.h>
+#include <cs50.h>
 
 void swap(int *a, int *b);
 
 int main(void)
 {
-    int x;
-    int y;
+    int x = get_int("x: ");
+    int y = get_int("x: ");
 
-    scanf("%i", &x);
-    scanf("%i", &y);
 
 
     printf("x is %i, y is %i\n", x, y);
