@@ -10,9 +10,6 @@ int main(void)
 
     printf("x is %i, y is %i\n", x, y);
     swap(&x, &y);
-    printf("\n");
-    printf("\n");
-    printf("\n");
     printf("new x is %i, new y is %i\n", x, y);
 }
 
