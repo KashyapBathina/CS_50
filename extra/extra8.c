@@ -7,8 +7,7 @@ int main(void)
     int x;
     int y;
 
-    scanf("%i", &x);
-    scanf("%i", &y);
+    
 
     printf("x is %i, y is %i\n", x, y);
     swap(&x, &y);
