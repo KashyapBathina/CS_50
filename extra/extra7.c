@@ -4,7 +4,7 @@
 int main(void)
 {
     string s = get_string("W: ");
-    char *t = &s;
+    char *t = &s[0];
 
     printf("%p\n", s);
     printf("%p\n", t);
