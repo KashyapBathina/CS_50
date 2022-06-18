@@ -16,7 +16,7 @@ person;
 const int GENERATIONS = 3;
 const int INDENT_LENGTH = 4;
 
-person *create_ family(int generations);
+person *create_     family(int generations);
 void print_family(person *p, int generation);
 void free_family(person *p);
 char random_allele();
