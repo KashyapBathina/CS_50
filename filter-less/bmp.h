@@ -1,8 +1,9 @@
 // BMP-related data types based on Microsoft's own
-// ./filter -g INFILE.bmp OUTFILE.bmp
-// ./filter -s INFILE.bmp OUTFILE.bmp
-// ./filter -r INFILE.bmp OUTFILE.bmp
-// ./filter -b INFILE.bmp OUTFILE.bmp
+// ./filter -g images/yard.bmp out.bmp
+// ./filter -s images/yard.bmp out.bmp
+// ./filter -r images/yard.bmp out.bmp
+// ./filter -b images/yard.bmp out.bmp
+
 
 #include <stdint.h>
 
