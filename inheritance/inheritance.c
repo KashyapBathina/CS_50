@@ -61,10 +61,12 @@ person *create_family(int generations)
     // If there are no generations left to create
     else
     {
-        n->parents
+        n->parents[0] = NULL;
+        n->parents[1] = NULL;
 
         // TODO: Randomly assign alleles
-
+        n->alleles[0] = random_allele();
+        n->alleles[1] = random_allele();
     }
 
     // TODO: Return newly created person
