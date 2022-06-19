@@ -16,7 +16,7 @@ person;
 const int GENERATIONS = 3;
 const int INDENT_LENGTH = 4;
 
-person *create_     family(int generations);
+person *create_family(int generations);
 void print_family(person *p, int generation);
 void free_family(person *p);
 char random_allele();
@@ -50,8 +50,8 @@ person *create_family(int generations)
         person *parent1 = create_family(generations - 1);
 
         // TODO: Set parent pointers for current person (can also use (*p).parent[0,1])
-        n->parent[0] = parent0
-        n->parent[1] = parent1
+        n->parents[0] = parent0;
+        n->parents[1] = parent1;
 
         // TODO: Randomly assign current person's alleles based on the alleles of their parents
         n->alleles[0] = n->parents[0]->alleles[rand() %2 ];
