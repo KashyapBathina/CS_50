@@ -40,9 +40,31 @@ bool load(const char *dictionary)
     FILE *file = fopen(dictionary, "r");
     if (file = null)
     {
-        prinft("Unable to open %s", dictionary);
+        prinft("Unable to open %s\n", dictionary);
         return false;
     }
+    // Declare Word
+    char word[LENGTH + 1];
+
+     // Scan Dictionary
+     while (fscanf(file, %s, word) != EOF)
+     {
+        // Allocate Memory
+        node *n = malloc(sizeof(node));
+
+        // Protection
+        if (n == NULL)
+        {
+            return false;
+        }
+
+        // Copy Word Into Node
+        strcpy((*n).word, word);
+        hash_value = hash(word);
+        (n*).next = table[hash_value];
+        table[hash_value] = n;
+        wordcount++;
+     }
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
