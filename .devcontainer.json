@@ -10,7 +10,7 @@
     "tomoki1207.pdf", 
     "vsls-contrib.gitdoc"
   ], 
-  "image": "ghcr.io/cs50/codespace:4c997a9f4675f10232d5a316e2f15eed4ea57905", 
+  "image": "ghcr.io/cs50/codespace:cd814180b776f78232820e62d48487d7f6f638a4", 
   "postCreateCommand": "/opt/cs50/bin/postCreateCommand", 
   "settings": {
     "C_Cpp.autocomplete": "Disabled", 
@@ -79,6 +79,7 @@
       "workbench.action.toggleSidebarVisibility"
     ], 
     "terminal.integrated.defaultProfile.linux": "bash", 
+    "terminal.integrated.persistentSessionReviveProcess": "never", 
     "terminal.integrated.profiles.linux": {
       "JavaScript Debug Terminal": null, 
       "bash": {
