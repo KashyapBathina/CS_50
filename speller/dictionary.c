@@ -5,6 +5,8 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <strings.h>
+
 #include "dictionary.h"
 
 // Represents a node in a hash table
@@ -35,7 +37,11 @@ bool check(const char *word)
 
     while (cursor != 0)
     {
-        if (strcasecmp(word, (*cursor).word))
+        if (strcasecmp(word, (*cursor).word) == 0)
+        {
+            return true;
+        }
+        cursor = (*cursor).next;
     }
     return false;
 }
@@ -103,5 +109,6 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
+    
     return false;
 }
