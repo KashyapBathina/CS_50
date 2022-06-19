@@ -51,7 +51,7 @@ unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
     unsigned long total = 0;
-    for (int = 0; i < strlen(word); i++)
+    for (int i = 0; i < strlen(word); i++)
     {
         total += tolower(word[i]);
     }
@@ -120,7 +120,7 @@ bool unload(void)
         }
         if (cursor == NULL)
         {
-            return true; 
+            return true;
         }
     }
     return false;
