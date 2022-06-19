@@ -30,6 +30,9 @@ unsigned int hash_value;
 bool check(const char *word)
 {
     // TODO
+    hash_value = hash(word);
+    node *cursor = table[hash_value];
+    
     return false;
 }
 
