@@ -50,7 +50,7 @@ person *create_family(int generations)
         person *parent1 = create_family(generations - 1);
 
         // TODO: Set parent pointers for current person
-        (*p).parent[0] = parent0
+        p->parent[0] = parent0
         (*p).parent[1] = parent1
 
 
