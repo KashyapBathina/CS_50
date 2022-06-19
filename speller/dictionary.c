@@ -2,7 +2,9 @@
 
 #include <ctype.h>
 #include <stdbool.h>
-
+#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
 #include "dictionary.h"
 
 // Represents a node in a hash table
@@ -18,6 +20,11 @@ const unsigned int N = 26;
 
 // Hash table
 node *table[N];
+
+// Variables
+unsigned int word_count;
+unsigned int hash_value;
+
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
@@ -66,7 +73,7 @@ bool load(const char *dictionary)
         wordcount++;
      }
      fclose(file);
-     return ture;
+     return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
