@@ -65,6 +65,8 @@ bool load(const char *dictionary)
         table[hash_value] = n;
         wordcount++;
      }
+     fclose(file);
+     return ture;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
