@@ -114,13 +114,7 @@ bool unload(void)
         node *cursor = table[i];
         while (cursor)
         {
-            node *tmp = cursor;
-            cursor = (*cursor).next;
-            free(tmp);
-        }
-        if (cursor == NULL)
-        {
-            return true;
+
         }
     }
     return false;

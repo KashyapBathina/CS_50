@@ -16,3 +16,18 @@ if (strcmp(s, t) == 0)
         printf("Different\n");
     }
 }
+
+
+
+
+
+
+
+
+            node *tmp = cursor;
+            cursor = (*cursor).next;
+            free(tmp);
+        }
+        if (cursor == NULL)
+        {
+            return true;
