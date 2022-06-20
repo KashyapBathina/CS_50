@@ -4,7 +4,8 @@ import sys
 
 
 for i in range(1, len(sys.argv)):
-    image = Image.open(" ", sys.agrv[idx+1])
+    print(" ", sys.agrv[idx+1])
+#    image = Image.open(" ", + picture)
 
 input = get_string("What filter do you want (black and white/blur)")
 
