@@ -55,7 +55,7 @@ unsigned int hash(const char *word)
     {
         total += tolower(word[i]);
     }
-    return total % n;
+    return total % N;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
@@ -63,16 +63,16 @@ bool load(const char *dictionary)
 {
     // TODO
     FILE *file = fopen(dictionary, "r");
-    if (file = null)
+    if (file == NULL)
     {
-        prinft("Unable to open %s\n", dictionary);
+        printf("Unable to open %s\n", dictionary);
         return false;
     }
     // Declare Word
     char word[LENGTH + 1];
 
      // Scan Dictionary
-     while (fscanf(file, %s, word) != EOF)
+     while (fscanf(file, "%s", word) != EOF)
      {
         // Allocate Memory
         node *n = malloc(sizeof(node));
@@ -86,9 +86,9 @@ bool load(const char *dictionary)
         // Copy Word Into Node
         strcpy((*n).word, word);
         hash_value = hash(word);
-        (n*).next = table[hash_value];
+        (*n).next = table[hash_value];
         table[hash_value] = n;
-        wordcount++;
+        word_count++;
      }
      fclose(file);
      return true;
@@ -111,7 +111,7 @@ bool unload(void)
     // TODO
     for (int i = 0; i < N; i++)
     {
-        node *cursor = table[i]
+        node *cursor = table[i];
         while (cursor)
         {
             node *tmp = cursor;
