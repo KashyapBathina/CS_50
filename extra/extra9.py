@@ -1,4 +1,4 @@
-from PIL import Image, 
+from PIL import Image, ImageFilter
 from cs50 import get_string
 
 input = get_string("What filter do you want (black and white/blur)")
