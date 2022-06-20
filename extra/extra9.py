@@ -7,7 +7,6 @@ if len(sys.argv) < 2 or sys.argv[1]!= "car.jpeg" or sys.argv[1] != "house.jpeg" 
     exit()
 
 
-
 picture = sys.argv[1]
 
 input = get_string("What filter do you want (black and white/blur)")
