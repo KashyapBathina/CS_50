@@ -6,6 +6,8 @@ if len(sys.argv) < 2 or agcv[1]!= car.jpeg or agcv[1] != house.jpeg or agcv[1] !
     print("Usage: extra9.py [car.jpeg / house.jpeg / mountain.jpeg / person.jpeg\n")
     exit()
 
+
+
 picture = sys.argv[1]
 
 input = get_string("What filter do you want (black and white/blur)")
