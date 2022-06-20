@@ -19,3 +19,11 @@ void swap(int *a, int *b)
     *a = *b;
     *b = tmp;
 }
+
+
+
+// after = before.filter(ImageFilter.BoxBlur(10))
+// after.save("out.bmp")
+// img = Image.open(file)
+// img = img.convert("L")
+// img.show()
