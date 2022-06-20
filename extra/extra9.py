@@ -3,7 +3,7 @@ from cs50 import get_string
 import sys
 
 
-    print(" ", sys.agrv[0])
+print("answer ", sys.agr[1])
 #    image = Image.open(" ", + picture)
 
 input = get_string("What filter do you want (black and white/blur)")
