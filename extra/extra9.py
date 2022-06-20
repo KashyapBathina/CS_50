@@ -2,7 +2,7 @@ from PIL import Image, ImageFilter
 from cs50 import get_string
 import sys
 
-if argcv < 2 || != car.jpeg || != house.jpeg || != mountain.jpeg || != person.jpeg
+if argcv < 2 or != car.jpeg or != house.jpeg or != mountain.jpeg or != person.jpeg
     print(""Usage: extra9.py [car.jpeg / house.jpeg / mountain.jpeg / person.jpeg\n")
 
 picture = sys.argv[1]
