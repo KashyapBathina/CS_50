@@ -3,7 +3,6 @@ from cs50 import get_string
 import sys
 
 
-for i in range(1, len(sys.argv)):
     print(" ", sys.agrv[idx+1])
 #    image = Image.open(" ", + picture)
 
