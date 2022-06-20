@@ -1,6 +1,5 @@
-import cs50
+from PIL import Image, ImageFilter
 
-name = get_string("Hello, what's your name")
-
-for i in range(3):
-    print ("hello, " + name)
+before = Image.open("bridge.bmp")
+after = before.filter(ImageFilter.BoxBlur(10))
+after.save("out.bmp")
