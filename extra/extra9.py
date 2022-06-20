@@ -2,7 +2,7 @@ from PIL import Image, ImageFilter
 from cs50 import get_string
 import sys
 
-if len(sys.argv) < 2 or sys.argv[1]!= "car.jpeg" or sys.argv[1] != "house.jpeg" or sys.argv[1] != "mountain.jpeg" or sys.argv[1] != "person.jpeg":
+if len(sys.argv) < 2 or sys.argv[1] != "car.jpeg" or sys.argv[1] != "house.jpeg" or sys.argv[1] != "mountain.jpeg" or sys.argv[1] != "person.jpeg":
     print("Usage: extra9.py [car.jpeg / house.jpeg / mountain.jpeg / person.jpeg\n")
     exit()
 
