@@ -7,8 +7,8 @@ image = Image.open("extra9.jpeg")
 
 if input == ("black and white"):
     image = image.convert("L")
-    image.save("after")
+    image.save("after.jpeg")
 
 if input == ("blur"):
     image = image.filter(ImageFilter.BLUR)
-    image.save("after")
+    image.save("after.jpeg")
