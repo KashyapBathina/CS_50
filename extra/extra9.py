@@ -3,8 +3,9 @@ from cs50 import get_string
 import sys
 
 picture = sys.argv[1]
-print("answer ", + picture)
-#    image = Image.open(" ", + picture)
+print(f"You picked {picture}")
+
+image = Image.open(f"{picture}")
 
 input = get_string("What filter do you want (black and white/blur)")
 
