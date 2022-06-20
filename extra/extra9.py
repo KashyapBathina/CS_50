@@ -2,8 +2,8 @@ from PIL import Image, ImageFilter
 from cs50 import get_string
 import sys
 
-if len(sys.argcv) < 2 or agcv[1]!= car.jpeg or != house.jpeg or != mountain.jpeg or != person.jpeg:
-    print(""Usage: extra9.py [car.jpeg / house.jpeg / mountain.jpeg / person.jpeg\n")
+if len(sys.argcv) < 2 or agcv[1]!= car.jpeg or agcv[1] != house.jpeg or agcv[1] != mountain.jpeg or agcv[1] != person.jpeg:
+    print("Usage: extra9.py [car.jpeg / house.jpeg / mountain.jpeg / person.jpeg\n")
 
 picture = sys.argv[1]
 
@@ -17,4 +17,4 @@ if input == ("black and white"):
 
 if input == ("blur"):
     image = image.filter(ImageFilter.BLUR)
-    image.save(p"{picture} after")
+    image.save(f"{picture} after")
