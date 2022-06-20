@@ -5,7 +5,7 @@ import sys
 picture = get_string("What image do you want to filter (car.jpeg / mountain.jpeg / person.jpeg / house.jpeg)")
 input = get_string("What filter do you want (black and white/blur)")
 
-image = Image.open(" ", sys)
+image = Image.open(" ", sys.argv)
 
 if input == ("black and white"):
     image = image.convert("L")
