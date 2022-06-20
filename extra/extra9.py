@@ -2,8 +2,8 @@ from PIL import Image, ImageFilter
 from cs50 import get_string
 import sys
 
-
-print("answer ", sys.agr[1])
+picture = sys.argv[1]
+print("answer ", + picture)
 #    image = Image.open(" ", + picture)
 
 input = get_string("What filter do you want (black and white/blur)")
