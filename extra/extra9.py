@@ -14,8 +14,8 @@ image = Image.open(f"{picture}")
 
 if input == ("black and white"):
     image = image.convert("L")
-    image.save(f"{picture} after")
+    image.save(f"post {picture}")
 
 if input == ("blur"):
     image = image.filter(ImageFilter.BLUR)
-    image.save(f"{picture} after")
+    image.save(f"post {picture}")
