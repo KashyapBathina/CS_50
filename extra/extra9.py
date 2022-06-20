@@ -18,4 +18,5 @@ if input == ("black and white"):
 
 if input == ("blur"):
     image = image.filter(ImageFilter.BLUR)
+    print(f"{picture})
     image.save(f"{picture} after")
