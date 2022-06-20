@@ -3,12 +3,10 @@ from cs50 import get_string
 import sys
 
 picture = sys.argv[1]
-print(f"You picked {picture}")
-
-image = Image.open(f"{picture}")
 
 input = get_string("What filter do you want (black and white/blur)")
 
+image = Image.open(f"{picture}")
 
 if input == ("black and white"):
     image = image.convert("L")
@@ -16,4 +14,4 @@ if input == ("black and white"):
 
 if input == ("blur"):
     image = image.filter(ImageFilter.BLUR)
-    image.save("after.jpeg")
+    image.save(p"{picture} after")
