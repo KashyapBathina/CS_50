@@ -4,13 +4,13 @@ import sys
 
 if len(sys.argv) < 2:
     print("Usage: extra9.py [car.jpeg / house.jpeg / mountain.jpeg / person.jpeg\n")
-    exit()
+    exit(1)
 
 picture = sys.argv[1].lower()
 
 if not picture in ["car.jpeg", "house.jpeg", "mountain.jpeg", "person.jpeg"]:
     print("Usage: extra9.py [car.jpeg / house.jpeg / mountain.jpeg / person.jpeg\n")
-    exit()
+    exit(1)
 
 input = input("What filter do you want (black and white/blur)")
 
