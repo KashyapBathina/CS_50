@@ -13,7 +13,7 @@ def main():
         exit()
 
     input = input("What filter do you want (black and white/blur)")
-    editor()
+        editor(picture)
 
 def editor():
     image = Image.open(f"{picture}")
