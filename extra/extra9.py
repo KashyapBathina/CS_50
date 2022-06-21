@@ -7,7 +7,7 @@ if len(sys.argv) < 2:
     print("Usage: extra9.py [car.jpeg / house.jpeg / mountain.jpeg / person.jpeg\n")
     exit()
 
-if not picture in ["car.jpeg", "house.jpeg", "mountain.jpeg", "person.jpeg"]:
+if not picture.lower() in ["car.jpeg", "house.jpeg", "mountain.jpeg", "person.jpeg"]:
     print("Usage: extra9.py [car.jpeg / house.jpeg / mountain.jpeg / person.jpeg\n")
     exit()
 
