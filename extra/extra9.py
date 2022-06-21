@@ -1,12 +1,15 @@
 from PIL import Image, ImageFilter
 import sys
 
+picture = sys.argv[1]
+
 if len(sys.argv) < 2:
     print("Usage: extra9.py [car.jpeg / house.jpeg / mountain.jpeg / person.jpeg\n")
     exit()
 
-list = [car.jpeg, house.jpeg, mountain.jpeg, person.jpeg]
-if sys.argv[1] in =
+if not sys.argv[1] in [car.jpeg, house.jpeg, mountain.jpeg, person.jpeg]:
+    print("Usage: extra9.py [car.jpeg / house.jpeg / mountain.jpeg / person.jpeg\n")
+    exit()
 
 picture = sys.argv[1]
 
