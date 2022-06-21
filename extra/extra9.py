@@ -5,6 +5,8 @@ if len(sys.argv) < 2:
     print("Usage: extra9.py [car.jpeg / house.jpeg / mountain.jpeg / person.jpeg\n")
     exit()
 
+if sys.argv[1] !in = 
+
 picture = sys.argv[1]
 
 input = input("What filter do you want (black and white/blur)")
