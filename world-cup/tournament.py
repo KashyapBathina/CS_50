@@ -16,6 +16,9 @@ def main():
 
     teams = ["team", "rating"]
     # TODO: Read teams into memory from file
+    with open(argc, "w") as file:
+        writer = csv.writer(file)
+        writer.writerow(data)
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
