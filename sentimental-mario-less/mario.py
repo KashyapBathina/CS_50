@@ -5,5 +5,7 @@ height = get_int("Height: ")
 if height < 0 or height > 9:
     break
 
-for i in range(height)
-    print((height - i) * " ", end)
+for i in range(height):
+    print((height - i) * " ", end = "")
+    print(height * "#")
+
