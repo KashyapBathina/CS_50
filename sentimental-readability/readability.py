@@ -1,22 +1,21 @@
 # TODO
 from cs50 import get_string
 
-words = 0
-sentences = 0
+text = "aaa"
+print (len(text))
 
-text = get_string("Text: ")
 
-for l in text:
-    letters = len(text)
-    print (letters)
+#text = get_string("Text: ")
 
-for w in text:
-    if " " in text:
-        words += 1
+#print len(text)
 
-for s in text:
-    if "." or "!" or "?" in text:
-        sentences += 1
+#for w in text:
+#    if " " in text:
+#        words += 1
+
+#for s in text:
+#    if "." or "!" or "?" in text:
+#        sentences += 1
 
 
 
