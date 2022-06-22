@@ -16,8 +16,8 @@ def main():
 
     teams = ["team", "rating"]
     # TODO: Read teams into memory from file
-    with open(argc, "w") as file:
-        writer = csv.writer(file)
+    with open(sys.argv[1], "r") as file:
+        writer = csv.reader(file)
         writer.writerow(data)
 
     counts = {}
