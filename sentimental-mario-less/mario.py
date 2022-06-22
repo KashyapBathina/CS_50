@@ -8,5 +8,5 @@ if height < 0 or height > 9:
 
 for i in range(height):
     print((height - i) * " ", end = "")
-    print((height - 3) * "#")
+    print((i + 1) * "#")
 
