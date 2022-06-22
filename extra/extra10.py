@@ -1,18 +1,63 @@
 import csv
-from cs50 import get_string
+import os
+from cs50 import get_string, get_int
 
-name = get_string("Name: ")
-number = get_string("Number: ")
+n = get_int("How many participants: ")
+data = ["Name", "Player"]
 
-with open("phonebook.csv", "a") as file:
+with open("list.csv", "w") as file:
     writer = csv.writer(file)
-    writer.writerow((name, number))
+    writer.writerow(data)
+
+for i in range(n):
+    name = get_string("Name: ")
+    player = get_string("Who is the best quarterback? (Brady, Rodgers, or Manning): ")
+    # structure: open('file_name', 'mode'). Where "r" reads, "w" clears file and writes, "a" appends or creates and adds to file
+    with open("list.csv", "a") as file:
+        writer = csv.writer(file)
+        writer.writerow((name, player))
+
+goats = {
+    "Brady": 0,
+    "Rodgers": 0,
+    "Manning": 0,
+}
+
+with open("list.csv", "r") as file:
+    reader = csv.DictReader(file)
+    for row in reader:
+        goat = row["Player"]
+        goats[goat] += 1
+
+for goat in goats:
+    count = goats[goat]
+    print(f"{goat}: {count}")
+
+os.remove("list.csv")
+
+
+
+
+
+
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+#import csv
+#from cs50 import get_string
+
+#name = get_string("Name: ")
+#number = get_string("Number: ")
+
+# structure: open('file_name', 'mode'). Where "r" reads, "w" clears file and writes, "a" appends or creates and adds to file
+#with open("phonebook.csv", "a") as file:
+#    writer = csv.writer(file)
+#    writer.writerow((name, number))
 
 
 # - - - - - - - - - - - - - - - - - - - - - -
-
-
-
 
 
 
