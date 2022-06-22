@@ -14,7 +14,7 @@ def main():
     if len(sys.argv) != 2:
         sys.exit("Usage: python tournament.py FILENAME")
 
-    teams = []
+    teams = ["team", "rating"]
     # TODO: Read teams into memory from file
 
     counts = {}
