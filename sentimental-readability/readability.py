@@ -8,6 +8,7 @@ text = get_string("Text: ")
 
 for l in text:
     letters = len(text)
+    print (letters)
 
 for w in text:
     if " " in text:
@@ -17,7 +18,5 @@ for s in text:
     if "." or "!" or "?" in text:
         sentences += 1
 
-print(letters)
-print(words)
-print(sentences)
+
 
