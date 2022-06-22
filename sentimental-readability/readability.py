@@ -5,6 +5,6 @@ text = get_string("Text: ")
 
 for text:
     letters = len(text)
-    if text 
+    if text = "
     words =
 
