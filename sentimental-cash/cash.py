@@ -6,5 +6,7 @@ while true
     if owed > 0:
         break
 
-if owed > 25:
-    owed - 25
+while owed > 25:
+    owed = owed - 25
+    nickels +=
+
