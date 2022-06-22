@@ -3,8 +3,9 @@ from cs50 import get_string
 
 text = get_string("Text: ")
 
-for text:
+for letters in text:
     letters = len(text)
-    if text 
-    words =
+
+for words in text:
+    for 
 
