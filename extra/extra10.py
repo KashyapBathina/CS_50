@@ -27,7 +27,7 @@ with open("list.csv", "r") as file:
     reader = csv.DictReader(file)
     for row in reader:
         goat = row["Player"]
-        goats[goat.lower] += 1
+        goats[goat] += 1
 
 for goat in goats:
     count = goats[goat]
