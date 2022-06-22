@@ -15,12 +15,12 @@ for i in range(n):
     # structure: open('file_name', 'mode'). Where "r" reads, "w" clears file and writes, "a" appends or creates and adds to file
     with open("list.csv", "a") as file:
         writer = csv.writer(file)
-        writer.writerow((name, player))
+        writer.writerow((name.lower, player.lower))
 
 goats = {
-    "Brady": 0,
-    "Rodgers": 0,
-    "Manning": 0,
+    "brady": 0,
+    "rodgers": 0,
+    "manning": 0,
 }
 
 with open("list.csv", "r") as file:
@@ -33,7 +33,8 @@ for goat in goats:
     count = goats[goat]
     print(f"{goat}: {count}")
 
-os.remove("list.csv")
+# To delete file
+#os.remove("list.csv")
 
 
 
