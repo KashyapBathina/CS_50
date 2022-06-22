@@ -15,7 +15,7 @@ for i in range(n):
     # structure: open('file_name', 'mode'). Where "r" reads, "w" clears file and writes, "a" appends or creates and adds to file
     with open("list.csv", "a") as file:
         writer = csv.writer(file)
-        writer.writerow((name.lower, player.lower))
+        writer.writerow((name, player.lower))
 
 goats = {
     "brady": 0,
@@ -27,7 +27,7 @@ with open("list.csv", "r") as file:
     reader = csv.DictReader(file)
     for row in reader:
         goat = row["Player"]
-        goats[goat] += 1
+        goats[goat.lower] += 1
 
 for goat in goats:
     count = goats[goat]
