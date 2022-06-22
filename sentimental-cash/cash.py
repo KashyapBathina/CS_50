@@ -1,29 +1,31 @@
 # TODO
 from cs50 import get_float
 
-while true
+while True:
     owed = get_float("How much change is owed: ")
     if owed > 0:
         break
 
 while owed > 25:
-    int nickels = 1
+    quarters = 0
     owed = owed - 25
-    nickels += 1
+    quarters += 1
 
 while owed > 10:
-    int dimes = 1
+    dimes = 0
     owed = owed - 10
     dimes += 1
 
 while owed > 5:
-    int quarters = 1
+    nickels = 0
     owed = owed - 5
-    quarters += 1
+    nickels += 1
 
 while owed > 1:
-    int pennies = 1
+    pennies = 0
     owed = owed - 1
     pennies += 1
 
-print(f"Nickels: {nickels} )
+change = quarters + dimes + nickels + pennies
+
+print(f"Nickels: {change}")
