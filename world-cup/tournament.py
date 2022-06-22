@@ -24,6 +24,7 @@ def main():
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
+    
 
 
     # Print each team's chances of winning, according to simulation
@@ -58,7 +59,7 @@ def simulate_tournament(teams):
     # TODO
     while len(teams) > 1:
         teams = simulate_round(teams)
-    return teams[0]
+    return teams["team"]
 
 
 if __name__ == "__main__":
