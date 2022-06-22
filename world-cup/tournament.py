@@ -21,7 +21,7 @@ def main():
         for row in reader:
             team = row["team"]
             rating = row{"rating"}
-            a
+            teams.append(team, rating)
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
