@@ -41,30 +41,6 @@ os.remove("list.csv")
 
 # - - - - - - - - - - - - - - - - - - - - - - - - -
 
-pizzas = {
-    "cheese" : 9,
-    "pepperoni" : 10,
-    "vegetable" : 11,
-    "chicken" : 12
-}
-
-pizzas["meat"] = 14
-
-for pie in pizzas:
-    print(pie)
-
-
-
-
-
-
-
-
-
-
-
-
-# - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
 
