@@ -18,7 +18,23 @@ def main():
         dna = dnafile.read()
 
     # TODO: Find longest match of each STR in DNA sequence
-     
+     max_counts = []
+    for i in range(1, len(reader.fieldnames)):
+        STR = reader.fieldnames[i]
+        max_counts.append(0)
+    # Loop through sequence to find STR
+        for j in range(len(sequence)):
+            STR_count = 0
+            # If match found, start counting repeats
+            if sequence[j:(j + len(STR))] == STR:
+                k = 0
+                while sequence[(j + k):(j + k + len(STR))] == STR:
+                    STR_count += 1
+                    k += len(STR)
+                # If new maximum of repeats, update max_counts
+                if STR_count > max_counts[i - 1]:
+                    max_counts[i - 1] = STR_count
+
 
     # TODO: Check database for matching profiles
 
