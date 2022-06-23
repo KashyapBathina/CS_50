@@ -50,6 +50,8 @@ pizzas = {
 
 pizzas["meat"] = 14
 
+for pie in pizzas:
+    print(pie)
 
 
 
