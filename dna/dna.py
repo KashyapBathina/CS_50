@@ -4,6 +4,7 @@ import sys
 
 def main():
 
+    sequence = []
     # TODO: Check for command-line usage
     if sys.argv < 3
     print("Usage: python dna.py data.csv sequence.txt")
@@ -12,10 +13,10 @@ def main():
     csvfile = sys.argv[1]
     textfile = sys.argv[2]
     with open(csvfile, "r") as file
-        file.read()
+        reader = csv.DictReader(file)
+        sequence.append
 
     # TODO: Read DNA sequence file into a variable
-
 
     # TODO: Find longest match of each STR in DNA sequence
 
