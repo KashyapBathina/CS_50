@@ -11,7 +11,7 @@ def main():
     # TODO: Read database file into a variable
     with open(argv[1], "r") as csvfile
         reader = csv.DictReader(csvfile)
-        sequence = file.read
+        sequence = list(reader)
 
     # TODO: Read DNA sequence file into a variable
     with open(argv[2], 'r') as dnafile:
