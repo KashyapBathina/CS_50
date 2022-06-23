@@ -24,18 +24,17 @@ def main():
     for i in database[0]:
         matches[i] = (longest_match(sequence, i))
 
-
     # TODO: Check database for matching profiles
     suspect = 'No Match'
     suspect_counter = 1
 
     for i in range(len(database)):
         for j in matches:
-            #Matches values are ints, need to cast them to strings for comparison
+            # Matches values are ints, need to cast them to strings for comparison
             if str(matches[j]) == database[i][j]:
                 suspect_counter += 1
         if suspect_counter == len(matches):
-            #We've got the suspect!  No need to continue
+            # We've got the suspect!  No need to continue
             suspect = database[i]['name']
             break
         else:
