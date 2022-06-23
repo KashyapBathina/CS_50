@@ -12,10 +12,10 @@ def main():
     csvfile = sys.argv[1]
     textfile = sys.argv[2]
     with open(csvfile, "r") as file
-        reader = csv.DictReader(file)
-        
+        file.read()
 
     # TODO: Read DNA sequence file into a variable
+
 
     # TODO: Find longest match of each STR in DNA sequence
 
