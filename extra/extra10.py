@@ -41,6 +41,29 @@ os.remove("list.csv")
 
 # - - - - - - - - - - - - - - - - - - - - - - - - -
 
+pizzas = {
+    "cheese" : 9,
+    "pepperoni" : 10,
+    "vegetable" : 11,
+    "chicken" : 12
+}
+
+for pie 
+
+
+
+
+
+
+
+
+
+
+
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - -
+
 
 
 #from cs50 import get_int
