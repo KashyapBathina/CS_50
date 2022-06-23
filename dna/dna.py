@@ -4,7 +4,6 @@ import sys
 
 def main():
 
-    sequence = []
     # TODO: Check for command-line usage
     if sys.argv < 3
     print("Usage: python dna.py data.csv sequence.txt")
@@ -14,7 +13,7 @@ def main():
     text = sys.argv[2]
     with open(csvfile, "r") as csvfile
         reader = csv.DictReader(file)
-        
+        sequence = file.read
 
     # TODO: Read DNA sequence file into a variable
 
