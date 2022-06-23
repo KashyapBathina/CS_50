@@ -10,9 +10,9 @@ def main():
     print("Usage: python dna.py data.csv sequence.txt")
 
     # TODO: Read database file into a variable
-    csvfile = sys.argv[1]
-    textfile = sys.argv[2]
-    with open(csvfile, "r") as file
+    csv = sys.argv[1]
+    text = sys.argv[2]
+    with open(csvfile, "r") as csvfile
         reader = csv.DictReader(file)
         sequence.append
 
