@@ -11,28 +11,18 @@ def main():
     # TODO: Read database file into a variable
     with open(argv[1], "r") as csvfile
         reader = csv.DictReader(csvfile)
-        dict_list = list(reader)
+        database = list(reader)
 
     # TODO: Read DNA sequence file into a variable
     with open(argv[2], 'r') as dnafile:
-        dna = dnafile.read()
+        sequence = dnafile.read()
 
     # TODO: Find longest match of each STR in DNA sequence
-    i = 0
-    j = len(STR)
-    max = 0;
-    for x in range(len(dna)):
-        if dna[i:j] == STR:
-            temp = 0;
-            while dna[i:j] == STR:
-                temp += 1
-                i+= len(STR)
-                j+= len(STR)
-                if(temp > max):
-                    max = temp
-        else:
-            i+=1
-            j+=1
+    matches = []
+    for i in range(1, len(database[0])):
+        matches.append(longest_match(sequence, database[0][i]))
+    print(matches)
+
 
     # TODO: Check database for matching profiles
 
