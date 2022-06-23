@@ -48,7 +48,7 @@ pizzas = {
     "chicken" : 12
 }
 
-for pie 
+pizzas["meat"] = 14
 
 
 
