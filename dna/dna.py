@@ -22,6 +22,7 @@ def main():
 
     # This results in "name" : 0
     for i in database[0]:
+        print(i)
     # where sequence is the full dna sequence and i is the subsequence like agat
         matches[i] = (longest_match(sequence, i))
 
