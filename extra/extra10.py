@@ -29,6 +29,9 @@ with open("list.csv", "r") as file:
         goat = row["Player"]
         goats[goat] += 1
 
+def get_value(goats):
+    return goats[goat]
+
 for goat in goats:
     count = goats[goat]
     print(f"{goat}: {count}")
