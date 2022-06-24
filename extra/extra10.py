@@ -29,12 +29,11 @@ with open("list.csv", "r") as file:
         goat = row["Player"]
         goats[goat] += 1
 
-def get_value(goats):
+def get_value(goat):
     return goats[goat]
 
-for goat in goats:
-    count = goats[goat]
-    print(f"{goat}: {count}")
+for goat in sorted(goats, key=get_value, reverse=True):
+    print(goats, goats[goat])
 
 # To delete file
 os.remove("list.csv")
