@@ -26,7 +26,7 @@ goats = {
 with open("list.csv", "r") as file:
     reader = csv.DictReader(file)
     for row in reader:
-        goat = row["Player"]
+        goat = row["Player"].strip().lower()
         goats[goat] += 1
 
 
