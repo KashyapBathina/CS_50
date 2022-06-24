@@ -29,10 +29,8 @@ with open("list.csv", "r") as file:
         goat = row["Player"]
         goats[goat] += 1
 
-def get_value(goat):
-    return goats[goat]
 
-for goat in sorted(goats, key = lambda , reverse = True):
+for goat in sorted(goats, key = lambda goat: goats[goat], reverse = True):
     print(goat, goats[goat])
 
 # To delete file
