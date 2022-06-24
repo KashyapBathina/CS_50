@@ -32,7 +32,7 @@ with open("list.csv", "r") as file:
 def get_value(goat):
     return goats[goat]
 
-for goat in sorted(goats, key=get_value, reverse=True):
+for goat in sorted(goats, key = lambda , reverse = True):
     print(goat, goats[goat])
 
 # To delete file
