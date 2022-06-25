@@ -2,7 +2,8 @@
 --in essence: picks movie ids where ratings is 10 and counts it in moviesid
 
 
-SELECT COUNT(movies.id) FROM movies JOIN ratings ON movies.id=ratings.movie_id AND ratings.rating=10;
+SELECT COUNT(movies.id) FROM movies
+JOIN ratings ON movies.id=ratings.movie_id AND ratings.rating=10;
 
 
 --SELECT title FROM movies
