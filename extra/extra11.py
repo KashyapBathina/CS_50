@@ -1,13 +1,12 @@
 
 
+# selects a title WHERE name is emma
+# WHERE star id is equal to peopleid
+# WHERE movie id is equal to star id)
 
-
-
-
-
-
-
-
+#SELECT title FROM movies
+#JOIN stars on movies.id = stars.movie_id
+#JOIN people ON stars.person_id = people.id AND people.name = "Emma Stone";
 
 
 
