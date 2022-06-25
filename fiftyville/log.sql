@@ -2,10 +2,9 @@
 SELECT description FROM crime_scene_reports
 WHERE day = "28" AND month = "7" AND street = "Humphrey Street";
 
-
-SELECT name FROM people
-JOIN crime_scene_reports ON people.id = crime_scene_reports.id
-WHERE month = 7 AND day = 28 AND street = "Humphrey Street" AND id = 295;
+SELECT transcript FROM interviews
+WHERE day = "28" AND month = "7"
+AND year = "2020" AND transcript like "%courthouse%";
 
 SELECT name FROM people
 JOIN crime_scene_reports ON people.id = crime_scene_reports.id AND people.id = 295
