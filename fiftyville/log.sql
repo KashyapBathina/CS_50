@@ -5,7 +5,8 @@ WHERE month = 7 AND day = 28
 AND street = "Humphrey Street";
 
 
-SELECT name, id FROM people
+SELECT name FROM people WHERE id IN (
+SELECT crime_scene_reports.id FROM people
 JOIN crime_scene_reports ON people.id = crime_scene_reports.id
-AND crime_scene_reports.month = 7 AND crime_scene_reports.day = 28
-AND crime_scene_reports.street = "Humphrey Street";
+AND crime_scene_reports.month = 7 AND crime_scene_reports.day = 28 AND crime_scene_reports.id = 295
+AND crime_scene_reports.street = "Humphrey Street" AND crime_scene_reports.id = 295);
