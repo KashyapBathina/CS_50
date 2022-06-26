@@ -2,18 +2,20 @@
 
 
 -- SUSPECTS:
-Bruce = 2
-Diana = 1
+Bruce = 3
+Diana = 2
 Brooke = 1
 Kenny = 2
-Iman = 1
-Luca = 2
+Iman = 2
+Luca = 3
 Taylor = 2
 Benista = 1
 Edwar = 1
-Sofia = 1
+Sofia = 2
 Doris = 1
-Kelsey = 1
+Kelsey = 2
+Vanessa = 1
+Barry = 1
 
 
 
