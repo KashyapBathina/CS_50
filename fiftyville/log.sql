@@ -17,6 +17,7 @@ Kelsey = 2
 Vanessa = 1
 Barry = 1
 
+--Accomplice: Robby (same duration of call as bruce)
 
 
 
