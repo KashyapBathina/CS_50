@@ -2,14 +2,14 @@
 
 
 -- SUSPECTS:
-| Bruce   |
-| Diana   |
-| Brooke  |
-| Kenny   |
-| Iman    |
-| Luca    |
-| Taylor  |
-| Benista
+| Bruce   | = 2
+| Diana   | = 1
+| Brooke  | = 1
+| Kenny   | = 2
+| Iman    | = 1
+| Luca    | = 2
+| Taylor  | = 2
+| Benista | = 1
 
 
 
