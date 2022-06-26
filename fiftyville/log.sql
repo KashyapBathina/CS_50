@@ -1,4 +1,21 @@
 -- Keep a log of any SQL queries you execute as you solve the mystery.
+
+
+-- SUSPECTS:
+| Bruce   |
+| Diana   |
+| Brooke  |
+| Kenny   |
+| Iman    |
+| Luca    |
+| Taylor  |
+| Benista
+
+
+
+
+
+
 SELECT description FROM crime_scene_reports
 WHERE day = "28" AND month = "7" AND street = "Humphrey Street";
 
@@ -19,8 +36,6 @@ AND atm_transactions.month = 7
 AND atm_transactions.day = 28
 AND atm_transactions.atm_location = 'Leggett Street'
 AND atm_transactions.transaction_type = 'withdraw';
-
-
 
 
 
@@ -100,9 +115,3 @@ SELECT name, phone_calls.duration
    AND phone_calls.day = 28
    AND phone_calls.duration <= 60
    ORDER BY phone_calls.duration;
-
-
-
-
-
--- suspects:
