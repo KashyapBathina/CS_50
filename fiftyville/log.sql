@@ -2,22 +2,23 @@
 
 
 -- SUSPECTS:
-Bruce = 3
-Diana = 2
-Brooke = 1
-Kenny = 2
-Iman = 2
-Luca = 3
-Taylor = 2
-Benista = 1
-Edwar = 1
-Sofia = 2
-Doris = 1
-Kelsey = 2
-Vanessa = 1
-Barry = 1
+--Bruce = 4
+--Diana = 2
+--Brooke = 1
+--Kenny = 2
+--Iman = 2
+--Luca = 3
+--Taylor = 2
+--Benista = 1
+--Edwar = 1
+--Sofia = 2
+--Doris = 1
+--Kelsey = 2
+--Vanessa = 1
+--Barry = 1
 
---Accomplice: Robby (same duration of call as bruce)
+--Accomplice:
+--Robby (same duration of call as bruce)
 
 
 
