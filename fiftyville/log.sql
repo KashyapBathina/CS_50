@@ -2,13 +2,11 @@
 SELECT description FROM crime_scene_reports
 WHERE day = "28" AND month = "7" AND street = "Humphrey Street";
 
-SELECT transcript FROM interviews
+SELECT name, transcript FROM interviews
 WHERE day = "28" AND month = "7"
-AND transcript like "%courthouse%";
+AND transcript like "%bakery%";
 
-SELECT name FROM people
-JOIN crime_scene_reports ON people.id = crime_scene_reports.id AND people.id = 295
-AND month = 7 AND day = 28 AND street = "Humphrey Street";
+
 
 
 
