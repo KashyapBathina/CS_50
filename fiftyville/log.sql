@@ -20,6 +20,12 @@ AND atm_transactions.day = 28
 AND atm_transactions.atm_location = 'Leggett Street'
 AND atm_transactions.transaction_type = 'withdraw';
 
+
+
+
+
+
+
 -- flight path
 SELECT flights.id, full_name, city, flights.hour, flights.minute
 FROM airports
@@ -33,7 +39,6 @@ AND flights.year = 2021
 AND flights.month = 7
 AND flights.day = 29
 ORDER BY flights.hour, flights.minute;
-
 
 SELECT passengers.flight_id, name, passengers.passport_number, passengers.seat
   FROM people
@@ -49,6 +54,11 @@ SELECT passengers.flight_id, name, passengers.passport_number, passengers.seat
  ORDER BY passengers.passport_number;
 
 
+
+
+
+
+
 -- car license path
 SELECT name, bakery_security_logs.hour, bakery_security_logs.minute
   FROM people
@@ -62,3 +72,9 @@ SELECT name, bakery_security_logs.hour, bakery_security_logs.minute
    AND bakery_security_logs.minute >= 15
    AND bakery_security_logs.minute <= 25
  ORDER BY bakery_security_logs.minute;
+
+
+
+
+
+-- suspects:
