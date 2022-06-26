@@ -48,6 +48,8 @@ AND atm_transactions.transaction_type = 'withdraw';
 
 
 
+
+
 -- flight path
 SELECT flights.id, full_name, city, flights.hour, flights.minute
 FROM airports
