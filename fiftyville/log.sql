@@ -77,4 +77,32 @@ SELECT name, bakery_security_logs.hour, bakery_security_logs.minute
 
 
 
+
+
+
+-- phone call path
+SELECT name, phone_calls.duration
+  FROM people
+  JOIN phone_calls
+    ON people.phone_number = phone_calls.caller
+ WHERE phone_calls.year = 2021
+   AND phone_calls.month = 7
+   AND phone_calls.day = 28
+   AND phone_calls.duration <= 60
+ ORDER BY phone_calls.duration;
+
+SELECT name, phone_calls.duration
+  FROM people
+  JOIN phone_calls
+    ON people.phone_number = phone_calls.receiver
+ WHERE phone_calls.year = 2021
+   AND phone_calls.month = 7
+   AND phone_calls.day = 28
+   AND phone_calls.duration <= 60
+   ORDER BY phone_calls.duration;
+
+
+
+
+
 -- suspects:
