@@ -4,7 +4,7 @@ WHERE day = "28" AND month = "7" AND street = "Humphrey Street";
 
 SELECT transcript FROM interviews
 WHERE day = "28" AND month = "7"
-AND year = "2020" AND transcript like "%courthouse%";
+AND transcript like "%courthouse%";
 
 SELECT name FROM people
 JOIN crime_scene_reports ON people.id = crime_scene_reports.id AND people.id = 295
