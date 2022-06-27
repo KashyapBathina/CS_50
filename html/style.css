@@ -4,9 +4,9 @@ img{
     margin-right: auto;
     padding: 200px 0px;
 }
-video{
-    height="50"
-    width="50"
+.videos{
+    height=200
+    width=200
 }
 .center{
     text-align: center;
