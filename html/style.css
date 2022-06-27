@@ -5,14 +5,14 @@ img{
     padding: 200px 0px;
 }
 .center{
-    text-align:"center"
+    text-align: center;
 }
 .large{
-    font-size:"large"
+    font-size: large;
 }
 .medium{
-    font-size:"medium"
+    font-size: medium;
 }
 .small{
-    font-size:"small"
+    font-size: small;
 }
