@@ -12,7 +12,7 @@
                 document.querySelector("#correct").addEventListener("click", function(){
                     console.log("hello")
                     correct.style.backgroundColor = 'green';
-                    document.querySelector("#feedback1").innerHTML = "Correct";
+                    document.querySelector("#notification1").innerHTML = "Correct";
                 })
 
                 let incorrects = document.querySelector(".incorrect");
@@ -20,10 +20,11 @@
                 {
                     incorrects[i].addEventListener("click", function(){
                         incorrects[i].style.backgroundColor = "red";
-                        document.querySelector(#feedback1").innerHTML = "Incorrect";
+                        document.querySelector("#notification2").innerHTML = "Incorrect";
                     });
                 }
 
+                
 
 
             });
