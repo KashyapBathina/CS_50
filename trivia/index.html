@@ -23,22 +23,22 @@
                     incorrects[i].addEventListener("click", function(){
                         console.log("hello")
                         incorrects[i].style.backgroundColor = "red";
-                        document.querySelector("#notification2").innerHTML = "Incorrect";
+                        document.querySelector("#notification1").innerHTML = "Incorrect";
                     });
                 }
 
                 // text question
                 document.querySelector("#check").addEventListener("click", function(){
+                    console.log("hello")
                     let input = document.querySelector("input");
                     if (input.value == "Skin") {
                         input.style.backgroundColor = "green";
-                        document.querySelector(#feedback2").innerHTML = "Correct!";
+                        document.querySelector("#notification2").innerHTML = "Correct!";
                     } else{
                         input.style.backgroundColor = "red";
-                        document.querySelector(#feedback2").innerHTML = "Incorrect!";
+                        document.querySelector("#notification2").innerHTML = "Incorrect!";
                     }
                 })
-
 
             });
 
