@@ -23,34 +23,7 @@
             <button id="check">Check Answer</button>
 
             <p>id="feedback2"</p>
-
-            <script>
-
-                let correct = document.querySelector('.correct');
-                correct.addEventListener('click', function(){
-                    body.style.backgroundColor = 'green';
-                    document.querySelector('#feedback1').innerHTML = "Correct";
-                });
-
-                let incorrects = document.querySelector(".incorrect");
-                for (let i = 0; i <incorrects.length; i++) {
-                    incorrects[i].addEventListener("click", function(){
-                        incorrects[i].style.backgroundColor = "red";
-                        document.querySelector(#feedback1").innerHTML = "Incorrect";
-                    });
-                }
-
-                document.querySelector("#check").addEventListener("click", function(){
-                    let input = document.querySelector("input");
-                    if (input.value == "Skin") {
-                        input.style.backgroundColor = "green";
-                        document.querySelector(#feedback2").innerHTML = "Correct!";
-                    } else{
-                        input.style.backgroundColor = "red";
-                        document.querySelector(#feedback2").innerHTML = "Incorrect!";
-                    }
-                });
-            </script>
+            
         </body>
 </html>
 
