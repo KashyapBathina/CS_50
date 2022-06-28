@@ -31,8 +31,7 @@
                 document.querySelector("#check").addEventListener("click", function(){
                     console.log("hello")
                     let input = document.querySelector("input");
-                    let global_input = input.toLowerCase()
-                    if (input.value == "Skin") {
+                    if (input.value.toLowerCase() == "Skin") {
                         input.style.backgroundColor = "green";
                         document.querySelector("#notification2").innerHTML = "Correct!";
                     } else{
