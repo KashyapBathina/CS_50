@@ -8,20 +8,24 @@
         <button id="red">R</button>
         <button id="green">G</button>
         <button id="blue">B</button>
+        <button id="body">Body</button>
         <script>
 
-            let body = document.querySelector('body');
             document.querySelector('#red').addEventListener('click', function()
             {
                 red.style.backgroundColor = 'red';
             });
 
             document.querySelector('#green').addEventListener('click', function() {
-                body.style.backgroundColor = 'green';
+                green.style.backgroundColor = 'green';
             });
 
             document.querySelector('#blue').addEventListener('click', function() {
-                body.style.backgroundColor = 'blue';
+                blue.style.backgroundColor = 'blue';
+            });
+
+            document.querySelector('#body').addEventListener('click', function() {
+                body.style.backgroundColor = 'grey';
             });
 
         </script>
