@@ -8,13 +8,21 @@
 
         <script>
             document.addEventListener("DOMContentLoaded", function(){
+
                 document.querySelector("#correct").addEventListener("click", function(){
                     console.log("hello")
                     correct.style.backgroundColor = 'green';
                     document.querySelector("#feedback1").innerHTML = "Correct";
                 })
 
-                document.querySelector(".incorrect").addEventListener
+                for (let i = 0; i <incorrects.length; i++)
+                {
+                    incorrects[i].addEventListener("click", function(){
+                        incorrects[i].style.backgroundColor = "red";
+                        document.querySelector(#feedback1").innerHTML = "Incorrect";
+                    });
+                }
+                
             });
 
         </script>
