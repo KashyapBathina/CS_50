@@ -22,4 +22,34 @@
             <h3>What is the largest organ in the body</h3>
             <input type="text"></input>
             <button id="check">Check Answer</button>
+
+            <p>id="feedback2"</p>
+            <script>
+                document.addEventListener("DOMContentLoaded", function(){
+
+                    document.querySelector(".correct").addEventListener('click', function(){
+                        correct.style.backgroundColor = 'green';
+                        document.querySelector('#feedback1').innerHTML = "Correct";
+                    });
+
+                    let incorrects = document.querySelector(".incorrect");
+                    for (let i = 0; i <incorrects.length; i++) {
+                        incorrects[i].addEventListener("click", function(){
+                            incorrects[i].style.backgroundColor = "red";
+                            document.querySelector(#feedback1").innerHTML = "Incorrect";
+                        });
+                    }
+
+                    document.querySelector("#check").addEventListener("click", function(){
+                        let input = document.querySelector("input");
+                        if (input.value == "Skin") {
+                            input.style.backgroundColor = "green";
+                            document.querySelector(#feedback2").innerHTML = "Correct!";
+                        } else{
+                            input.style.backgroundColor = "red";
+                            document.querySelector(#feedback2").innerHTML = "Incorrect!";
+                        }
+                    })
+            }
+            </script>
 </html>
