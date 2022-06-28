@@ -6,7 +6,10 @@
         <link href="styles.css" rel="stylesheet">
         <title>Trivia!</title>
         <script>
-            
+            document.querySelector('#incorrect').addEventListener('click', function()
+            {
+                incorrect.style.backgroundColor = 'red';
+            });
         </script>
     </head>
     <body>
@@ -20,10 +23,10 @@
                 <h3>
                     How many continents are there?
                 </h3>
-                <button id="5">5</button>
-                <button id="6">6</button>
+                <button id="incorrect">5</button>
+                <button id="incorrect">6</button>
                 <button id="7">7</button>
-                <button id="8">8</button>
+                <button id="incorrect">8</button>
             </div>
 
             <div class="section">
