@@ -7,9 +7,10 @@
         <title>Trivia!</title>
 
         <script>
-            document.addEventListener("DOMContentLoaded", function(){
+            document.addEventListener("DOMContentLoaded", function()
+            {
 
-                let correct = document.querySelector('.correct');
+                let correct = document.querySelector('#correct');
                 correct.addEventListener('click', function(){
                     correct.style.backgroundColor = 'green';
                     document.querySelector('#feedback1').innerHTML = "Correct";
@@ -33,7 +34,8 @@
                         document.querySelector(#feedback2").innerHTML = "Incorrect!";
                     }
                 })
-        }
+
+             }
         </script>
 
     </head>
