@@ -15,14 +15,17 @@
                     document.querySelector("#feedback1").innerHTML = "Correct";
                 })
 
-                for (let i = 0; i <incorrects.length; i++)
+                let incorrects = document.querySelector(".incorrect");
+                for (let i = 0; i <incorrect.length; i++)
                 {
                     incorrects[i].addEventListener("click", function(){
                         incorrects[i].style.backgroundColor = "red";
                         document.querySelector(#feedback1").innerHTML = "Incorrect";
                     });
                 }
-                
+
+
+
             });
 
         </script>
@@ -45,7 +48,7 @@
                 <button id="correct">7 Continents</button>
                 <button class="incorrect">8 Continents</button>
 
-                <p>id="feedback1"</p>
+                <p id="notification1"></p>
 
             </div>
 
@@ -56,7 +59,7 @@
                 <input type="text"></input>
                 <button id="check">Check Answer</button>
 
-                <p>id="feedback2"</p>
+                <p id="notification2"></p>
 
             </div>
         </div>
