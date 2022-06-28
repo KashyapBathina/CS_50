@@ -16,3 +16,11 @@ img{
 .small{
     font-size: small;
 }
+p{
+    text-align: center;
+    padding: 2px;
+    border: 1px solid blue;
+    display: inline-block;
+    background: #E3F2FD;
+    margin-bottom: 1px;
+}
