@@ -42,7 +42,7 @@ h2{
 
 button, input[type="submit"] {
     margin: 25px;
-    color: #eee;
+
     border: 1px solid;
     background-color: transparent;
     border-radius: 0.25rem;
@@ -67,3 +67,8 @@ img{
 img:hover{
     opacity: 0.3;
 }
+
+
+
+/*
+<img src="https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20200513185709/iStock-1097132584.jpg">
