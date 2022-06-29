@@ -19,8 +19,8 @@ img{
 p{
     text-align: center;
     padding: 2px;
-    border: 1px solid blue;
     display: inline-block;
-    background: #E3F2FD;
+    border: 0.5px solid black;
+    background-color:#f7f3eb;
     margin-bottom: 1px;
 }
