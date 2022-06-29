@@ -40,35 +40,6 @@ h2{
     padding: 50px 0px
 }
 
-img{
-    height: 1000px;
-    width: 400px;
-    opacity: 1;
-    transition: .5s ease;
-    backface-visibility: hidden;
-}
-
-img:hover{
-    opacity: 0.3;
-  }
-
-
-
-  
-.middle {
-    transition: .5s ease;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
-  }
-
-  .text {
-    background-color: #04AA6D;
-    color: white;
-    font-size: 16px;
-    padding: 16px 32px;
-  }
-
 button, input[type="submit"] {
     margin: 25px;
     color: #eee;
@@ -83,4 +54,30 @@ button, input[type="submit"] {
     text-align: center;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     vertical-align: middle;
+}
+
+img{
+    height: 1000px;
+    width: 400px;
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.text{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    visibility: hidden;
+}
+
+img:hover{
+    opacity: 0.3;
+  }
+
+img:hover .text{
+    visibility: visibile;
 }
