@@ -70,7 +70,7 @@ img{
     backface-visibility: hidden;
 }
 
-img:hover{
+button:hover{
     opacity: 0.3;
 }
 
