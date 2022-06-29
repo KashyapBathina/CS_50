@@ -50,7 +50,6 @@ h1{
     color: #74c47c;
 }
 
-<hr>
 
 .header {
     background-color: #477bff;
@@ -66,5 +65,6 @@ h1{
 
 
 h2{
+    text-align: center;
     padding: 50px 0px
 }
