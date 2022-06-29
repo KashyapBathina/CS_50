@@ -26,6 +26,9 @@ img:hover{
   opacity: 0.3;
 }
 
+img:hover .title{
+    opacity: 1;
+}
 
 p{
     text-align: center;
