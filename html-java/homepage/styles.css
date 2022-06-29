@@ -55,9 +55,8 @@ h1{
 }
 
 .section {
-    padding: 5px 20px 1px 20px
+    padding: 5px 20px 10px 20px
 }
-
 
 h2{
     text-align: center;
@@ -72,36 +71,7 @@ img{
     backface-visibility: hidden;
 }
 
-.container:hover img{
-    opacity: 0.3;
-  }
-
-  .container:hover .middle {
-    opacity: 1;
-  }
 
 
-.container {
-    height: 1000px;
-    width: 400px;
-  }
 
-.middle {
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
-  }
-
-  .text {
-
-    background-color: #04AA6D;
-    color: white;
-    font-size: 16px;
-    padding: 16px 32px;
-  }
 
