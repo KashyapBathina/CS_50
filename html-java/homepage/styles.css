@@ -10,6 +10,10 @@ p{
     display: inline-block;
     margin-bottom: 1px;
 }
+h1{
+    padding: 50px 0px;
+    color: green;
+}
 .center{
     text-align: center;
 }
@@ -22,8 +26,5 @@ p{
 .small{
     font-size: small;
 }
-.title{
-    color: green;
-    margin-top: 30px;
-}
+.
 
