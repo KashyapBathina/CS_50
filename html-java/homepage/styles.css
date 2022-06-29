@@ -26,12 +26,6 @@ img:hover{
   opacity: 0.3;
 }
 
-.text {
-    background-color: #04AA6D;
-    color: white;
-    font-size: 16px;
-    padding: 16px 32px;
-  }
 
 p{
     text-align: center;
@@ -93,4 +87,11 @@ h2{
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
+  }
+
+  .text {
+    background-color: #04AA6D;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
   }
