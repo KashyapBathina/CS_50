@@ -17,12 +17,12 @@ button, input[type="submit"] {
 img{
     height: 1000px;
     width: 400px;
-    opacity: 0.5
+    opacity: 1
+    transition: .5s ease;
 }
 
 img:hover{
-  opacity: 1.0;
-  easin
+  opacity: 0.5;
 }
 
 p{
