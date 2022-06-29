@@ -17,8 +17,9 @@ button, input[type="submit"] {
 img{
     height: 1000px;
     width: 400px;
-    opacity: 1
+    opacity: 1;
     transition: .5s ease;
+    backface-visibility: hidden;
 }
 
 img:hover{
