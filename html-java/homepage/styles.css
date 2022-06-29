@@ -40,6 +40,12 @@ h2{
     padding: 50px 0px
 }
 
+
+
+
+
+
+
 img{
     height: 1000px;
     width: 400px;
@@ -48,18 +54,12 @@ img{
     backface-visibility: hidden;
 }
 
-.container:hover img{
+img:hover{
     opacity: 0.3;
   }
 
-  .container:hover .middle {
+middle:hover{
     opacity: 1;
-  }
-
-
-.container {
-    height: 1000px;
-    width: 400px;
   }
 
 .middle {
