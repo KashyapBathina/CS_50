@@ -72,17 +72,20 @@ img{
     backface-visibility: hidden;
 }
 
-img:hover{
-  opacity: 0.3;
-}
+.container:hover img{
+    opacity: 0.3;
+  }
 
-img:hover .title{
+  .container:hover .middle {
+
     opacity: 1;
-}
+  }
+
 
 .container {
     position: relative;
-    width: 50%;
+    height: 1000px;
+    width
   }
 
 .middle {
