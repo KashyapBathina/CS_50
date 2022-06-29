@@ -74,11 +74,6 @@ h1{
     text-align: center;
 }
 
-.container {
-    position: relative;
-    width: 50%;
-  }
-
 .section {
     padding: 5px 20px 1px 20px
 }
