@@ -64,6 +64,12 @@ img{
     backface-visibility: hidden;
 }
 
+.img_wrap{
+    position: relative;
+    height: 200px;
+    width: 257px;
+}
+
 .text{
     position: absolute;
     top: 0;
@@ -74,10 +80,6 @@ img{
     visibility: hidden;
 }
 
-img:hover{
-    opacity: 0.3;
-  }
-
-img:hover .text{
+.img_wrap:hover .text{
     visibility: visibile;
 }
