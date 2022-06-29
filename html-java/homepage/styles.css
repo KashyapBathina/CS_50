@@ -58,17 +58,10 @@ button, input[type="submit"] {
 
 button.imgButton{
     background-image: url(https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20200513185709/iStock-1097132584.jpg);
-    background-size:cover; /* <-- scale the image to cover the button */
+    background-height:cover; /* <-- scale the image to cover the button */
     background-position:center center; /* <-- center the image in the button */
   }
 
-img{
-    height: 1000px;
-    width: 400px;
-    opacity: 1;
-    transition: .5s ease;
-    backface-visibility: hidden;
-}
 
 button:hover{
     opacity: 0.3;
