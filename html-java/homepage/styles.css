@@ -40,12 +40,6 @@ h2{
     padding: 50px 0px
 }
 
-
-
-
-
-
-
 img{
     height: 1000px;
     width: 400px;
@@ -58,10 +52,9 @@ img:hover{
     opacity: 0.3;
   }
 
-middle:hover{
-    opacity: 1;
-  }
 
+
+  
 .middle {
     transition: .5s ease;
     transform: translate(-50%, -50%);
