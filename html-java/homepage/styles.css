@@ -1,6 +1,7 @@
 button, input[type="submit"] {
-    background-color: transparent
-    border: 1px solid transparent;
+    color: #eee;
+    border: 1px #1864ab solid;
+    background-color: #1864ab;
     border-radius: 0.25rem;
     font-size: 0.95rem;
     font-weight: 400;
