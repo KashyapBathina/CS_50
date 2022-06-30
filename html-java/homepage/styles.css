@@ -76,6 +76,6 @@ button#accomplishments{
 
 button:hover{
     transform: scale(1.2);
-    opacity: 0.7;
-    color: #0d360f;
+    opacity: 0.5;
+    color: #D4AF37;
 }
