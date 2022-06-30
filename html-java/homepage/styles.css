@@ -30,6 +30,13 @@ h1{
     color: #74c47c;
 }
 
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
 
 .section {
     padding: 100px 20px 100px 20px
