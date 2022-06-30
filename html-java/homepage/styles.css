@@ -81,3 +81,9 @@ button:hover{
 p2{
     padding: 0px 25px;
 }
+
+img:hover{
+    transform: scale(1.4);
+    opacity: 0.7;
+    color: #D4AF37;
+}
