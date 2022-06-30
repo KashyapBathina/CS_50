@@ -94,3 +94,9 @@ img:hover{
     opacity: 0.7;
     color: #D4AF37;
 }
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
