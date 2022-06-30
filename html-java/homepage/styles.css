@@ -37,7 +37,7 @@ h1{
 
 h2{
     text-align: center;
-    padding: 50px 0px
+    padding: 5px 0px
 }
 
 button, input[type="submit"] {
@@ -75,7 +75,7 @@ button#accomplishments{
 }
 
 button:hover{
-    transform: scale(1.1);
+    transform: scale(1.2);
     opacity: 0.7;
     color: #0d360f;
 }
