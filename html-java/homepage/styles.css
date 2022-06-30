@@ -56,19 +56,19 @@ button, input[type="submit"] {
     vertical-align: middle;
 }
 
-button.hobbies{
+button#hobbies{
     background-image: url(https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20200513185709/iStock-1097132584.jpg);
     background-height:cover; /* <-- scale the image to cover the button */
     background-position:center center; /* <-- center the image in the button */
   }
 
-  button.hobbies{
+  button#interests{
     background-image: url(https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20200513185709/iStock-1097132584.jpg);
     background-height:cover; /* <-- scale the image to cover the button */
     background-position:center center; /* <-- center the image in the button */
   }
 
-button.hobbies{
+button#accomplishments{
     background-image: url(https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20200513185709/iStock-1097132584.jpg);
     background-height:cover; /* <-- scale the image to cover the button */
     background-position:center center; /* <-- center the image in the button */
@@ -76,6 +76,6 @@ button.hobbies{
 
 button:hover{
     transform: scale(1.1);
-    opacity: 0.3;
-    color:
+    opacity: 0.7;
+    color: #0d360f;
 }
