@@ -95,7 +95,7 @@ img:hover{
     color: #D4AF37;
 }
 
-.imagestyle1 {
-    
-    position: relative; top: -10px;
+.imagestyle {
+    position: relative; /* Declared position allows for location changes */
+    top: 20px;
 }
