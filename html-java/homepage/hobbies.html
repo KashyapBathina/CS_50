@@ -67,12 +67,27 @@
 
         <div id="container">
             <h1 class="center">My Hobbies</h1>
+            <p class="fixed-bottom">Copyright &#169; Kashyap Bathina</p>
         </div>
-
-        <footer>
-                <p class="fixed-bottom">Copyright &#169; Kashyap Bathina</p>
-        </footer>
 
 
     </body>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            let section = document.querySelector("#section");
+            let container = document.querySelector("#container");
+
+            document.querySelector("#dark").addEventListener("click", function(){
+                section.style.backgroundColor = "#121212";
+                container.style.backgroundColor = "#181818";
+            });
+
+            document.querySelector("#light").addEventListener("click", function(){
+                section.style.backgroundColor = "white";
+                container.style.backgroundColor = "white";
+            });
+        });
+    </script>
+
 </html>
