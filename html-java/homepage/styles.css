@@ -106,3 +106,9 @@ img:hover{
     background-image: url(https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20200513185709/iStock-1097132584.jpg);
 }
 
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
