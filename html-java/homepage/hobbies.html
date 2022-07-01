@@ -47,15 +47,17 @@
                       </li>
 
                       <li class="nav-item">
-                          <div class="dropdown preferences">
-                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink2" data-bs-toggle="dropdown" aria-expanded="false">
-                                Light Settings
-                            </a>
+                          <div class="item">
+                              <div class="dropdown preferences">
+                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink2" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Light Settings
+                                </a>
 
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item light" id="dark">Dark</a></li>
-                            <li><a class="dropdown-item dark" id="light">Light</a></li>
-                            </ul>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li><a class="dropdown-item light" id="dark">Dark</a></li>
+                                <li><a class="dropdown-item dark" id="light">Light</a></li>
+                                </ul>
+                              </div>
                           </div>
                       </li>
 
@@ -76,7 +78,7 @@
     </body>
 
     <script>
-        let navbar = document.querySelector(".navbar-nav");
+        let navbar = document.querySelector(".container-fluid");
         document.querySelector("#dark").addEventListener("click", function(){
                 document.body.style.backgroundColor = "#121212";
             });
