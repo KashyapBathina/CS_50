@@ -128,7 +128,6 @@ img:hover{
     padding:10px 10px;
 }
 
-
---#{$prefix}dropdown-min-width: #{
-    $dropdown-min-width};
-
+#dropdownsize{
+dropdown-min-width: 50px;
+}
