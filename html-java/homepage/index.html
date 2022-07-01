@@ -61,10 +61,17 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function(){
+            let section = document.querySelector("#section");
+            let container = document.querySelector("#container");
 
-            let body = document.querySelector(body);
             document.querySelector("#dark").addEventListener("click", function(){
-                body.style.backgroundColor = "#121212";
+                section.style.backgroundColor = "#121212";
+                container.style.backgroundColor = "#181818";
+            });
+
+            document.querySelector("#light").addEventListener("click", function(){
+                section.style.backgroundColor = "white";
+                container.style.backgroundColor = "white";
             });
         });
     </script>
@@ -89,6 +96,11 @@ document.addEventListener("DOMContentLoaded", function(){
                 container.style.backgroundColor = "white";
             });
         });
+
+
+document.querySelector("#dark").addEventListener("click", function(){
+                document.body.style.backgroundColor = "#121212";
+            });
 
 
 -->
