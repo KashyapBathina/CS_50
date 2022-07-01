@@ -12,12 +12,25 @@
     </head>
 
     <body>
+
         <div id="section">
             hello
+            <div class="dropdown preferences">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                    Light Preferences
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item light" id="dark">Dark</a></li>
+                <li><a class="dropdown-item dark" id="light">Light</a></li>
+                </ul>
+            </div>
         </div>
 
         <div id="container">
-            hello
+            <p>hello</p>
+            <p>hello</p>
+            <p>hello</p>
         </div>
     </body>
 
@@ -26,8 +39,8 @@
         let section = document.querySelector('#section');
         let container = document.querySelector("#container");
         document.querySelector("#dark").addEventListener("click", function(){
-            section.style.backgroundColor = '#121212';
-            container.style.backgroundColor = "404040";
+            section.style.backgroundColor = 'red';
+            container.style.backgroundColor = "green";
         });
     });
 </script>
