@@ -61,6 +61,21 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function(){
+
+            let body = document.querySelector(body);
+            document.querySelector("#dark").addEventListener("click", function(){
+                body.style.backgroundColor = "#121212";
+            });
+        });
+    </script>
+
+</html>
+
+
+<!--
+
+
+document.addEventListener("DOMContentLoaded", function(){
             let section = document.querySelector("#section");
             let container = document.querySelector("#container");
 
@@ -74,6 +89,6 @@
                 container.style.backgroundColor = "white";
             });
         });
-    </script>
 
-</html>
+
+-->
