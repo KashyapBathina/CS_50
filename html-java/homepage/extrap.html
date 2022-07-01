@@ -34,20 +34,21 @@
         </div>
 
 
-        <footer>
+        <div id="footer">
             <p class="fixed-bottom">Copyright &#169; Kashyap Bathina</p>
-        </footer>
+        </div>
+
     </body>
 
     <script>
         document.addEventListener("DOMContentLoaded", function(){
             let section = document.querySelector('#section');
             let container = document.querySelector("#container");
-            let footer = document.querySelector("footer");
+            let footer = document.querySelector("#footer");
             document.querySelector("#dark").addEventListener("click", function(){
                 section.style.backgroundColor = 'red';
                 container.style.backgroundColor = "green";
-                footer.style.backgroundColor = "blue"
+                footer.style.backgroundColor = "green";
 
             });
         });
