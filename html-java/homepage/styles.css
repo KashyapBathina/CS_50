@@ -114,7 +114,8 @@ img:hover{
   }
 
 .preferences{
-   
-    top: 100%;
-    right: 50%;
+    padding: 10px 10px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
 }

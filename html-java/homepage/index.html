@@ -20,7 +20,8 @@
 
             <div class="dropdown preferences">
                 <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown link
+                    <button id="light">7 Continents</button>
+                    <button id="dark">8 Continents</button>
                 </a>
 
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -56,7 +57,12 @@
         </div>
 
         <script>
-
+            document.addEventListener("DOMContentLoaded", function(){
+                document.querySelector("#dark").addEventListener("click", function(){
+                    correct.style.backgroundColor = 'green';
+                    document.querySelector("#notification1").innerHTML = "Correct";
+                })
+            }
         </script>
     </body>
 
