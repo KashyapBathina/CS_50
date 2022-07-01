@@ -128,6 +128,9 @@ img:hover{
     padding:10px 10px;
 }
 
-#dropdownMenuLink{
+.dropdown-menu{
 dropdown-min-width: 50px;
+dropdown-min-height: 100px;
+
+
 }
