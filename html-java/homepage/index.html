@@ -16,7 +16,7 @@
 
 
 
-            <div id="container">
+            <div id="section">
                 <h1 class="center">Hello, World</h1>
 
                 <div class="dropdown preferences">
@@ -39,7 +39,7 @@
 
 
 
-            <div id="section">
+            <div id="container">
 
                 <h2>Learn about my . . . </h2>
 
@@ -63,9 +63,15 @@
         document.addEventListener("DOMContentLoaded", function(){
             let section = document.querySelector("#section");
             let container = document.querySelector("#container");
+
             document.querySelector("#dark").addEventListener("click", function(){
-                section.style.backgroundColor = "green";
-                container.style.backgroundColor = "red";
+                section.style.backgroundColor = "#121212";
+                container.style.backgroundColor = "#404040";
+            });
+
+            document.querySelector("#light").addEventListener("click", function(){
+                section.style.backgroundColor = "white";
+                container.style.backgroundColor = "white";
             });
         });
     </script>
