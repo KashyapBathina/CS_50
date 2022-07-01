@@ -39,7 +39,7 @@
 
 
 
-            <div class="section">
+            <div id="section">
 
                 <h2>Learn about my . . . </h2>
 
@@ -61,9 +61,9 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function(){
-            let footer = document.querySelector("footer");
+            let section = document.querySelector("#section");
             document.querySelector("#dark").addEventListener("click", function(){
-                footer.style.backgroundColor = "green";
+                section.style.backgroundColor = "green";
             });
         });
     </script>

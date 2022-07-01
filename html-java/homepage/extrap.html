@@ -28,9 +28,13 @@
         </div>
 
         <div id="container">
-            <p>hello</p>
-            <p>hello</p>
-            <p>hello</p>
+            <h2>Learn about my . . . </h2>
+
+                <a href="hobbies.html"> <button id="hobbies">Hobbies</button> </a>
+
+                <a href="interests.html"> <button id="interests">Interests</button> </a>
+
+                <a href="life.html"> <button id="life">Life</button> </a>
         </div>
 
 
@@ -44,11 +48,9 @@
         document.addEventListener("DOMContentLoaded", function(){
             let section = document.querySelector('#section');
             let container = document.querySelector("#container");
-            let footer = document.querySelector("#footer");
             document.querySelector("#dark").addEventListener("click", function(){
                 section.style.backgroundColor = 'red';
                 container.style.backgroundColor = "green";
-                footer.style.backgroundColor = "green";
 
             });
         });
