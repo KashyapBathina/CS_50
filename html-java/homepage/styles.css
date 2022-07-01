@@ -129,6 +129,6 @@ img:hover{
 }
 
 
-.dropdownsizedropdown-min-width{
+--#{$prefix}dropdown-min-width: #{
+    $dropdown-min-width};
 
-}
