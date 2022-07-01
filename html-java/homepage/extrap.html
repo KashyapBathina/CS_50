@@ -32,15 +32,23 @@
             <p>hello</p>
             <p>hello</p>
         </div>
+
+
+        <footer>
+            <p class="fixed-bottom">Copyright &#169; Kashyap Bathina</p>
+        </footer>
     </body>
 
     <script>
         document.addEventListener("DOMContentLoaded", function(){
             let section = document.querySelector('#section');
             let container = document.querySelector("#container");
+            let footer = document.querySelector("footer");
             document.querySelector("#dark").addEventListener("click", function(){
                 section.style.backgroundColor = 'red';
                 container.style.backgroundColor = "green";
+                footer.style.backgroundColor = "blue"
+
             });
         });
     </script>
