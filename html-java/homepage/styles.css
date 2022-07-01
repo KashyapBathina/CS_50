@@ -148,5 +148,6 @@ img:hover{
   }
 
 p3{
+    position:relative;
     top: 20px;
 }
