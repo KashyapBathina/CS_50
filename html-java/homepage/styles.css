@@ -99,3 +99,13 @@ img:hover{
     position: relative; /* Declared position allows for location changes */
     top: 20px;
 }
+
+.img-with-text {
+    text-align: justify;
+    width: 150px;
+}
+
+.img-with-text img {
+    display: block;
+    margin: 0 auto;
+}
