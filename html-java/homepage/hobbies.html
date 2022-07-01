@@ -12,7 +12,7 @@
     <body>
 
         <div id="section">
-          <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+          <nav class="navbar navbar-expand-lg" style="background-color: #e6e3dc;">
               <div class="container-fluid">
                   <a class="navbar-brand" href="#"></a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -78,18 +78,17 @@
     </body>
 
     <script>
-        let navbar = document.querySelector("navbar");
+        let navbar = document.querySelector(".navbar");
         document.querySelector("#dark").addEventListener("click", function(){
                 document.body.style.backgroundColor = "#121212";
+                navbar.style.backgroundColor = "green";
             });
 
         document.querySelector("#light").addEventListener("click", function(){
                 document.body.style.backgroundColor = "white";
+                navbar.style.backgroundColor = "white";
             });
 
-        document.querySelector("#dark").addEventListener("click", function(){
-                navbar.style.backgroundColor = "green";
-            });
 
 
     </script>
