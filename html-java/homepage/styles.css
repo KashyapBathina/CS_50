@@ -133,4 +133,5 @@ img:hover{
     height: 100px;
     position: relative; /* Declared position allows for location changes */
     top: 20px;
+    right: 10px
 }
