@@ -14,10 +14,9 @@
 
     <body>
         <div>
+            <div id="container">
+                <h1 class="center">Hello, World</h1>
 
-            <h1 class="center">Hello, World</h1>
-
-            <div id="top">
                 <div class="dropdown preferences">
                     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                         Light Preferences
@@ -28,14 +27,13 @@
                     <li><a class="dropdown-item dark" id="light">Light</a></li>
                     </ul>
                 </div>
-            </div>
-
 
                 <div class="lgreen large center text1">
                     Greetings newcomer! I am not a sharing type, so this is a rare chance to familiarize yourself to me. Here, you will learn what amuses me, what entertains me, and what I have done. Welcome to me.
                 </div>
 
                 <hr>
+            </div>
 
             <div class="section">
 
@@ -57,9 +55,11 @@
 
         <script>
             document.addEventListener("DOMContentLoaded", function(){
-                let top = document.querySelector('#top');
+                let section = document.querySelector('#section');
+                let container = document.querySelector("#container");
                 document.querySelector("#dark").addEventListener("click", function(){
-                    top.style.backgroundColor = '#5d6361';
+                    section.style.backgroundColor = '#121212';
+                    container.style.backgroundColor = "404040";
                 });
             });
         </script>

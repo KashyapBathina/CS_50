@@ -38,7 +38,7 @@ h1{
   }
 
 
-.section {
+#section {
     padding: 100px 20px 100px 20px
 }
 
@@ -121,5 +121,9 @@ img:hover{
 }
 
 .text1{
+    padding:10px 10px;
+}
+
+#container{
     padding:10px 10px;
 }
