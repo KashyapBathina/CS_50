@@ -11,12 +11,13 @@
 
         <div id="section">
             <h1 class="center">Hello, World</h1>
-            <p class="hello"></p>
+            <p id="hello"></p>
         </div>
 
         <script>
-            document.addEventListener("darkness", function(e) {
+            document.addEventListener("darkness", function(darkness) {
             console.log(hello); // Prints "Example of an event"
+            document.querySelector("#hello").innerHTML = "Hello";
             });
         </script>
 

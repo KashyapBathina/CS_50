@@ -25,10 +25,6 @@
                     </ul>
                 </div>
 
-                <div class="lgreen large center text1">
-                    Greetings newcomer! I am not a sharing type, so this is a rare chance to familiarize yourself to me. Here, you will learn what amuses me, what entertains me, and what I have done. Welcome to me.
-                </div>
-
                 <a href="2.html"> <button id="2">Second</button> </a>
 
                 <hr>
@@ -37,19 +33,15 @@
         <script>
 
                 document.addEventListener("DOMContentLoaded", function(){
-                    let section = document.querySelector("#section");
+                    let body = document.querySelector("body");
                     let container = document.querySelector("#container");
 
                     document.querySelector("#dark").addEventListener("click", function(){
                         var event = new CustomEvent("darkness", { "detail": "dark" });
                         document.dispatchEvent(event);
-                        section.style.backgroundColor = "#121212";
-                        container.style.backgroundColor = "#181818";
+                        body.style.backgroundColor = "green";
                     });
 
-                    document.querySelector("#light").addEventListener("click", function(){
-                        section.style.backgroundColor = "white";
-                        container.style.backgroundColor = "white";
                     });
                 });
 
