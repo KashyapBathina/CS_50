@@ -39,7 +39,7 @@
                     let container = document.querySelector("#container");
 
                     document.querySelector("#dark").addEventListener("click", function(){
-                        var event = new CustomEvent("darkness", { "detail": "dark" });
+                        var event = new CustomEvent("darkness");
                         document.dispatchEvent(event);
                         body.style.backgroundColor = "green";
                     });
