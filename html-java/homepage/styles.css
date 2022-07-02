@@ -94,11 +94,7 @@ button#life{
     background-position:center center; /* <-- center the image in the button */
 }
 
-button:hover{
-    transform: scale(1.2);
-    opacity: 0.7;
-    color: #D4AF37;
-}
+
 
 p2{
     padding: 0px 25px;
