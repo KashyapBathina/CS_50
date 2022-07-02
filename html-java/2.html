@@ -14,28 +14,14 @@
     <body>
 
         <div id="section">
-                <h1 class="center">Hello, World</h1>
+            <h1 class="center">Hello, World</h1>
         </div>
 
         <script>
-
-                document.addEventListener("DOMContentLoaded", function(){
-                    let section = document.querySelector("#section");
-                    let container = document.querySelector("#container");
-
-                    document.querySelector("#dark").addEventListener("click", function(){
-
-                        section.style.backgroundColor = "#121212";
-                        container.style.backgroundColor = "#181818";
-                    });
-
-                    document.querySelector("#light").addEventListener("click", function(){
-                        section.style.backgroundColor = "white";
-                        container.style.backgroundColor = "white";
-                    });
-                });
-
-            </script>
+            document.addEventListener("darkness", function(e) {
+            console.log(hello); // Prints "Example of an event"
+            });
+        </script>
 
     <body>
 
