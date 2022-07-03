@@ -154,10 +154,10 @@ p3{
 
 
 body {
-    --bkg-color: white;
+    background-color: #fff;
     }
 
-    body.dark-theme {
-    --text-color: #eee;
-    --bkg-color: #121212;
+body.dark-theme {
+    
+    background-color: #121212;
     }
