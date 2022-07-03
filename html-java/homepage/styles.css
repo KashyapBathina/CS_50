@@ -151,3 +151,13 @@ p3{
     position:relative;
     top: 20px;
 }
+
+
+body {
+    --bkg-color: white;
+    }
+
+    body.dark-theme {
+    --text-color: #eee;
+    --bkg-color: #121212;
+    }
