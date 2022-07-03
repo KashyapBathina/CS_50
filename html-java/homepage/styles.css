@@ -129,7 +129,7 @@ img:hover{
 }
 
 #dropdownMenuLink2{
-    width: px;
+    width: 150px;
     height: 50px;
     position: relative; /* Declared position allows for location changes */
     top: 20px;
