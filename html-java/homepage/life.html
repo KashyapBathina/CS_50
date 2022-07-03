@@ -49,15 +49,13 @@
                       <li class="nav-item">
                         <div class="item">
                           <div class="dropdown preferences">
-                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink2" data-bs-toggle="dropdown" aria-expanded="false">
-                                Light Settings
+                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink1" data-bs-toggle="dropdown" aria-expanded="false">
+                                Light Preferences
                             </a>
 
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item light" id="dark">Dark</a></li>
-                            <li><a class="dropdown-item dark" id="light">Light</a></li>
+                            <li><a class="dropdown-item btn-toggle">Toggle Dark Mode</a></li>
                             </ul>
-                          </div>
                         </div>
                       </li>
 
@@ -78,16 +76,26 @@
     </body>
 
     <script>
-      let navbar = document.querySelector(".navbar");
-      document.querySelector("#dark").addEventListener("click", function(){
-              document.body.style.backgroundColor = "#121212";
-              navbar.style.backgroundColor = "#181818";
-          });
 
-      document.querySelector("#light").addEventListener("click", function(){
-              document.body.style.backgroundColor = "white";
-              navbar.style.backgroundColor = "#faf9f7";
-          });
-  </script>
+        const btn = document.querySelector(".btn-toggle");
+
+        const currentTheme = localStorage.getItem("theme");
+
+        if (currentTheme == "dark") {
+        document.body.classList.add("dark-theme");
+        }
+
+        btn.addEventListener("click", function () {
+            document.body.classList.toggle("dark-theme");
+            let theme = "light";
+
+            if (document.body.classList.contains("dark-theme")) {
+                theme = "dark";
+            }
+
+        localStorage.setItem("theme", theme);
+        });
+
+    </script>
 
 </html>
