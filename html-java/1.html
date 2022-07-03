@@ -10,56 +10,57 @@
         <title>My Webpage</title>
         <style>
             body {
-                padding: 25px;
-                background-color: white;
-                color: black;
-                font-size: 25px;
+            --text-color: #222;
+            --bkg-color: #fff;
             }
-            .dark-mode {
-                background-color: black;
-                color: white;
+            body.dark-theme {
+            --text-color: #eee;
+            --bkg-color: #121212;
             }
-            .light-mode {
-                background-color: white;
-                color: black;
+
+            * {
+            font-family: Arial, Helvetica, sans-serif;
+            }
+
+            body {
+            background: var(--bkg-color);
+            }
+
+            h1,
+            p {
+            color: var(--text-color);
             }
         </style>
     </head>
 
-
     <body>
 
-        <h1>Hello, World</h1>
-
-        <p>Lorem Ipsum . . .</p>
-
-        <button onclick="darkMode()" class="btn-toggle">Darkmode</button>
+        <button class="btn-toggle">Toggle Dark-Mode</button>
+        <h1>Hey there! This is just a title</h2>
+        <p>I am just a boring text, existing here solely for the purpose of this demo</p>
+        <p>And I am just another one like the one above me, because two is better than having only one</p>
 
         <script>
             const btn = document.querySelector(".btn-toggle");
 
             const currentTheme = localStorage.getItem("theme");
-                if (currentTheme == "dark") {
-                document.body.classList.add("dark-theme");
-                }
-
-                btn.addEventListener("click", function () {
-                document.body.classList.toggle("dark-theme");
-
-                let theme = "light";
-                if (document.body.classList.contains("dark-theme")) {
-                    theme = "dark";
-                }
-                localStorage.setItem("theme", theme);
-                });
-
-            function darkMode() {
-              var element = document.body;
-              element.classList.toggle("dark-mode");
+            if (currentTheme == "dark") {
+            document.body.classList.add("dark-theme");
             }
+
+            btn.addEventListener("click", function () {
+            document.body.classList.toggle("dark-theme");
+
+            let theme = "light";
+            if (document.body.classList.contains("dark-theme")) {
+                theme = "dark";
+            }
+            localStorage.setItem("theme", theme);
+            });
         </script>
 
     <body>
+
 
 </html>
 
