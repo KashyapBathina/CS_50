@@ -162,5 +162,6 @@ body.dark-theme {
     }
 
 .textcontainer{
+    padding: 20px 30px;
     color: green;
 }
