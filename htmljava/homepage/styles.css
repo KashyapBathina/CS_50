@@ -171,9 +171,9 @@ body.dark-theme {
     }
 
 .navbar {
-    background-color: yellow;
+    background-color: #faf9f7;
 }
 
 .navbar.dark-theme {
-    background-color: red;
+    background-color: #121212;
     }
