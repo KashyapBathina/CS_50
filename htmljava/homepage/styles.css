@@ -162,6 +162,10 @@ body.dark-theme {
     }
 
 .textcontainer{
-    padding: 20px 30px;
+    padding: 10px 20px;
     color: green;
+}
+
+footer{
+    padding:20px
 }
