@@ -153,14 +153,6 @@ p3{
 }
 
 
-body {
-    background-color: #fff;
-    }
-
-body.dark-theme {
-    background-color: #121212;
-    }
-
 .textcontainer{
     padding: 10px 20px;
     color: green;
@@ -170,6 +162,18 @@ footer{
     padding:20px
 }
 
-nav{
-    background-color: green;
+body {
+    background-color: #fff;
+    }
+
+body.dark-theme {
+    background-color: #121212;
+    }
+
+.navbar {
+    background-color: yellow;
 }
+
+.navbar.dark-theme {
+    background-color: red;
+    }
