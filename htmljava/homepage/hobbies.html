@@ -94,11 +94,16 @@
 
         const currentTheme = localStorage.getItem("theme");
 
+        let container = document.querySelector("#container");
+
         if (currentTheme == "dark") {
         document.body.classList.add("dark-theme");
         }
 
         btn.addEventListener("click", function () {
+
+            container.style.backgroundColor = "red";
+
 
             document.body.classList.toggle("dark-theme");
             let theme = "light";
