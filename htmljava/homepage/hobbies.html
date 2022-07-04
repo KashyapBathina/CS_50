@@ -98,12 +98,12 @@
 
         if (currentTheme == "dark") {
         document.body.classList.add("dark-theme");
-        navbar.classlist.add("dark-theme");
+        navbar.classList.add("dark-theme");
         }
 
         btn.addEventListener("click", function () {
 
-            navbar.classlist.toggle("dark-theme");
+            navbar.classList.toggle("dark-theme");
 
             document.body.classList.toggle("dark-theme");
             let theme = "light";
@@ -112,7 +112,7 @@
                 theme = "dark";
             }
 
-            if (navbar.classlist.contains("dark-theme")) {
+            if (navbar.classList.contains("dark-theme")) {
                 theme = "dark";
             }
 
