@@ -26,6 +26,8 @@ def register():
 
     # Validate name
     name = request.form.get("name")
+    sport = request.form.get("sport")
+
     if not name:
         return render_template("error.html", message="Missing name")
 
