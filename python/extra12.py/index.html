@@ -3,9 +3,9 @@
 {% block body %}
 
 <select name="sport">
-    <option disabled selected value="">Sport</option>
-    {% for sport in sports %}
-        <option value="{{ sport }}">{{ sport }}</option>
+    <option disabled selected value="">""</option>
+    {% for player in players %}
+        <option value="{{ player }}">{{ player }}</option>
     {% endfor %}
 </select>
 
