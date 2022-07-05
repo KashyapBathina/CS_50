@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<select name="sport">
+    <option disabled selected value="">Sport</option>
+    {% for sport in sports %}
+        <option value="{{ sport }}">{{ sport }}</option>
+    {% endfor %}
+</select>
+
+{% endblock %}
