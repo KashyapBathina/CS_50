@@ -7,7 +7,6 @@ db = SQL("sqlite:///goats.db")
 
 app = Flask(__name__)
 
-REGISTRANTS = {}
 
 PLAYERS = [
     "Basketball",
@@ -37,9 +36,6 @@ def register():
         return render_template("error.html", message="Invalid player")
 
     # Remember registrant
-    REGISTRANTS[name] = player
-
-    # Remember registrant
     db.execute("INSERT INTO registrants (name, sport) VALUES(?, ?)", name, player)
 
 
@@ -49,4 +45,5 @@ def register():
 
 @app.route("/registrants")
 def registrants():
-    return render_template("registrants.html", registrants=REGISTRANTS)
+    registrants = db.execute("SELECT * FROM registrants")
+    return render_template("registrants.html", registrants=registrants)
