@@ -9,9 +9,9 @@ app = Flask(__name__)
 
 
 PLAYERS = [
-    "Basketball",
-    "Soccer",
-    "Ultimate Frisbee"
+    "Aaron Rodgers",
+    "Tom Brady",
+    "Eli Manning"
 ]
 
 
