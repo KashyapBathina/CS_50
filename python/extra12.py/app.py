@@ -1,5 +1,6 @@
 # Implements a registration form, storing registrants in a dictionary, with error messages
 
+from cs50 import SQL
 from flask import Flask, redirect, render_template, request
 
 app = Flask(__name__)
