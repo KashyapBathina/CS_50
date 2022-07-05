@@ -6,10 +6,10 @@ app = Flask(__name__)
 
 REGISTRANTS = {}
 
-SPORTS = [
-    "Basketball",
-    "Soccer",
-    "Ultimate Frisbee"
+PLAYERS = [
+    "Rodgers",
+    "Brady",
+    ""
 ]
 
 
