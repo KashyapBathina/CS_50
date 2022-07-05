@@ -27,14 +27,14 @@ def register():
         return render_template("error.html", message="Missing name")
 
     # Validate sport
-    sport = request.form.get("sport")
-    if not sport:
-        return render_template("error.html", message="Missing sport")
-    if sport not in PLAYERS:
-        return render_template("error.html", message="Invalid sport")
+    player = request.form.get("player")
+    if not player:
+        return render_template("error.html", message="Missing player")
+    if player not in PLAYERS:
+        return render_template("error.html", message="Invalid player")
 
     # Remember registrant
-    REGISTRANTS[name] = sport
+    REGISTRANTS[name] = player
 
     # Confirm registration
     return redirect("/registrants")

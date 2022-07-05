@@ -1,15 +1,21 @@
 {% extends "layout.html" %}
 
 {% block body %}
-    <h1>Register</h1>
-
-    <form action="/register" method="post">
-
-        <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
-        {% for sport in sports %}
-            <input name="sport" type="radio" value="{{ sport }}"> {{ sport }}
-        {% endfor %}
-        <input type="submit" value="Register">
-
-    </form>
+    <h1>Registrants</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Player</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for name in registrants %}
+                <tr>
+                    <td>{{ name }}</td>
+                    <td>{{ registrants[name] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 {% endblock %}
