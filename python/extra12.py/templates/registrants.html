@@ -18,11 +18,15 @@
                     <td>
                         <form action="/deregister" method="post">
                             <input name="id" type="hidden" value="{{ registrant.id }}">
-                            <input type="submit" value="Deregister">
+                            <input type="submit" value="Delete">
                         </form>
                     </td>
                 </tr>
             {% endfor %}
         </tbody>
     </table>
+
+    <body>
+        <a href="index.html">Click here to regis
+    </body>
 {% endblock %}
