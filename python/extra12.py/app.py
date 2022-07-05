@@ -26,7 +26,6 @@ def register():
 
     # Validate name
     name = request.form.get("name")
-
     if not name:
         return render_template("error.html", message="Missing name")
 
@@ -39,6 +38,10 @@ def register():
 
     # Remember registrant
     REGISTRANTS[name] = player
+
+    # Remember registrant
+    db.execute("INSERT INTO registrants (name, sport) VALUES(?, ?)", name, player)
+
 
     # Confirm registration
     return redirect("/registrants")
