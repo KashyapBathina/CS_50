@@ -1,12 +1,15 @@
 {% extends "layout.html" %}
 
 {% block body %}
+    <h1>Register</h1>
 
-<select name="sport">
-    <option disabled selected value="">""</option>
-    {% for player in players %}
-        <option value="{{ player }}">{{ player }}</option>
-    {% endfor %}
-</select>
+    <form action="/register" method="post">
 
+        <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
+        {% for player in players %}
+            <input name="player" type="radio" value="{{ player }}"> {{ player }}
+        {% endfor %}
+        <input type="submit" value="Register">
+
+    </form>
 {% endblock %}
