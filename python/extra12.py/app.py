@@ -36,7 +36,7 @@ def register():
         return render_template("error.html", message="Invalid player")
 
     # Remember registrant
-    db.execute("INSERT INTO registrants (name, sport) VALUES(?, ?)", name, player)
+    db.execute("INSERT INTO registrants (name, player) VALUES(?, ?)", name, player)
 
 
     # Confirm registration
