@@ -3,6 +3,8 @@
 from cs50 import SQL
 from flask import Flask, redirect, render_template, request
 
+db = SQL("sqlite:///goats.db")
+
 app = Flask(__name__)
 
 REGISTRANTS = {}
