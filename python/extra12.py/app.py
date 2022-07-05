@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 REGISTRANTS = {}
 
-SPORTS = [
+PLAYERS = [
     "Basketball",
     "Soccer",
     "Ultimate Frisbee"
@@ -15,7 +15,7 @@ SPORTS = [
 
 @app.route("/")
 def index():
-    return render_template("index.html", sports=SPORTS)
+    return render_template("index.html", players=PLAYERS)
 
 
 @app.route("/register", methods=["POST"])
@@ -30,7 +30,7 @@ def register():
     sport = request.form.get("sport")
     if not sport:
         return render_template("error.html", message="Missing sport")
-    if sport not in SPORTS:
+    if sport not in PLAYERS:
         return render_template("error.html", message="Invalid sport")
 
     # Remember registrant
