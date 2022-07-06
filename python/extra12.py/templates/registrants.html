@@ -31,3 +31,14 @@
         <a href="https://kashyapbathina-code50-100645835-x546w64xvh6vvv-5000.githubpreview.dev/">Click here to add more people</a>
     </body>
 {% endblock %}
+
+
+
+UPDATE registrants
+SET FANS =
+(
+SELECT COUNT(*)
+FROM registrants b
+WHERE registrants.player = b.player
+GROUP BY LOGIN
+);
