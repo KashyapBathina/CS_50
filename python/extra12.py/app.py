@@ -59,7 +59,10 @@ def deregister():
 
 
 UPDATE registrants
-SET COUNT_LOGIN =
-(SELECT COUNT(*)
-FROM registrants
-GROUP BY player
+SET Count_LOGIN =
+(
+    SELECT COUNT(*)
+    FROM registrants b
+    WHERE registrants.player = b.player
+    GROUP BY player
+)
