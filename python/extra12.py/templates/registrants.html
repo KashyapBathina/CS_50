@@ -34,11 +34,18 @@
 
 
 
+CREATE TABLE registrants (id INTEGER, name TEXT NOT NULL, player TEXT NOT NULL, PRIMARY KEY(id));
+
+
+ALTER TABLE registrants
+ADD fans int;
+
+
 UPDATE registrants
 SET FANS =
 (
 SELECT COUNT(*)
 FROM registrants b
 WHERE registrants.player = b.player
-GROUP BY LOGIN
+GROUP BY player
 );
