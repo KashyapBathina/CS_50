@@ -56,3 +56,10 @@ def deregister():
     if id:
         db.execute("DELETE FROM registrants WHERE id = ?", id)
     return redirect("/registrants")
+
+
+UPDATE registrants
+SET COUNT_LOGIN =
+(SELECT COUNT(*)
+FROM registrants
+GROUP BY player
