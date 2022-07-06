@@ -37,19 +37,10 @@ def register():
 
     # Remember registrant
     db.execute("INSERT INTO registrants (name, player) VALUES(?, ?)", name, player)
-
+    db.execute("UPDATE registrants SET fans =(SELECT COUNT(*) FROM registrants b WHERE registrants.player = b.player GROUP BY player);")
 
     # Confirm registration
     return redirect("/registrants")
-
-    db.execute=UPDATE registrants
-    SET fans =
-    (
-    SELECT COUNT(*)
-    FROM registrants b
-    WHERE registrants.player = b.player
-    GROUP BY player
-    );
 
 
 @app.route("/registrants")
