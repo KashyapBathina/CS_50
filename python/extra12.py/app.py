@@ -42,6 +42,15 @@ def register():
     # Confirm registration
     return redirect("/registrants")
 
+    db.execute=UPDATE registrants
+    SET fans =
+    (
+    SELECT COUNT(*)
+    FROM registrants b
+    WHERE registrants.player = b.player
+    GROUP BY player
+    );
+
 
 @app.route("/registrants")
 def registrants():
