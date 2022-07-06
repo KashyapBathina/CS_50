@@ -7,7 +7,7 @@
             <tr>
                 <th>Name</th>
                 <th>Player</th>
-                <th></th>
+                <th>Fans</th>
             </tr>
         </thead>
         <tbody>
@@ -15,7 +15,7 @@
                 <tr>
                     <td>{{ registrant["name"] }}</td>
                     <td>{{ registrant["player"] }}</td>
-                    <td>{{ registrant["Fans"] }}</td>
+                    <td>{{ registrant["fans"] }}</td>
                     <td>
                         <form action="/deregister" method="post">
                             <input name="id" type="hidden" value="{{ registrant.id }}">
@@ -32,3 +32,13 @@
     </body>
 {% endblock %}
 
+
+
+UPDATE registrants
+SET FANS =
+(
+SELECT COUNT(*)
+FROM registrants b
+WHERE registrants.player = b.player
+GROUP BY LOGIN
+);
