@@ -58,11 +58,4 @@ def deregister():
     return redirect("/registrants")
 
 
-UPDATE registrants
-SET Count_LOGIN =
-(
-    SELECT COUNT(*)
-    FROM registrants b
-    WHERE registrants.player = b.player
-    GROUP BY player
-)
+
