@@ -124,7 +124,8 @@ def register():
         username = request.form.get("username")
         password = request.form.get("password")
         confirmation = request.form.get("confirmation")
-        
+        all_passwords = db.execute("SELECT )
+
 
         if not username or not password or not confirmation:
             return apology("must fill in all fields", 403)
