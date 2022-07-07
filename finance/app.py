@@ -207,7 +207,7 @@ def sell():
         VALUES (?, ?, ?, ?, ?)", session["user_id"], request.form.get("stock"), request.form.get("shares"), quote[price], time_now())
 
     else:
-
+        
     return apology("TODO")
 
 
@@ -227,3 +227,4 @@ def own_shares():
     # filter zero-share stocks
     owns = {k: v for k, v in owns.items() if v != 0}
     return owns
+
