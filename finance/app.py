@@ -73,7 +73,7 @@ def buy():
         db.execute("UPDATE users SET cash = cash - ? WHERE id = ?", cost, id=session["user_id"]);
 
         db.execute("INSERT INTO orders (user_id, symbol, shares, price, timestamp) VALUES (?, ?, ?, ?, ?)",
-        session["user_id"], quote["symbol"], quote["shares"], quote["price"], quote["time_now()"])
+        session["user_id"], quote["symbol"], quote["shares"], quote["price"], time_now())
 
     else:
         return render_template("buy.html")
@@ -190,8 +190,26 @@ def sell():
         if (not request.form.get("stock")) or (not request.form.get("shares")) or (int(request.form.get("shares"))) <= 0:
             return apology("must provide stock symbol or/and valid number of shares")
 
-        
+
 
     else:
 
     return apology("TODO")
+
+
+def time_now():
+    """HELPER: get current UTC date and time"""
+    now_utc = datetime.now(timezone.utc)
+    return str(now_utc.date()) + ' @time ' + now_utc.time().strftime("%H:%M:%S")
+
+def own_shares():
+    """Helper function: Which stocks the user owns, and numbers of shares owned. Return: dictionary {symbol: qty}"""
+    user_id = session["user_id"]
+    owns = {}
+    query = db.execute("SELECT symbol, shares FROM orders WHERE user_id = ?", user_id)
+    for q in query:
+        symbol, shares = q["symbol"], q["shares"]
+        owns[symbol] = owns.setdefault(symbol, 0) + shares
+    # filter zero-share stocks
+    owns = {k: v for k, v in owns.items() if v != 0}
+    return owns
