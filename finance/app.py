@@ -208,8 +208,6 @@ def sell():
 
     else:
         
-    return apology("TODO")
-
 
 def time_now():
     """HELPER: get current UTC date and time"""
