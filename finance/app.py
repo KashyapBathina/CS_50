@@ -124,7 +124,7 @@ def register():
         username = request.form.get("username")
         password = request.form.get("password")
         confirmation = request.form.get("confirmation")
-        all_passwords = db.execute("SELECT )
+        all_usernames = db.execute("SELECT username FROM users")
 
 
         if not username or not password or not confirmation:
@@ -133,7 +133,8 @@ def register():
         if password != confirmation:
             return apology("passwords must match", 403)
 
-        if password in
+        if username in all_usernames:
+            return apology("username already in use", 403)
 
 
     return apology("TODO")
