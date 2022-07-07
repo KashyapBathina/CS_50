@@ -68,7 +68,7 @@ def buy():
         cash_available = db.execute("SELECT cash FROM users WHERE id=:id", id=session["user_id"])
 
         if cost > cash_available[0]["cash"]:
-            return apology("you do not have enough cash for this transaction")
+            return apology("you do not have enough cash for this stock")
 
         db.execute("UPDATE users SET cash = cash - ? WHERE id = ?", cost, id=session["user_id"]);
 
