@@ -213,9 +213,17 @@ def sell():
 def sell():
     """Add money"""
     if request.method == "POST":
-        cash = request.form.get("cash")
 
-        if request.form.get("credit_card") != "4806013822" or != "
+
+        if request.form.get("credit_card") != "4806013822":
+            return apology("This is an invalid credit card number", 403)
+
+        cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]['cash']
+
+        cash = cash + request.form.get("money")
+
+        if cash 
+
 
 def time_now():
     """HELPER: get current UTC date and time"""
