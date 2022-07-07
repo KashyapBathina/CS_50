@@ -115,9 +115,12 @@ def quote():
     if request.method == "POST":
         quote = lookup(request.form.get("quote"))
         if not quote:
-            return apology("must provide stock symbol")
+            return apology("Either the stock does not exist or you have provided the incorrect symbol", 403)
 
-        return render_template("quoted.html", name = result["name"], price = usd(result["price"]), symbol = result["symbol"])
+        return render_template("quote.html", quote=quote)
+
+    else:
+        return render_template("quote.html")
 
 
 @app.route("/register", methods=["GET", "POST"])
