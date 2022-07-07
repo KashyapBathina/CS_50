@@ -186,9 +186,14 @@ def register():
 def sell():
     """Sell shares of stock"""
 
+    owns = own_shares()
+
     if request.method == "POST":
         if (not request.form.get("stock")) or (not request.form.get("shares")) or (int(request.form.get("shares"))) <= 0:
             return apology("must provide stock symbol or/and valid number of shares")
+
+        if owns[symbol] < int(request.form.get("shares")):
+            return apology("There cannot sell more shares than you own", 403)
 
 
 
