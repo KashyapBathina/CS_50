@@ -84,6 +84,10 @@ def history():
     """Show history of transactions"""
 
     rows = db.execute("SELECT symbol, shares, price, timestamp FROM orders WHERE user_id = ?", session["user_id"])
+
+    if not rows:
+        return apology("You have no transactions recorded")
+
     return render_template("history.html", rows = rows)
 
 
