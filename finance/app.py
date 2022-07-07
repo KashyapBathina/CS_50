@@ -136,7 +136,7 @@ def register():
 
         result = db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, generate_password_hash(password))
 
-        session["user_id"] = result
+        session["user_id"] = result[0]["id"]
 
 
     return apology("TODO")
