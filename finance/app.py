@@ -204,7 +204,7 @@ def sell():
         db.execute("UPDATE users SET cash = ? WHERE id = ?", remaining, session["user_id"])
 
         db.execute("INSERT INTO orders (user_id, symbol, shares, price, timestamp)
-        VALUES (?, ?, ?, ?, ?)", session["user_id"], request.form.get("stock"), shares, price, time_now())
+        VALUES (?, ?, ?, ?, ?)", session["user_id"], request.form.get("stock"), request.form.get("shares"), price, time_now())
 
 
 
