@@ -69,7 +69,8 @@ def buy():
 
         if cost > cash_available[0]["cash"]:
             return apology("you do not have enough cash for this transaction")
-            
+
+        db.execute("UPDATE users SET cash = cash - ? WHERE id = ?", cost, id=session["user_id"]);
 
     else:
         return render_template("buy.html")
