@@ -195,6 +195,12 @@ def sell():
         if owns[symbol] < int(request.form.get("shares")):
             return apology("There cannot sell more shares than you own", 403)
 
+        cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]['cash']
+        remaining = cash + price 
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", remaining, session["user_id"])
+
+
+
 
 
     else:
