@@ -187,6 +187,9 @@ def sell():
     """Sell shares of stock"""
 
     if request.method == "POST":
+        if (not request.form.get("stock")) or (not request.form.get("shares")) or (int(request.form.get("shares"))) <= 0:
+            return apology("must provide stock symbol or/and valid number of shares")
+
         
 
     else:
