@@ -113,7 +113,7 @@ def quote():
     """Get stock quote."""
 
     if request.method == "POST":
-        result = lookup
+        if 
 
 
 @app.route("/register", methods=["GET", "POST"])
