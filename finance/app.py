@@ -207,7 +207,16 @@ def sell():
         VALUES (?, ?, ?, ?, ?)", session["user_id"], request.form.get("stock"), request.form.get("shares"), quote[price], time_now())
 
     else:
-        
+        return render_template("sell.html", owns = owns.keys())
+
+@app.route("/sell", methods=["GET", "POST"])
+@login_required
+def sell():
+    """Add money"""
+    if request.method == "POST":
+        cash = request.form.get("cash")
+
+        if request.form.get("credit_card") != 4806013822 or !=
 
 def time_now():
     """HELPER: get current UTC date and time"""
