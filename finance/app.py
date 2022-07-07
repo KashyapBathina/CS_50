@@ -72,6 +72,9 @@ def buy():
 
         db.execute("UPDATE users SET cash = cash - ? WHERE id = ?", cost, id=session["user_id"]);
 
+        db.execute("INSERT INTO orders (user_id, symbol, shares, price, timestamp) VALUES (?, ?, ?, ?, ?)", 
+                                     user_id, symbol, shares, price, time_now())
+
 
 
     else:
