@@ -121,7 +121,13 @@ def register():
         return render_template("register.html")
 
     if request.method == "POST":
-        
+        username = request.form.get("username")
+
+        password = request.form.get("password")
+
+        confirmation = request.form.get("confirmation")
+
+        if
 
 
     return apology("TODO")
