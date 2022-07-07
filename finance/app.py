@@ -197,9 +197,14 @@ def sell():
 
         cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]['cash']
 
-        remaining = cash + 
+        quote = lookup(request.form.get("stock"))
+
+        remaining = cash + quote[price] * request.form.get("shares")
 
         db.execute("UPDATE users SET cash = ? WHERE id = ?", remaining, session["user_id"])
+
+        db.execute("INSERT INTO orders (user_id, symbol, shares, price, timestamp)
+        VALUES (?, ?, ?, ?, ?)", user_id, symbol, shares, price, time_now())
 
 
 
