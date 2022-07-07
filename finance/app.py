@@ -52,7 +52,24 @@ def buy():
     """Buy shares of stock"""
 
     if request.method == "POST":
-        
+        if (not request.form.get("stock")) or (not request.form.get("shares")):
+            return apology("must provide stock symbol and number of shares")
+
+        if int(request.form.get("shares")) <= 0:
+            return apology("must provide valid number of shares")
+
+        quote = lookup(request.form.get("stock"))
+
+        if quote == None:
+            return apology("Stock symbol not valid, please try again")
+
+        cost = int(request.form.get("shares")) * quote['price']
+
+        cash_available = db.execute("SELECT cash FROM users WHERE id=:id", id=session["user_id"])
+
+        if cost > cash_available[0]["cash"]:
+            return apology("you do not have enough cash for this transaction")
+            
 
     else:
         return render_template("buy.html")
