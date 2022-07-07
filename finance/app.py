@@ -206,10 +206,6 @@ def sell():
         db.execute("INSERT INTO orders (user_id, symbol, shares, price, timestamp)
         VALUES (?, ?, ?, ?, ?)", session["user_id"], request.form.get("stock"), request.form.get("shares"), quote[price], time_now())
 
-
-
-
-
     else:
 
     return apology("TODO")
