@@ -203,8 +203,7 @@ def sell():
 
         db.execute("UPDATE users SET cash = ? WHERE id = ?", remaining, session["user_id"])
 
-        db.execute("INSERT INTO orders (user_id, symbol, shares, price, timestamp)
-        VALUES (?, ?, ?, ?, ?)", session["user_id"], request.form.get("stock"), request.form.get("shares"), quote[price], time_now())
+        db.execute("INSERT INTO orders (user_id, symbol, shares, price, timestamp) VALUES (?, ?, ?, ?, ?)", session["user_id"], request.form.get("stock"), request.form.get("shares"), quote[price], time_now())
 
     else:
         return render_template("sell.html", owns = owns.keys())
@@ -224,7 +223,6 @@ def time_now():
     return str(now_utc.date()) + ' @time ' + now_utc.time().strftime("%H:%M:%S")
 
 def own_shares():
-    """Helper function: Which stocks the user owns, and numbers of shares owned. Return: dictionary {symbol: qty}"""
     user_id = session["user_id"]
     owns = {}
     query = db.execute("SELECT symbol, shares FROM orders WHERE user_id = ?", user_id)
