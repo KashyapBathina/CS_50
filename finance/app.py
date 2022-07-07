@@ -29,24 +29,6 @@ db = SQL("sqlite:///finance.db")
 if not os.environ.get("API_KEY"):
     raise RuntimeError("API_KEY not set")
 
-# Time
-def time_now():
-    """HELPER: get current UTC date and time"""
-    now_utc = datetime.now(timezone.utc)
-    return str(now_utc.date()) + ' @time ' + now_utc.time().strftime("%H:%M:%S")
-
-def own_shares():
-    """Helper function: Which stocks the user owns, and numbers of shares owned. Return: dictionary {symbol: qty}"""
-    user_id = session["user_id"]
-    owns = {}
-    query = db.execute("SELECT symbol, shares FROM orders WHERE user_id = ?", user_id)
-    for q in query:
-        symbol, shares = q["symbol"], q["shares"]
-        owns[symbol] = owns.setdefault(symbol, 0) + shares
-    # filter zero-share stocks
-    owns = {k: v for k, v in owns.items() if v != 0}
-    return owns
-
 
 @app.after_request
 def after_request(response):
@@ -240,3 +222,18 @@ def sell():
 
         db.execute("UPDATE users SET cash = cash + ? WHERE id = ?", request.form.get("money"), id=session["user_id"]);
 
+def time_now():
+    ## Get current time
+    now_utc = datetime.now(timezone.utc)
+    return str(now_utc.date()) + ' @time ' + now_utc.time().strftime("%H:%M:%S")
+
+def own_shares():
+    # Stocks the user owns, and numbers of shares owned
+    owns = {}
+    query = db.execute("SELECT symbol, shares FROM orders WHERE user_id = ?", session["user_id"])
+    for q in query:
+        symbol, shares = q["symbol"], q["shares"]
+        owns[symbol] = owns.setdefault(symbol, 0) + shares
+    # filter zero-share stocks
+    owns = {k: v for k, v in owns.items() if v != 0}
+    return owns
