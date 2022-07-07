@@ -214,15 +214,13 @@ def sell():
     """Add money"""
     if request.method == "POST":
 
-
         if request.form.get("credit_card") != "4806013822":
             return apology("This is an invalid credit card number", 403)
 
-        cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]['cash']
+        if request.form.get("money") > 100000:
+            return apology("Your card declined", 403)
 
-        cash = cash + request.form.get("money")
-
-        if cash 
+        db.execute("UPDATE users SET cash = cash + ? WHERE id = ?", request.form.get("money"), id=session["user_id"]);
 
 
 def time_now():
