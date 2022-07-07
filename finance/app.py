@@ -208,9 +208,9 @@ def sell():
     else:
         return render_template("sell.html", owns = owns.keys())
 
-@app.route("/sell", methods=["GET", "POST"])
+@app.route("/add_cash", methods=["GET", "POST"])
 @login_required
-def sell():
+def add_cash():
     """Add money"""
     if request.method == "POST":
 
@@ -221,6 +221,9 @@ def sell():
             return apology("Your card declined", 403)
 
         db.execute("UPDATE users SET cash = cash + ? WHERE id = ?", request.form.get("money"), id=session["user_id"]);
+
+    else:
+        return render_template("add_cash.html")
 
 def time_now():
     ## Get current time
