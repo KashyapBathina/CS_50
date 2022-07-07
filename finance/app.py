@@ -54,6 +54,8 @@ def buy():
     if request.method == "POST":
         
 
+    else:
+        return render_template("buy.html")
 
 @app.route("/history")
 @login_required
