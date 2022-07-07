@@ -122,10 +122,9 @@ def register():
 
     if request.method == "POST":
         username = request.form.get("username")
-
         password = request.form.get("password")
-
         confirmation = request.form.get("confirmation")
+        
 
         if not username or not password or not confirmation:
             return apology("must fill in all fields", 403)
@@ -133,7 +132,7 @@ def register():
         if password != confirmation:
             return apology("passwords must match", 403)
 
-        if password in 
+        if password in
 
 
     return apology("TODO")
