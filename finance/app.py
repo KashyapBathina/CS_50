@@ -111,7 +111,9 @@ def logout():
 @login_required
 def quote():
     """Get stock quote."""
-    return apology("TODO")
+
+    if request.method == "POST":
+        
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -140,7 +142,6 @@ def register():
 
     else:
         return render_template("register.html")
-
 
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
