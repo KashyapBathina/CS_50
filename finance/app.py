@@ -138,8 +138,8 @@ def register():
 
         session["user_id"] = result[0]["id"]
 
-
-    return apology("TODO")
+    else:
+        return render_template("register.html")
 
 
 @app.route("/sell", methods=["GET", "POST"])
