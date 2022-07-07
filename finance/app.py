@@ -113,7 +113,7 @@ def quote():
     """Get stock quote."""
 
     if request.method == "POST":
-        if 
+        if not request.form.
 
 
 @app.route("/register", methods=["GET", "POST"])
