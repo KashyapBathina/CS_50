@@ -75,8 +75,6 @@ def buy():
         db.execute("INSERT INTO orders (user_id, symbol, shares, price, timestamp) VALUES (?, ?, ?, ?, ?)",
         session["user_id"], quote["symbol"], quote["shares"], quote["price"], quote["time_now()"])
 
-
-
     else:
         return render_template("buy.html")
 
@@ -84,6 +82,8 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
+
+    row =
     return apology("TODO")
 
 
