@@ -187,8 +187,8 @@ def sell():
     """Sell shares of stock"""
 
     if request.method == "POST":
-
+        
 
     else:
-        
+
     return apology("TODO")
