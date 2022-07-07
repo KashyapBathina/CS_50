@@ -197,7 +197,7 @@ def sell():
 
         cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]['cash']
 
-        remaining = cash + price 
+        remaining = cash + 
 
         db.execute("UPDATE users SET cash = ? WHERE id = ?", remaining, session["user_id"])
 
