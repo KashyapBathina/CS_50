@@ -117,8 +117,6 @@ def quote():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
-    if request.method == "GET":
-        return render_template("register.html")
 
     if request.method == "POST":
         username = request.form.get("username")
@@ -137,6 +135,8 @@ def register():
             return apology("username already in use", 403)
 
         result = db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, generate_password_hash(password))
+
+
 
     return apology("TODO")
 
