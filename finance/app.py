@@ -136,8 +136,7 @@ def register():
         if username in all_usernames:
             return apology("username already in use", 403)
 
-        db.execute('INSERT INTO users (username, hash) \
-            VALUES(?, ?)', username, generate_password_hash(password))
+        db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, generate_password_hash(password))
 
     return apology("TODO")
 
