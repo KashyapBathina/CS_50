@@ -121,13 +121,14 @@ def register():
         return render_template("register.html")
 
     if request.method == "POST":
-        username = request.form.get("username")
+        if not request.form.get("username"):
+            return apology("must provide username", 403)
 
-        password = request.form.get("password")
+        elif not request.form.get("password"):
+            return apology("must provide password", 403)
 
-        confirmation = request.form.get("confirmation")
-
-        if
+        else not request.form.get("confirmation"):
+            return apology("passwords do not match", 403)
 
 
     return apology("TODO")
