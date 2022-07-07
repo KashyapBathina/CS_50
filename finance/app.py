@@ -215,7 +215,7 @@ def sell():
     if request.method == "POST":
         cash = request.form.get("cash")
 
-        if request.form.get("credit_card") != 4806013822 or !=
+        if request.form.get("credit_card") != "4806013822" or != "
 
 def time_now():
     """HELPER: get current UTC date and time"""
