@@ -127,8 +127,13 @@ def register():
 
         confirmation = request.form.get("confirmation")
 
-        if not username || 
-            return apology("must provide username", 403)
+        if not username or not password or not confirmation:
+            return apology("must fill in all fields", 403)
+
+        if password != confirmation:
+            return apology("passwords must match", 403)
+
+        if password in 
 
 
     return apology("TODO")
