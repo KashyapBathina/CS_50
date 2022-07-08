@@ -83,7 +83,7 @@ def buy():
         if cost > cash_available[0]["cash"]:
             return apology("you do not have enough cash for this stock")
 
-        db.execute("UPDATE users SET cash = cash - ? WHERE id = ?", cost, id=session["user_id"]);
+        db.execute("UPDATE users SET cash = cash - ? WHERE id = ?", cost, session["user_id"]);
 
         db.execute("INSERT INTO orders (user_id, symbol, shares, price, timestamp) VALUES (?, ?, ?, ?, ?)",
         session["user_id"], quote["symbol"], quote["shares"], quote["price"], time_now())
@@ -184,7 +184,6 @@ def register():
         username = request.form.get("username")
         password = request.form.get("password")
         confirmation = request.form.get("confirmation")
-        all_usernames = db.execute("SELECT username FROM users")
 
 
         if not username or not password or not confirmation:
