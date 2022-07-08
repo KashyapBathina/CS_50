@@ -245,10 +245,11 @@ def sell():
 @login_required
 def add_cash():
     """Add money"""
-    if request.method == "POST":
-        credit_card = "hello"
+    password = str(4806013822)
 
-        if request.form.get("credit_card") != credit_card:
+    if request.method == "POST":
+
+        if request.form.get("credit") != password:
             return apology("this is an invalid credit card number", 403)
 
         if int(request.form.get("money")) > int(999):
