@@ -203,7 +203,7 @@ def register():
 
         session["user_id"] = result
 
-        return redirect(url_for("index"))
+        return redirect("/")
 
     else:
         return render_template("register.html")
