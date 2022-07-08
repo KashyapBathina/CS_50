@@ -1,43 +1,26 @@
-<!DOCTYPE html>
+<html>
+<body>
 
-<html lang="en">
-    <head>
-        <title>background</title>
-    </head>
-    <body>
-        <!--
-        <button id="red">R</button>
-        <button id="green">G</button>
-        <button id="blue">B</button>
-        <button id="body">Body</button>
-        -->
-        <button class="btn btn-default" type="return confirm('Are you sure?')">Buy</button>
+<h1>The Window Object</h1>
+<h2>The confirm() Method</h2>
 
-        <script>
-            //document.querySelector('#red').addEventListener('click', function()
-            //{
-            //    red.style.backgroundColor = 'red';
-            //});
+<p>Click the button to see line-breaks in a confirm box.</p>
 
-            //document.querySelector('#green').addEventListener('click', function() {
-                green.style.backgroundColor = 'green';
-            //});
+<button onclick="myFunction()">Try it</button>
 
-            //document.querySelector('#blue').addEventListener('click', function() {
-            //    blue.style.backgroundColor = 'blue';
-            //});
+<p id="demo"></p>
 
-            //document.querySelector('#body').addEventListener('click', function() {
-            //    body.style.backgroundColor = 'grey';
-            //});
+<script>
+function myFunction() {
+  let text = "Press a button!\nEither OK or Cancel.";
+  if (confirm(text) == true) {
+    text = "You pressed OK!";
+  } else {
+    text = "You canceled!";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
 
-            function clicked(e)
-        {
-            if(!confirm('Are you sure?')) {
-                e.preventDefault();
-            }
-        }
-
-        </script>
-    </body>
+</body>
 </html>
