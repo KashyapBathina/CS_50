@@ -10,6 +10,11 @@
 
 <p id="demo"></p>
 
+<p id="accept-favor">
+    <a title="Accept this Favor" href="?wp_accept_favor=<?php comment_ID(); ?>"onclick="return confirm('Are you sure you would like to accept this reply as your favor?');"
+    >Accept this Favor</a>
+</p>
+
 <script>
 function myFunction() {
   let text = "Press a button!\nEither OK or Cancel.";
