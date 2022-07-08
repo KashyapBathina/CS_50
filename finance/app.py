@@ -193,6 +193,9 @@ def register():
         if password != confirmation:
             return apology("passwords must match", 403)
 
+        if password != confirmation:
+            return apology("passwords must match", 403)
+
         if username in all_usernames:
             return apology("username already in use", 403)
 
