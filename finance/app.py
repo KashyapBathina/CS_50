@@ -258,7 +258,7 @@ def add_cash():
         return redirect("/")
 
     else:
-        return render_template("add_cash.html")
+        return render_template("add_cash.html", )
 
 
 
