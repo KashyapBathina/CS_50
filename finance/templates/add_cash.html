@@ -1,23 +1,21 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    Add_Cash
+    Add Cash
 {% endblock %}
 
 {% block main %}
-
-    <form action="/add_cash" method="post">
-        <div class="form-group">
-            <select required name="symbol" class="form-select form-control" aria-label="Default select">
-              <option value=""> Available stocks </option>
-
-              {% for symbol in owns %}
-              <option value={{symbol}}> {{symbol}} </option>
-              {% endfor %}
-            </select>
-            <input required class="form-control" style='width: 120px' name="shares" placeholder="# shares" type="number" min="1">
-        </div>
-        <button style='width: 200px' class="form-group btn btn-info" type="submit">Confirm Purchase</button>
-</form>
-
+    <form action="{{ url_for('buy') }}" method="post">
+        <fieldset>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="credit_card" placeholder="Credit Card Number" type="number"/>
+            </div>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="money" placeholder="Amount of Money" type="number"/>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-default" type="submit">Buy</button>
+            </div>
+        </fieldset>
+    </form>
 {% endblock %}
