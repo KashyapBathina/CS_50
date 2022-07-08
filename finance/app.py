@@ -69,15 +69,15 @@ def buy():
 
     if request.method == "POST":
         if (not request.form.get("stock")) or (not request.form.get("shares")):
-            return apology("must provide stock symbol and number of shares")
+            return apology("must provide stock symbol and number of shares", 403)
 
         if int(request.form.get("shares")) <= 0:
-            return apology("must provide valid number of shares")
+            return apology("must provide valid number of shares", 403)
 
         quote = lookup(request.form.get("stock"))
 
         if quote == None:
-            return apology("Stock symbol not valid, please try again")
+            return apology("stock symbol not valid, please try again")
 
         cost = int(request.form.get("shares")) * quote['price']
 
@@ -247,11 +247,11 @@ def add_cash():
     """Add money"""
     if request.method == "POST":
 
-        if request.form.get("credit_card") != 4806013822:
-            return apology("This is an invalid credit card number")
+        if int(request.form.get("credit_card")) != 4806013822:
+            return apology("this is an invalid credit card number", 403)
 
-        if request.form.get("money") > 999:
-            return apology("Your card declined")
+        if int(request.form.get("money")) > 999:
+            return apology("your card declined", 403)
 
         db.execute("UPDATE users SET cash = cash + ? WHERE id = ?", request.form.get("money"), id=session["user_id"]);
 
