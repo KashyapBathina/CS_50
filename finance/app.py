@@ -169,7 +169,7 @@ def quote():
         if not quote:
             return apology("Either the stock does not exist or you have provided the incorrect symbol", 403)
 
-        return render_template("quoted.html", quote=quote)
+        return render_template("quoted.html", name = quote["name"], price = usd(quote["price"]), symbol = quote["symbol"])
 
     else:
         return render_template("quote.html")
