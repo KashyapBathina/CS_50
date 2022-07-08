@@ -255,7 +255,7 @@ def add_cash():
         if int(request.form.get("money")) > int(999):
             return apology("your card declined", 403)
 
-        db.execute("UPDATE users SET cash = cash + ? WHERE id = ?", request.form.get("money"), id=session["user_id"]);
+        db.execute("UPDATE users SET cash = cash + ? WHERE id = ?", request.form.get("money"), session["user_id"]);
 
         return redirect("/")
 
@@ -273,7 +273,7 @@ def own_shares():
     owns = {}
     query = db.execute("SELECT symbol, shares FROM orders WHERE user_id = ?", session["user_id"])
     for q in query:
-        symbol, shares = q["sqymbol"], q["shares"]
+        symbol, shares = q["symbol"], q["shares"]
         owns[symbol] = owns.setdefault(symbol, 0) + shares
     # filter zero-share stocks
     owns = {k: v for k, v in owns.items() if v != 0}
