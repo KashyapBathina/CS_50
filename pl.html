@@ -9,6 +9,8 @@
         <button id="green">G</button>
         <button id="blue">B</button>
         <button id="body">Body</button>
+        <button class="btn btn-default" type="return confirm('Are you sure?')">Buy</button>
+
         <script>
 
             document.querySelector('#red').addEventListener('click', function()
@@ -28,6 +30,12 @@
                 body.style.backgroundColor = 'grey';
             });
 
+            function clicked(e)
+        {
+            if(!confirm('Are you sure?')) {
+                e.preventDefault();
+            }
+        }
         </script>
     </body>
 </html>
