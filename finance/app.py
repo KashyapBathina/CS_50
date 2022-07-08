@@ -1,3 +1,6 @@
+# API KEY
+# export API_KEY=pk_63633ff467594e1c8e6823dee78a46a2
+
 import os
 from datetime import datetime, timezone
 from cs50 import SQL
