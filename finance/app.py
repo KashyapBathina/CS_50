@@ -247,12 +247,10 @@ def add_cash():
     """Add money"""
     if request.method == "POST":
 
-        if not(request.form.get("credit
-
-        if int(request.form.get("credit_card")) != 4806013822:
+        if request.form.get("credit_card")) != 4806013822:
             return apology("this is an invalid credit card number", 403)
 
-        if int(request.form.get("money")) > 999:
+        if int(request.form.get("money")) > int(999):
             return apology("your card declined", 403)
 
         db.execute("UPDATE users SET cash = cash + ? WHERE id = ?", request.form.get("money"), id=session["user_id"]);
