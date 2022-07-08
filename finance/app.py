@@ -218,7 +218,10 @@ def sell():
 
         db.execute("UPDATE users SET cash = ? WHERE id = ?", remaining, session["user_id"])
 
-        db.execute("INSERT INTO orders (user_id, symbol, shares, price, timestamp) VALUES (?, ?, ?, ?, ?)", session["user_id"], request.form.get("stock"), request.form.get("shares"), quote["price"], time_now())
+        db.execute("INSERT INTO orders (user_id, symbol, shares, price, timestamp) VALUES (?, ?, ?, ?, ?)",
+        session["user_id"], request.form.get("stock"), request.form.get("shares"), quote["price"], time_now())
+
+        return redirect("/")
 
     else:
         return render_template("sell.html", owns = owns.keys())
@@ -236,6 +239,8 @@ def add_cash():
             return apology("Your card declined", 403)
 
         db.execute("UPDATE users SET cash = cash + ? WHERE id = ?", request.form.get("money"), id=session["user_id"]);
+
+        return redirect("/")
 
     else:
         return render_template("add_cash.html")
