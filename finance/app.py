@@ -221,7 +221,7 @@ def sell():
             return apology("must provide stock symbol or/and valid number of shares")
 
         if owns[symbol] < int(request.form.get("shares")):
-            return apology("There cannot sell more shares than you own", 403)
+            return apology("You cannot sell more shares than you own", 403)
 
         cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]['cash']
 
