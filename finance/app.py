@@ -271,7 +271,7 @@ def own_shares():
     owns = {}
     query = db.execute("SELECT symbol, shares FROM orders WHERE user_id = ?", session["user_id"])
     for q in query:
-        symbol, shares = q["symbol"], q["shares"]
+        symbol, shares = q["sqymbol"], q["shares"]
         owns[symbol] = owns.setdefault(symbol, 0) + shares
     # filter zero-share stocks
     owns = {k: v for k, v in owns.items() if v != 0}
