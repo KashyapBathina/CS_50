@@ -6,7 +6,7 @@
 
 {% block main %}
 
-    <table style='margin-top: 30px' class="table table-striped table-dark">
+    <table style='margin-top: 30px' class="table table-striped">
       <thead>
         <tr>
           <th scope="col"> Symbol </th>
@@ -27,7 +27,7 @@
           <td>  {{ values[3] }}  </td>
         </tr>
         {% endfor %}
-        
+
         <tr class='bg-success'>
             <th scope='row' colspan='4'> Remaining Cash </th>
             <td> {{cash}} </td>
