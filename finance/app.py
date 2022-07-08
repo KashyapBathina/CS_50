@@ -205,6 +205,35 @@ def register():
 
         return redirect("/")
 
+
+        # ensure username was submitted
+        if not request.form.get("username"):
+            return apology("must provide username")
+
+        # ensure password and password confirmation were submitted
+        elif not request.form.get("password") or not request.form.get("password_confirm"):
+            return apology("must provide password")
+
+        # ensure password and password confirmation match
+        elif request.form.get("password") != request.form.get("password_confirm"):
+            return apology("password and password confirmation must match")
+
+        # hash password
+        hash = pwd_context.hash(request.form.get("password"))
+
+        # add user to database
+        result = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", request.form.get("username"), hash)
+
+        # ensure username is unique
+        if not result:
+            return apology("username is already registered")
+
+        # remember which user has logged in
+        session["user_id"] = result
+
+        # redirect user to home page
+        return redirect(url_for("index"))
+
     else:
         return render_template("register.html")
 
