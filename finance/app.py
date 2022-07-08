@@ -247,6 +247,8 @@ def add_cash():
     """Add money"""
     if request.method == "POST":
 
+        if not(request.form.get("credit
+
         if int(request.form.get("credit_card")) != 4806013822:
             return apology("this is an invalid credit card number", 403)
 
