@@ -6,7 +6,6 @@
 
 <p>Click the button to see line-breaks in a confirm box.</p>
 
-<button onclick="myFunction()">Try it</button>
 
 <p id="demo"></p>
 
@@ -16,15 +15,12 @@
 </p>
 
 <script>
-function myFunction() {
-  let text = "Press a button!\nEither OK or Cancel.";
   if (confirm(text) == true) {
-    text = "You pressed OK!";
-  } else {
-    text = "You canceled!";
+    document.body.style.backgroundColor = "green"
   }
-  document.getElementById("demo").innerHTML = text;
-}
+  else {
+    document.body.style.backgroundColor = "white"
+  }
 </script>
 
 </body>
