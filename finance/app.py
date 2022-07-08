@@ -86,6 +86,8 @@ def buy():
         db.execute("INSERT INTO orders (user_id, symbol, shares, price, timestamp) VALUES (?, ?, ?, ?, ?)",
         session["user_id"], quote["symbol"], quote["shares"], quote["price"], time_now())
 
+        return redirect("/")
+
     else:
         return render_template("buy.html")
 
