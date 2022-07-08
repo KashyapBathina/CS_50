@@ -30,6 +30,7 @@ if not os.environ.get("API_KEY"):
     raise RuntimeError("API_KEY not set")
 
 
+
 @app.after_request
 def after_request(response):
     """Ensure responses aren't cached"""
@@ -37,6 +38,7 @@ def after_request(response):
     response.headers["Expires"] = 0
     response.headers["Pragma"] = "no-cache"
     return response
+
 
 
 @app.route("/")
@@ -91,6 +93,9 @@ def buy():
     else:
         return render_template("buy.html")
 
+
+
+
 @app.route("/history")
 @login_required
 def history():
@@ -102,6 +107,7 @@ def history():
         return apology("You have no transactions recorded")
 
     return render_template("history.html", rows = rows)
+
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -140,6 +146,7 @@ def login():
         return render_template("login.html")
 
 
+
 @app.route("/logout")
 def logout():
     """Log user out"""
@@ -149,6 +156,7 @@ def logout():
 
     # Redirect user to login form
     return redirect("/")
+
 
 
 @app.route("/quote", methods=["GET", "POST"])
@@ -165,6 +173,7 @@ def quote():
 
     else:
         return render_template("quote.html")
+
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -196,6 +205,8 @@ def register():
     else:
         return render_template("register.html")
 
+
+
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
 def sell():
@@ -226,6 +237,8 @@ def sell():
     else:
         return render_template("sell.html", owns = owns.keys())
 
+
+
 @app.route("/add_cash", methods=["GET", "POST"])
 @login_required
 def add_cash():
@@ -244,6 +257,8 @@ def add_cash():
 
     else:
         return render_template("add_cash.html")
+
+
 
 def time_now():
     ## Get current time
