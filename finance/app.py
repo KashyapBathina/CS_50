@@ -224,12 +224,12 @@ def sell():
 
         quote = lookup(request.form.get("stock"))
 
-        remaining = cash + quote["price"] * request.form.get("shares")
+        remaining = cash + quote["price"] * int(request.form.get("shares"))
 
         db.execute("UPDATE users SET cash = ? WHERE id = ?", remaining, session["user_id"])
 
         db.execute("INSERT INTO orders (user_id, symbol, shares, price, timestamp) VALUES (?, ?, ?, ?, ?)",
-        session["user_id"], request.form.get("stock"), request.form.get("shares"), quote["price"], time_now())
+        session["user_id"], request.form.get("stock"), int(request.form.get("shares")), quote["price"], time_now())
 
         return redirect("/")
 
