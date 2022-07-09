@@ -222,7 +222,7 @@ def sell():
 
         cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]['cash']
 
-        quote = lookup(request.form.get("stock"))
+        quote = lookup(request.form.get("symbol"))
 
         remaining = cash + quote["price"] * int(request.form.get("shares"))
 
