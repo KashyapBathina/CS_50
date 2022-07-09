@@ -216,7 +216,7 @@ def sell():
     owns = own_shares()
 
     if request.method == "POST":
-        if not request.form.get("symbol") or not request.form.get("shares"):
+        if not (request.form.get("symbol")) or not (request.form.get("shares")):
             return apology("Must provide valid symbol and # of shares", 403)
 
         if owns[request.form.get("symbol")] < int(request.form.get("shares")):
