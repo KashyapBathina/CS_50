@@ -216,11 +216,6 @@ def sell():
     owns = own_shares()
 
     if request.method == "POST":
-        if (not request.form.get("symbol")) or (not request.form.get("shares")):
-            return apology("must fill out all fields")
-
-        if (int(request.form.get("shares"))) <= 0:
-            return apology("must provide valid number of shares")
 
         if owns[request.form.get("symbol")] < int(request.form.get("shares")):
             return apology("You cannot sell more shares than you own", 403)
