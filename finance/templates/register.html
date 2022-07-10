@@ -6,6 +6,13 @@
 
 {% block main %}
     <form action="/register" method="post">
+        <div class="form-group">
+            <select name="symbol" class="form-select form-control" aria-label="Default select">
+              <option value = "student"> Student </option>
+              <option value = "teacher"> Teacher </option>
+            </select>
+            <input class="form-control" style='width: 120px' name="type" placeholder="Student or Teacher" type="number" min="1">
+        </div>
         <div class="mb-3">
             <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
         </div>
