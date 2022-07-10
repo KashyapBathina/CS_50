@@ -113,7 +113,7 @@ def register():
         return render_template("register.html")
 
 
-@app.route("/add_cash", methods=["GET", "POST"])
+@app.route("/grades", methods=["GET", "POST"])
 @login_required
 def blank():
     if request.method == "POST":
