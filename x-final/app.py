@@ -35,7 +35,7 @@ def after_request(response):
 @app.route("/")
 @login_required
 def index():
-    
+
 
 
 @app.route("/login", methods=["GET", "POST"])
