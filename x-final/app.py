@@ -107,7 +107,7 @@ def register():
         if len(db.execute('SELECT username FROM users WHERE username = ?', username)) > 0:
             return apology("username already in use", 400)
 
-        
+
 
         result = db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, generate_password_hash(password))
 
@@ -123,7 +123,7 @@ def register():
 @login_required
 def blank():
     if request.method == "POST":
-
+        # send message in email once updated
     else:
 
 
