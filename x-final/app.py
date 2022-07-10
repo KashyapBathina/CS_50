@@ -35,7 +35,11 @@ def after_request(response):
 @app.route("/")
 @login_required
 def index():
+    if request.method == "POST":
+        return apology("hello, world")
 
+    else:
+        return apology("hello, world")
 
 
 @app.route("/login", methods=["GET", "POST"])
