@@ -127,6 +127,10 @@ def register():
 @app.route("/add_cash", methods=["GET", "POST"])
 @login_required
 def blank():
+    if request.method == "POST":
+
+    else:
+        
 
 
 def time_now():
