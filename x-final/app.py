@@ -94,9 +94,10 @@ def register():
     """Register user"""
 
     if request.method == "POST":
-        username = request.form.get("username")
+        email = request.form.get("email")
         password = request.form.get("password")
         confirmation = request.form.get("confirmation")
+
 
         if not username or not password or not confirmation:
             return apology("must fill in all fields", 400)
@@ -104,12 +105,12 @@ def register():
         elif password != confirmation:
             return apology("passwords must match", 400)
 
-        if len(db.execute('SELECT username FROM users WHERE username = ?', username)) > 0:
-            return apology("username already in use", 400)
+        if len(db.execute('SELECT email FROM users WHERE email = ?', email)) > 0:
+            return apology("email already in use", 400)
 
 
 
-        result = db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, generate_password_hash(password))
+        result = db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", email, generate_password_hash(password))
 
         session["user_id"] = result
 
