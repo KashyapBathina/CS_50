@@ -52,7 +52,7 @@ def login():
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
 
-        # Ensure username was submitted
+        # Ensure email was submitted
         if not request.form.get("email"):
             return apology("must provide email adress", 403)
 
@@ -60,10 +60,10 @@ def login():
         elif not request.form.get("password"):
             return apology("must provide password", 403)
 
-        # Query database for username
+        # Query database for email
         rows = db.execute("SELECT * FROM users WHERE email = ?", request.form.get("email"))
 
-        # Ensure username exists and password is correct
+        # Ensure email exists and password is correct
         if len(rows) != 1 or not check_password_hash(rows[0]["hash"], request.form.get("password")):
             return apology("invalid email and/or password", 403)
 
@@ -102,7 +102,7 @@ def register():
         first = request.form.get("first")
         last = request.form.get("last")
 
-        if not username or not password or not confirmation or not type or not school or not first or not last:
+        if not email or not password or not confirmation or not type or not school or not first or not last:
             return apology("must fill in all fields", 400)
 
         elif password != confirmation:
