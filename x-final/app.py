@@ -99,8 +99,10 @@ def register():
         confirmation = request.form.get("confirmation")
         type = request.form.get("type")
         school = request.form.get("school")
+        first = request.form.get("first")
+        last = request.form.get("last")
 
-        if not username or not password or not confirmation or not type or not school:
+        if not username or not password or not confirmation or not type or not school or not first or not last:
             return apology("must fill in all fields", 400)
 
         elif password != confirmation:
@@ -109,6 +111,7 @@ def register():
         if len(db.execute('SELECT email FROM users WHERE email = ?', email)) > 0:
             return apology("email already in use", 400)
 
+        
 
 
         result = db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", email, generate_password_hash(password))
