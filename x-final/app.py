@@ -39,7 +39,7 @@ def index():
         return apology("hello, world")
 
     else:
-        return apology("hello, world")
+        return apology("hello, kashyap")
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -124,8 +124,9 @@ def register():
 def blank():
     if request.method == "POST":
         # send message in email once updated
+        return apology("hello, world")
     else:
-
+        return apology("hello, kashyap")
 
 
 def time_now():
