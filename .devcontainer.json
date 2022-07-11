@@ -11,7 +11,7 @@
     "tomoki1207.pdf", 
     "vsls-contrib.gitdoc"
   ], 
-  "image": "ghcr.io/cs50/codespace:2e70f9722edaaa2b74bb6486ad092bec40713836", 
+  "image": "ghcr.io/cs50/codespace:9e802adf69dcc35b84ff7f71d4dd76962bccefe3", 
   "postCreateCommand": "/opt/cs50/bin/postCreateCommand", 
   "settings": {
     "C_Cpp.autocomplete": "Disabled", 
@@ -33,7 +33,7 @@
     "editor.parameterHints.enabled": false, 
     "editor.quickSuggestions": false, 
     "editor.renderIndentGuides": false, 
-    "editor.renderWhitespace": "boundary", 
+    "editor.renderWhitespace": "selection", 
     "editor.selectionHighlight": false, 
     "editor.semanticTokenColorCustomizations": {
       "[Default Dark+]": {
