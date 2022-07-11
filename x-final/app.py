@@ -111,11 +111,11 @@ def register():
         if len(db.execute('SELECT email FROM users WHERE email = ?', email)) > 0:
             return apology("email already in use", 400)
 
-        
 
 
 
-        result = db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", email, generate_password_hash(password))
+
+        result = db.execute("INSERT INTO users (email, hash, type, school, first, last) VALUES(?, ?)", email, generate_password_hash(password))
 
         session["user_id"] = result
 
