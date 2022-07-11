@@ -97,7 +97,7 @@ def register():
         email = request.form.get("email")
         password = request.form.get("password")
         confirmation = request.form.get("confirmation")
-
+        type = request.form.get("type")
 
         if not username or not password or not confirmation:
             return apology("must fill in all fields", 400)
