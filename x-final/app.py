@@ -114,6 +114,7 @@ def register():
         
 
 
+
         result = db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", email, generate_password_hash(password))
 
         session["user_id"] = result
