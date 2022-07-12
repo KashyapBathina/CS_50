@@ -2,6 +2,8 @@ from trycourier import Courier
 
 client = Courier(auth_token="Courier_Authentication_Token")
 
+
+
 response = client.send(
     event="your-event-id",
     recipient="your-recipient-id",
