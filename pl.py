@@ -11,3 +11,7 @@ email = input("what is your email adress: ")
 hash = random.getrandbits(128)
 print("hash value: %032x" % hash)
 
+“data”: {
+    “name”: {name}
+    "hash": {"", }
+    }
