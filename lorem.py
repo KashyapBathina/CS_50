@@ -20,6 +20,7 @@ resp = client.send_message(
       "name": "{name}",
       "code": "{code}",
     },
+    "template": "2VC65XG43QM5K5PJEV05YC46NCM9"
   }
 )
 print("done")
