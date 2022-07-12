@@ -11,15 +11,15 @@ code = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in ra
 print(code)
 
 
-response = client.send(
-    event="Registration",
-    recipient="{email}",
-    profile={
-        "recipient": "{email}",
+resp = client.send_message(
+  message={
+    "to": {
+      "email": "{email}",
     },
-    data={
-        "name": "hello",
-        "code": "hello",
+    "data": {
+      "name": "{name}",
+      "code": "{code}",
     },
+  }
 )
 print("done")
