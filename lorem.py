@@ -6,7 +6,7 @@ client = Courier(auth_token="Courier_Authentication_Token")
 
 name = input("name: ")
 email = input("email: ")
-code = .join(secrets.choice(string.ascii_uppercase + string.ascii_lowercase) for i in range(7))
+code = ''.join(random.choice(letters) for i in range(10))
 
 
 response = client.send(
