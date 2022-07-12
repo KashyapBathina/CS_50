@@ -14,7 +14,7 @@ print(code)
 resp = client.send_message(
   message={
     "to": {
-      "email": "{email}",
+      "email": "kbathina05@gmail.com",
     },
     "data": {
       "name": "{name}",
