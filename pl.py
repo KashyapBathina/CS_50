@@ -13,5 +13,5 @@ print("hash value: %032x" % hash)
 
 “data”: {
     “name”: {name}
-    "hash": {"%032x", %hash }
+    "code": {"%032x", %hash }
     }
