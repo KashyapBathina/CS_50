@@ -27,3 +27,32 @@ main img
     /* Constrain images on small screens */
     max-width: 100%;
 }
+
+h1{
+    padding: 50px 0px;
+    color: green;
+}
+
+.center{
+    text-align: center;
+}
+
+.large{
+    font-size: large;
+}
+
+.medium{
+    font-size: medium;
+}
+
+.small{
+    font-size: small;
+}
+
+.lgreen{
+    color: #74c47c;
+}
+
+#container{
+    padding:10px 10px;
+}

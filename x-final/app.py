@@ -6,6 +6,40 @@ from flask_session import Session
 from tempfile import mkdtemp
 from werkzeug.security import check_password_hash, generate_password_hash
 from helpers import apology, login_required
+import re
+import random
+import smtplib
+from email.mime.text import MIMEText
+from email.message import EmailMessage
+from email.headerregistry import Address
+from email.utils import make_msgid
+
+
+
+
+
+
+# automatically inputs students into classes
+# sends email to students once gradebook is updated
+# forgot password email confirmation
+# sends email with code once registered
+# hmsdjsdrkcwxfwaw
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # Configure application
@@ -32,14 +66,9 @@ def after_request(response):
     return response
 
 
-@app.route("/")
-@login_required
-def index():
-    if request.method == "POST":
-        return apology("hello, world")
-
-    else:
-        return apology("hello, kashyap")
+@app.route("/", methods=["GET"])
+def homepage():
+    return redirect("homepage.html")
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -71,7 +100,7 @@ def login():
         session["user_id"] = rows[0]["id"]
 
         # Redirect user to home page
-        return redirect("/")
+        return redirect("index.html")
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
@@ -86,7 +115,7 @@ def logout():
     session.clear()
 
     # Redirect user to login form
-    return redirect("/")
+    return redirect("/login.html")
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -97,13 +126,22 @@ def register():
         email = request.form.get("email")
         password = request.form.get("password")
         confirmation = request.form.get("confirmation")
-        type = request.form.get("type")
-        school = request.form.get("school")
         first = request.form.get("first")
         last = request.form.get("last")
+        variety = request.form.get("type")
+        school = request.form.get("school")
+        role = request.form.get("role")
+        organization = request.form.get("organization")
+        number = request.form.get("number")
 
-        if not email or not password or not confirmation or not type or not school or not first or not last:
+        if not email or not password or not confirmation or not type or not school or not first or not last or not variety or not school or not role or not organization or not number:
             return apology("must fill in all fields", 400)
+
+        if not re.match(r"^[A-Za-z0-9\.\+_-]+@[A-Za-z0-9\._-]+\.[a-zA-Z]*$", email):
+            return apology("must be a valid email address", 400)
+
+        if not re.match(r"/^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/", number):
+            return apology("must be a valid phone number", 400)
 
         elif password != confirmation:
             return apology("passwords must match", 400)
@@ -111,19 +149,41 @@ def register():
         if len(db.execute('SELECT email FROM users WHERE email = ?', email)) > 0:
             return apology("email already in use", 400)
 
+        hash = random.getrandbits(128)
+        print("hash value: %032x" % hash)
+
+        msg = EmailMessage()
+        msg['Subject'] = "Ayons asperges pour le déjeuner"
+        msg['From'] = Address("darkmoonemail21@gmail.com")
+        msg['To'] = Address({email})
+        msg.set_content(f"""\
+        Hello!
+
+        Here is your code: {hash}
+
+        http://www.yummly.com/recipe/Roasted-Asparagus-Epicurious-203718
+
+        --Pepé
+        """)
+
+        s = smtplib.SMTP('localhost')
+        s.send_message(msg)
+        s.quit()
 
 
-
-
-        result = db.execute("INSERT INTO users (email, hash, type, school, first, last) VALUES(?, ?)", email, generate_password_hash(password))
-
-        session["user_id"] = result
-
-        return redirect("/")
+        return redirect("verification.html", email=email, password=password, first=first, last=last, variety=variety, school=school, role=role, organzization=organization, number=number)
 
     else:
         return render_template("register.html")
 
+
+@app.route("/verification", methods=["GET", "POST"])
+def verification():
+    if request.method == "POST":
+        return apology("hello", 403)
+
+    else:
+        return render_template("verification.html")
 
 @app.route("/grades", methods=["GET", "POST"])
 @login_required

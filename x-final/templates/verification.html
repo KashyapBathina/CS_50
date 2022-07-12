@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Verification
+{% endblock %}
+
+{% block main %}
+    <div id="container">
+        <h1 class="center">A Verification Code Has Been Sent To Your Email To Verify Your Identity</h1>
+
+        <div class="center">
+            Please paste your code below
+        </div>
+
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="code" name="code" placeholder="Code" type="text">
+        </div>
+
+        <div>
+            <div class="medium">Below is your submission</div>
+            <div></div>
+        </div>
+    </div>
+{% endblock %}
+
+

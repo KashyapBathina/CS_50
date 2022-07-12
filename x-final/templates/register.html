@@ -6,12 +6,13 @@
 
 {% block main %}
     <form action="/register" method="post">
+        <div>Account Type</div>
         <div class="mb-3">
-            <select name="type" class="form-select form-control" aria-label="Default select">
-                <option value="">""</option>
-                <option id="teacher" value="teacher"> Teacher </option>
-                <option id="student" value="student"> Student </option>
-                <option id="gaurdian" value="parent"> Gaurdian/Evaluator </option>
+            <select name="type" id="person" class="form-select form-control" aria-label="Default select" onchange="myFunction()">
+                <option id="none" value ="1"> --select--</option>
+                <option id="student" value="2"> Student </option>
+                <option id="teacher" value="3"> Teacher </option>
+                <option id="gaurdian" value="4"> Gaurdian/Evaluator </option>
             </select>
         </div>
         <div class="mb-3">
@@ -24,10 +25,24 @@
             <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="last" name="last" placeholder="Last Name" type="text">
         </div>
         <div class="mb-3">
-            <input class="form-control mx-auto w-auto" id="school" name="school" placeholder="School" type="text">
+            <input class="blocked form-control mx-auto w-auto" id="school" name="school" placeholder="School" type="text" style="display:none">
         </div>
         <div class="mb-3">
-            <input class="form-control mx-auto w-auto" id="role" name="role" placeholder="Job Title/Role" type="text">
+            <input class="blocked form-control mx-auto w-auto" id="role" name="role" placeholder="Job Title/Role" type="text" style="display:none">
+        </div>
+        <div class="mb-3">
+            <select name="type" name="organization" id="type" class="form-select form-control" aria-label="Default select">
+                <option id="none" value ="1"> --select--</option>
+                <option id="Corporate" value="Corporate"> Corporate Education </option>
+                <option id="Further" value="Further"> Further Education </option>
+                <option id="Government" value="Government"> Government </option>
+                <option id="Higher" value="Higher"> Higher Ed </option>
+                <option id="K12" value="K12"> K12 </option>
+                <option id="Training" value="Training"> RTO/Training </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <input class="blocked form-control mx-auto w-auto" id="number" name="number" placeholder="Phone Number" type="text" style="display:none">
         </div>
         <div class="mb-3">
             <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
@@ -35,13 +50,32 @@
         <div class="mb-3">
             <input class="form-control mx-auto w-auto" id="confirmation" name="confirmation" placeholder="Confirm Password" type="password">
         </div>
-        <button class="btn btn-primary" type="submit">Register</button>
+        <button class="btn btn-primary" type="submit" >Register</button>
     </form>
 {% endblock %}
 
+
+
+
+
 {% block javascript %}
-    function TestsFunction() {
-        var T = document.getElementById("TestsDiv");
-        T.style.display = "block";  // <-- Set it to block
-    }
-{% block javascript %}
+    <script>
+        function myFunction() {
+            var x = document.getElementById("type").value;
+            let elementsList = document.querySelectorAll(".blocked")
+            const elementsArray = [...elementsList];
+
+            if(x==="1" || x==='2' || x==="4"){
+                elementsArray.forEach(element => {
+                        element.style.display = "none";
+                    });
+            }
+            if(x==='3'){
+                elementsArray.forEach(element => {
+                        element.style.display = "block";
+                    });
+            }
+        }
+    </script>
+{% endblock %}
+
