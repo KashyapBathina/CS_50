@@ -14,11 +14,11 @@ print(code)
 resp = client.send_message(
   message={
     "to": {
-      "email": "kbathina05@gmail.com",
+      "email": {email},
     },
     "data": {
-      "name": "{name}",
-      "code": "{code}",
+      "name": {name},
+      "code": {code},
     },
     "template": "2VC65XG43QM5K5PJEV05YC46NCM9"
   }
