@@ -1,6 +1,6 @@
 from trycourier import Courier
 
-client = Courier(auth_token="pk_prod_ZN043V85VAM138K22DMK8G8Y2F8Y") 
+client = Courier(auth_token="pk_prod_ZN043V85VAM138K22DMK8G8Y2F8Y")
 
 resp = client.send(
     event="your-event-id",
@@ -13,7 +13,7 @@ resp = client.send(
       "world": "Python!"
     }
 )
-print(resp['messageId'])
+print("done")
 
 
 
