@@ -10,12 +10,11 @@ response = client.send(
     event="Registration",
     recipient="{email}",
     profile={
-        "email": "{email}",
-        "phone_number": "recipient_number"
+        "name": "{name}",
+        "name": "{hash}",
     },
     data={
         "Loredm Ipsum": "dolor sit amet"
     },
-    override={} #Pass the override here
 )
-print(response['messageId'])
+print("done")
