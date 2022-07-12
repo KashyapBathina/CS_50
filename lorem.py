@@ -2,7 +2,8 @@ from trycourier import Courier
 
 client = Courier(auth_token="Courier_Authentication_Token")
 
-input
+name = input("name: ")
+email = input("email: ")
 
 
 response = client.send(
