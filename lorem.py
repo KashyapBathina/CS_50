@@ -1,11 +1,12 @@
 from trycourier import Courier
-import strings
+import string
 import secrets
 
 client = Courier(auth_token="Courier_Authentication_Token")
 
 name = input("name: ")
 email = input("email: ")
+code = .join(secrets.choice(string.ascii_uppercase + string.ascii_lowercase) for i in range(7))
 
 
 response = client.send(
@@ -13,7 +14,7 @@ response = client.send(
     recipient="{email}",
     profile={
         "name": "{name}",
-        "name": "{hash}",
+        "name": "{code}",
     },
     data={
         "Loredm Ipsum": "dolor sit amet"
