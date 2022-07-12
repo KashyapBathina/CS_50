@@ -1,29 +1,14 @@
 from trycourier import Courier
-import random
 
+client = Courier(auth_token="pk_prod_ZN043V85VAM138K22DMK8G8Y2F8Y")
 
-name = input("what is your name: ")
-email = input("what is your email adress: ")
-
-
-hash = random.getrandbits(128)
-print("hash value: {hash}")
-
-client = Courier(auth_token="dk_prod_MAPAZZ24RRMQ7CGQ5VR7MX6051R8")
-
-response = client.send(
-
-    event="your-notification-id" #Your notification ID from Courier
-    recipient="your-recipient-id" #Usually your system's User ID
-    profile={
-        "email": "{email}" #The recipient’s email address
-    },
-    data={
-        "name": "{name}" #The message you wish to send
-        "code": "{hash}"
-    }
-
+resp = client.send(
+  event="courier-quickstart",
+  recipient="aman@courier.com",
+  data={
+    "favoriteAdjective": "awesomeness"
+  },
+  profile={
+    "email": "aman@courier.com"
+  }
 )
-
-
-print("done")
