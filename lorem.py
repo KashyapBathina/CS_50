@@ -2,7 +2,7 @@ from trycourier import Courier
 import string
 import random
 
-client = Courier(auth_token="pk_test_2DCGY04RX048K4P0ES7T2VCHQHCH")
+client = Courier(auth_token="dk_prod_MAPAZZ24RRMQ7CGQ5VR7MX6051R8")
 
 name = input("name: ")
 email = input("email: ")
