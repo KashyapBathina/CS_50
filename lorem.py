@@ -7,10 +7,10 @@ email = input("email: ")
 
 
 response = client.send(
-    event="your-event-id",
-    recipient="your-recipient-id",
+    event="Registration",
+    recipient="{email}",
     profile={
-        "email": "recipient_id",
+        "email": "{email}",
         "phone_number": "recipient_number"
     },
     data={
