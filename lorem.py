@@ -18,8 +18,8 @@ response = client.send(
         "recipient": "{email}",
     },
     data={
-        "name": "{name}",
-        "code": "{code}",
+        "name": "hello",
+        "code": "hello",
     },
 )
 print("done")
