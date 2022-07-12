@@ -8,11 +8,7 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from helpers import apology, login_required
 import re
 import random
-import smtplib
-from email.mime.text import MIMEText
-from email.message import EmailMessage
-from email.headerregistry import Address
-from email.utils import make_msgid
+
 
 
 
@@ -152,23 +148,18 @@ def register():
         hash = random.getrandbits(128)
         print("hash value: %032x" % hash)
 
-        msg = EmailMessage()
-        msg['Subject'] = "Ayons asperges pour le déjeuner"
-        msg['From'] = Address("darkmoonemail21@gmail.com")
-        msg['To'] = Address({email})
-        msg.set_content(f"""\
-        Hello!
 
-        Here is your code: {hash}
 
-        http://www.yummly.com/recipe/Roasted-Asparagus-Epicurious-203718
 
-        --Pepé
-        """)
 
-        s = smtplib.SMTP('localhost')
-        s.send_message(msg)
-        s.quit()
+
+
+
+
+
+
+
+
 
 
         return redirect("verification.html", email=email, password=password, first=first, last=last, variety=variety, school=school, role=role, organzization=organization, number=number)
