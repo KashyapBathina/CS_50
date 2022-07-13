@@ -5,10 +5,10 @@ import phonenumbers
 
 number = input("number: ")
 
+my_number = phonenumbers.parse(number)
 
-
-
-if not re.match(r"/^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/", number):
-    print("error")
-else:
+if (phonenumbers.is_possible_number(my_number)) == "True":
     print("good")
+
+else:
+    print("error")
