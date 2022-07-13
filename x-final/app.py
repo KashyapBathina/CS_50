@@ -129,7 +129,7 @@ def register():
         organization = request.form.get("organization")
         number = request.form.get("number")
 
-        logging.info(f'{variety}')
+        if variety == "teacher"
 
         if not email or not password or not confirmation or not variety or not school or not first or not last or not variety or not school or not role or not organization or not number:
             return apology("must fill in all fields", 400)
