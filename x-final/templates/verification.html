@@ -40,8 +40,8 @@
             {% else %}
                 <div>Name: {{ first }} {{ last }}</div>
                 <div>email: {{ email }}</div>
-                <div id="myInput">password: {{ password }}</div>
-                <input id="checkbox" type="checkbox" onclick="myFunction()">Show Password
+                <div id="security">password: ****** </div>
+                <input type="checkbox" onclick="myFunction()">Show Password
                 <div>organization: {{ organization }}</div>
             {% endif %}
         </div>
@@ -52,10 +52,11 @@
 {% block javascript %}
 <script>
     function myFunction() {
-        var x = document.getElementById("myInput");
-        if (x.type === "password") {
-        x.type = "text";
-        } else {
+        var x = document.getElementById("security");
+        if (x.innerHTML === "******") {
+            x.innerHTML = "password: {{password}}";
+        }
+        else {
         x.type = "password";
         }
     }
