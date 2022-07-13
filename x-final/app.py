@@ -135,7 +135,7 @@ def register():
 
         if str(variety) == "teacher":
             if not email or not password or not confirmation or not first or not last or not school or not role or not number:
-                return apology("must fill in all fields", 400)
+                return apology("teacher must fill in all fields", 400)
 
             if not re.match("^[\dA-Z]{3}-[\dA-Z]{3}-[\dA-Z]{4}$", number):
                 return apology("must be a valid phone number", 400)
@@ -143,7 +143,7 @@ def register():
 
         if str(variety) == "student" or str(variety) == "gaurdian":
             if not email or not password or not confirmation or not first or not last:
-                return apology("must fill in all fields", 400)
+                return apology("student must fill in all fields", 400)
 
 
         if not re.match(r"^[A-Za-z0-9\.\+_-]+@[A-Za-z0-9\._-]+\.[a-zA-Z]*$", email):
