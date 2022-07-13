@@ -1,13 +1,11 @@
-import phonenumbers
+import re
 
 
 
 number = input("number: ")
 
-my_number = phonenumbers.parse(number)
-
-if (phonenumbers.is_possible_number(my_number)) == "True":
-    print("good")
+if not re.match("^[\dA-Z]{3}-[\dA-Z]{3}-[\dA-Z]{4}$", number):
+    print("error")
 
 else:
-    print("error")
+    print("good")
