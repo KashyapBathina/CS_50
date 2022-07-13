@@ -32,21 +32,9 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbar">
-                    {% if session["user_id"] and variety = "Student" %}
+                    {% if session["user_id"] %}
                         <ul class="navbar-nav me-auto mt-2">
                             <li class="nav-item"><a class="nav-link" href="/index">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/lorem">Gradebook</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/lorem">Schedule</a></li>
-                        </ul>
-                        <ul class="navbar-nav ms-auto mt-2">
-                            <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
-                        </ul>
-                    {% elif session["user_id"] and variety = "Teacher"}
-                        <ul class="navbar-nav me-auto mt-2">
-                            <li class="nav-item"><a class="nav-link" href="/index">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/lorem">Gradebook</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/lorem">Schedule</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/lorem">Students</a></li>
                         </ul>
                         <ul class="navbar-nav ms-auto mt-2">
                             <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
