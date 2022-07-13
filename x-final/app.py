@@ -137,7 +137,7 @@ def register():
             if not email or not password or not confirmation or not first or not last or not school or not role or str(organization)=="none" or not number:
                 return apology("must fill in all fields", 400)
 
-            if not re.match(r"/^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/", number):
+            if not re.match("^[\dA-Z]{3}-[\dA-Z]{3}-[\dA-Z]{4}$", number):
                 return apology("must be a valid phone number", 400)
 
 
