@@ -26,6 +26,8 @@
                 <div>Name: {{ first }} {{ last }}</div>
                 <div>email: {{ email }}</div>
                 <div>password: {{ password }}</div>
+                <input type="password" value="FakePSW" id="myInput">
+                <input type="checkbox" onclick="myFunction()">Show Password
                 <div>organization: {{ organization }}</div>
                 <div>role: {{ role }}</div>
                 <div>school: {{ school }}</div>
@@ -36,6 +38,8 @@
                 <div>Name: {{ first }} {{ last }}</div>
                 <div>email: {{ email }}</div>
                 <div>password: {{ password }}</div>
+                <input type="password" value="FakePSW" id="myInput">
+                <input type="checkbox" onclick="myFunction()">Show Password
                 <div>organization: {{ organization }}</div>
             {% endif %}
         </div>
@@ -44,6 +48,15 @@
 
 
 {% block javascript %}
-
+<script>
+    function myFunction() {
+        var x = document.getElementById("myInput");
+        if (x.type === "password") {
+        x.type = "text";
+        } else {
+        x.type = "password";
+        }
+    }
+</script>
 {% endblock %}
 
