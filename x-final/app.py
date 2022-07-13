@@ -177,12 +177,6 @@ def verification():
     else:
         return render_template("verification.html")
 
-@app.route("/apology", methods=["POST"])
-def back():
-    if request.method == "POST":
-        back = request.form.get("back")
-        if back:
-            return redirect("{{ request.META.get('HTTP_REFERER') }}")
 
 @app.route("/grades", methods=["GET", "POST"])
 @login_required
