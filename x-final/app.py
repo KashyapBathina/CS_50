@@ -177,6 +177,10 @@ def verification():
     else:
         return render_template("verification.html")
 
+@app.route("/apology", methods=["POST"])
+def apology():
+    if request.method == "POST":
+        
 
 @app.route("/grades", methods=["GET", "POST"])
 @login_required
