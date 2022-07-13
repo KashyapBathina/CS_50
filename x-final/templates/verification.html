@@ -6,7 +6,9 @@
 
 {% block main %}
     <div id="container">
-        <h1 class="center">A Verification Code Has Been Sent To Your Email To Verify Your Identity</h1>
+        <h1 class="center">Hello, {{first}}</h1>
+
+        <h2 class="center">A Verification Code Has Been Sent To Your Email To Verify Your Identity</h2>
 
         <div class="center">
             Please paste your code below
@@ -19,10 +21,8 @@
         <button class="btn btn-primary" type="submit" >Submit</button>
 
         <div id="submission" style="background-color:#f7f3eb;">
-            <div class="medium">Below is your {{variety}} submission</div>
-            <div>Email: {{ email }}</div>
+            <div class="medium">Below is your submission</div>
             <div>Name: {{ first }} {{ last }}</div>
-            <div>Password: {{ password }}</div>
         </div>
     </div>
 {% endblock %}

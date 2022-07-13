@@ -172,7 +172,7 @@ def register():
         }
         )
 
-        return redirect("verification.html", email=email, password=password, first=first, last=last, variety=variety, school=school, role=role, organzization=organization, number=number, code=code)
+        return render_template("verification.html", first=first, last=last, password=password, variety=variety, role=role, organization=organization, school=school, email=email, number=number)
 
     else:
         return render_template("register.html")
