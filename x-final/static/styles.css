@@ -64,13 +64,11 @@ h1{
 }
 
 .hover-underline-animation {
-  display: inline-block;
   position: relative;
   color:#0087ca;
   text-align: center;
   display: block;
-    width: 100px;
-    margin: auto;
+  margin: auto;
 
 }
 
