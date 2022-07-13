@@ -34,6 +34,8 @@ import random
 
 
 
+
+
 # Configure application
 app = Flask(__name__)
 
@@ -126,21 +128,17 @@ def register():
         organization = request.form.get("organization")
         number = request.form.get("number")
 
-        if variety == "Teacher":
-            if not email or not password or not confirmation or not variety or not school or not first or not last or not variety or not school or not role or not organization or not number:
-                return apology("must fill in all fields", 400)
-
-            elif not re.match(r"/^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/", number):
-                return apology("must be a valid phone number", 400)
-
-        if variety == "Student" or "Gaurdian/Evaluator":
-            if not email or not password or not confirmation or not variety or role or not first or not last:
+        if not email or not password or not confirmation or not type or not school or not first or not last or not variety or not school or not role or not organization or not number:
+            return apology("must fill in all fields", 400)
 
         if not re.match(r"^[A-Za-z0-9\.\+_-]+@[A-Za-z0-9\._-]+\.[a-zA-Z]*$", email):
             return apology("must be a valid email address", 400)
 
-        if password != confirmation:
-                return apology("passwords must match", 400)
+        if not re.match(r"/^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/", number):
+            return apology("must be a valid phone number", 400)
+
+        elif password != confirmation:
+            return apology("passwords must match", 400)
 
         if len(db.execute('SELECT email FROM users WHERE email = ?', email)) > 0:
             return apology("email already in use", 400)
