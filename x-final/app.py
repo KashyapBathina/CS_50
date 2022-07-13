@@ -10,6 +10,7 @@ import re
 from trycourier import Courier
 import string
 import random
+import logging
 
 
 
@@ -128,6 +129,8 @@ def register():
         organization = request.form.get("organization")
         number = request.form.get("number")
 
+        logging.info(f'{variety}')
+
         if not email or not password or not confirmation or not variety or not school or not first or not last or not variety or not school or not role or not organization or not number:
             return apology("must fill in all fields", 400)
 
@@ -170,7 +173,7 @@ def register():
 def verification():
     if request.method == "POST":
         return apology("hello", 403)
-        
+
     else:
         return render_template("verification.html")
 
