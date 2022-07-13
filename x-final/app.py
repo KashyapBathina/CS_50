@@ -34,12 +34,6 @@ import random
 
 
 
-
-
-
-
-
-
 # Configure application
 app = Flask(__name__)
 
