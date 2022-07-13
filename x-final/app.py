@@ -7,6 +7,8 @@ from tempfile import mkdtemp
 from werkzeug.security import check_password_hash, generate_password_hash
 from helpers import apology, login_required
 import re
+from trycourier import Courier
+import string
 import random
 
 
@@ -145,24 +147,24 @@ def register():
         if len(db.execute('SELECT email FROM users WHERE email = ?', email)) > 0:
             return apology("email already in use", 400)
 
-        hash = random.getrandbits(128)
-        print("hash value: %032x" % hash)
+        client = Courier(auth_token="dk_prod_MAPAZZ24RRMQ7CGQ5VR7MX6051R8")
 
+        code = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(6))
 
+        resp = client.send_message(
+        message={
+            "to": {
+            "email": (email),
+            },
+            "data": {
+                "name": (first),
+                "code": (code),
+            },
+            "template": "2VC65XG43QM5K5PJEV05YC46NCM9"
+        }
+        )
 
-
-
-
-
-
-
-
-
-
-
-
-
-        return redirect("verification.html", email=email, password=password, first=first, last=last, variety=variety, school=school, role=role, organzization=organization, number=number)
+        return redirect("verification.html", email=email, password=password, first=first, last=last, variety=variety, school=school, role=role, organzization=organization, number=number, code=code)
 
     else:
         return render_template("register.html")
@@ -175,6 +177,7 @@ def verification():
 
     else:
         return render_template("verification.html")
+
 
 @app.route("/grades", methods=["GET", "POST"])
 @login_required
