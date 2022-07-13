@@ -134,7 +134,7 @@ def register():
 
 
         if str(variety) == "teacher":
-            if not email or not password or not confirmation or not first or not last or not school or not role or not organization or not number:
+            if not email or not password or not confirmation or not first or not last or not school or not role or not number:
                 return apology("must fill in all fields", 400)
 
             if not re.match("^[\dA-Z]{3}-[\dA-Z]{3}-[\dA-Z]{4}$", number):
@@ -142,7 +142,7 @@ def register():
 
 
         if str(variety) == "student" or str(variety) == "gaurdian":
-            if not email or not password or not confirmation or not first or not last or not organization:
+            if not email or not password or not confirmation or not first or not last:
                 return apology("must fill in all fields", 400)
 
 
