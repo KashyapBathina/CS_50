@@ -59,7 +59,7 @@
 
         <main class="container-fluid py-5 text-center">
             <img alt="{{ top }}" class="border img-fluid" src="http://memegen.link/custom/{{ top | urlencode }}/{{ bottom | urlencode }}.jpg?alt=https://i.imgur.com/CsCgN7Ll.png&width=400" title="{{ top }}">
-            <input type="submit" href="{{  }}" placeholder="Click to go back">
+            <input type="submit" href="{{ request.META.HTTP_REFERER }}" placeholder="Click to go back">
         </main>
 
         <footer class="mb-5 small text-center text-muted">
