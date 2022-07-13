@@ -30,8 +30,17 @@ body, html {
 }
 
 .bgimg-1:hover {
-  zoom: 150%;
-  transform: skew(25deg, 25deg);
+  animation: shimmy 3s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes shimmy {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(20px, 50px);
+  }
 }
 
 
