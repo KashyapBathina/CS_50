@@ -25,53 +25,106 @@
         </div>
 
 
+
+
+
+
         <table class="table">
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">Submitted Form</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                <td>Name:</td>
+                <td>{{first}} {{last}}</td>
               </tr>
               <tr>
                 <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
+                <td>Email:</td>
+                <td>{{email}}</td>
               </tr>
               <tr>
                 <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
+                <td>Password:</td>
+                <td><div id="security">******</div> <input type="checkbox" onclick="myFunction()">Show Password</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Role:</td>
+                <td>{{role}}</td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>School:</td>
+                <td>{{school}}</td>
+              </tr>
+              <tr>
+                <th scope="row">6</th>
+                <td>Organization:</td>
+                <td>{{organization}}</td>
+              </tr>
+              <tr>
+                <th scope="row">7</th>
+                <td>Number:</td>
+                <td>{{number}}</td>
               </tr>
             </tbody>
           </table>
+
+
+
+
+
 
         <div id="submission">
             <div class="medium" style="padding: 20px 20px">Below is your {{variety}} submission</div>
             {% if variety=="teacher" %}
                 <div>Name: {{ first }} {{ last }}</div>
                 <div>email: {{ email }}</div>
-                <div id="security">password: ****** </div>
+                password:<div id="security">******</div>
                 <input type="checkbox" onclick="myFunction()">Show Password
                 <div>organization: {{ organization }}</div>
                 <div>role: {{ role }}</div>
                 <div>school: {{ school }}</div>
-                <div>organization: {{ organization }}</div>
                 <div>number: {{ number }}</div>
 
             {% else %}
-                <div>Name: {{ first }} {{ last }}</div>
-                <div>email: {{ email }}</div>
-                password:<div id="security"> ****** </div>
-                <input type="checkbox" onclick="myFunction()">Show Password
-                <div>organization: {{ organization }}</div>
+            <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Name:</td>
+                <td>{{first}} {{last}}</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Email:</td>
+                <td>{{email}}</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Password:</td>
+                <td><div id="security">******</div> <input type="checkbox" onclick="myFunction()">Show Password</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Organization:</td>
+                <td>{{organization}}</td>
+              </tr>
+            </tbody>
+          </table>
             {% endif %}
         </div>
     </div>
