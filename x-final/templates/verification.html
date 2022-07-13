@@ -54,11 +54,11 @@
     function myFunction() {
         var password = JSON.parse('{{ password | tojson }}')
         var x = document.getElementById("security");
-        if (x.innerHTML === "******") {
-            x.innerHTML = password;
+        if (x.innerHTML === password) {
+            x.innerHTML = "******";
         }
         else {
-        x.innerHTML = "******";
+            x.innerHTML = password
         }
     }
 </script>
