@@ -22,7 +22,14 @@
 
         <div id="submission" style="background-color:#f7f3eb;">
             <div class="medium">Below is your submission</div>
-            <div>Name: {{ first }} {{ last }}</div>
+            {% if variety="teacher" %}
+                <div>Name: {{ first }} {{ last }}</div>
+                <div>email: {{ email }}</div>
+                
+            {% else %}
+                <div>Name: {{ first }} {{ last }}</div>
+                <div>email: {{ email }}</div>
+            {% endif %}
         </div>
     </div>
 {% endblock %}
