@@ -127,7 +127,7 @@ def register():
         role = request.form.get("role")
         organization = request.form.get("organization")
         number = request.form.get("number")
-
+        
         if not email or not password or not confirmation or not type or not school or not first or not last or not variety or not school or not role or not organization or not number:
             return apology("must fill in all fields", 400)
 
