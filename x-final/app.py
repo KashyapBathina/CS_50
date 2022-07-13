@@ -170,7 +170,7 @@ def register():
 def verification():
     if request.method == "POST":
         return apology("hello", 403)
-
+        
     else:
         return render_template("verification.html")
 
