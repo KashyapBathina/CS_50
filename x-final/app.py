@@ -136,11 +136,10 @@ def register():
         if variety == "Student" or "Gaurdian/Evaluator":
             if not email or not password or not confirmation or not variety or role or not first or not last:
 
-
         if not re.match(r"^[A-Za-z0-9\.\+_-]+@[A-Za-z0-9\._-]+\.[a-zA-Z]*$", email):
-                return apology("must be a valid email address", 400)
+            return apology("must be a valid email address", 400)
 
-        elif password != confirmation:
+        if password != confirmation:
                 return apology("passwords must match", 400)
 
         if len(db.execute('SELECT email FROM users WHERE email = ?', email)) > 0:
