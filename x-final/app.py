@@ -66,7 +66,7 @@ def after_request(response):
 
 @app.route("/", methods=["GET"])
 def homepage():
-    return redirect("homepage.html")
+    return render_template("homepage.html")
 
 
 @app.route("/login", methods=["GET", "POST"])
