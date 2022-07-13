@@ -40,7 +40,7 @@
             {% else %}
                 <div>Name: {{ first }} {{ last }}</div>
                 <div>email: {{ email }}</div>
-                <div id="security">password: ****** </div>
+                password:<div id="security"> ****** </div>
                 <input type="checkbox" onclick="myFunction()">Show Password
                 <div>organization: {{ organization }}</div>
             {% endif %}
@@ -52,13 +52,13 @@
 {% block javascript %}
 <script>
     function myFunction() {
-        var password = JSON.parse('{{ password | tojson }}');.
+        var password = JSON.parse('{{ password | tojson }}')
         var x = document.getElementById("security");
         if (x.innerHTML === "******") {
-            x.innerHTML = "password: (passoword)";
+            x.innerHTML = password;
         }
         else {
-        x.type = "password";
+        x.innerHTML = "******";
         }
     }
 </script>
