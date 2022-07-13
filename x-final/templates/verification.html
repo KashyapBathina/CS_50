@@ -11,7 +11,7 @@
         <h2 class="center lgreen">A Verification Code Has Been Sent To Your Email To Verify Your Identity</h2>
 
         <div style="padding: 20px 20px">
-            <div class="center" style="padding: 20px 20px">
+            <div class="center lgreen" style="padding: 20px 20px">
                 Please paste your code below
             </div>
 
@@ -29,52 +29,7 @@
 
 
 
-        <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Name:</td>
-                <td>{{first}} {{last}}</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Email:</td>
-                <td>{{email}}</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Password:</td>
-                <td><div id="security">******</div> <input type="checkbox" onclick="myFunction()">Show Password</td>
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-                <td>Role:</td>
-                <td>{{role}}</td>
-              </tr>
-              <tr>
-                <th scope="row">5</th>
-                <td>School:</td>
-                <td>{{school}}</td>
-              </tr>
-              <tr>
-                <th scope="row">6</th>
-                <td>Organization:</td>
-                <td>{{organization}}</td>
-              </tr>
-              <tr>
-                <th scope="row">7</th>
-                <td>Number:</td>
-                <td>{{number}}</td>
-              </tr>
-            </tbody>
-          </table>
+
 
 
 
@@ -82,16 +37,55 @@
 
 
         <div id="submission">
-            <div class="medium" style="padding: 20px 20px">Below is your {{variety}} submission</div>
+            <div class="medium lgreen" style="padding: 20px 20px">Below is your {{variety}} submission</div>
             {% if variety=="teacher" %}
-                <div>Name: {{ first }} {{ last }}</div>
-                <div>email: {{ email }}</div>
-                password:<div id="security">******</div>
-                <input type="checkbox" onclick="myFunction()">Show Password
-                <div>organization: {{ organization }}</div>
-                <div>role: {{ role }}</div>
-                <div>school: {{ school }}</div>
-                <div>number: {{ number }}</div>
+
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Name:</td>
+                    <td>{{first}} {{last}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Email:</td>
+                    <td>{{email}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Password:</td>
+                    <td><div id="security">******</div> <input type="checkbox" onclick="myFunction()">Show Password</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Role:</td>
+                    <td>{{role}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>School:</td>
+                    <td>{{school}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>Organization:</td>
+                    <td>{{organization}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>Number:</td>
+                    <td>{{number}}</td>
+                  </tr>
+                </tbody>
+              </table>
 
             {% else %}
             <table class="table">
