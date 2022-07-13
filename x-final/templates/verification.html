@@ -25,7 +25,7 @@
         </div>
 
         <div id="submission">
-            <div class="medium">Below is your {{variety}} submission</div>
+            <div class="medium" style="padding: 20px 20px">Below is your {{variety}} submission</div>
             {% if variety=="teacher" %}
                 <div>Name: {{ first }} {{ last }}</div>
                 <div>email: {{ email }}</div>
@@ -40,8 +40,7 @@
             {% else %}
                 <div>Name: {{ first }} {{ last }}</div>
                 <div>email: {{ email }}</div>
-                <div>password: {{ password }}</div>
-                <input type="password" value="{{password}}" id="myInput">
+                <div id="myInput">password: {{ password }}</div>
                 <input type="checkbox" onclick="myFunction()">Show Password
                 <div>organization: {{ organization }}</div>
             {% endif %}
