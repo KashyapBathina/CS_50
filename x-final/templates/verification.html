@@ -8,17 +8,21 @@
     <div id="container">
         <h1 class="center">Hello, {{first}}</h1>
 
-        <h2 class="center">A Verification Code Has Been Sent To Your Email To Verify Your Identity</h2>
+        <h2 class="center lgreen">A Verification Code Has Been Sent To Your Email To Verify Your Identity</h2>
 
-        <div class="center">
-            Please paste your code below
+        <div style="padding: 20px 20px">
+            <div class="center" style="padding: 20px 20px">
+                Please paste your code below
+            </div>
+
+            <div class="mb-3">
+                <input class="form-control mx-auto w-auto" id="code" name="code" placeholder="Code" type="text">
+            </div>
+
+            <div class="mb-3">
+                <button class="btn btn-primary" type="submit" >Submit</button>
+            </div>
         </div>
-
-        <div class="mb-3">
-            <input class="form-control mx-auto w-auto" id="code" name="code" placeholder="Code" type="text">
-        </div>
-
-        <button class="btn btn-primary" type="submit" >Submit</button>
 
         <div id="submission">
             <div class="medium">Below is your {{variety}} submission</div>
