@@ -1,15 +1,16 @@
 from trycourier import Courier
 
-client = Courier(auth_token="pk_prod_ZN043V85VAM138K22DMK8G8Y2F8Y")
+client = Courier(auth_token="Courier_Authentication_Token")
 
-resp = client.send(
-  event="courier-quickstart",
-  recipient="boonraj1@gmail.com",
-  data={
-    "favoriteAdjective": "awesomeness"
-  },
-  profile={
-    "email": "boonraj1@gmail.com"
-  }
+response = client.send(
+    event="your-notification-id" #Your notification ID from Courier
+    recipient="your-recipient-id" #Usually your system's User ID
+    profile={
+        "email": "user@example.com" #The recipient’s email address
+    },
+    data={
+        "Lorem Ipsum": "dolor sit amet" #The message you wish to send
+    }
 )
-print("done")
+
+print(response['messageId'])
