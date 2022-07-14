@@ -156,16 +156,16 @@ def register():
         client = Courier(auth_token="pk_prod_3VNJBYM54EM107NQ0ZZ62Y7CRY67")
 
         resp = client.send_message(
-        message={
-            "to": {
-            "email": "darkmooncs05@gmail.com",
-            },
-            "template": "C4P4331NKF4G9MHBY4663SM7XVA3",
-            "data": {
-            "name": (first),
-            "code": (code)",
-            },
-        }
+            message={
+                "to": {
+                    "email": (email),
+                },
+                "template": "C4P4331NKF4G9MHBY4663SM7XVA3",
+                "data": {
+                    "name": (first),
+                    "code": (code),
+                },
+            }
         )
 
         #global gcode
