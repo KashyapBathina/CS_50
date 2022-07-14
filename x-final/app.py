@@ -204,18 +204,8 @@ def verification():
 @app.route("/index")
 @login_required
 def index():
-    """Show portfolio of stocks"""
-
-    owns = own_shares()
-    total = 0
-    for symbol, shares in owns.items():
-        result = lookup(symbol)
-        name, price = result["name"], result["price"]
-        stock_value = shares * price
-        total += stock_value
-        owns[symbol] = (name, shares, usd(price), usd(stock_value))
-    cash = db.execute("SELECT (name, type,  FROM users WHERE id = ? ", session["user_id"])[0]['cash']
-    return render_template("index.html")
+    name = db.execute("SELECT name FROM users WHERE id = ? ", session["user_id"])
+    return render_template("index.html", name=name)
 
 
 
