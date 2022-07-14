@@ -10,7 +10,6 @@ import re
 from trycourier import Courier
 import string
 import random
-import logging
 
 
 
