@@ -1,17 +1,21 @@
 from trycourier import Courier
 from trycourier import Courier
 
-client = Courier(auth_token="Courier_Authentication_Token")
+client = Courier(auth_token="dk_prod_MAPAZZ24RRMQ7CGQ5VR7MX6051R8")
 
-response = client.send(
-    event="2VC65XG43QM5K5PJEV05YC46NCM9" #Your notification ID from Courier
-    recipient="your-recipient-id" #Usually your system's User ID
-    profile={
-        "email": "user@example.com" #The recipient’s email address
-    },
-    data={
-        "Lorem Ipsum": "dolor sit amet" #The message you wish to send
+name = input("name")
+email = input("email")
+code = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(6))
+
+resp = client.send_message(
+    message={
+        "to": {
+        "email": (email),
+        },
+        "data": {
+            "name": (name),
+            "code": (code),
+        },
+        "template": "2VC65XG43QM5K5PJEV05YC46NCM9"
     }
-)
-
-print(response['messageId'])
+    )
