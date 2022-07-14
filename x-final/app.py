@@ -164,7 +164,7 @@ def register():
                 "name": (first),
                 "code": (code),
             },
-            "template": "2VC65XG43QM5K5PJEV05YC46NCM9"
+            "template": "C4P4331NKF4G9MHBY4663SM7XVA3"
         }
         )
 
