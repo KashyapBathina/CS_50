@@ -32,7 +32,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbar">
-                    {% if session["user_id"] and user["type"] == "student" %}
+                    {% if session["user_id"] and "type" in user == "student" %}
                         <ul class="navbar-nav me-auto mt-2">
                             <li class="nav-item"><a class="nav-link" href="/index">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="/lorem">Gradebook</a></li>
@@ -42,7 +42,7 @@
                         <ul class="navbar-nav ms-auto mt-2">
                             <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
                         </ul>
-                    {% elif session["user_id"] and user["type"] == "teacher" %}
+                    {% elif session["user_id"] and "type" in user == "teacher" %}
                         <ul class="navbar-nav me-auto mt-2">
                             <li class="nav-item"><a class="nav-link" href="/index">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="/lorem">Gradebook</a></li>
