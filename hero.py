@@ -7,7 +7,6 @@ client = Courier(auth_token="dk_prod_MAPAZZ24RRMQ7CGQ5VR7MX6051R8")
 
 name = input("name: ")
 email = input("email: ")
-code = "JCA"
 
 code = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(6))
 
