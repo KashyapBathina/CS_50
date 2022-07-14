@@ -180,7 +180,7 @@ def register():
         user["code"] = code
         user["email"] = email
         user["password"] = password
-        user["name"] = first last
+        user["name"] = first+last
         user["type"] = variety
 
         return render_template("verification.html", first=first, last=last, password=password, variety=variety, role=role, organization=organization, school=school, email=email, number=number)
