@@ -26,18 +26,13 @@ import logging
 
 
 
+
+
+
+
+
+
 user = {}
-
-
-
-
-
-
-
-
-
-
-
 
 # Configure application
 app = Flask(__name__)
@@ -204,6 +199,24 @@ def verification():
 
     else:
         return render_template("verification.html")
+
+
+@app.route("/index")
+@login_required
+def index():
+    """Show portfolio of stocks"""
+
+    owns = own_shares()
+    total = 0
+    for symbol, shares in owns.items():
+        result = lookup(symbol)
+        name, price = result["name"], result["price"]
+        stock_value = shares * price
+        total += stock_value
+        owns[symbol] = (name, shares, usd(price), usd(stock_value))
+    cash = db.execute("SELECT cash FROM users WHERE id = ? ", session["user_id"])[0]['cash']
+    return render_template("index.html", owns=owns, cash=usd(cash), total=usd(total))
+
 
 
 @app.route("/grades", methods=["GET", "POST"])
