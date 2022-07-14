@@ -9,16 +9,17 @@
         <h1 class="center">Hello, {{first}}</h1>
 
         <h2 class="center lgreen">A Verification Code Has Been Sent To Your Email To Verify Your Identity</h2>
+        <form action="/login" method="post">
+            <div style="padding: 20px 20px">
+                <div class="mb-3">
+                    <input class="form-control mx-auto w-auto" id="usercode" name="usercode" placeholder="Code" type="text">
+                </div>
 
-        <div style="padding: 20px 20px">
-            <div class="mb-3">
-                <input class="form-control mx-auto w-auto" id="usercode" name="usercode" placeholder="Code" type="text">
+                <div class="mb-3">
+                    <button class="btn btn-primary" type="submit"">Submit</button>
+                </div>
             </div>
-
-            <div class="mb-3">
-                <button class="btn btn-primary" type="submit"">Submit</button>
-            </div>
-        </div>
+        </form>
 
 
 
