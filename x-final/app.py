@@ -184,13 +184,15 @@ def register():
 @app.route("/verification", methods=["GET", "POST"])
 def verification():
     if request.method == "POST":
+        submit = request.form("submit")
         icode = request.form.get("icode")
 
-        if gcode == icode:
-            return apology("code is correct", 400)
+        if submit:
+            if gcode == icode:
+                return apology("code is correct", 400)
 
-        else:
-            return apology("code is incorrect", 400)
+            else:
+                return apology("code is incorrect", 400)
 
     else:
         return render_template("verification.html")
