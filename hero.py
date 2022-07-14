@@ -1,23 +1,15 @@
 from trycourier import Courier
-from trycourier import Courier
-import string
-import random
 
-client = Courier(auth_token="dk_prod_MAPAZZ24RRMQ7CGQ5VR7MX6051R8")
+client = Courier(auth_token="pk_prod_ZN043V85VAM138K22DMK8G8Y2F8Y")
 
-name = input("name")
-email = input("email")
-code = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(6))
-
-resp = client.send_message(
-    message={
-        "to": {
-        "email": (email),
-        },
-        "data": {
-            "name": (name),
-            "code": (code),
-        },
-        "template": "2VC65XG43QM5K5PJEV05YC46NCM9"
-    }
+resp = client.send(
+  event="courier-quickstart",
+  recipient="boonraj1@gmail.com",
+  data={
+    "favoriteAdjective": "awesomeness"
+  },
+  profile={
+    "email": "boonraj1@gmail.com"
+  }
 )
+print("done")
