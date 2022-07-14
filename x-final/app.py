@@ -26,7 +26,7 @@ import logging
 
 
 
-user= {}
+user = {}
 
 
 
@@ -174,8 +174,12 @@ def register():
         }
         )
 
-        global gcode
-        gcode = code
+        #global gcode
+        #gcode = code
+
+        user["code"] = code
+        user["name"] = first last
+        user["type"] = variety
 
         return render_template("verification.html", first=first, last=last, password=password, variety=variety, role=role, organization=organization, school=school, email=email, number=number)
 
@@ -191,7 +195,7 @@ def verification():
         last = request.form.get("last")
         name = first last
 
-        if str(gcode) == str(usercode):
+        if user["code"] == str(usercode):
             return apology(f"code is correct {name}", 400)
             #result = db.execute("INSERT INTO users (email, hash, name, type) VALUES(?, ?)", email, generate_password_hash(password), name, variety)
             #session["user_id"] = result
