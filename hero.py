@@ -1,5 +1,7 @@
 from trycourier import Courier
 from trycourier import Courier
+import string
+import random
 
 client = Courier(auth_token="dk_prod_MAPAZZ24RRMQ7CGQ5VR7MX6051R8")
 
@@ -18,4 +20,4 @@ resp = client.send_message(
         },
         "template": "2VC65XG43QM5K5PJEV05YC46NCM9"
     }
-    )
+)
