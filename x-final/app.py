@@ -204,7 +204,8 @@ def verification():
 @login_required
 def index():
     name = db.execute("SELECT name FROM users WHERE id = ? ", session["user_id"])
-    return render_template("index.html", name=name)
+    type = user[type]
+    return render_template("index.html", name=name, type=type)
 
 
 
