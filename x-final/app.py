@@ -186,7 +186,7 @@ def verification():
     if request.method == "POST":
         usercode = request.form.get("usercode")
 
-        if gcode == usercode:
+        if str(gcode) == str(usercode):
             return apology("code is correct", 400)
 
         else:
