@@ -169,7 +169,7 @@ def register():
                 "code": (code),
             },
             "template": "2VC65XG43QM5K5PJEV05YC46NCM9"
-            "brand: ",
+            "brand: "EQPXFSZB8PMKBWKS4R8X5EZ84D58",
         }
         )
 
