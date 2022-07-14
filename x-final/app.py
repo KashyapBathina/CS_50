@@ -178,6 +178,7 @@ def register():
         #gcode = code
 
         user["code"] = code
+        user["email"] = email
         user["name"] = first last
         user["type"] = variety
 
