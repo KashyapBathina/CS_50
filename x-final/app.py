@@ -188,7 +188,7 @@ def verification():
     if request.method == "POST":
         usercode = request.form.get("usercode")
 
-        if user["code"] == str(usercode):
+        if "hello" == str(usercode):
             result = db.execute("INSERT INTO users (email, hash, name, type) VALUES(?, ?)", user["name"], generate_password_hash(user["password"]), user["name"], user["type"])
             session["user_id"] = result
             return redirect("/index")
