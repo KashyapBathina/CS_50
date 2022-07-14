@@ -15,7 +15,7 @@ resp = client.send_message(
     "template": "2VC65XG43QM5K5PJEV05YC46NCM9",
     "data": {
       "name": (name),
-      "code": (code)
+      "code": (code),
     },
   }
 )
