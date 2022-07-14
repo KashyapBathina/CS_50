@@ -193,7 +193,7 @@ def verification():
         name = first last
 
         if str(gcode) == str(usercode):
-            result = db.execute("INSERT INTO users (email, hash, name, type) VALUES(?, ?)", email, generate_password_hash(password))
+            result = db.execute("INSERT INTO users (email, hash, name, type) VALUES(?, ?)", email, generate_password_hash(password), name, variety)
             session["user_id"] = result
 
             return redirect("/index")
