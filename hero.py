@@ -1,26 +1,24 @@
 from trycourier import Courier
+import random
+import string
 
-
+name = input("name: ")
+email = input("email: ")
 code = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(6))
-name = "kashyap"
 
+client = Courier(auth_token="dk_prod_MAPAZZ24RRMQ7CGQ5VR7MX6051R8")
 
-client = Courier(auth_token="Courier_Authentication_Token")
-
-response = client.send(
-    event="2VC65XG43QM5K5PJEV05YC46NCM9" #Your notification ID from Courier
-    profile={
-        "email": (email), #The recipient’s email address
+resp = client.send_message(
+  message={
+    "to": {(email)
     },
-    data={
-        "name": (name),
-        "code": (code),
-    }
-    "template": "2VC65XG43QM5K5PJEV05YC46NCM9"
+    "template": "2VC65XG43QM5K5PJEV05YC46NCM9",
+    "data": {
+      "name": (name),
+      "code": (code)
+    },
+  }
 )
 
-print(response['messageId'])
+print(resp['requestId'])
 
-)
-
-print(response['messageId'])
