@@ -22,5 +22,3 @@ message={
     "template": "2VC65XG43QM5K5PJEV05YC46NCM9"
     }
 )
-
-print(resp['requestId'])
