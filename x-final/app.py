@@ -172,6 +172,9 @@ def register():
         }
         )
 
+        global gcode
+        gcode = code
+
         return render_template("verification.html", first=first, last=last, password=password, variety=variety, role=role, organization=organization, school=school, email=email, number=number)
 
     else:
@@ -181,10 +184,13 @@ def register():
 @app.route("/verification", methods=["GET", "POST"])
 def verification():
     if request.method == "POST":
-        gcode = request.form.get("gcode")
-        if code == gcode:
-            
+        icode = request.form.get("icode")
 
+        if gcode == icode:
+            return apology("code is correct", 400)
+
+        else:
+            return apology("code is incorrect", 400)
 
     else:
         return render_template("verification.html")
