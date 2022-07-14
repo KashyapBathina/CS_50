@@ -185,18 +185,17 @@ def register():
 def verification():
     if request.method == "POST":
         usercode = request.form.get("usercode")
-        email = request.form.get("email")
-        password = request.form.get("password")
-        variety = request.form.get("variety")
         first = request.form.get("first")
         last = request.form.get("last")
         name = first last
 
         if str(gcode) == str(usercode):
-            result = db.execute("INSERT INTO users (email, hash, name, type) VALUES(?, ?)", email, generate_password_hash(password), name, variety)
-            session["user_id"] = result
-
-            return redirect("/index")
+            return apology(f"code is correct {name}", 400)
+            #result = db.execute("INSERT INTO users (email, hash, name, type) VALUES(?, ?)", email, generate_password_hash(password), name, variety)
+            #session["user_id"] = result
+            #email = request.form.get("email")
+            #password = request.form.get("password")
+            #variety = request.form.get("variety")
 
 
         else:
