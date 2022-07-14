@@ -214,8 +214,8 @@ def index():
         stock_value = shares * price
         total += stock_value
         owns[symbol] = (name, shares, usd(price), usd(stock_value))
-    cash = db.execute("SELECT cash FROM users WHERE id = ? ", session["user_id"])[0]['cash']
-    return render_template("index.html", owns=owns, cash=usd(cash), total=usd(total))
+    cash = db.execute("SELECT (name, type,  FROM users WHERE id = ? ", session["user_id"])[0]['cash']
+    return render_template("index.html")
 
 
 
