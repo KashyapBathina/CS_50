@@ -193,12 +193,11 @@ def register():
 def verification():
     if request.method == "POST":
         usercode = request.form.get("usercode")
-        name = user["name"]
 
         if user["code"] == str(usercode):
-            return apology(f"code is correct {name}", 400)
-            #result = db.execute("INSERT INTO users (email, hash, name, type) VALUES(?, ?)", email, generate_password_hash(password), name, variety)
-            #session["user_id"] = result
+            result = db.execute("INSERT INTO users (email, hash, name, type) VALUES(?, ?)", user["name"], generate_password_hash(user["password"]), user["name"], user["type"])
+            session["user_id"] = result
+            return redirect("/index")
 
         else:
             return apology("code is incorrect", 400)
