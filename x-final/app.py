@@ -151,14 +151,13 @@ def register():
         if len(db.execute('SELECT email FROM users WHERE email = ?', email)) > 0:
             return apology("email already in use", 400)
 
-        client = Courier(auth_token="dk_prod_S04HTYNPFD4RWFHTGW3ADT6VSSHN")
-
         code = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(6))
 
+        client = Courier(auth_token="dk_prod_S04HTYNPFD4RWFHTGW3ADT6VSSHN")
         resp = client.send_message(
         message={
             "to": {
-            "email": (email),
+                "email": (email),
             },
             "data": {
                 "name": (first),
