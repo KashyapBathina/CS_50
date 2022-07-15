@@ -175,7 +175,7 @@ def register():
         user["email"] = email
         user["password"] = password
         user["name"] = first + ' ' + last
-        user["type"] = str(variety)
+        session["type"] = str(variety)
         session["type"] = user["type"]
 
 
