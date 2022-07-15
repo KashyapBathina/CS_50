@@ -22,41 +22,30 @@
 
     <body>
 
-                    {% if session["type"] == "student" %}
-                        <ul class="navbar-nav me-auto mt-2">
-                            <li class="nav-item"><a class="nav-link" href="/index">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/lorem">Gradebook</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/lorem">Schedule</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/lorem">Student Info</a></li>
-                        </ul>
-                        <ul class="navbar-nav ms-auto mt-2">
-                            <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
-                        </ul>
-                    {% elif session["type"] == "gaurdian" %}
-                        <ul class="navbar-nav me-auto mt-2">
-                            <li class="nav-item"><a class="nav-link" href="/index">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/lorem">Gradebook</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/lorem">Schedule</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/lorem">Student Info</a></li>
-                        </ul>
-                        <ul class="navbar-nav ms-auto mt-2">
-                            <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
-                        </ul>
-        {% elif session["type"] == "teacher" %}
+        {% if session["user_id"] session["type"] == "teacher" %}
             <ul class="navbar-nav me-auto mt-2">
                 <li class="nav-item"><a class="nav-link" href="/index">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/lorem">Gradebook</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/lorem">Grading</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/lorem">Classes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/students">Students</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/lorem">Reporting</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/lorem">Account Info</a></li>
-                </ul>
-                <ul class="navbar-nav ms-auto mt-2">
-                    <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
+                <li class="nav-item"><a class="nav-link" href="/lorem">Gradebook</a></li>
+                <li class="nav-item"><a class="nav-link" href="/lorem">Grading</a></li>
+                <li class="nav-item"><a class="nav-link" href="/lorem">Classes</a></li>
+                <li class="nav-item"><a class="nav-link" href="/students">Students</a></li>
+                <li class="nav-item"><a class="nav-link" href="/lorem">Reporting</a></li>
+                <li class="nav-item"><a class="nav-link" href="/lorem">Account Info</a></li>
             </ul>
-                    {% else %}
-
+            <ul class="navbar-nav ms-auto mt-2">
+                <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
+            </ul>
+        {% elif session["user_id"]%}
+            <ul class="navbar-nav me-auto mt-2">
+                <li class="nav-item"><a class="nav-link" href="/index">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/lorem">Gradebook</a></li>
+                <li class="nav-item"><a class="nav-link" href="/lorem">Schedule</a></li>
+                <li class="nav-item"><a class="nav-link" href="/lorem">Student Info</a></li>
+            </ul>
+            <ul class="navbar-nav ms-auto mt-2">
+                <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
+            </ul>
+        {% else %}
         <nav class="bg-light border navbar navbar-expand-md navbar-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/">
@@ -74,7 +63,7 @@
                 </div>
             </div>
         </nav>
-                    {% endif %}
+        {% endif %}
 
         {% if get_flashed_messages() %}
             <header>
