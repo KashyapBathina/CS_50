@@ -194,7 +194,7 @@ def verification():
 
         if user["code"] == str(usercode):
             result = db.execute("INSERT INTO users (email, hash, name, type) VALUES(?, ?, ?, ?)", user["email"], generate_password_hash(user["password"]), user["name"], user["type"])
-            session["user_id"] = result[0]["id"]
+            session["user_id"] = result
             return redirect("/index")
 
         else:
@@ -212,6 +212,8 @@ def index():
 
 
     name = db.execute("SELECT name FROM users WHERE id = ? ", session["user_id"])
+    print (name)
+    print(session["user_id"])
     return render_template("index.html", name=str(name))
 
 
