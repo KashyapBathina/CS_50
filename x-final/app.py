@@ -174,16 +174,16 @@ def register():
         #global gcode
         #gcode = code
 
-        session["code"] = code
-        session["email"] = email
-        session["password"] = password
-        session["name"] = first + ' ' + last
-        session["type"] = str(variety)
-        print(session["code"])
-        print(session["email"])
-        print(session["password"])
-        print(session["name"])
-        print(session["type"])
+        user["code"] = code
+        user["email"] = email
+        user["password"] = password
+        user["name"] = first + ' ' + last
+        user["type"] = str(variety)
+        print(user["code"])
+        print(user["email"])
+        print(user["password"])
+        print(user["name"])
+        print(user["type"])
 
 
         return render_template("verification.html", first=first, last=last, password=password, variety=variety, role=role, organization=organization, school=school, email=email, number=number)
@@ -198,8 +198,8 @@ def verification():
         usercode = request.form.get("usercode")
 
         if session["code"] == str(usercode):
-            db.execute("INSERT INTO users (email, hash, name, type) VALUES(?, ?, ?, ?)", session["email"], generate_password_hash(session["password"]), session["name"], session["type"])
-            result = db.execute("SELECT * FROM users WHERE email = ?", session["email"])
+            db.execute("INSERT INTO users (email, hash, name, type) VALUES(?, ?, ?, ?)", user["email"], generate_password_hash(user["password"]), user["name"], user["type"])
+            result = db.execute("SELECT * FROM users WHERE email = ?", user["email"])
             session["user_id"] = result[0]["id"]
             return redirect("/index")
 
