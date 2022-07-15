@@ -217,10 +217,7 @@ def index():
         return apology("not finished", 400)
 
     else:
-        name = db.execute("SELECT name FROM users WHERE id = ? ", session["user_id"])
-
         print(session["user_id"])
-        print(name)
         return render_template("index.html", name=session["name"])
 
 
