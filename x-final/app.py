@@ -179,7 +179,7 @@ def register():
         user["password"] = password
         user["name"] = first + ' ' + last
         user["type"] = str(variety)
-        session["variety"] = str(user["type"])
+        #session["variety"] = str(user["type"])
 
 
         return render_template("verification.html", first=first, last=last, password=password, variety=variety, role=role, organization=organization, school=school, email=email, number=number)
@@ -209,7 +209,7 @@ def verification():
 @app.route("/index")
 @login_required
 def index():
-    if session["variety"] == "teacher":
+    if user["type"] == "teacher":
         return apology("teacher")
 
     #if session["variety"] == "student":
