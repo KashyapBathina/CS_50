@@ -183,12 +183,6 @@ def register():
         session["password"] = password
         session["name"] = first + ' ' + last
         session["type"] = str(variety)
-        print(session["code"])
-        print(session["email"])
-        print(session["password"])
-        print(session["name"])
-        print(session["type"])
-
 
         return render_template("verification.html", first=first, last=last, password=password, variety=variety, role=role, organization=organization, school=school, email=email, number=number)
 
