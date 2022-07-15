@@ -32,7 +32,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbar">
-                    {% if session["variety"] == "teacher" %}
+                    {% if session["type"] == "student" %}
                         <ul class="navbar-nav me-auto mt-2">
                             <li class="nav-item"><a class="nav-link" href="/index">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="/lorem">Gradebook</a></li>
@@ -42,8 +42,7 @@
                         <ul class="navbar-nav ms-auto mt-2">
                             <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
                         </ul>
-                    <!--
-                    {% elif session[user_id] and {'type':"gaurdian"} %}
+                    {% elif session["type"] == "gaurdian" %}
                         <ul class="navbar-nav me-auto mt-2">
                             <li class="nav-item"><a class="nav-link" href="/index">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="/lorem">Gradebook</a></li>
@@ -53,7 +52,7 @@
                         <ul class="navbar-nav ms-auto mt-2">
                             <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
                         </ul>
-                    {% elif session[user_id] and {'type':"teacher"} %}
+                    {% elif session["type"] == "teacher" %}
                         <ul class="navbar-nav me-auto mt-2">
                             <li class="nav-item"><a class="nav-link" href="/index">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="/lorem">Gradebook</a></li>
@@ -66,7 +65,6 @@
                         <ul class="navbar-nav ms-auto mt-2">
                             <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
                         </ul>
-                    -->
                     {% else %}
                         <ul class="navbar-nav ms-auto mt-2">
                             <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
