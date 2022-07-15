@@ -209,15 +209,16 @@ def verification():
 @app.route("/index")
 @login_required
 def index():
-    if user["type"] == "teacher":
+    if session["user_id"] == "5":
         return apology("teacher")
 
     #if session["variety"] == "student":
         #return apology("student")
 
 
-    #name = db.execute("SELECT name FROM users WHERE id = ? ", session["user_id"])
-    #return render_template("index.html", name=name)
+    name = db.execute("SELECT name FROM users WHERE id = ? ", session["user_id"])
+    type = session["variety"]
+    return render_template("index.html", name=name, type=type)
 
 
 
