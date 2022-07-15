@@ -211,10 +211,10 @@ def index():
         return apology("teacher")
 
 
-    name = db.execute("SELECT name FROM users WHERE id = ? ", session["user_id"])
-    print (name)
+    asdasd = db.execute("SELECT name FROM users WHERE id = ? ", session["user_id"])
+    print (asdasd)
     print(session["user_id"])
-    return render_template("index.html", name=str(name))
+    return render_template("index.html", name=str(asdasd))
 
 
 
