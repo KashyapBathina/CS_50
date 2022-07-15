@@ -218,7 +218,9 @@ def index():
 
     else:
         print(session["user_id"])
-        return render_template("index.html", name=session["name"])
+        row = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
+        row
+        return render_template("index.html", name=user["name"])
 
 
 
