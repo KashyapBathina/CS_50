@@ -179,6 +179,11 @@ def register():
         session["password"] = password
         session["name"] = first + ' ' + last
         session["type"] = str(variety)
+        print(session["code"])
+        print(session["email"])
+        print(session["password"])
+        print(session["name"])
+        print(session["type"])
 
 
         return render_template("verification.html", first=first, last=last, password=password, variety=variety, role=role, organization=organization, school=school, email=email, number=number)
@@ -209,7 +214,9 @@ def verification():
 @login_required
 def index():
     name = db.execute("SELECT name FROM users WHERE id = ? ", session["user_id"])
-    return render_template("index.html", name=str(name))
+    print(session["user_id"])
+    print(name)
+    return render_template("index.html", name=name)
 
 
 
