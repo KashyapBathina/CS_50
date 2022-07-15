@@ -44,7 +44,6 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
-session_start()
 
 # Configure CS50 Library to use SQLite database
 db = SQL("sqlite:///darkmoon.db")
@@ -208,10 +207,6 @@ def verification():
 @app.route("/index")
 @login_required
 def index():
-    if session["user_id"] == "5":
-        return apology("teacher")
-
-
     name = db.execute("SELECT name FROM users WHERE id = ? ", session["user_id"])
     print (name)
     print (session["email"])
