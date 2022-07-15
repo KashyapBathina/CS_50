@@ -208,8 +208,6 @@ def verification():
 @app.route("/index")
 @login_required
 def index():
-    print(session["variety"])
-    print(user["variety"])
     name = db.execute("SELECT name FROM users WHERE id = ? ", session["user_id"])
     return render_template("index.html", name=name)
 
