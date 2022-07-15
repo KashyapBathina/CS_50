@@ -174,11 +174,11 @@ def register():
         #global gcode
         #gcode = code
 
-        user["code"] = code
-        user["email"] = email
-        user["password"] = password
-        user["name"] = first + ' ' + last
-        user["type"] = str(variety)
+        session["code"] = code
+        session["email"] = email
+        session["password"] = password
+        session["name"] = first + ' ' + last
+        session["type"] = str(variety)
 
 
         return render_template("verification.html", first=first, last=last, password=password, variety=variety, role=role, organization=organization, school=school, email=email, number=number)
@@ -193,7 +193,7 @@ def verification():
         usercode = request.form.get("usercode")
 
         if user["code"] == str(usercode):
-            result = db.execute("INSERT INTO users (email, hash, name, type) VALUES(?, ?, ?, ?)", user["email"], generate_password_hash(user["password"]), user["name"], user["type"])
+            result = db.execute("INSERT INTO users (email, hash, name, type) VALUES(?, ?, ?, ?)", session["email"], generate_password_hash(session["password"]), session["name"], session["type"])
             session["user_id"] = result[0]["id"]
             return redirect("/index")
 
@@ -213,7 +213,7 @@ def index():
 
     name = db.execute("SELECT name FROM users WHERE id = ? ", session["user_id"])
     print (name)
-    print (user["name"])
+    print (session["email"])
     print(session["user_id"])
     return render_template("index.html", name=str(name))
 
