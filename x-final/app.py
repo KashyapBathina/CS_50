@@ -87,7 +87,7 @@ def login():
         if len(rows) != 1 or not check_password_hash(rows[0]["hash"], request.form.get("password")):
             return apology("invalid email and/or password", 403)
 
-        if rows["type"] != request.form.get("type"):
+        if rows[0]["type"] != request.form.get("type"):
             return apology("invalid account type", 400)
 
         # Remember which user has logged in
