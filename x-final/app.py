@@ -179,7 +179,6 @@ def register():
         user["password"] = password
         user["name"] = first + ' ' + last
         user["type"] = str(variety)
-        session["variety"] = str(variety)
 
 
         return render_template("verification.html", first=first, last=last, password=password, variety=variety, role=role, organization=organization, school=school, email=email, number=number)
@@ -192,6 +191,7 @@ def register():
 def verification():
     if request.method == "POST":
         usercode = request.form.get("usercode")
+        session["variety"] = str(user["type"])
 
         if user["code"] == str(usercode):
             result = db.execute("INSERT INTO users (email, hash, name, type) VALUES(?, ?, ?, ?)", user["email"], generate_password_hash(user["password"]), user["name"], user["type"])
