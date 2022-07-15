@@ -210,13 +210,17 @@ def verification():
         return render_template("verification.html")
 
 
-@app.route("/index")
+@app.route("/index", methods=["GET", "POST"])
 @login_required
 def index():
-    name = db.execute("SELECT name FROM users WHERE id = ? ", session["user_id"])
-    print(session["user_id"])
-    print(name)
-    return render_template("index.html", name=name)
+    if request.method == "POST":
+        return apology("not finished", 400)
+
+    else:
+        name = db.execute("SELECT name FROM users WHERE id = ? ", session["user_id"])
+        print(session["user_id"])
+        print(name)
+        return render_template("index.html", name=name)
 
 
 
