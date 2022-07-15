@@ -210,8 +210,6 @@ def index():
     if session["user_id"] == "5":
         return apology("teacher")
 
-    #if session["variety"] == "student":
-        #return apology("student")
     variety = user["type"]
 
     name = db.execute("SELECT name FROM users WHERE id = ? ", session["user_id"])
