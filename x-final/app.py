@@ -87,11 +87,13 @@ def login():
         if len(rows) != 1 or not check_password_hash(rows[0]["hash"], request.form.get("password")):
             return apology("invalid email and/or password", 403)
 
+        if rows["type"] != request.form.get
+
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
 
         # Redirect user to home page
-        return redirect("index.html")
+        return redirect("/index")
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
