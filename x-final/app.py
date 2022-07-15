@@ -109,7 +109,7 @@ def logout():
     session.clear()
 
     # Redirect user to login form
-    return redirect("/login.html")
+    return redirect("/login")
 
 
 @app.route("/register", methods=["GET", "POST"])
