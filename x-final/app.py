@@ -196,7 +196,7 @@ def verification():
         if user["code"] == str(usercode):
             result = db.execute("INSERT INTO users (email, hash, name, type) VALUES(?, ?, ?, ?)", user["email"], generate_password_hash(user["password"]), user["name"], user["type"])
             session["user_id"] = result[0]["id"]
-            session["type"] = result[0]["type"]
+            session["variety"] = str(result[0]["type"])
             return redirect("/index")
 
         else:
@@ -209,8 +209,15 @@ def verification():
 @app.route("/index")
 @login_required
 def index():
-    name = db.execute("SELECT name FROM users WHERE id = ? ", session["user_id"])
-    return render_template("index.html", name=name)
+    if session["variety"] == "teacher":
+        return apology("teacher")
+
+    #if session["variety"] == "student":
+        #return apology("student")
+
+
+    #name = db.execute("SELECT name FROM users WHERE id = ? ", session["user_id"])
+    #return render_template("index.html", name=name)
 
 
 
