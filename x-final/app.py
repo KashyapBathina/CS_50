@@ -175,8 +175,8 @@ def register():
         user["email"] = email
         user["password"] = password
         user["name"] = first + ' ' + last
-        session["type"] = str(variety)
-        session["type"] = user["type"]
+        user["type"] = str(variety)
+        session["variety"] = user["type"]
 
 
         return render_template("verification.html", first=first, last=last, password=password, variety=variety, role=role, organization=organization, school=school, email=email, number=number)
