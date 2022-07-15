@@ -219,6 +219,17 @@ def index():
         return render_template("index.html", name=session["name"])
 
 
+@app.route("/students", methods=["GET", "POST"])
+@login_required
+def students():
+    if request.method == "POST":
+        return apology("not finished", 400)
+
+    else:
+        print(session["user_id"])
+        return render_template("index.html", name=session["name"])
+
+
 
 @app.route("/grades", methods=["GET", "POST"])
 @login_required
