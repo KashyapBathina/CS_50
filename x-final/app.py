@@ -179,6 +179,7 @@ def register():
         user["password"] = password
         user["name"] = first + ' ' + last
         user["type"] = str(variety)
+        session["variety"] = str(user["type"])
 
 
         return render_template("verification.html", first=first, last=last, password=password, variety=variety, role=role, organization=organization, school=school, email=email, number=number)
@@ -191,7 +192,6 @@ def register():
 def verification():
     if request.method == "POST":
         usercode = request.form.get("usercode")
-        session["variety"] = str(user["type"])
 
         if user["code"] == str(usercode):
             result = db.execute("INSERT INTO users (email, hash, name, type) VALUES(?, ?, ?, ?)", user["email"], generate_password_hash(user["password"]), user["name"], user["type"])
@@ -208,6 +208,8 @@ def verification():
 @app.route("/index")
 @login_required
 def index():
+    print(session["variety"])
+    print(user["variety"])
     name = db.execute("SELECT name FROM users WHERE id = ? ", session["user_id"])
     return render_template("index.html", name=name)
 
