@@ -197,7 +197,7 @@ def verification():
     if request.method == "POST":
         usercode = request.form.get("usercode")
 
-        if user["code"] == str(usercode):
+        if session["code"] == str(usercode):
             db.execute("INSERT INTO users (email, hash, name, type) VALUES(?, ?, ?, ?)", session["email"], generate_password_hash(session["password"]), session["name"], session["type"])
             result = db.execute("SELECT * FROM users WHERE username = ?", session["email"])
             session["user_id"] = result[0]["id"]
