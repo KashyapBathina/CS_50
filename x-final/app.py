@@ -195,6 +195,7 @@ def verification():
         if user["code"] == str(usercode):
             result = db.execute("INSERT INTO users (email, hash, name, type) VALUES(?, ?, ?, ?)", session["email"], generate_password_hash(session["password"]), session["name"], session["type"])
             session["user_id"] = result[0]["id"]
+            session["user_id"] = result[0]["id"]
             return redirect("/index")
 
         else:
