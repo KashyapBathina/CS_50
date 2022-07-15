@@ -6,12 +6,11 @@
 
 {% block main %}
     <div id="container">
-        <h1 class="center">Hello, {{name}}</h1>
-    {% if variety == "teacher"}
-        <h2 class="center lgreen">Hello, {{variety}}</h2>
-    {% else %}
-        <h2 class="center lgreen">You have no assignments</h2>
-    {% endif %}
+        {% if name == "Kashyap Bath" %}
+            <h2 class="center lgreen">Hello, {{name}}</h2>
+        {% else %}
+            <h2 class="center lgreen">You have no assignments</h2>
+        {% endif %}
     </div>
 {% endblock %}
 

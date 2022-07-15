@@ -210,10 +210,9 @@ def index():
     if session["user_id"] == "5":
         return apology("teacher")
 
-    variety = user["type"]
 
     name = db.execute("SELECT name FROM users WHERE id = ? ", session["user_id"])
-    return render_template("index.html", name=name, variety=variety)
+    return render_template("index.html", name=str(name))
 
 
 
