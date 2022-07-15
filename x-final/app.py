@@ -177,8 +177,6 @@ def register():
         user["name"] = first + ' ' + last
         user["type"] = variety
 
-        global type
-        type = str(user["type"])
 
         return render_template("verification.html", first=first, last=last, password=password, variety=variety, role=role, organization=organization, school=school, email=email, number=number)
 
