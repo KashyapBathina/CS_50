@@ -224,7 +224,7 @@ def index():
 def students():
     if request.method == "POST":
         return apology("not finished", 400)
-        
+
 
     else:
         print(session["user_id"])
@@ -235,7 +235,11 @@ def students():
 @login_required
 def classes():
     if request.method == "POST":
-        return apology("not finished", 400)
+        tname = request.form.get("tname")
+        cname = request.form.get("cname")
+
+        
+
 
     else:
         return render_template("classes.html", name=session["name"])
