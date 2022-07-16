@@ -232,7 +232,7 @@ def students():
         if not re.match(r"^[A-Za-z0-9\.\+_-]+@[A-Za-z0-9\._-]+\.[a-zA-Z]*$", semail):
             return apology("must be a valid email address", 400)
 
-        db.execute("INSERT INTO students (classid, classname) VALUES(?, ?)", session["user_id"], cname)
+        db.execute("INSERT INTO students (classid, teacherid, ) VALUES(?, ?)", session["user_id"], cname)
         classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
         return redirect("/classes")
 

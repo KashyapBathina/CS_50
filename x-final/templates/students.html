@@ -34,7 +34,7 @@
                         <label for="exampleFormControlInput1" class="form-label">Class Name</label>
                         <select name="type" id="type" class="form-select form-control form-label" aria-label="Default select">
                             <option name = "none" id="none" value ="none"> --select class--</option>
-                            {% for class in classes %}
+                            {% for class in student %}
                             <option name = "cname" value="{class}"> {class} </option>
                             {% endfor %}
                         </select>
@@ -48,7 +48,7 @@
         </div>
       </div>
       {% else %}
-        {% for class in classes %}
+        {% for student in students %}
         <div class="w3-quarter" style="padding-top:20px;">
             <a href="/students" style="text-decoration: none;">
             <div class="w3-container w3-teal w3-text-white w3-padding-16" style="width:200px">
