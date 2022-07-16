@@ -235,8 +235,7 @@ def students():
 
         classid = db.execute("SELECT classid FROM classes WHERE classname = ?", cname)
 
-        db.execute("INSERT INTO students (classid, classname, teacherid, sname, semail) VALUES(?, ?)", classid, cname, session["user_id"], sname, semail)
-        students = db.execute("SELECT * FROM students WHERE teacherid = ?", session["user_id"])
+        db.execute("INSERT INTO students (classid, classname, teacherid, studentname, studentemail) VALUES(?, ?)", classid, cname, session["user_id"], sname, semail)
         return redirect("/students")
 
 
@@ -256,7 +255,6 @@ def classes():
             return apology("you must name your class", 400)
 
         db.execute("INSERT INTO classes (teacherid, classname) VALUES(?, ?)", session["user_id"], cname)
-        classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
         return redirect("/classes")
 
 
