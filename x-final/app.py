@@ -246,7 +246,7 @@ def classes():
 
 
     else:
-        return render_template("classes.html", classname=classname)
+        return render_template("classes.html", classes=classes)
 
 
 
