@@ -246,6 +246,7 @@ def classes():
 
 
     else:
+        classes = ("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
         return render_template("classes.html", classes=classes)
 
 
