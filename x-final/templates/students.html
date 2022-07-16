@@ -27,19 +27,19 @@
             <div class="card card-body">
                 <form action="/students" method="post">
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Student Name</label>
-                        <input name="sname" type="text" class="form-control" id="exampleFormControlInput1" placeholder="student email">
-                    </div>
-                    <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Student Email</label>
                         <input name="semail" type="email" class="form-control" id="exampleFormControlInput1" placeholder="student email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Student Name</label>
+                        <input name="sname" type="text" class="form-control" id="exampleFormControlInput1" placeholder="student name">
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Class Name</label>
                         <select name="classesl" id="classesl" class="form-select form-control form-label" aria-label="Default select">
                             <option name = "none" id="none" value ="none"> --select class--</option>
                             {% for class in classes %}
-                            <option name = "cname" value="{class}"> {class} </option>
+                            <option name = "cname" value="{{class["classname"]}}"> {{class["classname"]}} </option>
                             {% endfor %}
                         </select>
                     </div>
