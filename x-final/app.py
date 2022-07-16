@@ -223,12 +223,24 @@ def index():
 @login_required
 def students():
     if request.method == "POST":
-        return apology("not finished", 400)
+        semail = request.form.get("semail")
+        cname = request.form.get("cname")
+
+        if not semail or str(cname) == "none":
+            return apology("you must fill out all fields", 400)
+
+        if not re.match(r"^[A-Za-z0-9\.\+_-]+@[A-Za-z0-9\._-]+\.[a-zA-Z]*$", semail):
+            return apology("must be a valid email address", 400)
+
+        db.execute("INSERT INTO students (classid, classname) VALUES(?, ?)", session["user_id"], cname)
+        classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
+        return redirect("/classes")
 
 
     else:
-        print(session["user_id"])
-        return render_template("students.html", name=session["name"])
+        classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
+        print(classes)
+        return render_template("classes.html", classes=classes)
 
 
 @app.route("/classes", methods=["GET", "POST"])
