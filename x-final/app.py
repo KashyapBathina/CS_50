@@ -230,6 +230,16 @@ def students():
         return render_template("index.html", name=session["name"])
 
 
+@app.route("/classes", methods=["GET", "POST"])
+@login_required
+def students():
+    if request.method == "POST":
+        return apology("not finished", 400)
+
+    else:
+        return render_template("index.html", name=session["name"])
+
+
 
 @app.route("/grades", methods=["GET", "POST"])
 @login_required
