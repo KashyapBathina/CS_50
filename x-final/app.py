@@ -234,13 +234,13 @@ def students():
 
         db.execute("INSERT INTO students (classid, teacherid, ) VALUES(?, ?)", session["user_id"], cname)
         classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
-        return redirect("/classes")
+        return redirect("/students")
 
 
     else:
         classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
-        print(classes)
-        return render_template("classes.html", classes=classes)
+        students = db.execute("SELECT * FROM students where teacherid = ?", session["user_id"])
+        return render_template("students.html", classes=classes, students=students)
 
 
 @app.route("/classes", methods=["GET", "POST"])
@@ -259,7 +259,6 @@ def classes():
 
     else:
         classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
-        print(classes)
         return render_template("classes.html", classes=classes)
 
 

@@ -27,20 +27,24 @@
             <div class="card card-body">
                 <form action="/students" method="post">
                     <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Student Name</label>
+                        <input name="sname" type="text" class="form-control" id="exampleFormControlInput1" placeholder="student email">
+                    </div>
+                    <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Student Email</label>
                         <input name="semail" type="email" class="form-control" id="exampleFormControlInput1" placeholder="student email">
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Class Name</label>
-                        <select name="type" id="type" class="form-select form-control form-label" aria-label="Default select">
+                        <select name="classesl" id="classesl" class="form-select form-control form-label" aria-label="Default select">
                             <option name = "none" id="none" value ="none"> --select class--</option>
-                            {% for class in student %}
+                            {% for class in classes %}
                             <option name = "cname" value="{class}"> {class} </option>
                             {% endfor %}
                         </select>
                     </div>
                     <div class="mb-3">
-                        <button type="submit" class="btn btn-primary mb-3" style="margin-right:10px">Make New Class</button>
+                        <button type="submit" class="btn btn-primary mb-3" style="margin-right:10px">Add Student</button>
                     </div>
                 </form>
             </div>
@@ -48,35 +52,55 @@
         </div>
       </div>
       {% else %}
-        {% for student in students %}
-        <div class="w3-quarter" style="padding-top:20px;">
-            <a href="/students" style="text-decoration: none;">
-            <div class="w3-container w3-teal w3-text-white w3-padding-16" style="width:200px">
-            <div class="w3-left"><i class="fa fa-users w3-xlarge"></i></div>
-            <div class="w3-clear"></div>
-                <h4>{{class["classname"]}}</h4>
+        <div class="w3-panel">
+            <div class="w3-row-padding" style="margin:0 -16px">
+              <div class="w3-twothird">
+                <h5>All Students</h5>
+                <table class="w3-table w3-striped w3-white">
+                {% for student in students %}
+                  <tr>
+                    <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
+                    <td>{{student["name"]}}</td>
+                    <td><i>{[student["email"]}}</i></td>
+                    <td><i>student["average"]</i></td>
+                  </tr>
+                {% endfor %}
+                </table>
+              </div>
             </div>
-            </a>
-        </div>
-        {% endfor %}
+          </div>
+          <hr>
 
         <div class="w3-quarter" style="padding-top:20px"></div>
         <div class="accordion accordion-flush" id="accordionFlushExample">
             <div class="accordion-item">
               <h2 class="accordion-header" id="flush-headingOne">
                 <a class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne" style="text-decoration: none;">
-                      <h4>Click to add more classes</h4>
+                      <h4>Click to add more students</h4>
                 </a>
               </h2>
               <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                 <div class="card card-body">
-                    <form action="/classes" method="post">
+                    <form action="/students" method="post">
                         <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Class Name</label>
-                            <input name="cname" type="text" class="form-control" id="exampleFormControlInput1" placeholder="class name">
+                            <label for="exampleFormControlInput1" class="form-label">Student Name</label>
+                            <input name="sname" type="text" class="form-control" id="exampleFormControlInput1" placeholder="student email">
                         </div>
                         <div class="mb-3">
-                            <button type="submit" class="btn btn-primary mb-3" style="margin-right:10px">Make New Class</button>
+                            <label for="exampleFormControlInput1" class="form-label">Student Email</label>
+                            <input name="semail" type="email" class="form-control" id="exampleFormControlInput1" placeholder="student email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Class Name</label>
+                            <select name="classesl" id="classesl" class="form-select form-control form-label" aria-label="Default select">
+                                <option name = "none" id="none" value ="none"> --select class--</option>
+                                {% for class in classes %}
+                                <option name = "cname" value="{class}"> {class} </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary mb-3" style="margin-right:10px">Add Student</button>
                         </div>
                     </form>
                 </div>
