@@ -27,10 +27,6 @@
             <div class="card card-body">
                 <form action="/students" method="post">
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Student Name</label>
-                        <input name="cname" type="text" class="form-control" id="exampleFormControlInput1" placeholder="student name">
-                    </div>
-                    <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Student Email</label>
                         <input name="cname" type="email" class="form-control" id="exampleFormControlInput1" placeholder="student email">
                     </div>
@@ -42,7 +38,6 @@
                             <option name = "{class}" value="{class}"> {class} </option>
                             {% endfor %}
                         </select>
-                        <input name="cname" type="text" class="form-control" id="exampleFormControlInput1" placeholder="class name">
                     </div>
                     <div class="mb-3">
                         <button type="submit" class="btn btn-primary mb-3" style="margin-right:10px">Make New Class</button>
