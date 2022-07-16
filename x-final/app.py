@@ -241,12 +241,13 @@ def classes():
             return apology("you must name your class", 400)
 
         db.execute("INSERT INTO classes (teacherid, classname) VALUES(?, ?)", session["user_id"], cname)
-        classes = ("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
+        classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
         return redirect("/classes")
 
 
     else:
-        classes = ("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
+        classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
+        print(classes)
         return render_template("classes.html", classes=classes)
 
 
