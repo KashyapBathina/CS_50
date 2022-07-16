@@ -235,14 +235,18 @@ def students():
 @login_required
 def classes():
     if request.method == "POST":
-        tname = request.form.get("tname")
         cname = request.form.get("cname")
 
-        
+        if not cname:
+            return apology("you must name your class", 400)
+
+        db.execute("INSERT INTO classes (teacherid, classname) VALUES(?, ?)", session["user_id"], cname)
+        classname = ("SELECT classname FROM classes WHERE teacherid = ?", session["user_id"])
+        return redirect("/classes")
 
 
     else:
-        return render_template("classes.html", name=session["name"])
+        return render_template("classes.html", classname=classname)
 
 
 
