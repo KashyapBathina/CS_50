@@ -241,7 +241,7 @@ def classes():
             return apology("you must name your class", 400)
 
         db.execute("INSERT INTO classes (teacherid, classname) VALUES(?, ?)", session["user_id"], cname)
-        classname = ("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
+        classes = ("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
         return redirect("/classes")
 
 
