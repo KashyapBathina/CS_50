@@ -227,17 +227,17 @@ def students():
 
     else:
         print(session["user_id"])
-        return render_template("index.html", name=session["name"])
+        return render_template("students.html", name=session["name"])
 
 
 @app.route("/classes", methods=["GET", "POST"])
 @login_required
-def students():
+def classes():
     if request.method == "POST":
         return apology("not finished", 400)
 
     else:
-        return render_template("index.html", name=session["name"])
+        return render_template("classes.html", name=session["name"])
 
 
 
