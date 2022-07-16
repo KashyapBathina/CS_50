@@ -224,6 +224,7 @@ def index():
 def students():
     if request.method == "POST":
         return apology("not finished", 400)
+        
 
     else:
         print(session["user_id"])
