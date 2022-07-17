@@ -226,6 +226,7 @@ def students():
         semail = request.form.get("semail")
         sname = request.form.get("sname")
         classesl = request.form.get("classesl")
+        print(classesl)
 
         if not semail or not sname or str(classesl) == "none":
             return apology("you must fill out all fields", 400)
@@ -234,8 +235,10 @@ def students():
             return apology("must be a valid email address", 400)
 
         classid = db.execute("SELECT classid FROM classes WHERE classname = ?", classesl)
+        print(classid)
 
-        db.execute("INSERT INTO students (classid, classname, teacherid, studentname, studentemail) VALUES(?, ?, ?, ?, ?)", classid, classesl, session["user_id"], sname, semail)
+        #db.execute("INSERT INTO classes (teacherid, classname) VALUES(?, ?)", session["user_id"], cname)
+        db.execute("INSERT INTO students (teacherid, classname, classid, studentname, studentemail) VALUES(?, ?, ?, ?, ?)", session["user_id"], classesl, classid, sname, semail)
         return redirect("/students")
 
 
