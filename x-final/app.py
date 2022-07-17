@@ -236,10 +236,11 @@ def students():
 
 
         classes = db.execute("SELECT * FROM classes WHERE classname = ?", classesl.strip())
-        print(classes["classid"])
+        id = (classes["classid"])
+        print(id)
 
         #db.execute("INSERT INTO classes (teacherid, classname) VALUES(?, ?)", session["user_id"], cname)
-        db.execute("INSERT INTO students (teacherid, classname, classid, studentname, studentemail) VALUES(?, ?, ?, ?, ?)", session["user_id"], classesl, classid, sname, semail)
+        db.execute("INSERT INTO students (teacherid, classname, classid, studentname, studentemail) VALUES(?, ?, ?, ?, ?)", session["user_id"], classesl, classes["classid"], sname, semail)
         return redirect("/students")
 
 
