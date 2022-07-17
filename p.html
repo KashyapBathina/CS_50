@@ -10,7 +10,7 @@ function SelectEmail(name)
 	var listboxEmails = document.getElementById('emails');
 	for (var i=0;i<listboxEmails.length;i++)
 	{
-		listboxname = listboxEmails[i]
+		listboxname = listboxEmails[i].innerHTML
 		if (listboxname == name)
 		{
 			listboxEmails.selectedIndex = i;
@@ -30,10 +30,10 @@ function SelectEmail(name)
 </select>
 
 <select id="emails" name ="emails" style = "width: 100;"  multiple="multiple">
-    <option value ="joe@asds.com">joe@asds.com</option>
-    <option value ="albert@asds.com">albert@asds.com</option>
-    <option value ="gary@asds.com">gary@asds.com</option>
-    <option value ="ace@asds.com">ace@asds.com</option>
+    <option value ="joe@asds.com">joe</option>
+    <option value ="albert@asds.com">albert</option>
+    <option value ="gary@asds.com">gary</option>
+    <option value ="ace@asds.com">ace</option>
 </SELECT>
 </body>
 </html>
