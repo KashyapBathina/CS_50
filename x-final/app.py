@@ -246,6 +246,8 @@ def students():
     else:
         classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
         students = db.execute("SELECT * FROM students where teacherid = ?", session["user_id"])
+        print(students)
+        
         return render_template("students.html", classes=classes, students=students)
 
 
