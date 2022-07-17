@@ -10,6 +10,7 @@ import re
 from trycourier import Courier
 import string
 import random
+import json
 
 
 
@@ -236,9 +237,9 @@ def students():
 
 
         asd = db.execute("SELECT * FROM classes WHERE classname = ?", classesl.strip())
-        qwe =  dict[asd]
         print(asd)
-        print(qwe)
+        res = json.loads(asd)
+        print(res)
 
         #db.execute("INSERT INTO classes (teacherid, classname) VALUES(?, ?)", session["user_id"], cname)
         db.execute("INSERT INTO students (teacherid, classname, classid, studentname, studentemail) VALUES(?, ?, ?, ?, ?)", session["user_id"], classesl, classes["classid"], sname, semail)
