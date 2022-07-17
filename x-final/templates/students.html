@@ -97,7 +97,7 @@
                             <select name="classesl" id="classesl" class="form-select form-control form-label" aria-label="Default select">
                                 <option name = "none" id="none" value ="none"> --select class--</option>
                                 {% for class in classes %}
-                                <option name = "cname" value="{class}"> {class} </option>
+                                <option name = "cname" value="{{class}}"> {{class}} </option>
                                 {% endfor %}
                             </select>
                         </div>
