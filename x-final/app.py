@@ -269,9 +269,14 @@ def classes():
 @login_required
 def grading():
     if request.method == "POST":
-        semail = request.form.get("semail")
-        sname = request.form.get("sname")
+        form = request.form.get("form")
+        weight = request.form.get("weight")
+        aname = request.form.get("aname")
         classesl = request.form.get("classesl")
+
+        if form:
+            result = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
+
 
 
         return redirect("/grading")
