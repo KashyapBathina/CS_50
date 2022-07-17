@@ -242,7 +242,6 @@ def students():
         db.execute("INSERT INTO students (teacherid, classname, classid, studentname, studentemail) VALUES(?, ?, ?, ?, ?)", session["user_id"], classesl, classes[0]["classid"], sname, semail)
         return redirect("/students")
 
-
     else:
         classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
         students = db.execute("SELECT * FROM students where teacherid = ?", session["user_id"])
@@ -262,21 +261,41 @@ def classes():
         db.execute("INSERT INTO classes (teacherid, classname) VALUES(?, ?)", session["user_id"], cname)
         return redirect("/classes")
 
-
     else:
         classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
         return render_template("classes.html", classes=classes)
 
 
 
-@app.route("/grades", methods=["GET", "POST"])
+@app.route("/grading", methods=["GET", "POST"])
 @login_required
-def blank():
+def grading():
     if request.method == "POST":
-        # send message in email once updated
-        return apology("hello, world")
+        semail = request.form.get("semail")
+        sname = request.form.get("sname")
+        classesl = request.form.get("classesl")
+
+        if not semail or not sname or str(classesl) == "none":
+            return apology("you must fill out all fields", 400)
+
+        if not re.match(r"^[A-Za-z0-9\.\+_-]+@[A-Za-z0-9\._-]+\.[a-zA-Z]*$", semail):
+            return apology("must be a valid email address", 400)
+
+        return redirect("/classes")
+
     else:
-        return apology("hello, kashyap")
+        return render_template("grading.html", classes=classes, students=students)
+
+
+
+@app.route("/gradebook", methods=["GET", "POST"])
+@login_required
+def gradebook():
+    if request.method == "POST":
+
+        return redirect("/classes")
+    else:
+        return render_template("gradebook.html", classes=classes, students=students)
 
 
 def time_now():
