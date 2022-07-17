@@ -235,8 +235,10 @@ def students():
             return apology("must be a valid email address", 400)
 
 
-        classes = db.execute("SELECT * FROM classes WHERE classname = ?", classesl.strip())
-        print(classes)
+        asd = db.execute("SELECT * FROM classes WHERE classname = ?", classesl.strip())
+        qwe =  dict[asd]
+        print(asd)
+        print(qwe)
 
         #db.execute("INSERT INTO classes (teacherid, classname) VALUES(?, ?)", session["user_id"], cname)
         db.execute("INSERT INTO students (teacherid, classname, classid, studentname, studentemail) VALUES(?, ?, ?, ?, ?)", session["user_id"], classesl, classes["classid"], sname, semail)
