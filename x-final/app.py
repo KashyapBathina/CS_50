@@ -225,17 +225,17 @@ def students():
     if request.method == "POST":
         semail = request.form.get("semail")
         sname = request.form.get("sname")
-        cname = request.form.get("cname")
+        classesl = request.form.get("classesl")
 
-        if not semail or not sname or str(cname) == "none":
+        if not semail or not sname or str(classesl) == "none":
             return apology("you must fill out all fields", 400)
 
         if not re.match(r"^[A-Za-z0-9\.\+_-]+@[A-Za-z0-9\._-]+\.[a-zA-Z]*$", semail):
             return apology("must be a valid email address", 400)
 
-        classid = db.execute("SELECT classid FROM classes WHERE classname = ?", cname)
+        classid = db.execute("SELECT classid FROM classes WHERE classname = ?", classesl)
 
-        db.execute("INSERT INTO students (classid, classname, teacherid, studentname, studentemail) VALUES(?, ?, ?, ?, ?)", classid, cname, session["user_id"], sname, semail)
+        db.execute("INSERT INTO students (classid, classname, teacherid, studentname, studentemail) VALUES(?, ?, ?, ?, ?)", classid, classesl, session["user_id"], sname, semail)
         return redirect("/students")
 
 
