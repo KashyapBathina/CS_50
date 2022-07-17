@@ -226,7 +226,7 @@ def students():
         semail = request.form.get("semail")
         sname = request.form.get("sname")
         classesl = request.form.get("classesl")
-        print(classesl)
+        print(classesl.strip())
 
         if not semail or not sname or str(classesl) == "none":
             return apology("you must fill out all fields", 400)
@@ -235,9 +235,8 @@ def students():
             return apology("must be a valid email address", 400)
 
 
-        class
         classid = db.execute("SELECT classid FROM classes WHERE classname = ?", classesl)
-        pid = str(classid)
+        pid = int(classid)
         strip = pid.strip()
         print(strip)
 
