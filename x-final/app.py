@@ -273,11 +273,6 @@ def grading():
         sname = request.form.get("sname")
         classesl = request.form.get("classesl")
 
-        if not semail or not sname or str(classesl) == "none":
-            return apology("you must fill out all fields", 400)
-
-        if not re.match(r"^[A-Za-z0-9\.\+_-]+@[A-Za-z0-9\._-]+\.[a-zA-Z]*$", semail):
-            return apology("must be a valid email address", 400)
 
         return redirect("/grading")
 
