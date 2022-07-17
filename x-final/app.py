@@ -236,7 +236,7 @@ def students():
 
 
         classid = db.execute("SELECT classid FROM classes WHERE classname = ?", classesl)
-        pid = int(classid)
+        pid = (classid)
         strip = pid.strip()
         print(strip)
 
