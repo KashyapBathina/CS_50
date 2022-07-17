@@ -244,7 +244,6 @@ def students():
     else:
         classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
         students = db.execute("SELECT * FROM students where teacherid = ?", session["user_id"])
-        print(students)
         return render_template("students.html", classes=classes, students=students)
 
 
@@ -280,9 +279,11 @@ def grading():
         if not re.match(r"^[A-Za-z0-9\.\+_-]+@[A-Za-z0-9\._-]+\.[a-zA-Z]*$", semail):
             return apology("must be a valid email address", 400)
 
-        return redirect("/classes")
+        return redirect("/grading")
 
     else:
+        classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
+        students = db.execute("SELECT * FROM students where teacherid = ?", session["user_id"])
         return render_template("grading.html", classes=classes, students=students)
 
 
@@ -292,7 +293,7 @@ def grading():
 def gradebook():
     if request.method == "POST":
 
-        return redirect("/classes")
+        return redirect("/gradebook")
     else:
         return render_template("gradebook.html", classes=classes, students=students)
 
