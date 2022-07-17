@@ -227,7 +227,6 @@ def students():
         semail = request.form.get("semail")
         sname = request.form.get("sname")
         classesl = request.form.get("classesl")
-        print(classesl.strip())
 
         if not semail or not sname or str(classesl) == "none":
             return apology("you must fill out all fields", 400)
