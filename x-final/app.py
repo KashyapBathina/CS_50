@@ -269,10 +269,9 @@ def classes():
 @login_required
 def grading():
     if request.method == "POST":
-        #form = request.form.get("form")
-        #weight = request.form.get("weight")
-        #aname = request.form.get("aname")
-        #classesl = request.form.get("classesl")
+        cname = request.form.get("cname")
+
+        
 
         return redirect("/grading")
 
@@ -290,9 +289,3 @@ def gradebook():
         return redirect("/gradebook")
     else:
         return render_template("gradebook.html", classes=classes, students=students)
-
-
-def time_now():
-    # Get current time
-    now_utc = datetime.now(timezone.utc)
-    return str(now_utc.date()) + ' @time ' + now_utc.time().strftime("%H:%M:%S")
