@@ -14,7 +14,7 @@
 
     <div class="w3-row-padding w3-margin-bottom">
       <input autocomplete="off" autofocus placeholder="Query" type="search">
-        {% if not shows %}
+        {% if not response %}
           <h5>No students in that class. Maybe you typed the wrong class name.</h5>
         {% else %}
           <ul></ul>
@@ -113,14 +113,18 @@
 {% endblock %}
 
 {% block javascript %}
-  <script>
+<script>
 
-    let input = document.querySelector('input');
-    input.addEventListener('input', async function() {
-        let response = await fetch('/search?q=' + input.value);
-        let shows = await response.text();
-        document.querySelector('ul').innerHTML = shows;
-    });
-
-  </script>
+  let input = document.querySelector('input');
+        input.addEventListener('input', async function() {
+            let response = await fetch('/search?q=' + input.value);
+            let shows = await response.json();
+            let html = '';
+            for (let id in shows) {
+                let name = shows[id].studentname.replace('<', '&lt;').replace('&', '&amp;');
+                html += '<li>' + name + '</li>';
+            }
+            document.querySelector('ul').innerHTML = html;
+        });
+</script>
 {% endblock %}
