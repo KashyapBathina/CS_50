@@ -80,10 +80,10 @@
                                 {% for student in students %}
                                   <tr>
                                     <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
-                                    <td>{{student["studentname"]}}</td>
-                                    <td>{{student["classname"]}}</td>
-                                    <td>{{student["studentemail"]}}</td>
-                                    <td><i>student["average"]</i></td>
+                                    <td id="studentname">{{student["studentname"]}}</td>
+                                    <td id="classname">{{student["classname"]}}</td>
+                                    <td id="studentemail">{{student["studentemail"]}}</td>
+                                    <td id=""><i>student["average"]</i></td>
                                   </tr>
                                 {% endfor %}
                                 </table>
@@ -116,9 +116,16 @@
             let html = '';
             for (let id in shows) {
                 let name = shows[id].studentname.replace('<', '&lt;').replace('&', '&amp;');
-                html += '<li>' + name + '</li>';
+                let class = shows[id].classname.replace('<', '&lt;').replace('&', '&amp;');
+                let email = shows[id].studentemail.replace('<', '&lt;').replace('&', '&amp;');
+                n += name;
+                c += class;
+                e += email;
+
             }
-            document.querySelector('ul').innerHTML = html;
+            document.querySelector('ul').innerHTML = n;
+            document.querySelector('#').innerHTML = c;
+            document.querySelector('ul').innerHTML = e;
         });
 </script>
 {% endblock %}
