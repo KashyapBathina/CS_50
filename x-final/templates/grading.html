@@ -100,17 +100,27 @@
             let shows = await response.json();
             let html = '';
             for (let id in shows) {
-                let name = shows[id].studentname.replace('<', '&lt;').replace('&', '&amp;');
-                let class = shows[id].classname.replace('<', '&lt;').replace('&', '&amp;');
-                let email = shows[id].studentemail.replace('<', '&lt;').replace('&', '&amp;');
-                n += name;
-                c += class;
-                e += email;
+                //let name = shows[id].studentname.replace('<', '&lt;').replace('&', '&amp;');
+                //let class = shows[id].classname.replace('<', '&lt;').replace('&', '&amp;');
+                //let email = shows[id].studentemail.replace('<', '&lt;').replace('&', '&amp;');
+                //n += name;
+                //c += class;
+                //e += email;
+                let response = await fetch('/search?q=' + input.value);
+                let shows = await response.json();
+                let html = '';
+                for (let id in shows) {
+                    let name = shows[id].studentname.replace('<', '&lt;').replace('&', '&amp;');
+                    html += '<li>' + title + '</li>';
+                }
+                document.querySelector('ul').innerHTML = html;
+
 
             }
-            document.querySelector('#studentname').innerHTML = n;
-            document.querySelector('#classname').innerHTML = c;
-            document.querySelector('#studentemail').innerHTML = e;
+            document.querySelector('#studentname').innerHTML = html;
+            //document.querySelector('#studentname').innerHTML = n;
+            //document.querySelector('#classname').innerHTML = c;
+            //document.querySelector('#studentemail').innerHTML = e;
         });
 </script>
 {% endblock %}
