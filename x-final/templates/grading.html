@@ -109,13 +109,12 @@
 <script type="text/javascript">
     $(document).on('submit','#todo-form',function(e)
             {
-    console.log('hello');
     e.preventDefault();
     $.ajax({
     type:'POST',
-    url:'/',
+    url:'/grading',
     data:{
-    todo:$("#todo").val()
+    classesl:$("#classesl")
     },
     success:function()
     {
