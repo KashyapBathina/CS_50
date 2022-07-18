@@ -95,16 +95,16 @@
 {% endblock %}
 
 {% block javascript %}
-  <script type="text/javascript">
+<script type="text/javascript">
     $(document).on('submit','#todo-form',function(e)
                    {
       console.log('hello');
       e.preventDefault();
       $.ajax({
         type:'POST',
-        url:'/',
+        url:'/grading',
         data:{
-          todo:$("#todo").val()
+          cname:$("#cname").val()
         },
         success:function()
         {
@@ -112,6 +112,7 @@
         }
       })
     });
+</script>
 {% endblock %}
 
 
