@@ -95,8 +95,10 @@
                                   </thead>
                                   <tr id="final">
                                     <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
+                                    <!--
                                     <td name="studentname" id="uno"></td>
                                     <td name="classclass" id="dos"></td>
+                                    -->
                                     <td name="grade" id="grade"><i><input name="grade" type="number" placeholder="%" style="width:50px; position:absolute; margin-left:40px;"></i></td>
                                   </tr>
                                 </table>
@@ -126,10 +128,10 @@
                 let one = '';
                 let two = '';
                 for (let id in shows) {
-                    let name = shows[id].studentname
+                    let name = shows[id].studentname.replace('<', '&lt;').replace('&', '&amp;');
                     one += "<td>" name "</td>";
-                    let classname = shows[id].classname
-                    two += "<td name="classclass" id="dos">" "</td>";
+                    let classname = shows[id].classname.replace('<', '&lt;').replace('&', '&amp;');
+                    two += "<td>" classname "</td>";
 
                 }
                 document.querySelector('#final').innerHTML = one;
