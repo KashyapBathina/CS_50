@@ -89,7 +89,7 @@
                                     <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
                                     <td id="uno"></td>
                                     <td id="dos"></td>
-                                    <td id="tres"></td>
+                                    <td name="grade" id="grade"></td>
                                   </tr>
                                 </table>
                               </div>
@@ -124,12 +124,9 @@
                     one += name;
                     let classname = shows[id].classname.replace('<', '&lt;').replace('&', '&amp;');
                     two += classname;
-                    let studente = shows[id].studentemail.replace('<', '&lt;').replace('&', '&amp;');
-                    three += studente;
                 }
                 document.querySelector('#uno').innerHTML = one;
                 document.querySelector('#dos').innerHTML = two;
-                document.querySelector('#tres').innerHTML = three;
             });
 </script>
 {% endblock %}
