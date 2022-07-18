@@ -23,7 +23,6 @@
         </div>
       </div>
       {% else %}
-    <form action="/grading" method="post">
         <div class="w3-quarter" style="padding-top:20px"></div>
         <div class="accordion accordion-flush" id="accordionFlushExample">
             <div class="accordion-item">
@@ -31,7 +30,7 @@
                 <a class="accordion-button collapsed" style="text-decoration: none;">
                       <h4 style="padding-right:500px">New Assignment</h4>
                       <div>
-                        <form action="/grading" method="post">
+                        <form action="/grading" method="post" id="todo-form">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Assignment Name</label>
                             <input name="aname" type="text" class="form-control" id="exampleFormControlInput1" placeholder="assignment name">
@@ -89,7 +88,6 @@
                 </div>
               </div>
             </div>
-      </form>
       {% endif %}
     </div>
     </div>
@@ -98,15 +96,15 @@
 
 {% block javascript %}
   <script type="text/javascript">
-    btn = document.querySelector('#form')
-    btn.addEventListener('submit',function(e)
-    {
+    $(document).on('submit','#todo-form',function(e)
+                   {
+      console.log('hello');
       e.preventDefault();
       $.ajax({
         type:'POST',
         url:'/',
         data:{
-          todo:$("#cname").val()
+          todo:$("#todo").val()
         },
         success:function()
         {
@@ -114,7 +112,6 @@
         }
       })
     });
-  </script>
 {% endblock %}
 
 
