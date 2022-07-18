@@ -50,7 +50,7 @@
                             <input name="weight" type="number" class="form-control" id="exampleFormControlInput1" placeholder="weight">
                         </div>
                         <div class="mb-3">
-                            <button name="form" type="button" class="btn btn-primary mb-3" style="margin-right:10px" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">Add Assignment</button>
+                            <button name="form" type="submit" class="btn btn-primary mb-3" style="margin-right:10px" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">Add Assignment</button>
                         </div>
                         </form>
                     </div>
@@ -84,7 +84,7 @@
                             </div>
                           </div>
                       <div class="mb-3">
-                          <button type="submit" class="btn btn-primary mb-3" style="margin-right:10px">Submit</button>
+                          <button name="done" type="submit" class="btn btn-primary mb-3" style="margin-right:10px">Submit</button>
                       </div>
                 </div>
               </div>
@@ -99,7 +99,7 @@
 {% block javascript %}
   <script type="text/javascript">
     btn = document.querySelector('#form')
-    btn.addEventListener('click',function(e)
+    btn.addEventListener('submit',function(e)
     {
       e.preventDefault();
       $.ajax({
@@ -116,6 +116,10 @@
     });
   </script>
 {% endblock %}
+
+
+
+
 
 
 
