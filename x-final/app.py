@@ -269,9 +269,11 @@ def classes():
 @login_required
 def grading():
     if request.method == "POST":
-        aname = request.form.get("aname")
         cname = request.form.get("cname")
-        weight = request.form.get("weight")
+        form = request.form.get("form")
+
+        if form:
+            shows = db.execute("SELECT * FROM students WHERE classname = ? AND teacherid = ?", cname, session["user_id"])
 
 
 
@@ -281,16 +283,6 @@ def grading():
         classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
         students = db.execute("SELECT * FROM students where teacherid = ?", session["user_id"])
         return render_template("grading.html", classes=classes, students=students)
-
-
-@app.route("/search")
-def search():
-    q = request.args.get("q")
-    if q:
-        shows = db.execute("SELECT * FROM students WHERE classname LIKE ? AND teacherid = ?", "%" + request.args.get("q") + "%", session["user_id"])
-    else:
-        shows = []
-    return jsonify(shows)
 
 
 @app.route("/gradebook", methods=["GET", "POST"])

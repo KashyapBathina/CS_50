@@ -98,7 +98,7 @@
 
 {% block javascript %}
   <script type="text/javascript">
-    $(document).on('submit','#todo-form',function(e)
+    document.querySelector('#form').addEventListener('submit',function(e)
                   {
       console.log('hello');
       e.preventDefault();
