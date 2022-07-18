@@ -285,7 +285,7 @@ def grading():
 def search():
     q = request.args.get("q")
     if q:
-        shows = db.execute("SELECT * FROM students WHERE classname = ?", "%" + request.args.get("q") + "%")
+        shows = db.execute("SELECT * FROM students WHERE classname LIKE ? AND teacherid = ?", "%" + request.args.get("q") + "%", session["user_id"])
         print(shows)
     else:
         shows = []
