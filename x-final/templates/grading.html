@@ -12,6 +12,7 @@
       <h5><b><i class="fa fa-dashboard"></i> Grading </b></h5>
     </header>
 
+    <!--
     <div class="w3-row-padding w3-margin-bottom">
       <input autocomplete="off" autofocus placeholder="Query" type="search">
 
@@ -37,7 +38,7 @@
                 </div>
             </form>
         </div>
-    <!--
+        -->
     {% if not students %}
       <div class="accordion accordion-flush" id="accordionFlushExample">
         <div class="accordion-item">
@@ -83,32 +84,19 @@
                 </a>
               </h2>
               <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                {% if not result %}
-                <div class="card card-body">
-                    <div class="w3-panel">
-                        <div class="w3-row-padding" style="margin:0 -16px">
-                            <div class="w3">
-                            <h5>No students in that class. Maybe you typed the wrong class name.</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {% else %}
                 <div class="card card-body">
                     <form action="/grading" method="post">
                         <div class="w3-panel">
                             <div class="w3-row-padding" style="margin:0 -16px">
-                              <div class="w3">>
+                              <div class="w3">
                                 <table class="w3-table w3-striped w3-white">
-                                {% for student in students %}
                                   <tr>
                                     <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
-                                    <td>{{student["studentname"]}}</td>
-                                    <td>{{student["classname"]}}</td>
-                                    <td>{{student["studentemail"]}}</td>
-                                    <td><i>student["average"]</i></td>
+                                    <td id="tres"></td>
+                                    <td id="dos"></td>
+                                    <td id="tres"></td>
+                                    <td id="average"><i>average</i></td>
                                   </tr>
-                                {% endfor %}
                                 </table>
                               </div>
                             </div>
@@ -118,13 +106,10 @@
                         </div>
                     </form>
                 </div>
-                {% endif %}
-
               </div>
             </div>
-                      </form>
-                      {% endif %}
-            -->
+            </form>
+            {% endif %}
           </div>
     </div>
     <hr>
@@ -135,20 +120,22 @@
 
   let input = document.querySelector('input');
         input.addEventListener('input', async function() {
-            let response = await fetch('/search?q=' + input.value);
-            let shows = await response.json();
-            let html = '';
-            for (let id in shows) {
-                let n = shows[id].studentname.replace('<', '&lt;').replace('&', '&amp;');
-                one += n;
-                let c = shows[id].classname.replace('<', '&lt;').replace('&', '&amp;');
-                two += c;
-                let e = shows[id].studentemail.replace('<', '&lt;').replace('&', '&amp;');
-                three += e;
-            }
-            document.querySelector('#uno').innerHTML = one;
-            document.querySelector('#dos').innerHTML = two;
-            document.querySelector('#tres').innerHTML = three;
-        });
+          let response = await fetch('/search?q=' + input.value);
+                let shows = await response.json();
+                let one = '';
+                let two = '';
+                let three = '';
+                for (let id in shows) {
+                    let name = shows[id].studentname.replace('<', '&lt;').replace('&', '&amp;');
+                    one += name;
+                    let classname = shows[id].classname.replace('<', '&lt;').replace('&', '&amp;');
+                    two += classname;
+                    let studente = shows[id].studentemail.replace('<', '&lt;').replace('&', '&amp;');
+                    three += studente;
+                }
+                document.querySelector('#uno').innerHTML = one;
+                document.querySelector('#dos').innerHTML = two;
+                document.querySelector('#tres').innerHTML = three;
+            });
 </script>
 {% endblock %}
