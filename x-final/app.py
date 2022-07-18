@@ -271,7 +271,7 @@ def grading():
     if request.method == "POST":
         cname = request.form.get("cname")
 
-        
+
 
         return redirect("/grading")
 
@@ -279,6 +279,12 @@ def grading():
         classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
         students = db.execute("SELECT * FROM students where teacherid = ?", session["user_id"])
         return render_template("grading.html", classes=classes, students=students)
+
+
+@app.route("/search")
+def search():
+    shows = db.execute("SELECT * FROM students WHERE classname LIKE ?", "%" + request.args.get("q") + "%")
+    return render_template("search.html", shows=shows)
 
 
 @app.route("/gradebook", methods=["GET", "POST"])
