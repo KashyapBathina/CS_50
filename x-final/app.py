@@ -10,7 +10,7 @@ import re
 from trycourier import Courier
 import string
 import random
-import json
+from flask import Flask, jsonify, render_template, request
 
 
 
@@ -279,13 +279,17 @@ def grading():
     else:
         classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
         students = db.execute("SELECT * FROM students where teacherid = ?", session["user_id"])
-        q = request.args.get("q")
-        if q:
-            shows = db.execute("SELECT  FROM shows WHERE title LIKE ? LIMIT 50", "%" + q + "%")
-        else:
-            shows = []
-        return jsonify(shows)
+        return render_template("grading.html", classes=classes, students=students)
 
+
+@app.route("/search")
+def search():
+    q = request.args.get("q")
+    if q:
+        shows = db.execute("SELECT * FROM shows WHERE title LIKE ? LIMIT 50", "%" + q + "%")
+    else:
+        shows = []
+    return jsonify(shows)
 
 
 @app.route("/gradebook", methods=["GET", "POST"])
