@@ -65,15 +65,20 @@
                         <div class="w3-panel">
                             <div class="w3-row-padding" style="margin:0 -16px">
                               <div class="w3">>
+                                <ul></ul>
+                                <!--
                                 <table class="w3-table w3-striped w3-white">
+                                {% for student in students %}
                                   <tr>
                                     <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
-                                    <td id="studentname"></td>
-                                    <td id="classname"></td>
-                                    <td id="studentemail"></td>
-                                    <td id=""></td>
+                                    <td>{{student["studentname"]}}</td>
+                                    <td>{{student["classname"]}}</td>
+                                    <td>{{student["studentemail"]}}</td>
+                                    <td><i>student["average"]</i></td>
                                   </tr>
+                                {% endfor %}
                                 </table>
+                                -->
                               </div>
                             </div>
                           </div>
@@ -82,6 +87,7 @@
                         </div>
                     </form>
                 </div>
+
               </div>
             </div>
             </form>
@@ -100,27 +106,10 @@
             let shows = await response.json();
             let html = '';
             for (let id in shows) {
-                //let name = shows[id].studentname.replace('<', '&lt;').replace('&', '&amp;');
-                //let class = shows[id].classname.replace('<', '&lt;').replace('&', '&amp;');
-                //let email = shows[id].studentemail.replace('<', '&lt;').replace('&', '&amp;');
-                //n += name;
-                //c += class;
-                //e += email;
-                let response = await fetch('/search?q=' + input.value);
-                let shows = await response.json();
-                let html = '';
-                for (let id in shows) {
-                    let name = shows[id].studentname.replace('<', '&lt;').replace('&', '&amp;');
-                    html += '<li>' + title + '</li>';
-                }
-                document.querySelector('ul').innerHTML = html;
-
-
+                let name = shows[id].studentname.replace('<', '&lt;').replace('&', '&amp;');
+                html += '<li>' + name + '</li>';
             }
-            document.querySelector('#studentname').innerHTML = html;
-            //document.querySelector('#studentname').innerHTML = n;
-            //document.querySelector('#classname').innerHTML = c;
-            //document.querySelector('#studentemail').innerHTML = e;
+            document.querySelector('ul').innerHTML = html;
         });
 </script>
 {% endblock %}
