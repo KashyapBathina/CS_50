@@ -65,7 +65,12 @@
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Class Name</label>
-                            <input name="cname" id="asd" autocomplete="off" autofocus placeholder="Query" type="search">
+                            <select name="classesl" id="classesl" class="form-select form-control form-label" aria-label="Default select">
+                              <option name = "none" id="none" value ="none"> --select class--</option>
+                              {% for class in classes %}
+                              <option name = "cname" value=" {{class["classname"]}} "> {{class["classname"]}} </option>
+                              {% endfor %}
+                          </select>
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Weight</label>
@@ -95,10 +100,8 @@
                                   </thead>
                                   <tr id="final">
                                     <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
-                                    <!--
                                     <td name="studentname" id="uno"></td>
                                     <td name="classclass" id="dos"></td>
-                                    -->
                                     <td name="grade" id="grade"><i><input name="grade" type="number" placeholder="%" style="width:50px; position:absolute; margin-left:40px;"></i></td>
                                   </tr>
                                 </table>
@@ -119,22 +122,4 @@
 {% endblock %}
 
 {% block javascript %}
-<script>
-
-  let input = document.querySelector('#asd');
-        input.addEventListener('input', async function() {
-          let response = await fetch('/search?q=' + input.value);
-                let shows = await response.json();
-                let one = '';
-                let two = '';
-                for (let id in shows) {
-                    let name = shows[id].studentname.replace('<', '&lt;').replace('&', '&amp;');
-                    one += "<td>" name "</td>";
-                    let classname = shows[id].classname.replace('<', '&lt;').replace('&', '&amp;');
-                    two += "<td>" classname "</td>";
-
-                }
-                document.querySelector('#final').innerHTML = one;
-            });
-</script>
 {% endblock %}
