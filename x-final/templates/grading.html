@@ -93,11 +93,8 @@
                                         <th style="margin-left:40px; position:absolute;">Grade</th>
                                     </tr>
                                   </thead>
-                                  <tr>
-                                    <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
-                                    <td name="studentname" id="uno"></td>
-                                    <td name="classclass" id="dos"></td>
-                                    <td name="grade" id="grade"><i><input name="grade" type="number" placeholder="%" style="width:50px; position:absolute; margin-left:40px;"></i></td>
+                                  <tr id="final">
+
                                   </tr>
                                 </table>
                               </div>
@@ -132,8 +129,7 @@
                     two += classname;
 
                 }
-                document.querySelector('#uno').innerHTML = one;
-                document.querySelector('#dos').innerHTML = two;
+                document.querySelector('#final').innerHTML = "one";
             });
 </script>
 {% endblock %}
