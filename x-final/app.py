@@ -269,11 +269,11 @@ def classes():
 @login_required
 def grading():
     if request.method == "POST":
-        classname = request.form.get("cname")
+        classesl = request.form.get("classesl")
 
-        print(classname)
-        nstudents = db.execute("SELECT * FROM students WHERE classname = ? AND teacherid = ?", classname, session["user_id"])
-        return render_template('grading.html', nstudents=nstudents)
+        print(classesl)
+        selected = db.execute("SELECT * FROM students WHERE classname = ? AND teacherid = ?", classesl, session["user_id"])
+        return render_template('grading.html', selected=selected)
 
     else:
         classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
