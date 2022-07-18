@@ -283,9 +283,10 @@ def grading():
 
 @app.route("/search")
 def search():
-    q = request.args.get("classesl")
+    q = request.form.get("classesl")
+    print(q)
     if q:
-        shows = db.execute("SELECT * FROM students WHERE classname LIKE ?", "%" + request.args.get("classesl") + "%")
+        shows = db.execute("SELECT * FROM students WHERE classname LIKE ?", request.form.get("classesl"))
     else:
         shows = []
     return jsonify(shows)
