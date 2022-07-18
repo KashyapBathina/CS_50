@@ -65,7 +65,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Class Name</label>
-                            <input autocomplete="off" autofocus placeholder="Query" type="search">
+                            <input id="asd" autocomplete="off" autofocus placeholder="Query" type="search">
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Weight</label>
@@ -112,7 +112,7 @@
 {% block javascript %}
 <script>
 
-  let input = document.querySelector('input');
+  let input = document.querySelector('#asd');
         input.addEventListener('input', async function() {
           let response = await fetch('/search?q=' + input.value);
                 let shows = await response.json();
