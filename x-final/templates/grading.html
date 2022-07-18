@@ -102,21 +102,24 @@
 
 {% block javascript %}
   <script type="text/javascript">
-    $(document).on('submit','#todo-form',function(e)
+
+
+
+//    $(document).on('submit','#todo-form',function(e)
                   {
-      e.preventDefault();
-      $.ajax({
-        type:'POST',
-        url:'/',
-        data:{
-          classesl:$("#classesl")
-        },
-        success:function()
-        {
-          alert('saved');
-        }
-      })
-    });
+//      e.preventDefault();
+//      $.ajax({
+//        type:'POST',
+//        url:'/',
+//        data:{
+//          classesl:$("#classesl")
+//        },
+//        success:function()
+//        {
+//          alert('saved');
+//        }
+//      })
+//    });
   </script>
 {% endblock %}
 
