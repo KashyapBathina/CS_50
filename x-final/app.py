@@ -270,7 +270,7 @@ def classes():
 def grading():
     if request.method == "POST":
         classesl = request.form.get("classesl")
-
+        print(todo)
         print(classesl)
         selected = db.execute("SELECT * FROM students WHERE classname = ? AND teacherid = ?", classesl, session["user_id"])
         students = db.execute("SELECT * FROM students where teacherid = ?", session["user_id"])
