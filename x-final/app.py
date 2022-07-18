@@ -279,8 +279,12 @@ def grading():
     else:
         classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
         students = db.execute("SELECT * FROM students where teacherid = ?", session["user_id"])
-        result = db.execute("SELECT * FROM students classname = ?", session["user_id"], "%" + request.args.get("q") + "%")
-        return render_template("grading.html", classes=classes, students=students, result=result)
+        q = request.args.get("q")
+        if q:
+            shows = db.execute("SELECT  FROM shows WHERE title LIKE ? LIMIT 50", "%" + q + "%")
+        else:
+            shows = []
+        return jsonify(shows)
 
 
 
