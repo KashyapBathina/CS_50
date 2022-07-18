@@ -14,7 +14,11 @@
 
     <div class="w3-row-padding w3-margin-bottom">
       <input autocomplete="off" autofocus placeholder="Query" type="search">
-        <ul></ul>
+        {% if not shows %}
+          <h5>No students in that class. Maybe you typed the wrong class name.</h5>
+        {% else %}
+          <ul></ul>
+        {% endif %}
     <!--
     {% if not students %}
       <div class="accordion accordion-flush" id="accordionFlushExample">
@@ -109,3 +113,14 @@
 {% endblock %}
 
 {% block javascript %}
+  <script>
+
+    let input = document.querySelector('input');
+    input.addEventListener('input', async function() {
+        let response = await fetch('/search?q=' + input.value);
+        let shows = await response.text();
+        document.querySelector('ul').innerHTML = shows;
+    });
+
+  </script>
+{% endblock %}
