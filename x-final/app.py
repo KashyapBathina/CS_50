@@ -269,7 +269,8 @@ def classes():
 @login_required
 def grading():
     if request.method == "POST":
-        cname = request.form.get("cname")
+        aname =
+        cname = 
 
 
 
