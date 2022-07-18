@@ -14,8 +14,29 @@
 
     <div class="w3-row-padding w3-margin-bottom">
       <input autocomplete="off" autofocus placeholder="Query" type="search">
-          <h5>Are the right students not showing up?  Maybe you typed the wrong class name.</h5>
-          <ul></ul>
+
+
+          <div class="card card-body">
+            <form action="/grading" method="post">
+                <div class="w3-panel">
+                    <div class="w3-row-padding" style="margin:0 -16px">
+                      <h5>Are the right students not showing up?  Maybe you typed the wrong class name.</h5>
+                      <div class="w3">
+                        <table class="w3-table w3-striped w3-white">
+                            <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
+                            <td id="uno"></td>
+                            <td id="dos"></td>
+                            <td id="tres"></td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                <div class="mb-3">
+                    <button type="button" class="btn btn-primary mb-3" style="margin-right:10px">Add Student</button>
+                </div>
+            </form>
+        </div>
     <!--
     {% if not students %}
       <div class="accordion accordion-flush" id="accordionFlushExample">
@@ -118,10 +139,16 @@
             let shows = await response.json();
             let html = '';
             for (let id in shows) {
-                let name = shows[id].studentname.replace('<', '&lt;').replace('&', '&amp;');
-                html += '<li>' + name + '</li>';
+                let n = shows[id].studentname.replace('<', '&lt;').replace('&', '&amp;');
+                one += n;
+                let c = shows[id].classname.replace('<', '&lt;').replace('&', '&amp;');
+                two += c;
+                let e = shows[id].studentemail.replace('<', '&lt;').replace('&', '&amp;');
+                three += e;
             }
-            document.querySelector('ul').innerHTML = html;
+            document.querySelector('#uno').innerHTML = one;
+            document.querySelector('#dos').innerHTML = two;
+            document.querySelector('#tres').innerHTML = three;
         });
 </script>
 {% endblock %}
