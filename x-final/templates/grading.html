@@ -55,7 +55,7 @@
                 </a>
               </h2>
               <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                {% if result %}
+                {% if not response %}
                 <div class="card card-body">
                     <div class="w3-panel">
                         <div class="w3-row-padding" style="margin:0 -16px">
@@ -91,7 +91,7 @@
                         </div>
                     </form>
                     -->
-                    <ul>{{shows["name"]}}</ul>
+                    <ul>{{shows["studentname"]}}</ul>
                 </div>
                 {% endif %}
 
