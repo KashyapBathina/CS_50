@@ -288,7 +288,6 @@ def search():
     q = request.args.get("q")
     if q:
         shows = db.execute("SELECT * FROM students WHERE classname LIKE ? AND teacherid = ?", "%" + request.args.get("q") + "%", session["user_id"])
-        print(shows[0]["studentname"])
     else:
         shows = []
     return jsonify(shows)
