@@ -94,7 +94,10 @@
                                     </tr>
                                   </thead>
                                   <tr id="final">
-
+                                    <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
+                                    <td name="studentname" id="uno"></td>
+                                    <td name="classclass" id="dos"></td>
+                                    <td name="grade" id="grade"><i><input name="grade" type="number" placeholder="%" style="width:50px; position:absolute; margin-left:40px;"></i></td>
                                   </tr>
                                 </table>
                               </div>
@@ -124,12 +127,12 @@
                 let two = '';
                 for (let id in shows) {
                     let name = shows[id].studentname
-                    one += name;
+                    one += "<td>" name "</td>";
                     let classname = shows[id].classname
                     two += classname;
 
                 }
-                document.querySelector('#final').innerHTML = "one";
+                document.querySelector('#final').innerHTML = one;
             });
 </script>
 {% endblock %}
