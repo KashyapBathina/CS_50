@@ -282,16 +282,6 @@ def grading():
         return render_template("grading.html", classes=classes, students=students)
 
 
-@app.route("/search")
-def search():
-    q = request.args.get("q")
-    if q:
-        shows = db.execute("SELECT * FROM students WHERE classname LIKE", "%" + q + "%")
-    else:
-        shows = []
-    return jsonify(shows)
-
-
 @app.route("/gradebook", methods=["GET", "POST"])
 @login_required
 def gradebook():

@@ -41,7 +41,12 @@
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Class Name</label>
-                            <input name="class1" autocomplete="off" autofocus placeholder="Query" type="text">
+                            <select name="classesl" id="classesl" class="form-select form-control form-label" aria-label="Default select">
+                              <option name = "none" id="none" value ="none"> --select class--</option>
+                              {% for class in classes %}
+                              <option name = "cname" value=" {{class["classname"]}} "> {{class["classname"]}} </option>
+                              {% endfor %}
+                          </select>
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Weight</label>
@@ -55,7 +60,7 @@
                 </a>
               </h2>
               <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                {% if not shows %}
+                {% if not result %}
                 <div class="card card-body">
                     <div class="w3-panel">
                         <div class="w3-row-padding" style="margin:0 -16px">
@@ -67,7 +72,6 @@
                 </div>
                 {% else %}
                 <div class="card card-body">
-                    <!--
                     <form action="/grading" method="post">
                         <div class="w3-panel">
                             <div class="w3-row-padding" style="margin:0 -16px">
@@ -90,8 +94,6 @@
                             <button type="button" class="btn btn-primary mb-3" style="margin-right:10px">Add Student</button>
                         </div>
                     </form>
-                    -->
-                    <ul></ul>
                 </div>
                 {% endif %}
 
@@ -102,21 +104,4 @@
       {% endif %}
     </div>
     <hr>
-{% endblock %}
-
-
-{% block javascript %}
-    <script>
-        let input = document.querySelector('input');
-            input.addEventListener('input', async function() {
-                let response = await fetch('/search?q=' + input.value);
-                let shows = await response.json();
-                let html = '';
-                for (let id in shows) {
-                    let students = shows[id].studentname.replace('<', '&lt;').replace('&', '&amp;');
-                    html += '<li>' + students + '</li>';
-                }
-                document.querySelector('ul').innerHTML = html;
-            });
-    </script>
 {% endblock %}
