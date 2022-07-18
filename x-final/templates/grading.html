@@ -68,7 +68,7 @@
                             <select name="classesl" id="classesl" class="form-select form-control form-label" aria-label="Default select">
                               <option name = "none" id="none" value ="none"> --select class--</option>
                               {% for class in classes %}
-                              <option name = "cname" value=" {{class["classname"]}} "> {{class["classname"]}} </option>
+                              <option name = "cname" id="cnamel" value=" {{class["classname"]}} "> {{class["classname"]}} </option>
                               {% endfor %}
                           </select>
                         </div>
@@ -118,8 +118,9 @@
 {% block javascript %}
 <script>
 
-  let input = document.querySelector('input');
-        input.addEventListener('input', async function() {
+  let input = document.querySelector('#cnamel');
+  let btn = document.querySelector("#button")
+        input.addEventListener('click', async function() {
           let response = await fetch('/search?q=' + input.value);
                 let shows = await response.json();
                 let one = '';
