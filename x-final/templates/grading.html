@@ -80,7 +80,6 @@
               </h2>
               <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                 <div class="card card-body">
-                    <form action="/grading" method="post">
                         <div class="w3-panel">
                             <div class="w3-row-padding" style="margin:0 -16px">
                               <p>Are the right students not showing up?  Maybe you typed the wrong class name.</p>
@@ -107,15 +106,14 @@
                         <div class="mb-3">
                             <button type="button" class="btn btn-primary mb-3" style="margin-right:10px">Submit</button>
                         </div>
-                    </form>
                 </div>
               </div>
             </div>
-            </form>
-            {% endif %}
-          </div>
+      </form>
+      {% endif %}
     </div>
-    <hr>
+    </div>
+<hr>
 {% endblock %}
 
 {% block javascript %}
