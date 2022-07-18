@@ -85,12 +85,19 @@
           </div>
     </form>
       {% endif %}
-
-
-
-
     </div>
-
     <hr>
+{% endblock %}
 
+
+{% block javascript %}
+    <script>
+
+        let input = document.querySelector('input');
+        input.addEventListener('input', async function() {
+            let response = await fetch('/search?q=' + input.value);
+            let result = await response.text();
+            document.querySelector('ul').innerHTML = result;
+        });
+    </script>
 {% endblock %}
