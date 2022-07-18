@@ -65,12 +65,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Class Name</label>
-                            <select name="classesl" id="classesl" class="form-select form-control form-label" aria-label="Default select">
-                              <option name = "none" id="none" value ="none"> --select class--</option>
-                              {% for class in classes %}
-                              <option name = "cname" value=" {{class["classname"]}} "> {{class["classname"]}} </option>
-                              {% endfor %}
-                          </select>
+                            <input autocomplete="off" autofocus placeholder="Query" type="search">
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Weight</label>
@@ -88,17 +83,14 @@
                     <form action="/grading" method="post">
                         <div class="w3-panel">
                             <div class="w3-row-padding" style="margin:0 -16px">
-                              <div class="w3">>
+                              <h5>Are the right students not showing up?  Maybe you typed the wrong class name.</h5>
+                              <div class="w3">
                                 <table class="w3-table w3-striped w3-white">
-                                {% for student in students %}
-                                  <tr>
                                     <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td id=""></td>
-                                    <td id="average"><i>average</i></td>
+                                    <td id="uno"></td>
+                                    <td id="dos"></td>
+                                    <td id="tres"></td>
                                   </tr>
-                                {% endfor %}
                                 </table>
                               </div>
                             </div>
