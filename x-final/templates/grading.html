@@ -50,7 +50,7 @@
                             <input name="weight" type="number" class="form-control" id="exampleFormControlInput1" placeholder="weight">
                         </div>
                         <div class="mb-3">
-                            <button name="form" type="submit" class="btn btn-primary mb-3" style="margin-right:10px" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">Add Assignment</button>
+                            <button name="form" type="button" class="btn btn-primary mb-3" style="margin-right:10px" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">Add Assignment</button>
                         </div>
                         </form>
                     </div>
@@ -71,10 +71,10 @@
                                         <th style="margin-left:40px; position:absolute;">Grade</th>
                                     </tr>
                                   </thead>
-                                  {% for student in students %}
+                                  {% for student in nstudents %}
                                   <tr id="final">
                                     <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
-                                    <td name="studentname"></td>
+                                    <td name="studentname">{{student["studentname"]}}</td>
                                     <td name="classclass"></td>
                                     <td name="grade"><i><input name="grade" type="number" placeholder="%" style="width:50px; position:absolute; margin-left:40px;"></i></td>
                                   </tr>
@@ -98,9 +98,9 @@
 
 {% block javascript %}
   <script type="text/javascript">
-    document.querySelector('#form').addEventListener('submit',function(e)
-                  {
-      console.log('hello');
+    btn = document.querySelector('#form')
+    btn.addEventListener('click',function(e)
+    {
       e.preventDefault();
       $.ajax({
         type:'POST',
