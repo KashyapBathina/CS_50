@@ -273,7 +273,8 @@ def grading():
 
         print(classesl)
         selected = db.execute("SELECT * FROM students WHERE classname = ? AND teacherid = ?", classesl, session["user_id"])
-        return render_template('grading.html', selected=selected)
+        
+        return redirect("/grading")
 
     else:
         classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
