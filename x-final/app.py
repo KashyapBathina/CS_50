@@ -269,23 +269,18 @@ def classes():
 @login_required
 def grading():
     if request.method == "POST":
-        form = request.form.get("form")
-        weight = request.form.get("weight")
-        aname = request.form.get("aname")
-        classesl = request.form.get("classesl")
-
-        if form:
-            result = db.execute("SELECT * FROM students classname = ?", session["user_id"], "%" + request.args.get("q") + "%")
-            print(result)
-            return render_template("search.html", result=result)
-
+        #form = request.form.get("form")
+        #weight = request.form.get("weight")
+        #aname = request.form.get("aname")
+        #classesl = request.form.get("classesl")
 
         return redirect("/grading")
 
     else:
         classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
         students = db.execute("SELECT * FROM students where teacherid = ?", session["user_id"])
-        return render_template("grading.html", classes=classes, students=students)
+        result = db.execute("SELECT * FROM students classname = ?", session["user_id"], "%" + request.args.get("q") + "%")
+        return render_template("grading.html", classes=classes, students=students, result=result)
 
 
 
