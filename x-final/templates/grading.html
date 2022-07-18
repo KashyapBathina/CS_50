@@ -55,6 +55,7 @@
                 </a>
               </h2>
               <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                {% if result %}
                 <div class="card card-body">
                     <form action="/grading" method="post">
                         <div class="w3-panel">
@@ -80,6 +81,34 @@
                         </div>
                     </form>
                 </div>
+                {% else %}
+                <div class="card card-body">
+                    <form action="/grading" method="post">
+                        <div class="w3-panel">
+                            <div class="w3-row-padding" style="margin:0 -16px">
+                              <div class="w3">
+                                <h5>Students in {{cname}}</h5>
+                                <table class="w3-table w3-striped w3-white">
+                                {% for student in students %}
+                                  <tr>
+                                    <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
+                                    <td>{{student["studentname"]}}</td>
+                                    <td>{{student["classname"]}}</td>
+                                    <td>{{student["studentemail"]}}</td>
+                                    <td><i>student["average"]</i></td>
+                                  </tr>
+                                {% endfor %}
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        <div class="mb-3">
+                            <button type="button" class="btn btn-primary mb-3" style="margin-right:10px">Add Student</button>
+                        </div>
+                    </form>
+                </div>
+                {% endif %}
+
               </div>
             </div>
           </div>
