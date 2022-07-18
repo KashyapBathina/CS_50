@@ -269,8 +269,9 @@ def classes():
 @login_required
 def grading():
     if request.method == "POST":
-        aname =
-        cname = 
+        aname = request.form.get("aname")
+        cname = request.form.get("cname")
+        weight = request.form.get("weight")
 
 
 
@@ -287,7 +288,7 @@ def search():
     q = request.args.get("q")
     if q:
         shows = db.execute("SELECT * FROM students WHERE classname LIKE ? AND teacherid = ?", "%" + request.args.get("q") + "%", session["user_id"])
-        print(shows)
+        print(shows[0]["studentname"])
     else:
         shows = []
     return jsonify(shows)
