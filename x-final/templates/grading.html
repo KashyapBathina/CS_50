@@ -34,6 +34,7 @@
                 <a class="accordion-button collapsed" style="text-decoration: none;">
                       <h4 style="padding-right:500px">New Assignment</h4>
                       <div>
+                        <form action="/grading" method="post">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Assignment Name</label>
                             <input name="aname" type="text" class="form-control" id="exampleFormControlInput1" placeholder="assignment name">
@@ -54,7 +55,7 @@
                         <div class="mb-3">
                             <button name="form" type="button" class="btn btn-primary mb-3" style="margin-right:10px" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">Add Student</button>
                         </div>
-                    </form>
+                        </form>
                     </div>
                 </a>
               </h2>
