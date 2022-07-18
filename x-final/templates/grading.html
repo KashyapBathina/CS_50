@@ -4,13 +4,6 @@
     Grading
 {% endblock %}
 
-
-
-<!--
-    <input autocomplete="off" autofocus placeholder="Query" type="search">
-    <h5>Are the right students not showing up?  Maybe you typed the wrong class name.</h5>
-    <ul></ul>
--->
 {% block main %}
 <div class="w3-main" style="margin-left:300px;margin-top:43px;">
 
@@ -20,6 +13,10 @@
     </header>
 
     <div class="w3-row-padding w3-margin-bottom">
+      <input autocomplete="off" autofocus placeholder="Query" type="search">
+          <h5>Are the right students not showing up?  Maybe you typed the wrong class name.</h5>
+          <ul></ul>
+    <!--
     {% if not students %}
       <div class="accordion accordion-flush" id="accordionFlushExample">
         <div class="accordion-item">
@@ -46,7 +43,12 @@
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Class Name</label>
-                            <input name="cclass" autocomplete="off" autofocus placeholder="Query" type="search">
+                            <select name="classesl" id="classesl" class="form-select form-control form-label" aria-label="Default select">
+                              <option name = "none" id="none" value ="none"> --select class--</option>
+                              {% for class in classes %}
+                              <option name = "cname" value=" {{class["classname"]}} "> {{class["classname"]}} </option>
+                              {% endfor %}
+                          </select>
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Weight</label>
@@ -60,13 +62,22 @@
                 </a>
               </h2>
               <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                {% if not result %}
+                <div class="card card-body">
+                    <div class="w3-panel">
+                        <div class="w3-row-padding" style="margin:0 -16px">
+                            <div class="w3">
+                            <h5>No students in that class. Maybe you typed the wrong class name.</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% else %}
                 <div class="card card-body">
                     <form action="/grading" method="post">
                         <div class="w3-panel">
                             <div class="w3-row-padding" style="margin:0 -16px">
                               <div class="w3">>
-                                <ul></ul>
-                                <!--
                                 <table class="w3-table w3-striped w3-white">
                                 {% for student in students %}
                                   <tr>
@@ -78,7 +89,6 @@
                                   </tr>
                                 {% endfor %}
                                 </table>
-                                -->
                               </div>
                             </div>
                           </div>
@@ -87,11 +97,13 @@
                         </div>
                     </form>
                 </div>
+                {% endif %}
 
               </div>
             </div>
-            </form>
-            {% endif %}
+                      </form>
+                      {% endif %}
+            -->
           </div>
     </div>
     <hr>
