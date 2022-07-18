@@ -275,7 +275,8 @@ def grading():
         classesl = request.form.get("classesl")
 
         if form:
-            result = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
+            result = db.execute("SELECT * FROM students WHERE teacherid = ? AND classname = ?", session["user_id"], classesl)
+            print(list)
 
 
 
