@@ -91,7 +91,7 @@
                         </div>
                     </form>
                     -->
-                    <ul>{{shows["studentname"]}}</ul>
+                    <ul></ul>
                 </div>
                 {% endif %}
 
@@ -113,8 +113,8 @@
                 let shows = await response.json();
                 let html = '';
                 for (let id in shows) {
-                    let title = shows[id].title.replace('<', '&lt;').replace('&', '&amp;');
-                    html += '<li>' + title + '</li>';
+                    let students = shows[id].studentname.replace('<', '&lt;').replace('&', '&amp;');
+                    html += '<li>' + students + '</li>';
                 }
                 document.querySelector('ul').innerHTML = html;
             });
