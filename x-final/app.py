@@ -270,17 +270,11 @@ def classes():
 def grading():
     if request.method == "POST":
         cname = request.form.get("cname")
-        form = request.form.get("form")
-        done = request.form.get("done")
 
-        if form:
-            print(cname)
-            nstudents = db.execute("SELECT * FROM students WHERE classname = ? AND teacherid = ?", cname, session["user_id"])
-            print(nstudents)
-            return render_template('grading.html', nstudents=nstudents)
-
-        if done:
-            return apology("not finished yet", 400)
+        print(cname)
+        nstudents = db.execute("SELECT * FROM students WHERE classname = ? AND teacherid = ?", cname, session["user_id"])
+        print(nstudents)
+        return render_template('grading.html', nstudents=nstudents)
 
     else:
         classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
