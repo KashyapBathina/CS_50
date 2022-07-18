@@ -286,7 +286,7 @@ def grading():
 def search():
     q = request.args.get("q")
     if q:
-        shows = db.execute("SELECT * FROM shows WHERE title LIKE ? LIMIT 50", "%" + q + "%")
+        shows = db.execute("SELECT * FROM students WHERE classname LIKE", "%" + q + "%")
     else:
         shows = []
     return jsonify(shows)
