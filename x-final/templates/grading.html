@@ -41,7 +41,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Class Name</label>
-                            <input name="classl" autocomplete="off" autofocus placeholder="Query" type="search">
+                            <input name="class1" autocomplete="off" autofocus placeholder="Query" type="text">
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Weight</label>
@@ -107,12 +107,16 @@
 
 {% block javascript %}
     <script>
-
         let input = document.querySelector('input');
-        input.addEventListener('input', async function() {
-            let response = await fetch('/search?q=' + input.value);
-            let result = await response.text();
-            document.querySelector('ul').innerHTML = result;
-        });
+            input.addEventListener('input', async function() {
+                let response = await fetch('/search?q=' + input.value);
+                let shows = await response.json();
+                let html = '';
+                for (let id in shows) {
+                    let title = shows[id].title.replace('<', '&lt;').replace('&', '&amp;');
+                    html += '<li>' + title + '</li>';
+                }
+                document.querySelector('ul').innerHTML = html;
+            });
     </script>
 {% endblock %}
