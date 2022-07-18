@@ -50,10 +50,7 @@
                             <input name="weight" type="number" class="form-control" id="exampleFormControlInput1" placeholder="weight">
                         </div>
                         <div class="mb-3">
-                            <!--
-                              <button name="form" type="submit" class="btn btn-primary mb-3" style="margin-right:10px" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">Add Assignment</button>
-                              -->
-                              <button type="submit">submit</button>
+                            <button name="form" type="submit" class="btn btn-primary mb-3" style="margin-right:10px" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">Add Assignment</button>
                         </div>
                         </form>
                     </div>
@@ -74,8 +71,7 @@
                                         <th style="margin-left:40px; position:absolute;">Grade</th>
                                     </tr>
                                   </thead>
-                                  <!--
-                                  {% for s in nstudents %}
+                                  {% for s in selected %}
                                   <tr id="final">
                                     <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
                                     <td name="studentname">{{s["studentname"]}}</td>
@@ -83,7 +79,6 @@
                                     <td name="grade"><i><input name="grade" type="number" placeholder="%" style="width:50px; position:absolute; margin-left:40px;"></i></td>
                                   </tr>
                                   {% endfor %}
-                                  -->
                                 </table>
                               </div>
                             </div>
