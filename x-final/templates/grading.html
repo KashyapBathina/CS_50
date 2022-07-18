@@ -126,16 +126,14 @@
                 let one = '';
                 let two = '';
                 for (let id in shows) {
-                    let name = shows[id].studentname.replace('<', '&lt;').replace('&', '&amp;');
+                    let name = shows[id].studentname
                     one += name;
-                    let classname = shows[id].classname.replace('<', '&lt;').replace('&', '&amp;');
+                    let classname = shows[id].classname
                     two += classname;
 
                 }
                 document.querySelector('#uno').innerHTML = one;
-                document.querySelector('#uno').value = one;
                 document.querySelector('#dos').innerHTML = two;
-                document.querySelector('#dos').value = two;
             });
 </script>
 {% endblock %}
