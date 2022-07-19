@@ -81,9 +81,9 @@
                                         <td name="classclass">{{student["classname"]}}</td>
                                         <td name="grade"><i><input name="grade" type="number" placeholder="%" style="width:50px; position:absolute; margin-left:40px;"></i></td>
                                         <form action="/fgrading" method="post">
-                                            <input name="name" type="hidden" value="{{ student.studentname }}">
-                                            <input name="class" type="hidden" value="{{ student.classname }}">
-                                            <input name="name" type="hidden" value="{{ student.studentname }}">
+                                        <input name="name" type="hidden" value="{{ student.studentname }}">
+                                        <input name="class" type="hidden" value="{{ student.classname }}">
+                                        <input name="name" type="hidden" value="{{ student.studentname }}">
                                         </form>
                                       </tr>
                                     {% endfor %}
@@ -104,8 +104,11 @@
 {% endblock %}
 
 {% block javascript %}
+
 <script>
     var classesl = {{classesl|tojson}};
-    document.getElementById('classesl').value=classesl;
+    console.log(classesl);
+    document.getElementById('classesl').value = classesl;
 </script>
+
 {% endblock %}
