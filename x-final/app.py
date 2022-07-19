@@ -307,7 +307,8 @@ def fgrading():
         count = len(sname)
         print(count)
 
-        for count, idx, 
+        for i, val in enumerate(sname):
+            print(f"grade: {sname[val]}")
 
 
         return redirect("/grading")
