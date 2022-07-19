@@ -65,7 +65,7 @@
                                 </div>
                             {% else %}
                               <div class="w3">
-                                <form action="/fgrading" method="post" id="todo-form">
+                                <form action="/fgrading" method="post">
                                   <table class="w3-table w3-striped w3-white">
                                     <thead>
                                       <tr>
@@ -81,14 +81,11 @@
                                         <td name="sname">{{student["studentname"]}}</td>
                                         <td name="cclass">{{student["classname"]}}</td>
                                         <td><i><input name="grade" type="number" placeholder="%" style="width:50px; position:absolute; margin-left:40px;"></i></td>
-                                        <form action="/fgrading" method="post">
-                                            
-                                            <input name="aname" type="hidden" value="{{aname}}">
-                                            <input name="weight" type="hidden" value="{{weight}}">
-                                            <input name="classname" type="hidden" value="{{ student.classname }}">
+                                        <input name="aname" type="hidden" value="{{aname}}">
+                                        <input name="weight" type="hidden" value="{{weight}}">
 
-                                            <input name="studentname" type="hidden" value="{{ student["studentname"] }}">
-                                        </form>
+                                        <input name="classname" type="hidden" value="{{ student.classname }}">
+                                        <input name="studentname" type="hidden" value="{{ student["studentname"] }}">
                                       </tr>
                                     {% endfor %}
                                   </table>
