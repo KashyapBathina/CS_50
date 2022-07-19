@@ -80,13 +80,13 @@
                                         <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
                                         <td name="sname">{{student["studentname"]}}</td>
                                         <td name="cclass">{{student["classname"]}}</td>
-                                        <td name="grade"><i><input name="grade" type="number" placeholder="%" style="width:50px; position:absolute; margin-left:40px;"></i></td>
+                                        <td><i><input name="grade" type="number" placeholder="%" style="width:50px; position:absolute; margin-left:40px;"></i></td>
                                         <form action="/fgrading" method="post">
                                             <input name="aname" type="hidden" value="{{aname}}">
                                             <input name="weight" type="hidden" value="{{weight}}">
 
                                             <input name="studentname" type="hidden" value="{{ student.studentname }}">
-                                            <i><input name="id" type="hidden" value="{{ student.studentemail }}"></i>
+                                            <input name="semail" type="hidden" value="{{ student.studentemail }}">
                                             <input name="classname" type="hidden" value="{{ student.classname }}">
                                         </form>
                                       </tr>

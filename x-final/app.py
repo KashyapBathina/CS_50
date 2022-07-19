@@ -295,7 +295,7 @@ def fgrading():
     classname = request.form.get("classname")
 
     sname = request.form.getlist("studentname")
-    sid = request.form.getlist("id")
+    semail = request.form.getlist("semail")
     grade = request.form.getlist("grade")
 
     print(aname)
@@ -303,7 +303,7 @@ def fgrading():
     print(classname)
 
     print(sname)
-    print(sid)
+    print(semail)
     print(grade)
 
     return redirect("/grading")
