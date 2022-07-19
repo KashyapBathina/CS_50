@@ -296,14 +296,15 @@ def fgrading():
 
         sname = request.form.getlist("studentname")
         grade = request.form.getlist("grade")
+        item_ids = request.form.getlist('item_id')
 
         print(aname)
         print(weight)
 
         print(sname)
         print(grade)
-        
-        for count, item in enumerate(sname):
+
+        for item_id, idx in enumerate(item_id):
             print(f"name: {item[sname]}, grade: {item[grade]}")
 
         return redirect("/grading")
