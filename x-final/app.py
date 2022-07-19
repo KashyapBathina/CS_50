@@ -274,16 +274,11 @@ def grading():
         selected = db.execute("SELECT * FROM students WHERE classname = ?", classesl.strip())
         if selected:
             print(selected)
-            fselected = {}
-            fselected.clear()
-            fselected = {selected}
-            print(fselected["studentname"])
-
-        return redirect("/classes")
+        return redirect("/classes", selected=selected)
     else:
         classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
         students = db.execute("SELECT * FROM students where teacherid = ?", session["user_id"])
-        return render_template("grading.html", classes=classes, students=students)
+        return render_template("grading.html", classes=classes, students=students, selected=selected)
 
 
 @app.route("/gradebook", methods=["GET", "POST"])
