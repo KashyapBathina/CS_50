@@ -275,7 +275,8 @@ def grading():
         if selected:
             print(selected)
 
-        return redirect("/classes")
+        return render_template("/classes", selected=selected)
+
     else:
         classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
         students = db.execute("SELECT * FROM students where teacherid = ?", session["user_id"])
