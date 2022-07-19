@@ -107,8 +107,12 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function(){
-        var classesl = classesl|tojson;
+        var classesl = ({{classesl|tojson}});
+        var aname = ({{aname|tojson}});
+        var weight = ({{weight|tojson}});
         document.getElementById('classesl').value = classesl;
+        document.getElementById('aname').value = aname;
+        document.getElementById('weight').value = weight;
     });
 </script>
 
