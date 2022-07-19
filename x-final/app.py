@@ -256,7 +256,7 @@ def classes():
         if not cname:
             return apology("you must name your class", 400)
 
-        db.execute("INSERT INTO classes (teacherid, classname) VALUES(?, ?)", session["user_id"], cname)
+        db.execute("INSERT INTO classes (teacherid, classname) VALUES(?, ?)", session["user_id"], cname.strip())
         return redirect("/classes")
 
     else:
@@ -271,10 +271,10 @@ def grading():
     if request.method == "POST":
         classesl = request.form.get("classesl")
         print(classesl.strip())
-        classes = db.execute("SELECT * FROM classes WHERE classname = ?", classesl.strip())
-        print(classes)
-        selected = db.execute("SELECT * FROM students WHERE classname = ?", classesl.strip())
+        selected = db.execute("SELECT * FROM students")
+        print(selected)
         students = db.execute("SELECT * FROM students WHERE teacherid = ?", session["user_id"])
+        classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
         return render_template('grading.html', selected=selected, students=students, classes=classes)
 
     else:
