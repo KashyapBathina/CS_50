@@ -11,7 +11,7 @@ from trycourier import Courier
 import string
 import random
 from flask import Flask, jsonify, render_template, request
-from itertools import izip
+import itertools
 
 
 
@@ -303,8 +303,8 @@ def fgrading():
         print(sname)
         print(grade)
 
-        for (i,j) in izip(aname, grade):
-	        print (i,j)
+        for (i,j) in zip(sname, grade):
+            print (i,j)
 
         return redirect("/grading")
 
