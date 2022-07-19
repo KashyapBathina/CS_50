@@ -100,8 +100,7 @@
 
 {% block javascript %}
 <script>
-    var name = {{name|tojson}};
-
-    document.getElementById('classesl').value="English";
+    var classesl = {{classesl|tojson}};
+    document.getElementById('classesl').value=classesl;
 </script>
 {% endblock %}
