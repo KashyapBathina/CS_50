@@ -282,23 +282,12 @@ def grading():
         return render_template("grading.html", classes=classes, students=students)
 
 
-@app.route("/gradingbook", methods=["GET", "POST"])
+@app.route("/gradingbook", methods=["POST"])
 @login_required
 def gradingbook():
     classesl = request.form.get("classesl")
-
-    if request.method == "POST":
-        classesl = request.form.get("classesl")
-        print(classesl.strip())
-        selected = db.execute("SELECT * FROM students WHERE classname = ?", classesl.strip())
-        classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
-        students = db.execute("SELECT * FROM students where teacherid = ?", session["user_id"])
-        return render_template("fgrading.html", classes=classes, students=students, selected=selected, classesl=classesl)
-
-    else:
-        classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
-        students = db.execute("SELECT * FROM students where teacherid = ?", session["user_id"])
-        return render_template("grading.html", classes=classes, students=students)
+    
+    return render_template("gradebook.html")
 
 
 @app.route("/gradebook", methods=["GET", "POST"])
