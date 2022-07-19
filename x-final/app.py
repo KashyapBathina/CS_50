@@ -290,21 +290,22 @@ def grading():
 @app.route("/fgrading", methods=["POST"])
 @login_required
 def fgrading():
-    aname = request.form.get("aname")
-    weight = request.form.get("weight")
-    classname = request.form.getlist("classname")
+    if request.method == "POST":
+        aname = request.form.get("aname")
+        weight = request.form.get("weight")
+        classname = request.form.getlist("classname")
 
-    sname = request.form.getlist("studentname")
-    grade = request.form.getlist("grade")
+        sname = request.form.getlist("studentname")
+        grade = request.form.getlist("grade")
 
-    print(aname)
-    print(weight)
-    print(classname)
+        print(aname)
+        print(weight)
+        print(classname)
 
-    print(sname)
-    print(grade)
+        print(sname)
+        print(grade)
 
-    return redirect("/grading")
+        return redirect("/grading")
 
 
 @app.route("/gradebook", methods=["GET", "POST"])
