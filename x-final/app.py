@@ -304,9 +304,8 @@ def fgrading():
         print(sname)
         print(grade)
 
-        for item_id, idx in enumerate(item_id):
-            print (idx["sname"])
-            print (idx["grade"])
+        for len(sname), idx in enumerate(item_id):
+            
 
         return redirect("/grading")
 
