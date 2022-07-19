@@ -82,6 +82,7 @@
                                         <td name="cclass">{{student["classname"]}}</td>
                                         <td><i><input name="grade" type="number" placeholder="%" style="width:50px; position:absolute; margin-left:40px;"></i></td>
                                         <form action="/fgrading" method="post">
+                                            
                                             <input name="aname" type="hidden" value="{{aname}}">
                                             <input name="weight" type="hidden" value="{{weight}}">
                                             <input name="classname" type="hidden" value="{{ student.classname }}">
