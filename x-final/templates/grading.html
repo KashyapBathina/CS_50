@@ -50,7 +50,7 @@
                             <input name="weight" type="number" class="form-control" id="exampleFormControlInput1" placeholder="weight">
                         </div>
                         <div class="mb-3">
-                            <button name="form" id="form" type="button" onclick="getData()" class="btn btn-primary mb-3" style="margin-right:10px" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">Add Assignment</button>
+                            <button name="form" id="form" type="submit" class="btn btn-primary mb-3" style="margin-right:10px" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">Add Assignment</button>
                         </div>
                         </form>
                     </div>
@@ -105,8 +105,13 @@
     crossorigin="anonymous">
 </script>
 
+
+{% endblock %}
+
+
+<!--
 <script type="text/javascript">
-function getData(){
+  function getData(){
     console.log('hello');
     $.ajax({
       type:'POST',
@@ -123,11 +128,7 @@ function reload(){
     container.innerHTML= content;
 }
 </script>
-{% endblock %}
-
-
-
-
+-->
 
 
 

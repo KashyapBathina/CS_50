@@ -268,22 +268,19 @@ def classes():
 @app.route("/grading", methods=["GET", "POST"])
 @login_required
 def grading():
+    classesl = request.form.get("classesl")
+
     if request.method == "POST":
         classesl = request.form.get("classesl")
         print(classesl.strip())
         selected = db.execute("SELECT * FROM students WHERE classname = ?", classesl.strip())
-        if selected:
-            print(selected)
-            global fselected
-            fselected = selected
-            print(fselected)
-
-        return redirect("/grading")
+        classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
+        students = db.execute("SELECT * FROM students where teacherid = ?", session["user_id"])
+        return render_template("grading.html", classes=classes, students=students, selected=selected)
 
     else:
         classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
         students = db.execute("SELECT * FROM students where teacherid = ?", session["user_id"])
-
         return render_template("grading.html", classes=classes, students=students)
 
 
