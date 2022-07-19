@@ -287,19 +287,18 @@ def grading():
         return render_template("grading.html", classes=classes, students=students)
 
 
-@app.route("/gradingbook", methods=["POST"])
+@app.route("/fgrading", methods=["POST"])
 @login_required
-def gradingbook():
+def fgrading():
     aname = request.form.get("aname")
     weight = request.form.get("weight")
-    classesl = (request.form.get("classesl")).strip()
-    name = request.form.get("name")
+
+    studentname = request.form.get("studentname")
+    classname = request.form.get("classname")
     grade = request.form.get("grade")
 
     print(aname)
     print(weight)
-    print(classesl)
-    print(name)
     print(grade)
 
     return redirect("/grading")

@@ -65,6 +65,7 @@
                                 </div>
                             {% else %}
                               <div class="w3">
+                                <form action="/fgrading" method="post" id="todo-form">
                                   <table class="w3-table w3-striped w3-white">
                                     <thead>
                                       <tr>
@@ -81,15 +82,18 @@
                                         <td name="classclass">{{student["classname"]}}</td>
                                         <td name="grade"><i><input name="grade" type="number" placeholder="%" style="width:50px; position:absolute; margin-left:40px;"></i></td>
                                         <form action="/fgrading" method="post">
+                                        <input name="aname" type="hidden" value=" ">
+                                        <input name="weight" type="hidden" value=" ">
+
                                         <input name="name" type="hidden" value="{{ student.studentname }}">
-                                        <input name="class" type="hidden" value="{{ student.classname }}">
-                                        <input name="name" type="hidden" value="{{ student.studentname }}">
+                                        <input name="classname" type="hidden" value="{{ student.classname }}">
                                         </form>
                                       </tr>
                                     {% endfor %}
                                   </table>
+                                </form>
                                 <div class="mb-3">
-                                <button name="done" type="submit" class="btn btn-primary mb-3" style="margin-right:10px">Submit</button>
+                                <button name="done" type="submit" class="btn btn-primary mb-3" style="margin-top:10px">Submit</button>
                                 </div>
                             {% endif %}
                         </div>
