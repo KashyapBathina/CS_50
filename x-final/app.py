@@ -300,6 +300,7 @@ def fgrading():
     print(aname)
     print(weight)
     print(grade)
+    
 
     return redirect("/grading")
 
