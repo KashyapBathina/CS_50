@@ -283,10 +283,8 @@ def grading():
     else:
         classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
         students = db.execute("SELECT * FROM students where teacherid = ?", session["user_id"])
-        if fselected:
-            final = fselected
 
-        return render_template("grading.html", classes=classes, students=students, final=final)
+        return render_template("grading.html", classes=classes, students=students)
 
 
 @app.route("/gradebook", methods=["GET", "POST"])
