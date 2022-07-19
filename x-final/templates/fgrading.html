@@ -106,11 +106,10 @@
 {% block javascript %}
 
 <script>
-
-    var classesl = {{classesl|tojson}}
-
-    document.getElementById('classesl').value = classesl;
-    
+    document.addEventListener("DOMContentLoaded", function(){
+        var classesl = {{classesl|tojson}};
+        document.getElementById('classesl').value = classesl;
+    });
 </script>
 
 {% endblock %}
