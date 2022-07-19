@@ -78,8 +78,8 @@
                                     {% for student in selected %}
                                       <tr id="final">
                                         <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
-                                        <td name="studentname">{{student["studentname"]}}</td>
-                                        <td name="classclass">{{student["classname"]}}</td>
+                                        <td name="sname">{{student["studentname"]}}</td>
+                                        <td name="cclass">{{student["classname"]}}</td>
                                         <td name="grade"><i><input name="grade" type="number" placeholder="%" style="width:50px; position:absolute; margin-left:40px;"></i></td>
                                         <form action="/fgrading" method="post">
                                             <input name="aname" type="hidden" value="{{aname}}">

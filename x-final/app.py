@@ -300,6 +300,7 @@ def fgrading():
     print(aname)
     print(weight)
     print(classname)
+    
     print(studentname)
     print(grade)
 
