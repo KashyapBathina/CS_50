@@ -304,7 +304,7 @@ def fgrading():
 
         print(sname)
         print(grade)
-
+        for len(sname), idx in 
 
         return redirect("/grading")
 
