@@ -273,14 +273,11 @@ def grading():
         print(classesl.strip())
         selected = db.execute("SELECT * FROM students WHERE classname = ?", classesl.strip())
         if selected:
-
             print(selected)
+            print(selected[0]["studentname"])
 
-            fchosen = selected.replace("[", "")
-            print(fchosen)
-            final = {}
-            final = {fchosen}
-            print(final)
+
+
         return redirect("/classes")
     else:
         classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
