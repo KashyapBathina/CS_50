@@ -276,11 +276,12 @@ def grading():
             disallowed_characters = "[]"
             print(selected)
 
-            for character in disallowed_characters:
-	            selected = selected.replace(character, "")
+            fchosen = selected.replace("[", "")
+            print(fchosen)
 
-            fchosen = {}
-            fchosen = {selected}
+
+            final = {}
+            fiinal = {fchosen}
             print(fchosen)
         return redirect("/classes")
     else:
