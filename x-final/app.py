@@ -292,15 +292,19 @@ def grading():
 def fgrading():
     aname = request.form.get("aname")
     weight = request.form.get("weight")
-
-    studentname = request.form.get("studentname")
     classname = request.form.get("classname")
+    studentname = request.form.get("studentname")
     grade = request.form.get("grade")
 
     print(aname)
     print(weight)
-    print(grade)
-    
+    print(classname)
+
+    for name in studentname:
+        print(studentname)
+
+    for g in grade:
+        print(grade)
 
     return redirect("/grading")
 
