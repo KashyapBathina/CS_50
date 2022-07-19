@@ -50,7 +50,7 @@
                             <input name="weight" type="number" class="form-control" id="exampleFormControlInput1" placeholder="weight">
                         </div>
                         <div class="mb-3">
-                            <button name="form" id="form" type="button" class="btn btn-primary mb-3" style="margin-right:10px" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">Add Assignment</button>
+                            <button name="form" id="form" type="button" onclick="getData()" class="btn btn-primary mb-3" style="margin-right:10px" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">Add Assignment</button>
                         </div>
                         </form>
                     </div>
@@ -62,6 +62,7 @@
                             <div class="w3-row-padding" style="margin:0 -16px">
                               <div class="w3">
                                   <p>Are the right students not showing up?  Maybe you typed the wrong class name.</p>
+                                  <
                                   <table class="w3-table w3-striped w3-white">
                                     <thead>
                                       <tr>
@@ -105,8 +106,7 @@
 </script>
 
 <script type="text/javascript">
-    document.querySelector('#form').addEventListener('click',function(e)
-                 {
+    function getData(){
     console.log('hello');
     $.ajax({
       type:'POST',
@@ -115,7 +115,7 @@
         classesl:$("#classesl").val()
       },
     })
-  });
+  };
 </script>
 {% endblock %}
 
