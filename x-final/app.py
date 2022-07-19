@@ -272,6 +272,9 @@ def grading():
         classesl = request.form.get("classesl")
         aname = request.form.get("aname")
         weight = request.form.get("weight")
+        print(classesl)
+        print(aname)
+        print(weight)
 
         selected = db.execute("SELECT * FROM students WHERE classname = ?", classesl.strip())
         classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
@@ -287,9 +290,14 @@ def grading():
 @app.route("/gradingbook", methods=["POST"])
 @login_required
 def gradingbook():
-    classesl = request.form.get("classesl")
+    aname = request.form.get("aname")
+    weight = request.form.get("weight")
+    classesl = (request.form.get("classesl")).strip()
     name = request.form.get("name")
     grade = request.form.get("grade")
+
+    print(aname)
+    print(weight)
     print(classesl)
     print(name)
     print(grade)
