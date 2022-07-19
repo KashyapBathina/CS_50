@@ -71,11 +71,11 @@
                                         <th style="margin-left:40px; position:absolute;">Grade</th>
                                     </tr>
                                   </thead>
-                                  {% for s in selected %}
+                                  {% for student in selected %}
                                   <tr id="final">
                                     <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
-                                    <td name="studentname">{{s["studentname"]}}</td>
-                                    <td name="classclass">{{s["classname"]}}</td>
+                                    <td name="studentname">{{student["studentname"]}}</td>
+                                    <td name="classclass">{{student["classname"]}}</td>
                                     <td name="grade"><i><input name="grade" type="number" placeholder="%" style="width:50px; position:absolute; margin-left:40px;"></i></td>
                                   </tr>
                                   {% endfor %}
