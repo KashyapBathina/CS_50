@@ -308,7 +308,8 @@ def fgrading():
         print(count)
 
         for i, val in enumerate(sname):
-            print(f"grade: {sname[val]}")
+            print (val)
+            print (val)
 
 
         return redirect("/grading")
