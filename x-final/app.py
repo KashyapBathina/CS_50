@@ -286,8 +286,13 @@ def grading():
 @login_required
 def gradingbook():
     classesl = request.form.get("classesl")
-    
-    return render_template("gradebook.html")
+    name = request.form.get("name")
+    grade = request.form.get("grade")
+    print(classesl)
+    print(name)
+    print(grade)
+
+    return redirect("/grading")
 
 
 @app.route("/gradebook", methods=["GET", "POST"])
