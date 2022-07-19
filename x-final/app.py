@@ -238,7 +238,7 @@ def students():
         classes = db.execute("SELECT * FROM classes WHERE classname = ?", classesl.strip())
 
         #db.execute("INSERT INTO classes (teacherid, classname) VALUES(?, ?)", session["user_id"], cname)
-        db.execute("INSERT INTO students (teacherid, classname, classid, studentname, studentemail) VALUES(?, ?, ?, ?, ?)", session["user_id"], classesl.strip(), classes[0]["classid"], sname, semail)
+        db.execute("INSERT INTO students (teacherid, classname, classid, studentname, studentemail) VALUES(?, ?, ?, ?, ?)", session["user_id"], classesl.strip(), classes[0]["classid"], sname.strip(), semail.strip())
         return redirect("/students")
 
     else:
