@@ -271,9 +271,11 @@ def grading():
     if request.method == "POST":
         classesl = request.form.get("classesl")
         print(classesl.strip())
-        selected = db.execute("SELECT * FROM students WHERE classname = ?", classesl.strip())
+        math = "Math"
+        classes = db.execute("SELECT * FROM classes WHERE classname = ?", classesl.strip())
+        
         print(selected)
-        students = db.execute("SELECT * FROM students where teacherid = ?", session["user_id"])
+        students = db.execute("SELECT * FROM students WHERE teacherid = ?", session["user_id"])
         classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
         return render_template('grading.html', selected=selected, students=students, classes=classes)
 
