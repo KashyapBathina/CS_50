@@ -62,7 +62,7 @@
                             <div class="w3-row-padding" style="margin:0 -16px">
                               <div class="w3">
                                   <p>Are the right students not showing up?  Maybe you typed the wrong class name.</p>
-                                  <
+                                  <a href="javascript: reload()">Click to Reload</a>
                                   <table class="w3-table w3-striped w3-white">
                                     <thead>
                                       <tr>
@@ -106,7 +106,7 @@
 </script>
 
 <script type="text/javascript">
-    function getData(){
+function getData(){
     console.log('hello');
     $.ajax({
       type:'POST',
@@ -116,6 +116,12 @@
       },
     })
   };
+
+function reload(){
+    var container = document.getElementById("yourDiv");
+    var content = container.innerHTML;
+    container.innerHTML= content;
+}
 </script>
 {% endblock %}
 
