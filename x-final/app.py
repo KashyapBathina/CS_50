@@ -293,7 +293,7 @@ def fgrading():
     if request.method == "POST":
         aname = request.form.get("aname")
         weight = request.form.get("weight")
-        classname = request.form.getlist("classname")
+        classname = request.form.get("classname")
 
         sname = request.form.getlist("studentname")
         grade = request.form.getlist("grade")
@@ -304,6 +304,7 @@ def fgrading():
 
         print(sname)
         print(grade)
+
 
         return redirect("/grading")
 
