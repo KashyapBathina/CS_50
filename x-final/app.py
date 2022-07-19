@@ -295,24 +295,16 @@ def fgrading():
     if request.method == "POST":
         aname = request.form.get("aname")
         weight = request.form.get("weight")
-
         sname = request.form.getlist("studentname")
         grade = request.form.getlist("grade")
-        item_id = request.form.getlist('item_id')
 
         print(aname)
         print(weight)
-
         print(sname)
         print(grade)
 
-        count = len(sname)
-        print(count)
-
-        for i, val in enumerate(sname):
-            print (val)
-            print (val)
-
+        for (i,j) in izip(aname, grade):
+	        print (i,j)
 
         return redirect("/grading")
 
