@@ -268,8 +268,6 @@ def classes():
 @app.route("/grading", methods=["GET", "POST"])
 @login_required
 def grading():
-    classesl = request.form.get("classesl")
-
     if request.method == "POST":
         classesl = request.form.get("classesl")
         print(classesl.strip())
