@@ -50,7 +50,7 @@
                             <input name="weight" type="number" class="form-control" id="exampleFormControlInput1" placeholder="weight">
                         </div>
                         <div class="mb-3">
-                            <button name="form" type="submit" class="btn btn-primary mb-3" style="margin-right:10px" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">Add Assignment</button>
+                            <button name="form" id="form" type="submit" class="btn btn-primary mb-3" style="margin-right:10px" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">Add Assignment</button>
                         </div>
                         </form>
                     </div>
@@ -105,7 +105,7 @@
 </script>
 
 <script type="text/javascript">
-  $(document).on('submit','#todo-form',function(e)
+    document.querySelector('#form').addEventListener('click','#todo-form',function(e)
                  {
     console.log('hello');
     e.preventDefault();
