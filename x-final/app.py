@@ -297,6 +297,7 @@ def fgrading():
         weight = request.form.get("weight")
         sname = request.form.getlist("studentname")
         grade = request.form.getlist("grade")
+        classname = 
 
         print(aname)
         print(weight)
@@ -305,6 +306,7 @@ def fgrading():
 
         for (i,j) in zip(sname, grade):
             print (i,j)
+            db.execute("INSERT INTO gradebook (assignmentname, weight, grade, studentname, classname, teacherid) VALUES(?, ?, ?, ?, ?)", aname, weight, i, session["user_id"])
 
         return redirect("/grading")
 
