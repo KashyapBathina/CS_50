@@ -11,19 +11,8 @@
     <header class="w3-container" style="padding-top:22px; text-align: left;">
       <h5><b><i class="fa fa-dashboard"></i> Grading </b></h5>
     </header>
-
     <!---->
-    {% if not students %}
-      <div class="accordion accordion-flush" id="accordionFlushExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingOne">
-            <a class="accordion-button collapsed" href="/students"  data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne" style="text-decoration: none;">
-                <h4>You do not have any students, click to add one.</h4>
-            </a>
-          </h2>
-        </div>
-      </div>
-      {% else %}
+
         <div class="w3-quarter" style="padding-top:20px"></div>
         <div class="accordion accordion-flush" id="accordionFlushExample">
             <div class="accordion-item">
@@ -57,9 +46,8 @@
                 </a>
               </h2>
           </div>
-      {% endif %}
-    </div>
-    </div>
+        </div>
+</div>
 <hr>
 {% endblock %}
 
