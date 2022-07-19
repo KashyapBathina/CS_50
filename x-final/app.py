@@ -273,7 +273,12 @@ def grading():
         print(classesl.strip())
         selected = db.execute("SELECT * FROM students WHERE classname = ?", classesl.strip())
         if selected:
+            disallowed_characters = "[]"
             print(selected)
+
+            for character in disallowed_characters:
+	            selected = selected.replace(character, "")
+
             fchosen = {}
             fchosen = {selected}
             print(fchosen)
