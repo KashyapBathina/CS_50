@@ -84,10 +84,9 @@
                                         <form action="/fgrading" method="post">
                                             <input name="aname" type="hidden" value="{{aname}}">
                                             <input name="weight" type="hidden" value="{{weight}}">
-
-                                            <input name="studentname" type="hidden" value="{{ student.studentname }}">
-                                            <input name="semail" type="hidden" value="{{ student.studentemail }}">
                                             <input name="classname" type="hidden" value="{{ student.classname }}">
+
+                                            <input name="studentname" type="hidden" value="{{ student.classname }}">
                                         </form>
                                       </tr>
                                     {% endfor %}
