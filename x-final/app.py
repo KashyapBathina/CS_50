@@ -274,9 +274,6 @@ def grading():
         selected = db.execute("SELECT * FROM students WHERE classname = ?", classesl.strip())
         if selected:
             print(selected)
-            dict = {}
-            dict = {selected}
-            print(dict)
 
         return redirect("/classes")
     else:
