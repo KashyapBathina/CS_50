@@ -108,7 +108,6 @@
     document.querySelector('#form').addEventListener('click','#todo-form',function(e)
                  {
     console.log('hello');
-    e.preventDefault();
     $.ajax({
       type:'POST',
       url:'/grading',
