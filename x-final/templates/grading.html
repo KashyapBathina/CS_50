@@ -50,7 +50,7 @@
                             <input name="weight" type="number" class="form-control" id="exampleFormControlInput1" placeholder="weight">
                         </div>
                         <div class="mb-3">
-                            <button href="javascript: reload()" name="form" type="submit" class="btn btn-primary mb-3" style="margin-right:10px" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">Add Assignment</button>
+                            <button name="form" type="submit" class="btn btn-primary mb-3" style="margin-right:10px" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">Add Assignment</button>
                         </div>
                         </form>
                     </div>
@@ -61,9 +61,8 @@
                         <div class="w3-panel">
                             <div class="w3-row-padding" style="margin:0 -16px">
                               <div class="w3">
-                              {% if not selected %}
                                   <p>Are the right students not showing up?  Maybe you typed the wrong class name.</p>
-                              {% else %}
+                                  <a href="javascript: reload()">Click to Reload</a>
                                   <table class="w3-table w3-striped w3-white">
                                     <thead>
                                       <tr>
@@ -82,11 +81,9 @@
                                       </tr>
                                     {% endfor %}
                                   </table>
-                                  <div class="mb-3">
-                                    <button name="done" type="submit" class="btn btn-primary mb-3" style="margin-right:10px">Submit</button>
-                                </div>
-                              {% endif %}
-
+                            <div class="mb-3">
+                              <button name="done" type="submit" class="btn btn-primary mb-3" style="margin-right:10px">Submit</button>
+                            </div>
                         </div>
                       </div>
                     </div>
@@ -103,24 +100,7 @@
 
 
 {% block javascript %}
-<script src="https://code.jquery.com/jquery-3.5.1.js"
-    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-    crossorigin="anonymous">
-</script>
 
-<script type="text/javascript">
-  $(document).on('submit','#todo-form',function(e)
-                 {
-    console.log('hello');
-    e.preventDefault();
-    $.ajax({
-      type:'POST',
-      url:'/grading',
-      data:{
-        classesl:$("#classesl").val()
-      },
-    })
-  });
 
   function reload(){
     var container = document.getElementById("yourDiv");
