@@ -107,9 +107,9 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function(){
-        var classesl = {{ classesl|tojson }};
-        var aname = {{ aname|tojson }};
-        var weight = {{ weight|tojson }};
+        var classesl = JSON.parse('{{ classesl | tojson }}');
+        var aname = JSON.parse('{{ aname | tojson }}');
+        var weight = JSON.parse('{{ weight | tojson }}');
 
         document.getElementById('classesl').value = classesl;
         document.getElementById('aname').value = aname;
