@@ -273,16 +273,14 @@ def grading():
         print(classesl.strip())
         selected = db.execute("SELECT * FROM students WHERE classname = ?", classesl.strip())
         if selected:
-            disallowed_characters = "[]"
+
             print(selected)
 
             fchosen = selected.replace("[", "")
             print(fchosen)
-
-
             final = {}
-            fiinal = {fchosen}
-            print(fchosen)
+            final = {fchosen}
+            print(final)
         return redirect("/classes")
     else:
         classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
