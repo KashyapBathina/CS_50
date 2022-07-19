@@ -309,7 +309,7 @@ def fgrading():
             print (i,j)
             db.execute("INSERT INTO gradebook (assignmentname, weight, grade, studentname, classname, teacherid) VALUES(?, ?, ?, ?, ?, ?)", aname, weight, j, i, classname, session["user_id"])
 
-        return redirect("/grading")
+        return redirect("/gradebook")
 
 
 @app.route("/gradebook", methods=["GET", "POST"])
