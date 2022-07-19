@@ -62,7 +62,6 @@
                             <div class="w3-row-padding" style="margin:0 -16px">
                               <div class="w3" id="yourDiv">
                                   <p>Are the right students not showing up?  Maybe you typed the wrong class name.</p>
-                                  <a href="javascript: reload()">Click to Reload</a>
                                   <table class="w3-table w3-striped w3-white">
                                     <thead>
                                       <tr>
@@ -120,12 +119,8 @@
   });
 
   function reload(){
-    var container = document.getElementById("yourDiv");
-    var content = container.innerHTML;
-    container.innerHTML= content;
-
-   //this line is to watch the result in console , you can remove it later
-    console.log("Refreshed");
+    setInterval(refreshQuote, 10000); //every 10 seconds
+    $("#yourdiv").load("grading.html");
 }
 </script>
 {% endblock %}
