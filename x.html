@@ -2,112 +2,238 @@
 <html>
 
 <head>
-  <style>
-    table {
-      width: 500px;
-      border: none;
-      border-top: 1px solid #EEEEEE;
-      font-family: arial, sans-serif;
-      border-collapse: collapse;
-    }
+	<title>Expandable Table</title>
 
-    td,
-    th {
-      border: 1px solid #EEEEEE;
-      border-top: none;
-      text-align: left;
-      padding: 8px;
-      color: #363D41;
-      font-size: 14px;
-    }
+	<script src=
+"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src=
+"https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href=
+"https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+	<link rel="stylesheet"
+		type="text/css" href=
+"https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+	<div align="center" class=
+		"table table-responsive">
+		<table id="ExpenseTable"
+			class="table table-responsive
+			table-hover table-bordered">
+		</table>
+	</div>
 
-    tr {
-      background-color: #fff;
-      border: none;
-      cursor: pointer;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      justify-content: flex-start;
-    }
-
-    tr:first-child:hover {
-      cursor: default;
-      background-color: #fff;
-    }
-
-    tr:hover {
-      background-color: #EEF4FD;
-    }
-
-    .expanded-row-content {
-      border-top: none;
-      display: grid;
-      grid-column: 1/-1;
-      justify-content: flex-start;
-      color: #AEB1B3;
-      font-size: 13px;
-      background-color: #fff;
-    }
-
-    .hide-row {
-      display: none;
-    }
-  </style>
+	<style>
+		.add-btn {
+			color: green;
+			cursor: pointer;
+			margin-right: 6px;
+		}
+	</style>
 </head>
 
 <body>
+	<script>
+		class CellEntry {
+			constructor() {
+				this.sum = 0;
+				this.percentage = 0;
+			}
+		}
 
-  <h2> Expendable table </h2>
+		class OutletBasedRowEntry {
+			constructor() {
+				this.cells = {
+					Total: new CellEntry()
+				};
+				this.childRows = {};
+			}
+			add(entry) {
+				this.cells.Total.sum += entry.netamount;
+				this.getOrCreateCellById(
+					entry.outlet).sum += entry.netamount;
+			}
+			getOrCreateChildRowById(id) {
+				if (!this.childRows[id])
+					this.childRows[id] =
+						new OutletBasedRowEntry();
+				return this.childRows[id];
+			}
+			getOrCreateCellById(id) {
+				if (!this.cells[id])
+					this.cells[id] = new CellEntry();
+				return this.cells[id];
+			}
+		}
 
-  <table>
-    <tr>
-      <th>Company</th>
-      <th>Contact</th>
-      <th>Country</th>
-    </tr>
-    <tr onClick='toggleRow(this)'>
-      <td>Alfreds Futterkiste</td>
-      <td>Maria Anders</td>
-      <td>Germany</td>
-      <td class='expanded-row-content hide-row'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-        galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also
-        the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-        release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
-        like Aldus PageMaker including versions of Lorem Ipsum.</td>
-    </tr>
-    <tr onClick='toggleRow(this)'>
-      <td>Centro comercial Moctezuma</td>
-      <td>Francisco Chang</td>
-      <td>Mexico</td>
-      <td class='expanded-row-content hide-row'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-        galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also
-        the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-        release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
-        like Aldus PageMaker including versions of Lorem Ipsum.</td>
-    </tr>
-    <tr onClick='toggleRow(this)'>
-      <td>Ernst Handel</td>
-      <td>Roland Mendel</td>
-      <td>Austria</td>
-      <td class='expanded-row-content hide-row'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-        galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also
-        the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-        release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
-        like Aldus PageMaker including versions of Lorem Ipsum.</td>
-    </tr>
+		function tabulizeData(data) {
+			let TotalRowEntry = new OutletBasedRowEntry();
+			data.forEach(entry => {
+				TotalRowEntry.add(entry);
+				TotalRowEntry.getOrCreateChildRowById(
+						entry.brandname).add(entry);
+				TotalRowEntry.getOrCreateChildRowById(
+						entry.brandname).
+						getOrCreateChildRowById(
+						entry.itemname).add(entry);
+			});
+			renderTable(TotalRowEntry);
+		}
 
-  </table>
+		function renderTable(TotalRowEntry) {
+			let $table = $('#ExpenseTable');
+			let $thead = $(
+'<thead><tr><th>Brand Name</th></tr><tr><th></th></tr><tr><th>Total</th></tr><thead>'),
+				$tbody = $('<tbody>');
+			let $headingRows = $thead.find('tr');
 
-  <script>
-    const toggleRow = (element) => {
-      element.getElementsByClassName('expanded-row-content')[0].classList.toggle('hide-row');
-      console.log(event);
-    }
-  </script>
+			function addCellEntriesToRow(
+				rowEntry, $row) {
+				for (let cellName in
+					TotalRowEntry.cells) {
+					let cellEntry = rowEntry
+						.getOrCreateCellById(cellName);
+					$('<td>').html(cellEntry.sum)
+							.appendTo($row);
+					$('<td>').html(cellEntry.percentage)
+								.appendTo($row);
+				}
+			}
 
+			$.each(TotalRowEntry.cells,
+				function (cellName, cellEntry) {
+				$('<th colspan=2>').html(cellName)
+					.appendTo($headingRows.eq(0));
+				$('<th>PROFIT</th>')
+					.appendTo($headingRows.eq(1));
+				$('<th>LOSS</th>').appendTo(
+					$headingRows.eq(1));
+				$('<th>').html(cellEntry.sum)
+					.appendTo($headingRows.eq(2));
+				$('<th>').html(cellEntry.percentage)
+					.appendTo($headingRows.eq(2));
+			});
+
+			$.each(TotalRowEntry.childRows,
+				function (brandName, rowEntry) {
+				let $row = $('<tr>').appendTo($tbody);
+				let rowId = 'row' + $row.index();
+				let firstCell = $(
+'<td><i class="fas fa-plus add-btn" data-toggle="collapse" data-target=".'
+					+ rowId + '"></i>' + brandName
+					+ '</td>').appendTo($row);
+				addCellEntriesToRow(rowEntry, $row);
+				$.each(rowEntry.childRows, function (
+						itemName, rowEntry) {
+					$row = $('<tr>').addClass('collapse '
+						+ rowId).appendTo($tbody);
+					$('<td>').html(itemName).appendTo($row);
+					addCellEntriesToRow(rowEntry, $row);
+				});
+			});
+
+			$thead.appendTo($table);
+			$tbody.appendTo($table);
+		}
+
+		tabulizeData([{
+			"outlet": "MUMBAI",
+			"brandname": "HOTEL-1",
+			"itemname": "Restaurant",
+			"transactionType": "TransferIn",
+			"netamount": 980
+		},
+		{
+			"outlet": "MUMBAI",
+			"brandname": "HOTEL-1",
+			"itemname": "Hall",
+			"transactionType": "TransferIn",
+			"netamount": 130
+		},
+		{
+			"outlet": "MUMBAI",
+			"brandname": "HOTEL-1",
+			"itemname": "Bakery",
+			"transactionType": "TransferIn",
+			"netamount": 500
+		},
+		{
+			"outlet": "MUMBAI",
+			"brandname": "HOTEL-2",
+			"itemname": "Restaurant",
+			"transactionType": "TransferIn",
+			"netamount": 110
+		},
+		{
+			"outlet": "MUMBAI",
+			"brandname": "HOTEL-2",
+			"itemname": "Party",
+			"transactionType": "TransferIn",
+			"netamount": 720
+		},
+		{
+			"outlet": "MUMBAI",
+			"brandname": "HOTEL-2",
+			"itemname": "Pool",
+			"transactionType": "TransferIn",
+			"netamount": 40000
+		},
+		{
+			"outlet": "MUMBAI",
+			"brandname": "HOTEL-2",
+			"itemname": "Bakery",
+			"transactionType": "TransferIn",
+			"netamount": 14000
+		},
+		{
+			"outlet": "MUMBAI",
+			"brandname": "HOTEL-2",
+			"itemname": "Marriage",
+			"transactionType": "TransferIn",
+			"netamount": 500
+		},
+		{
+			"outlet": "MUMBAI",
+			"brandname": "HOTEL-2",
+			"itemname": "Car Valet",
+			"transactionType": "TransferIn",
+			"netamount": 5500
+		},
+		{
+			"outlet": "MUMBAI",
+			"brandname": "HOTEL-2",
+			"itemname": "Expense",
+			"transactionType": "TransferIn",
+			"netamount": 1000
+		},
+		{
+			"outlet": "MUMBAI",
+			"brandname": "HOTEL-3",
+			"itemname": "Restaurant",
+			"transactionType": "TransferIn",
+			"netamount": 324
+		},
+		{
+			"outlet": "MUMBAI",
+			"brandname": "HOTEL-4",
+			"itemname": "Party",
+			"transactionType": "LOSS",
+			"netamount": 476426
+		},
+		{
+			"outlet": "JAIPUR",
+			"brandname": "HOTEL-4",
+			"itemname": "Party",
+			"transactionType": "LOSS",
+			"netamount": 115313
+		},
+		{
+			"outlet": "BANGALORE",
+			"brandname": "HOTEL-4",
+			"itemname": "Party",
+			"transactionType": "LOSS",
+			"netamount": 92141
+		}
+		]);
+	</script>
 </body>
 
 </html>
