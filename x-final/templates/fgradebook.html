@@ -56,35 +56,41 @@
                                   <h3>You have no students in this class.</h3>
                               </div>
                             {% else %}
+                              <div class="w3">
+                                <table>
 
 
-                        <table class="table table-condensed" style="border-collapse:collapse;">
-                          <thead>
-                              <tr>
-                                  <th>#</th>
-                                  <th>Date</th>
-                                  <th>Description</th>
-                                  <th>Credit</th>
-                                  <th>Debit</th>
-                                  <th>Balance</th>
-                              </tr>
-                          </thead>
-                          <tbody>
-                            <tr data-toggle="collapse" data-target="#demo1" class="accordion-toggle">
-                              <td>1</td>
-                              <td>05 May 2013</td>
-                              <td>Credit Account</td>
-                              <td class="text-success">$150.00</td>
-                              <td class="text-error"></td>
-                              <td class="text-success">$150.00</td>
-                            </tr>
+                                  <tr>
+                                    <th>Company</th>
+                                    <th>Contact</th>
+                                    <th>Country</th>
+                                  </tr>
 
-                            <tr>
-                              <td colspan="6" class="hiddenRow">
-                                <div class="accordion-body collapse" id="demo1">Demo1</div>
-                              </td>
-                            </tr>
-                          </tbody>
+                                  <tr onClick='toggleRow(this)'>
+                                    <td>Alfreds Futterkiste</td>
+                                    <td>Maria Anders</td>
+                                    <td>Germany</td>
+                                    <td class='expanded-row-content hide-row'>
+                                      <table class="w3-table w3-striped w3-white">
+                                          <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Class</th>
+                                            </tr>
+                                          </thead>
+                                            <tr id="final">
+                                              <td name="sname">{{student["studentname"]}}</td>
+                                              <td name="cclass">{{student["classname"]}}</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                  </tr>
+
+
+                                </table>
+                              </div>
+
+
 
 
 
