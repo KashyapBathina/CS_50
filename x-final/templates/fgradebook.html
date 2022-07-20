@@ -57,8 +57,8 @@
                               </div>
                             {% else %}
 
-                            <div class="w3" class="w3-table w3-striped w3-white">
-                                <table style="padding-bottom:50px">
+                            <div class="w3">
+                                <table style="padding-bottom:50px" class="w3-striped w3-white">
 
 
                                   <tr>
@@ -73,16 +73,21 @@
                                     <td>Germany</td>
                                     <td class='expanded-row-content hide-row'>
                                       <table class="w3-table w3-striped w3-white">
-                                          <thead>
-                                            <tr>
-                                                <th>Name</th>
-                                                <th>Class</th>
-                                            </tr>
-                                          </thead>
-                                            <tr id="final">
-                                              <td name="sname">sname</td>
-                                              <td name="cclass">cname</td>
-                                            </tr>
+                                        <thead>
+                                          <tr>
+                                              <th></th>
+                                              <th>Name</th>
+                                              <th>Class</th>
+                                              <th style="margin-left:40px; position:absolute;">GPA</th>
+                                          </tr>
+                                        </thead>
+
+                                        <tr id="final">
+                                        <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
+                                        <td name="sname">{{student["studentname"]}}</td>
+                                        <td name="cclass">{{student["classname"]}}</td>
+                                        <td><i>{{student["gpa"]}}</i></td>
+                                      </tr>
                                         </table>
                                     </td>
                                   </tr>
@@ -93,7 +98,6 @@
 
 
 
-                              <!--
                               <div class="w3">
                                   <table class="w3-table w3-striped w3-white">
                                     <thead>
@@ -115,7 +119,9 @@
                                   </table>
                             {% endif %}
                               </div>
-                            -->
+
+
+
                         </div>
                     </div>
               </div>
