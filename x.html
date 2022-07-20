@@ -2,99 +2,15 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
     <style>
-        .hiddenRow {
-            padding: 0 !important;
-        }
+
     </style>
 </head>
 
 
 <body>
-    <table class="table table-condensed" style="border-collapse:collapse;">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Date</th>
-                <th>Description</th>
-                <th>Credit</th>
-                <th>Debit</th>
-                <th>Balance</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr data-toggle="collapse" data-target="#demo1" class="accordion-toggle">
-                <td>1</td>
-                <td>05 May 2013</td>
-                <td>Credit Account</td>
-                <td class="text-success">$150.00</td>
-                <td class="text-error"></td>
-                <td class="text-success">$150.00</td>
-            </tr>
-            <tr >
-                <td colspan="6" class="hiddenRow"><div class="accordian-body collapse" id="demo1"> Demo Content1 </div> </td>
-            </tr>
 
-            <tr data-toggle="collapse" data-target="#demo2" class="accordion-toggle">
-                <td>2</td>
-                <td>05 May 2013</td>
-                <td>Credit Account</td>
-                <td class="text-success">$11.00</td>
-                <td class="text-error"></td>
-                <td class="text-success">$161.00</td>
-            </tr>
-            <tr>
-                <td colspan="6" class="hiddenRow"><div id="demo2" class="accordian-body collapse">Demo Content2</div></td>
-            </tr>
-
-            <tr data-toggle="collapse" data-target="#demo3" class="accordion-toggle">
-                <td>3</td>
-                <td>05 May 2013</td>
-                <td>Credit Account</td>
-                <td class="text-success">$500.00</td>
-                <td class="text-error"></td>
-                <td class="text-success">$661.00</td>
-            </tr>
-            <tr>
-                <td colspan="6"  class="hiddenRow"><div id="demo3" class="accordian-body collapse">Demo Content3</div></td>
-            </tr>
-
-            <tr data-toggle="collapse" data-target="#demo4" class="accordion-toggle">
-                <td>4</td>
-                <td>05 May 2013</td>
-                <td>Credit Account</td>
-                <td class="text-success">$500.00</td>
-                <td class="text-error"></td>
-                <td class="text-success">$661.00</td>
-            </tr>
-            <tr>
-                <td colspan="6"  class="hiddenRow"><div id="demo4" class="accordian-body collapse">Demo Content4</div></td>
-            </tr>
-
-            <tr data-toggle="collapse" data-target="#demo5" class="accordion-toggle">
-                <td>5</td>
-                <td>05 May 2013</td>
-                <td>Credit Account</td>
-                <td class="text-success">$500.00</td>
-                <td class="text-error"></td>
-                <td class="text-success">$661.00</td>
-            </tr>
-            <tr>
-                <td colspan="6"  class="hiddenRow"><div id="demo5" class="accordian-body collapse">Demo Content5</div></td>
-            </tr>
-        </tbody>
-    </table>
-
-    <script>
-        $('.accordian-body').on('show.bs.collapse', function () {
-    $(this).closest("table")
-        .find(".collapse.in")
-        .not(this)
-        //.collapse('toggle')
-})
-    </script>
 </body>
 
 </html>
