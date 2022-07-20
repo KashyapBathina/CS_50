@@ -98,7 +98,6 @@ h1{
 
     td,
     th {
-    border: 1px solid #EEEEEE;
     border-top: none;
     text-align: left;
     padding: 8px;
@@ -107,7 +106,6 @@ h1{
     }
 
     tr {
-    background-color: #fff;
     border: none;
     cursor: pointer;
     display: grid;

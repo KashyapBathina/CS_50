@@ -58,7 +58,7 @@
                             {% else %}
 
                             <div class="w3">
-                              <table class="w3-table w3-striped w3-white">
+                              <table class="w3-striped w3-white">
 
 
                                 <tr>
@@ -69,7 +69,7 @@
 
                                 {% for student in selected %}
                                 <tr onClick='toggleRow(this)'>
-                                  <td>{{student["studentname"]}}</td>
+                                  <td><i class="fa fa-user w3-text-blue w3-large"></i>{{student["studentname"]}}</td>
                                   <td>{{student["classname"]}}</td>
                                   <td>Germany</td>
                                   <td class='expanded-row-content hide-row'>
