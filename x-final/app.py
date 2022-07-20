@@ -308,7 +308,6 @@ def fgrading():
 def gradebook():
     if request.method == "POST":
         classesl = request.form.get("classesl")
-
         selected = db.execute("SELECT * FROM students WHERE classname = ? and teacherid = ?", classesl.strip(), session["user_id"])
         classes = db.execute("SELECT * FROM assignments WHERE teacherid = ?", session["user_id"])
         students = db.execute("SELECT * FROM students where teacherid = ?", session["user_id"])
