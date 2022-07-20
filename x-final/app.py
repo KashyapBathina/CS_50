@@ -318,20 +318,12 @@ def gradebook():
         return render_template("gradebook.html", classes=classes)
 
 
-@app.route("/fgradebook", methods=["POST"])
+@app.route("/fgradebook", methods=["Get"])
 @login_required
 def fgradebook():
-    if request.method == "POST":
-        aname = request.form.get("aname")
-        weight = request.form.get("weight")
-        sname = request.form.getlist("studentname")
-        grade = request.form.getlist("grade")
-        classname = request.form.get("classname")
+    if request.method == "Get":
+        classesl.strip
+        selected = db.execute("SELECT * FROM students WHERE classname = ? and teacherid = ?", classesl.strip(), session["user_id"])
 
-        for (i,j) in zip(sname, grade):
-            print (i,j)
-            db.execute("INSERT INTO gradebook (assignmentname, weight, grade, studentname, classname, teacherid) VALUES(?, ?, ?, ?, ?, ?)", aname, weight, j, i, classname, session["user_id"])
 
-        return redirect("/gradebook")
-
-    if 
+        print("hello")
