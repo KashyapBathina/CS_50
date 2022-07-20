@@ -277,7 +277,6 @@ def grading():
 
         selected = db.execute("SELECT * FROM students WHERE classname = ? AND teacherid = ?", classesl.strip(), session["user_id"])
         classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
-        students = db.execute("SELECT * FROM students where teacherid = ?", session["user_id"])
         return render_template("fgrading.html", classes=classes, students=students, selected=selected, classesl=classesl, aname=aname, weight=weight)
 
     else:
@@ -314,6 +313,7 @@ def gradebook():
         return render_template("fgradebook.html", classes=classes, students=students, selected=selected, classesl=classesl)
 
     else:
+        students = db.execute("SELECT * FROM students where teacherid = ?", session["user_id"])
         classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
         return render_template("gradebook.html", classes=classes)
 
