@@ -57,24 +57,39 @@
                                 </div>
                             {% else %}
                               <div class="w3">
-                                  <table class="w3-table w3-striped w3-white">
-                                    <thead>
-                                      <tr>
-                                          <th></th>
-                                          <th>Name</th>
-                                          <th>Class</th>
-                                          <th style="margin-left:40px; position:absolute;">GPA</th>
-                                      </tr>
-                                    </thead>
-                                    {% for student in selected %}
-                                      <tr id="final">
-                                        <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
-                                        <td name="sname">{{student["studentname"]}}</td>
-                                        <td name="cclass">{{student["classname"]}}</td>
-                                        <td><i>{{student["gpa"]}}</i></td>
-                                      </tr>
-                                    {% endfor %}
-                                  </table>
+                                <div class="accordion" id="accordionExample">
+
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <table class="w3-table w3-striped w3-white">
+                                          <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Name</th>
+                                                <th>Class</th>
+                                                <th style="margin-left:40px; position:absolute;">GPA</th>
+                                            </tr>
+                                          </thead>
+                                          {% for student in selected %}
+                                            <tr id="final">
+                                              <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
+                                              <td name="sname">{{student["studentname"]}}</td>
+                                              <td name="cclass">{{student["classname"]}}</td>
+                                              <td><i>{{student["gpa"]}}</i></td>
+                                            </tr>
+                                          {% endfor %}
+                                        </table>
+                                      </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                      <div class="accordion-body">
+                                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                </div>
                             {% endif %}
                         </div>
                       </div>
