@@ -21,8 +21,8 @@
                       <h4 style="padding-right:500px">View Grades</h4>
                       <div>
                         <form action="/gradebook" method="post" id="todo-form">
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Class Name</label>
+                        <div class="mb-3" style="padding-top:50px">
+                            <label for="exampleFormControlInput1" class="form-label" style="padding-right:20px">Class Name</label>
                             <select name="classesl" id="classesl" class="form-select form-control form-label" aria-label="Default select">
                               <option name = "none" id="none" value ="none"> --select class--</option>
                               {% for class in classes %}
@@ -30,7 +30,7 @@
                               {% endfor %}
                           </select>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-3" style="padding-top:20px">
                             <button name="form" id="form" type="submit" class="btn btn-primary mb-3" style="margin-right:10px" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">Add Assignment</button>
                         </div>
                         </form>
