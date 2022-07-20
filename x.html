@@ -1,171 +1,113 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
 <head>
-    <title>How to slideToggle a table row</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/jquery-ui.min.css" rel="stylesheet" />
-    <link href="css/custom.css" rel="stylesheet" />
-    <style type="text/css">
-    tr.detail {
-    display: none;
-    width: 100%;
+  <style>
+    table {
+      width: 500px;
+      border: none;
+      border-top: 1px solid #EEEEEE;
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
     }
-    tr.detail div {
-    display: none;
+
+    td,
+    th {
+      border: 1px solid #EEEEEE;
+      border-top: none;
+      text-align: left;
+      padding: 8px;
+      color: #363D41;
+      font-size: 14px;
     }
-    .showmore:hover {
-    cursor: pointer;
+
+    tr {
+      background-color: #fff;
+      border: none;
+      cursor: pointer;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: flex-start;
     }
-    </style>
+
+    tr:first-child:hover {
+      cursor: default;
+      background-color: #fff;
+    }
+
+    tr:hover {
+      background-color: #EEF4FD;
+    }
+
+    .expanded-row-content {
+      border-top: none;
+      display: grid;
+      grid-column: 1/-1;
+      justify-content: flex-start;
+      color: #AEB1B3;
+      font-size: 13px;
+      background-color: #fff;
+    }
+
+    .hide-row {
+      display: none;
+    }
+  </style>
 </head>
+
 <body>
-<div class="wrapper">
-  <header>
-    <div class="container">
-    <h1 class="col-lg-9">How to slideToggle a table row</h1>
 
-    </div>
-  </header>
-  <div class="container">
-    <h5>Author: Julian Hansen</h5>
-<table class="table mytable">
-  <tr>
-    <td>Col1</td>
-    <td>Col 2</td>
-    <td><a class="showmore">Show More</a></td>
-  </tr>
-  <tr class="detail">
-    <td colspan="3">
-      <div>
-        <table class="table">
-          <tr>
-            <td>Detail 1</td><td>Detail 2</td>
-            <td>Detail 1</td><td>Detail 2</td>
-          </tr>
-          <tr>
-            <td>Detail 1</td><td>Detail 2</td>
-            <td>Detail 1</td><td>Detail 2</td>
-          </tr>
-          <tr>
-            <td>Detail 1</td><td>Detail 2</td>
-            <td>Detail 1</td><td>Detail 2</td>
-          </tr>
-          <tr>
-            <td>Detail 1</td><td>Detail 2</td>
-            <td>Detail 1</td><td>Detail 2</td>
-          </tr>
-          <tr>
-            <td>Detail 1</td><td>Detail 2</td>
-            <td>Detail 1</td><td>Detail 2</td>
-          </tr>
-          <tr>
-            <td>Detail 1</td><td>Detail 2</td>
-            <td>Detail 1</td><td>Detail 2</td>
-          </tr>
-        </table>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td>Col1</td>
-    <td>Col 2</td>
-    <td><a class="showmore">Show More</a></td>
-  </tr>
-  <tr class="detail">
-    <td colspan="3">
-      <div>
-        <table class="table">
-          <tr>
-            <td>Detail 1</td><td>Detail 2</td>
-            <td>Detail 1</td><td>Detail 2</td>
-          </tr>
-          <tr>
-            <td>Detail 1</td><td>Detail 2</td>
-            <td>Detail 1</td><td>Detail 2</td>
-          </tr>
-          <tr>
-            <td>Detail 1</td><td>Detail 2</td>
-            <td>Detail 1</td><td>Detail 2</td>
-          </tr>
-          <tr>
-            <td>Detail 1</td><td>Detail 2</td>
-            <td>Detail 1</td><td>Detail 2</td>
-          </tr>
-          <tr>
-            <td>Detail 1</td><td>Detail 2</td>
-            <td>Detail 1</td><td>Detail 2</td>
-          </tr>
-          <tr>
-            <td>Detail 1</td><td>Detail 2</td>
-            <td>Detail 1</td><td>Detail 2</td>
-          </tr>
-        </table>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td>Col1</td>
-    <td>Col 2</td>
-    <td><a class="showmore">Show More</a></td>
-  </tr>
-  <tr class="detail">
-    <td colspan="3">
-      <div>
-        <table class="table">
-          <tr>
-            <td>Detail 1</td><td>Detail 2</td>
-            <td>Detail 1</td><td>Detail 2</td>
-          </tr>
-          <tr>
-            <td>Detail 1</td><td>Detail 2</td>
-            <td>Detail 1</td><td>Detail 2</td>
-          </tr>
-          <tr>
-            <td>Detail 1</td><td>Detail 2</td>
-            <td>Detail 1</td><td>Detail 2</td>
-          </tr>
-          <tr>
-            <td>Detail 1</td><td>Detail 2</td>
-            <td>Detail 1</td><td>Detail 2</td>
-          </tr>
-          <tr>
-            <td>Detail 1</td><td>Detail 2</td>
-            <td>Detail 1</td><td>Detail 2</td>
-          </tr>
-          <tr>
-            <td>Detail 1</td><td>Detail 2</td>
-            <td>Detail 1</td><td>Detail 2</td>
-          </tr>
-        </table>
-      </div>
-    </td>
-  </tr>
-</table>
-</div>
-</div>
-<footer>
-  <div class="container">
-    Copyright Julian Hansen &copy; 2016
-  </div>
-</footer>
+  <h2> Expendable table </h2>
 
+  <table>
+    <tr>
+      <th>Company</th>
+      <th>Contact</th>
+      <th>Country</th>
+    </tr>
+    <tr onClick='toggleRow(this)'>
+      <td>Alfreds Futterkiste</td>
+      <td>Maria Anders</td>
+      <td>Germany</td>
+      <td class='expanded-row-content hide-row'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+        galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also
+        the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+        release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+        like Aldus PageMaker including versions of Lorem Ipsum.</td>
+    </tr>
+    <tr onClick='toggleRow(this)'>
+      <td>Centro comercial Moctezuma</td>
+      <td>Francisco Chang</td>
+      <td>Mexico</td>
+      <td class='expanded-row-content hide-row'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+        galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also
+        the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+        release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+        like Aldus PageMaker including versions of Lorem Ipsum.</td>
+    </tr>
+    <tr onClick='toggleRow(this)'>
+      <td>Ernst Handel</td>
+      <td>Roland Mendel</td>
+      <td>Austria</td>
+      <td class='expanded-row-content hide-row'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+        galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also
+        the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+        release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+        like Aldus PageMaker including versions of Lorem Ipsum.</td>
+    </tr>
 
+  </table>
 
+  <script>
+    const toggleRow = (element) => {
+      element.getElementsByClassName('expanded-row-content')[0].classList.toggle('hide-row');
+      console.log(event);
+    }
+  </script>
 
-<script>
-$(function() {
-  $('a.showmore').click(function(e) {
-    e.preventDefault();
-    // We break and store the result so we can use it to hide
-    // the row after the slideToggle is closed
-    var targetrow = $(this).closest('tr').next('.detail');
-    targetrow.show().find('div').slideToggle('slow', function(){
-      if (!$(this).is(':visible')) {
-        targetrow.hide();
-      }
-    });
-  });
-});
-</script>
 </body>
+
 </html>
