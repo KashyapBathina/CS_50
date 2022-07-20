@@ -109,7 +109,6 @@ h1{
     border: none;
     cursor: pointer;
     display: grid;
-    height: 50px
     grid-template-columns: repeat(3, 1fr);
     justify-content: flex-start;
     }
