@@ -61,9 +61,10 @@
 
 
                                   <tr>
-                                    <th>Company</th>
-                                    <th>Contact</th>
-                                    <th>Country</th>
+                                    <th></th>
+                                    <th>Name</th>
+                                    <th>Class</th>
+                                    <th style="margin-left:40px; position:absolute;">GPA</th>
                                   </tr>
 
                                   <tr onClick='toggleRow(this)'>
@@ -71,18 +72,14 @@
                                     <td>Maria Anders</td>
                                     <td>Germany</td>
                                     <td class='expanded-row-content hide-row'>
-                                      <table class="w3-table w3-striped w3-white">
-                                          <thead>
-                                            <tr>
-                                                <th>Name</th>
-                                                <th>Class</th>
-                                            </tr>
-                                          </thead>
-                                            <tr id="final">
-                                              <td name="sname">{{student["studentname"]}}</td>
-                                              <td name="cclass">{{student["classname"]}}</td>
-                                            </tr>
-                                        </table>
+
+                                      <tr id="final">
+                                        <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
+                                        <td name="sname">{{student["studentname"]}}</td>
+                                        <td name="cclass">{{student["classname"]}}</td>
+                                        <td><i>{{student["gpa"]}}</i></td>
+                                      </tr>
+                                      
                                     </td>
                                   </tr>
 
@@ -133,13 +130,18 @@
 {% block javascript %}
 
 <script>
-    document.addEventListener("DOMContentLoaded", function(){
-        var classesl = JSON.parse('{{ classesl | tojson }}');
-        document.getElementById('classesl').value = classesl;
-    });
+  document.addEventListener("DOMContentLoaded", function(){
+      var classesl = JSON.parse('{{ classesl | tojson }}');
+      document.getElementById('classesl').value = classesl;
+  });
 
-    var acc = document.getElementsByClassName("accordion");
-    var i;
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  const toggleRow = (element) => {
+    element.getElementsByClassName('expanded-row-content')[0].classList.toggle('hide-row');
+    console.log(event);
+  }
 </script>
 
 {% endblock %}
