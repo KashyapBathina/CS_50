@@ -322,7 +322,6 @@ def gradebook():
 @login_required
 def fgradebook():
     if request.method == "Get":
-        classesl.strip
         selected = db.execute("SELECT * FROM students WHERE classname = ? and teacherid = ?", classesl.strip(), session["user_id"])
 
 
