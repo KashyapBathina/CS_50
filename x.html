@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
-    <link href="css/bootstrap.css" rel="stylesheet">
+    
   </head>
   <body>
     <table class="table table-hover">
@@ -13,16 +13,20 @@
         </thead>
 
         <tbody>
-            <tr data-bs-toggle=="collapse" data-target="#accordion" class="clickable">
-                <td>Some Stuff</td>
-                <td>Some more stuff</td>
-                <td>And some more</td>
-            </tr>
-            <tr>
-                <td colspan="3">
-                    <div id="accordion" class="collapse">Hidden by default</div>
-                </td>
-            </tr>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <tr class="accordion-button" data-bs-toggle="collapse" data-target="#accordion" class="clickable">
+                        <td>Some Stuff</td>
+                        <td>Some more stuff</td>
+                        <td>And some more</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <div id="accordion" class="collapse">Hidden by default</div>
+                        </td>
+                    </tr>
+                </div>
+            </div>
         </tbody>
     </table>
 
