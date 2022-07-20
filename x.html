@@ -2,53 +2,67 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-
-    <h2>Accordion</h2>
-
-    <a class="accordion">
-        <table class="w3-table w3-striped w3-white">
-            <thead>
-            <tr>
-                <th></th>
-                <th>Name</th>
-                <th>Class</th>
-                <th style="margin-left:40px; position:absolute;">GPA</th>
-            </tr>
-            </thead>
-            {% endfor %}
-        </table>
-    </a>
-    <div class="panel">
-    <p>
-        <table>
-        <tr id="final">
-            <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
-            <td name="sname">{{student["studentname"]}}</td>
-            <td name="cclass">{{student["classname"]}}</td>
-            <td><i>{{student["gpa"]}}</i></td>
-        </tr>
-        </table>
-    </p>
-    </div>
-
-    <script>
-    var acc = document.getElementsByClassName("accordion");
-    var i;
-
-    for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-        panel.style.display = "none";
-        } else {
-        panel.style.display = "block";
-        }
-    });
+<script src="https://raw.githubusercontent.com/SteveSanderson/knockout.mapping/master/build/output/knockout.mapping-latest.debug.js"></script>
+<script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css"></script>
+<script src="https://knockoutjs.com/downloads/knockout-2.2.0.js"></script>
+<style>
+    .hiddenRow {
+        padding: 0 !important;
     }
-    </script>
+</style>
+</head>
+
+
+<body>
+    <table class="table table-condensed" style="border-collapse:collapse;">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Credit</th>
+                <th>Debit</th>
+                <th>Balance</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-toggle="collapse" data-target="#demo1" class="accordion-toggle">
+                <td>1</td>
+                <td>05 May 2013</td>
+                <td>Credit Account</td>
+                <td class="text-success">$150.00</td>
+                <td class="text-error"></td>
+                <td class="text-success">$150.00</td>
+            </tr>
+            <tr >
+                <td colspan="6" class="hiddenRow"><div class="accordian-body collapse" id="demo1"> Demo1 </div> </td>
+            </tr>
+            <tr data-toggle="collapse" data-target="#demo2" class="accordion-toggle">
+                <td>2</td>
+                <td>05 May 2013</td>
+                <td>Credit Account</td>
+                <td class="text-success">$11.00</td>
+                <td class="text-error"></td>
+                <td class="text-success">$161.00</td>
+            </tr>
+            <tr>
+                <td colspan="6" class="hiddenRow"><div id="demo2" class="accordian-body collapse">Demo2</div></td>
+            </tr>
+            <tr data-toggle="collapse" data-target="#demo3" class="accordion-toggle">
+                <td>3</td>
+                <td>05 May 2013</td>
+                <td>Credit Account</td>
+                <td class="text-success">$500.00</td>
+                <td class="text-error"></td>
+                <td class="text-success">$661.00</td>
+            </tr>
+            <tr>
+                <td colspan="6"  class="hiddenRow"><div id="demo3" class="accordian-body collapse">Demo3</div></td>
+            </tr>
+        </tbody>
+    </table>
+
 </body>
 
 </html>
