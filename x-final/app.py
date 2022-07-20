@@ -274,11 +274,8 @@ def grading():
         classesl = request.form.get("classesl")
         aname = request.form.get("aname")
         weight = request.form.get("weight")
-        print(classesl)
-        print(aname)
-        print(weight)
 
-        selected = db.execute("SELECT * FROM students WHERE classname = ?", classesl.strip())
+        selected = db.execute("SELECT * FROM students WHERE classname = ? AND teacherid = ?", classesl.strip(), session["user_id"])
         classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
         students = db.execute("SELECT * FROM students where teacherid = ?", session["user_id"])
         return render_template("fgrading.html", classes=classes, students=students, selected=selected, classesl=classesl, aname=aname, weight=weight)
@@ -299,12 +296,6 @@ def fgrading():
         grade = request.form.getlist("grade")
         classname = request.form.get("classname")
 
-        print(aname)
-        print(weight)
-        print(sname)
-        print(grade)
-        print(classname)
-
         for (i,j) in zip(sname, grade):
             print (i,j)
             db.execute("INSERT INTO gradebook (assignmentname, weight, grade, studentname, classname, teacherid) VALUES(?, ?, ?, ?, ?, ?)", aname, weight, j, i, classname, session["user_id"])
@@ -316,7 +307,14 @@ def fgrading():
 @login_required
 def gradebook():
     if request.method == "POST":
+        classesl = request.form.get("classesl")
 
-        return redirect("/gradebook")
+        selected = db.execute("SELECT * FROM students WHERE classname = ? and teacherid = ?", classesl.strip(), session["user_id"])
+        classes = db.execute("SELECT * FROM assignments WHERE teacherid = ?", session["user_id"])
+        students = db.execute("SELECT * FROM students where teacherid = ?", session["user_id"])
+        return render_template("fgrading.html", classes=classes, students=students, selected=selected, classesl=classesl)
+
     else:
-        return render_template("gradebook.html", classes=classes, students=students)
+        classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
+        students = db.execute("SELECT * FROM students where teacherid = ?", session["user_id"])
+        return render_template("grading.html", classes=classes, students=students)
