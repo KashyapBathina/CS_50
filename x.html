@@ -1,85 +1,56 @@
 <!DOCTYPE html>
+
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.accordion {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
-}
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
 
-.active, .accordion:hover {
-  background-color: #ccc;
-}
+    <body>
 
-.panel {
-  padding: 0 18px;
-  display: none;
-  background-color: white;
-  overflow: hidden;
-}
-</style>
-</head>
-<body>
+        <h2>Accordion</h2>
 
-<h2>Accordion</h2>
+        <button class="accordion">
+            <table class="w3-table w3-striped w3-white">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Class</th>
+                    <th style="margin-left:40px; position:absolute;">GPA</th>
+                </tr>
+                </thead>
+                {% endfor %}
+            </table>
+        </button>
+        <div class="panel">
+        <p>
+            <table>
+            <tr id="final">
+                <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
+                <td name="sname">{{student["studentname"]}}</td>
+                <td name="cclass">{{student["classname"]}}</td>
+                <td><i>{{student["gpa"]}}</i></td>
+            </tr>
+            </table>
+        </p>
+        </div>
 
-<button class="accordion">
-    <table class="w3-table w3-striped w3-white">
-        <thead>
-          <tr>
-              <th></th>
-              <th>Name</th>
-              <th>Class</th>
-              <th style="margin-left:40px; position:absolute;">GPA</th>
-          </tr>
-        </thead>
-        {% endfor %}
-      </table>
-</button>
-<div class="panel">
-  <p>
-    <table>
-    <tr id="final">
-        <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
-        <td name="sname">{{student["studentname"]}}</td>
-        <td name="cclass">{{student["classname"]}}</td>
-        <td><i>{{student["gpa"]}}</i></td>
-      </tr>
-    </table>
-  </p>
-</div>
+        <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
 
+        for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+            panel.style.display = "none";
+            } else {
+            panel.style.display = "block";
+            }
+        });
+        }
+        </script>
+    </body>
 
-
-
-
-
-
-<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}
-</script>
-
-</body>
 </html>
