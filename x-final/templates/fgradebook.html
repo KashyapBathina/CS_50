@@ -58,40 +58,6 @@
                             {% else %}
 
 
-
-                            <div class="w3">
-                              <button class="accordion">
-                                <table class="w3-table w3-striped w3-white">
-                                    <thead>
-                                      <tr>
-                                          <th></th>
-                                          <th>Name</th>
-                                          <th>Class</th>
-                                          <th style="margin-left:40px; position:absolute;">GPA</th>
-                                      </tr>
-                                    </thead>
-                                  </table>
-                              </button>
-                              <div class="panel">
-                                <p>
-                                  {% for student in selected %}
-                                  <table>
-                                    <tr id="final">
-                                      <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
-                                      <td name="sname">{{student["studentname"]}}</td>
-                                      <td name="cclass">{{student["classname"]}}</td>
-                                      <td><i>{{student["gpa"]}}</i></td>
-                                    </tr>
-                                  </table>
-                                  {% endfor %}
-                                </p>
-                              </div>
-                            </div>
-
-
-
-
-
                               <div class="w3">
                                   <table class="w3-table w3-striped w3-white">
                                     <thead>
@@ -111,6 +77,8 @@
                                       </tr>
                                     {% endfor %}
                                   </table>
+
+                                  
                             {% endif %}
                         </div>
                       </div>
