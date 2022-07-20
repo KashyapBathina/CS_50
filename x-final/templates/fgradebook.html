@@ -52,11 +52,35 @@
                         <div class="w3-panel">
                             <div class="w3-row-padding" style="margin:0 -16px">
                             {% if not selected %}
-                                <div class="mb-3">
-                                    <h3>You have no students in this class.</h3>
-                                </div>
+                              <div class="mb-3">
+                                  <h3>You have no students in this class.</h3>
+                              </div>
                             {% else %}
 
+                              <div class="w3">
+                                <table class="table table-hover">
+                                  <thead>
+                                    <tr>
+                                      <th></th>
+                                      <th></th>
+                                      <th></th>
+                                    </tr>
+                                  </thead>
+
+                                  <tbody>
+                                      <tr data-toggle="collapse" data-target="#accordion" class="clickable">
+                                          <td>Some Stuff</td>
+                                          <td>Some more stuff</td>
+                                          <td>And some more</td>
+                                      </tr>
+                                      <tr>
+                                          <td colspan="3">
+                                              <div id="accordion" class="collapse">Hidden by default</div>
+                                          </td>
+                                      </tr>
+                                  </tbody>
+                                  </table>
+                              </div>
 
                               <div class="w3">
                                   <table class="w3-table w3-striped w3-white">
@@ -77,11 +101,9 @@
                                       </tr>
                                     {% endfor %}
                                   </table>
-
-                                  
                             {% endif %}
+                              </div>
                         </div>
-                      </div>
                     </div>
               </div>
             </div>
