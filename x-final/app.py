@@ -310,11 +310,28 @@ def gradebook():
         classesl = request.form.get("classesl")
         selected = db.execute("SELECT * FROM students WHERE classname = ? and teacherid = ?", classesl.strip(), session["user_id"])
         classes = db.execute("SELECT * FROM gradebook WHERE teacherid = ?", session["user_id"])
-        
-
         students = db.execute("SELECT * FROM students where teacherid = ?", session["user_id"])
         return render_template("fgradebook.html", classes=classes, students=students, selected=selected, classesl=classesl)
 
     else:
         classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
         return render_template("gradebook.html", classes=classes)
+
+
+@app.route("/fgradebook", methods=["POST"])
+@login_required
+def fgradebook():
+    if request.method == "POST":
+        aname = request.form.get("aname")
+        weight = request.form.get("weight")
+        sname = request.form.getlist("studentname")
+        grade = request.form.getlist("grade")
+        classname = request.form.get("classname")
+
+        for (i,j) in zip(sname, grade):
+            print (i,j)
+            db.execute("INSERT INTO gradebook (assignmentname, weight, grade, studentname, classname, teacherid) VALUES(?, ?, ?, ?, ?, ?)", aname, weight, j, i, classname, session["user_id"])
+
+        return redirect("/gradebook")
+
+    if 
