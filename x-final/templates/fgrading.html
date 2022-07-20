@@ -69,18 +69,16 @@
                                   <table class="w3-table w3-striped w3-white">
                                     <thead>
                                       <tr>
-                                          <th></th>
                                           <th>Name</th>
                                           <th>Class</th>
-                                          <th style="margin-left:40px; position:absolute;">Grade</th>
+                                          <th>Grade</th>
                                       </tr>
                                     </thead>
                                     {% for student in selected %}
                                       <tr id="final">
-                                        <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
-                                        <td name="sname">{{student["studentname"]}}</td>
+                                        <td name="sname"><i class="fa fa-user w3-text-blue w3-large"></i> {{student["studentname"]}}</td>
                                         <td name="cclass">{{student["classname"]}}</td>
-                                        <td><i><input name="grade" type="number" placeholder="%" style="width:50px; position:absolute; margin-left:40px;"></i></td>
+                                        <td><i><input name="grade" type="number" placeholder="%" style="width:50px; position:absolute;"></i></td>
                                         <input name="aname" type="hidden" value="{{aname}}">
                                         <input name="weight" type="hidden" value="{{weight}}">
                                         <input name="classname" type="hidden" value="{{ student.classname }}">
