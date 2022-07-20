@@ -310,6 +310,8 @@ def gradebook():
         classesl = request.form.get("classesl")
         selected = db.execute("SELECT * FROM students WHERE classname = ? and teacherid = ?", classesl.strip(), session["user_id"])
         classes = db.execute("SELECT * FROM gradebook WHERE teacherid = ?", session["user_id"])
+        
+
         students = db.execute("SELECT * FROM students where teacherid = ?", session["user_id"])
         return render_template("fgradebook.html", classes=classes, students=students, selected=selected, classesl=classesl)
 
