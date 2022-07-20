@@ -90,7 +90,7 @@ h1{
 }
 
     table {
-    width: 500px;
+    width: 1050px;
     border: none;
     border-top: 1px solid #EEEEEE;
     font-family: arial, sans-serif;
@@ -109,6 +109,7 @@ h1{
     border: none;
     cursor: pointer;
     display: grid;
+    height: 50px
     grid-template-columns: repeat(3, 1fr);
     justify-content: flex-start;
     }
