@@ -67,20 +67,22 @@
                                     <th style="margin-left:40px; position:absolute;">GPA</th>
                                   </tr>
 
-                                  <tr onClick='toggleRow(this)'>
-                                    <td>Alfreds Futterkiste</td>
-                                    <td>Maria Anders</td>
-                                    <td>Germany</td>
-                                    <td class='expanded-row-content hide-row'>
 
-                                      <tr id="final">
+                                  <tr onClick='toggleRow(this)'>
                                         <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
                                         <td name="sname">{{student["studentname"]}}</td>
                                         <td name="cclass">{{student["classname"]}}</td>
                                         <td><i>{{student["gpa"]}}</i></td>
-                                      </tr>
-                                      
-                                    </td>
+                                        <td class='expanded-row-content hide-row'>
+
+                                          <tr id="final">
+                                            <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
+                                            <td name="sname">{{student["studentname"]}}</td>
+                                            <td name="cclass">{{student["classname"]}}</td>
+                                            <td><i>{{student["gpa"]}}</i></td>
+                                          </tr>
+
+                                        </td>
                                   </tr>
 
 
