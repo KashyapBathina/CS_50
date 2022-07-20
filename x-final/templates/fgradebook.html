@@ -68,16 +68,17 @@
                                   </tr>
                                   {% for student in selected %}
                                   <tr onClick='toggleRow(this)'>
-                                    <td>Alfreds Futterkiste</td>
-                                    <td>Maria Anders</td>
-                                    <td>Germany</td>
+                                    <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
+                                    <td name="sname">{{student["studentname"]}}</td>
+                                    <td name="cclass">{{student["classname"]}}</td>
+                                    <td><i>{{student["gpa"]}}</i></td>
                                     <td class='expanded-row-content hide-row'>
 
                                       <tr id="final">
                                         <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
-                                        <td name="sname">{{student["studentname"]}}</td>
-                                        <td name="cclass">{{student["classname"]}}</td>
-                                        <td><i>{{student["gpa"]}}</i></td>
+                                        <td name="sname">assignment</td>
+                                        <td name="cclass">weight</td>
+                                        <td><i>grade</i></td>
                                       </tr>
 
                                     </td>
