@@ -1,16 +1,173 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <style>
-
+    <title>How to slideToggle a table row</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/jquery-ui.min.css" rel="stylesheet" />
+    <link href="css/custom.css" rel="stylesheet" />
+    <style type="text/css">
+    tr.detail {
+    display: none;
+    width: 100%;
+    }
+    tr.detail div {
+    display: none;
+    }
+    .showmore:hover {
+    cursor: pointer;
+    }
     </style>
 </head>
-
-
 <body>
+<div class="wrapper">
+  <header>
+    <div class="container">
+    <h1 class="col-lg-9">How to slideToggle a table row</h1>
 
+    </div>
+  </header>
+  <div class="container">
+    <h5>Author: Julian Hansen</h5>
+<table class="table mytable">
+  <tr>
+    <td>Col1</td>
+    <td>Col 2</td>
+    <td><a class="showmore">Show More</a></td>
+  </tr>
+  <tr class="detail">
+    <td colspan="3">
+      <div>
+        <table class="table">
+          <tr>
+            <td>Detail 1</td><td>Detail 2</td>
+            <td>Detail 1</td><td>Detail 2</td>
+          </tr>
+          <tr>
+            <td>Detail 1</td><td>Detail 2</td>
+            <td>Detail 1</td><td>Detail 2</td>
+          </tr>
+          <tr>
+            <td>Detail 1</td><td>Detail 2</td>
+            <td>Detail 1</td><td>Detail 2</td>
+          </tr>
+          <tr>
+            <td>Detail 1</td><td>Detail 2</td>
+            <td>Detail 1</td><td>Detail 2</td>
+          </tr>
+          <tr>
+            <td>Detail 1</td><td>Detail 2</td>
+            <td>Detail 1</td><td>Detail 2</td>
+          </tr>
+          <tr>
+            <td>Detail 1</td><td>Detail 2</td>
+            <td>Detail 1</td><td>Detail 2</td>
+          </tr>
+        </table>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>Col1</td>
+    <td>Col 2</td>
+    <td><a class="showmore">Show More</a></td>
+  </tr>
+  <tr class="detail">
+    <td colspan="3">
+      <div>
+        <table class="table">
+          <tr>
+            <td>Detail 1</td><td>Detail 2</td>
+            <td>Detail 1</td><td>Detail 2</td>
+          </tr>
+          <tr>
+            <td>Detail 1</td><td>Detail 2</td>
+            <td>Detail 1</td><td>Detail 2</td>
+          </tr>
+          <tr>
+            <td>Detail 1</td><td>Detail 2</td>
+            <td>Detail 1</td><td>Detail 2</td>
+          </tr>
+          <tr>
+            <td>Detail 1</td><td>Detail 2</td>
+            <td>Detail 1</td><td>Detail 2</td>
+          </tr>
+          <tr>
+            <td>Detail 1</td><td>Detail 2</td>
+            <td>Detail 1</td><td>Detail 2</td>
+          </tr>
+          <tr>
+            <td>Detail 1</td><td>Detail 2</td>
+            <td>Detail 1</td><td>Detail 2</td>
+          </tr>
+        </table>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>Col1</td>
+    <td>Col 2</td>
+    <td><a class="showmore">Show More</a></td>
+  </tr>
+  <tr class="detail">
+    <td colspan="3">
+      <div>
+        <table class="table">
+          <tr>
+            <td>Detail 1</td><td>Detail 2</td>
+            <td>Detail 1</td><td>Detail 2</td>
+          </tr>
+          <tr>
+            <td>Detail 1</td><td>Detail 2</td>
+            <td>Detail 1</td><td>Detail 2</td>
+          </tr>
+          <tr>
+            <td>Detail 1</td><td>Detail 2</td>
+            <td>Detail 1</td><td>Detail 2</td>
+          </tr>
+          <tr>
+            <td>Detail 1</td><td>Detail 2</td>
+            <td>Detail 1</td><td>Detail 2</td>
+          </tr>
+          <tr>
+            <td>Detail 1</td><td>Detail 2</td>
+            <td>Detail 1</td><td>Detail 2</td>
+          </tr>
+          <tr>
+            <td>Detail 1</td><td>Detail 2</td>
+            <td>Detail 1</td><td>Detail 2</td>
+          </tr>
+        </table>
+      </div>
+    </td>
+  </tr>
+</table>
+</div>
+</div>
+<footer>
+  <div class="container">
+    Copyright Julian Hansen &copy; 2016
+  </div>
+</footer>
+
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script>
+$(function() {
+  $('a.showmore').click(function(e) {
+    e.preventDefault();
+    // We break and store the result so we can use it to hide
+    // the row after the slideToggle is closed
+    var targetrow = $(this).closest('tr').next('.detail');
+    targetrow.show().find('div').slideToggle('slow', function(){
+      if (!$(this).is(':visible')) {
+        targetrow.hide();
+      }
+    });
+  });
+});
+</script>
 </body>
-
 </html>
