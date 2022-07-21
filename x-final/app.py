@@ -320,6 +320,9 @@ def gradebook():
             print(sgrade)
             sweight = db.execute("SELECT weight FROM gradebook WHERE classname = ? and teacherid = ? AND studentname = ?", classesl.strip(), session["user_id"], val["studentname"])
             print(sweight)
+            for (i,j) in zip(sgrade, sweight):
+                print (i,j)
+
 
 
         return render_template("fgradebook.html", classes=classes, students=students, selected=selected, classesl=classesl, assignments=assignments)
