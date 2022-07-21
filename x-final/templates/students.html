@@ -57,7 +57,7 @@
             <div class="w3-row-padding" style="margin:0 -16px">
               <div class="w3">
                 <h5>All Students</h5>
-                <table class="w3-table w3-striped w3-white">
+                <table >
                   <thead>
                     <tr>
                       <th>Name</th>
@@ -122,28 +122,21 @@
     </div>
 
     <hr>
-    <div class="w3-container">
-      <h5>General Stats</h5>
-      <p>New Visitors</p>
-      <div class="w3-grey">
-        <div class="w3-container w3-center w3-padding w3-green" style="width:25%">+25%</div>
-      </div>
 
-      <p>New Users</p>
-      <div class="w3-grey">
-        <div class="w3-container w3-center w3-padding w3-orange" style="width:50%">50%</div>
-      </div>
-    </div>
-    <hr>
-
-    <div class="w3-container">
-      <h5>Email</h5>
-      <p>New Visitors</p>
-      {% for student in students}
-      
-      <p>New Users</p>
-      <div class="w3-grey">
-        <div class="w3-container w3-center w3-padding w3-orange" style="width:50%">50%</div>
+    <div class="w3-panel">
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-twothird">
+          <h5>Emails</h5>
+          <table class="w3-table w3-striped w3-white" style="width:800px">
+            {% for student in students %}
+            <tr>
+              <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
+              <td>{{student["studentname"]}}</td>
+              <td><i>{{student["studentemail"]}}</i></td>
+            </tr>
+            {% endfor %}
+          </table>
+        </div>
       </div>
     </div>
     <hr>
