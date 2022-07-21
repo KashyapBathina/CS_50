@@ -84,12 +84,14 @@
                                               <th><i>Grade</i></th>
                                           </tr>
                                         </thead>
-                                        {% for a in name %}
+                                        {% for a in assignments %}
+                                        {% if a.studentname == student["studentname"] %}
                                           <tr id="final">
                                             <td name="sname">{{a["assignmentname"]}}</td>
                                             <td name="cclass">{{a["weight"]}}</td>
                                             <th><i>{{a["grade"]}}</i></th>
                                           </tr>
+                                        {% endif %}
                                         {% endfor %}
                                       </table>
                                   </td>
