@@ -318,13 +318,16 @@ def gradebook():
             print (val["studentname"])
             sgrade = db.execute("SELECT grade FROM gradebook WHERE classname = ? and teacherid = ? AND studentname = ?", classesl.strip(), session["user_id"], val["studentname"])
             sweight = db.execute("SELECT weight FROM gradebook WHERE classname = ? and teacherid = ? AND studentname = ?", classesl.strip(), session["user_id"], val["studentname"])
-            total = 0
+            gweight = 0
+            gtotal = 0
             for (i,j) in zip(sgrade, sweight):
                 #print (i["grade"],j["weight"])
-                agrade = int(i["grade"] * (j["weight"]/100))
-                total += agrade
-            print(total)
-            db.execute("UPDATE students SET grade = ? WHERE studentname = ? AND classname = ? AND teacherid = ?", total, val["studentname"], classesl.strip(), session["user_id"])
+                agrade = int(i["grade"] * (j["weight"]))
+                gweight += int(j["weight"])
+                gtotal += agrade
+            print(gtotal)
+            print(gweight)
+            #db.execute("UPDATE students SET grade = ? WHERE studentname = ? AND classname = ? AND teacherid = ?", total, val["studentname"], classesl.strip(), session["user_id"])
 
 
         print(students)
