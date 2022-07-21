@@ -76,8 +76,8 @@
                                   <td>{{student["classname"]}}</td>
                                   <td>Germany</td>
                                   <td class='expanded-row-content hide-row'>
-                                    <table class="w3-table w3-striped w3-white">
-                                        <thead>
+                                    <table>
+                                        <thead style="background-color: #4fd19f;">
                                           <tr>
                                               <th>Assignment Name</th>
                                               <th>Weight</th>
@@ -86,7 +86,7 @@
                                         </thead>
                                         {% for a in assignments %}
                                         {% if a.studentname == student["studentname"] %}
-                                          <tr id="final">
+                                          <tr id="final" style="background-color: #D6EEEE;">
                                             <td name="sname">{{a["assignmentname"]}}</td>
                                             <td name="cclass">{{a["weight"]}}</td>
                                             <th><i>{{a["grade"]}}</i></th>
