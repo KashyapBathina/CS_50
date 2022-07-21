@@ -84,10 +84,10 @@
                                               <th><i>Grade</i></th>
                                           </tr>
                                         </thead>
-                                        {% for a in gradebook where assignment.studentname == student %}
+                                        {% for assignment in gradebook %}
                                           <tr id="final">
-                                            <td name="sname">{{a["name"]}}</td>
-                                            <td name="cclass">class name</td>
+                                            <td name="sname">{{assignment["name"]}}</td>
+                                            <td name="cclass">{{assignment["class"]}}</td>
                                             <th><i>Grade</i></th>
                                           </tr>
                                           {% endfor %}
