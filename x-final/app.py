@@ -323,7 +323,8 @@ def gradebook():
                 agrade = (i["grade"] * (j["weight"]/100))
                 print(agrade)
 
-            total = agrade
+            sum += agrade
+            
 
 
 
