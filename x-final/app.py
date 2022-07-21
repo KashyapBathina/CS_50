@@ -336,7 +336,7 @@ def gradebook():
         return render_template("fgradebook.html", classes=classes, students=students, selected=selected, classesl=classesl, assignments=assignments)
 
     else:
-        classes = db.execute("SELECTl * FROM classes WHERE teacherid = ?", session["user_id"])
+        classes = db.execute("SELECTl8 * FROM classes WHERE teacherid = ?", session["user_id"])
         return render_template("gradebook.html", classes=classes)
 
 
