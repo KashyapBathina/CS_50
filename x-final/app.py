@@ -312,7 +312,7 @@ def gradebook():
         students = db.execute("SELECT * FROM students where teacherid = ?", session["user_id"])
         assignments = db.execute("SELECT * FROM gradebook where teacherid = ?", session["user_id"])
 
-        
+        for
 
         return render_template("fgradebook.html", classes=classes, students=students, selected=selected, classesl=classesl, assignments=assignments)
 
