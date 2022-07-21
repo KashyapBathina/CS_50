@@ -316,10 +316,10 @@ def gradebook():
         for i, val in enumerate(studentslist):
             print (val)
             print(val["studentname"])
-            sassign = db.execute("SELECT * FROM gradebook where teacherid = ? AND classname = ? AND studentname = ?", session["user_id"], classesl.strip(), val["studentname"])
-            print (sassign)
+            name = db.execute("SELECT * FROM gradebook where teacherid = ? AND classname = ? AND studentname = ?", session["user_id"], classesl.strip(), val["studentname"])
+            print (name)
 
-        return render_template("fgradebook.html", classes=classes, students=students, selected=selected, classesl=classesl, assignments=assignments)
+        return render_template("fgradebook.html", classes=classes, students=students, selected=selected, classesl=classesl, assignments=assignments, name=name)
 
     else:
         classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
