@@ -218,8 +218,8 @@ def index():
         return apology("not finished", 400)
 
     else:
-        print(session["user_id"])
-        return render_template("index.html", name=session["name"])
+        students = db.execute("SELECT * FROM students where teacherid = ?", session["user_id"])
+        return render_template("index.html", name=session["name"], students=students)
 
 
 @app.route("/students", methods=["GET", "POST"])
