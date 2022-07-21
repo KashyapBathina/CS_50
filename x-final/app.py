@@ -320,8 +320,8 @@ def gradebook():
             sweight = db.execute("SELECT weight FROM gradebook WHERE classname = ? and teacherid = ? AND studentname = ?", classesl.strip(), session["user_id"], val["studentname"])
             for (i,j) in zip(sgrade, sweight):
                 print (i["grade"],j["weight"])
-                agrade = i["grade"] * j["weight"] / j["weight"]
-                print(agrade)
+                agrade = i["grade"] * .tj["weight"]
+
 
 
 
