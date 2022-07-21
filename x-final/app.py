@@ -326,6 +326,7 @@ def gradebook():
             print(total)
             db.execute("UPDATE gradebook SET grade = ? WHERE studentname = ? AND classname = ? AND teacherid = ?", total, val["studentname"], classesl.strip(), session["user_id"])
 
+
         print(students)
         return render_template("fgradebook.html", classes=classes, students=students, selected=selected, classesl=classesl, assignments=assignments)
 
