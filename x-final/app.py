@@ -316,8 +316,11 @@ def gradebook():
         studentslist = db.execute("SELECT studentname FROM students where teacherid = ?", session["user_id"])
         for i, val in enumerate(studentslist):
             print (val["studentname"])
-            sassignments = db.execute("SELECT * FROM gradebook WHERE classname = ? and teacherid = ? AND studentname = ?", classesl.strip(), session["user_id"], val["studentname"])
-            print(sassignments)
+            sgrade = db.execute("SELECT grade FROM gradebook WHERE classname = ? and teacherid = ? AND studentname = ?", classesl.strip(), session["user_id"], val["studentname"])
+            print(sgrade)
+            sweight = db.execute("SELECT weight FROM gradebook WHERE classname = ? and teacherid = ? AND studentname = ?", classesl.strip(), session["user_id"], val["studentname"])
+            print(sweight)
+
 
         return render_template("fgradebook.html", classes=classes, students=students, selected=selected, classesl=classesl, assignments=assignments)
 
