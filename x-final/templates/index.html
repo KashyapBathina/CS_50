@@ -226,7 +226,7 @@
       </div>
     </div>
     <hr>
-
+    {% if session["type"] == "teacher" %}
     <div class="w3-container">
       <h5>Students (A-Z)</h5>
       <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
@@ -239,6 +239,8 @@
       </table><br>
       <a href="/students"><button class="w3-button w3-dark-grey">All Students <i class="fa fa-arrow-right"></i></button></a>
     </div>
+    {% endif %}
+
     <hr>
     <div class="w3-container w3-dark-grey w3-padding-32">
       <div class="w3-row">
