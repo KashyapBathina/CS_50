@@ -315,9 +315,8 @@ def gradebook():
         studentslist = db.execute("SELECT studentname FROM students where teacherid = ? and classname = ?", session["user_id"], classesl.strip())
         for i, val in enumerate(studentslist):
             print (val)
-            name = list{val.values()}[0]
-            print(val[0])
-            sassign = db.execute("SELECT * FROM gradebook where teacherid = ? AND classname = ? AND studentname = ?", session["user_id"], classesl.strip(), val[0])
+            print(val["studentname"])
+            sassign = db.execute("SELECT * FROM gradebook where teacherid = ? AND classname = ? AND studentname = ?", session["user_id"], classesl.strip(), val["studentname"])
             print (sassign)
 
         return render_template("fgradebook.html", classes=classes, students=students, selected=selected, classesl=classesl, assignments=assignments)
