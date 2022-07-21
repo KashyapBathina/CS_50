@@ -262,8 +262,13 @@ def classes():
         return redirect("/classes")
 
     else:
-        classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
-        return render_template("classes.html", classes=classes)
+        if session["type"] == "teacher":
+            classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
+            return render_template("classes.html", classes=classes)
+
+        else:
+            classes = db.execute("SELECT * FROM students WHERE studentemail = ?", session["email"])
+            return render_template("classes.html", classes=classes)
 
 
 
