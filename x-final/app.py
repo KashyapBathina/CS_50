@@ -324,7 +324,7 @@ def gradebook():
                 agrade = int(i["grade"] * (j["weight"]/100))
                 total += agrade
             print(total)
-            db.execute("UPDATE gradebook SET grade = ? WHERE studentname = ? AND classname = ? AND teacherid = ?", total, val["studentname"], classesl.strip(), session["user_id"])
+            db.execute("UPDATE students SET grade = ? WHERE studentname = ? AND classname = ? AND teacherid = ?", total, val["studentname"], classesl.strip(), session["user_id"])
 
 
         print(students)
