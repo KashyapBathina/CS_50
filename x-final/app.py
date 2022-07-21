@@ -329,7 +329,7 @@ def gradebook():
 
 
 
-
+        print(students)
         return render_template("fgradebook.html", classes=classes, students=students, selected=selected, classesl=classesl, assignments=assignments)
 
     else:
