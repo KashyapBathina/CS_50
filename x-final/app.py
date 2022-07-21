@@ -325,12 +325,9 @@ def gradebook():
                 agrade = int(i["grade"] * (j["weight"]))
                 gweight += int(j["weight"])
                 gtotal += agrade
-            print(gtotal)
-            print(gweight)
-            #db.execute("UPDATE students SET grade = ? WHERE studentname = ? AND classname = ? AND teacherid = ?", total, val["studentname"], classesl.strip(), session["user_id"])
+            fgrade = (gtotal) / (gweight)
+            db.execute("UPDATE students SET grade = ? WHERE studentname = ? AND classname = ? AND teacherid = ?", fgrade, val["studentname"], classesl.strip(), session["user_id"])
 
-
-        print(students)
         return render_template("fgradebook.html", classes=classes, students=students, selected=selected, classesl=classesl, assignments=assignments)
 
     else:
