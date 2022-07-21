@@ -336,6 +336,7 @@ def gradebook():
         return render_template("fgradebook.html", classes=classes, students=students, selected=selected, classesl=classesl, assignments=assignments)
 
     else:
+        print(session["name"])
         classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
         return render_template("gradebook.html", classes=classes)
 
