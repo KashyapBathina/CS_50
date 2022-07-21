@@ -311,9 +311,13 @@ def gradebook():
         classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
         students = db.execute("SELECT * FROM students where teacherid = ?", session["user_id"])
         assignments = db.execute("SELECT * FROM gradebook where teacherid = ?", session["user_id"])
-    
-        for i, val in enumerate(students[i]["studentname"]):
-            print (i, ",",val)
+
+
+        studentslist = db.execute("SELECT studentname FROM students where teacherid = ?", session["user_id"])
+        for i, val in enumerate(studentslist):
+            print (val["studentname"])
+            sassignments = db.execute("SELECT * FROM gradebook WHERE classname = ? and teacherid = ? AND studentname = ?", classesl.strip(), session["user_id"], val["studentname"])
+            print(sassignments)
 
         return render_template("fgradebook.html", classes=classes, students=students, selected=selected, classesl=classesl, assignments=assignments)
 
