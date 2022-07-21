@@ -318,13 +318,14 @@ def gradebook():
             print (val["studentname"])
             sgrade = db.execute("SELECT grade FROM gradebook WHERE classname = ? and teacherid = ? AND studentname = ?", classesl.strip(), session["user_id"], val["studentname"])
             sweight = db.execute("SELECT weight FROM gradebook WHERE classname = ? and teacherid = ? AND studentname = ?", classesl.strip(), session["user_id"], val["studentname"])
+            sum = 0
             for (i,j) in zip(sgrade, sweight):
-                print (i["grade"],j["weight"])
+                #print (i["grade"],j["weight"])
                 agrade = (i["grade"] * (j["weight"]/100))
-                print(agrade)
+                #print(agrade)
+                sum += agrade
+                print(sum)
 
-            sum += agrade
-            
 
 
 
