@@ -317,9 +317,7 @@ def gradebook():
         for i, val in enumerate(studentslist):
             print (val["studentname"])
             sgrade = db.execute("SELECT grade FROM gradebook WHERE classname = ? and teacherid = ? AND studentname = ?", classesl.strip(), session["user_id"], val["studentname"])
-            print(sgrade)
             sweight = db.execute("SELECT weight FROM gradebook WHERE classname = ? and teacherid = ? AND studentname = ?", classesl.strip(), session["user_id"], val["studentname"])
-            print(sweight)
             for (i,j) in zip(sgrade, sweight):
                 print (i,j)
 
