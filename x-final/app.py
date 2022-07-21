@@ -340,7 +340,7 @@ def gradebook():
             classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
             return render_template("gradebook.html", classes=classes)
         else:
-            classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
+            classes = db.execute("SELECT * FROM students WHERE studentemail = ?", session["email"])
             return render_template("gradebook.html", classes=classes)
 
 
