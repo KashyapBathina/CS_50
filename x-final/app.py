@@ -319,7 +319,7 @@ def gradebook():
             sgrade = db.execute("SELECT grade FROM gradebook WHERE classname = ? and teacherid = ? AND studentname = ?", classesl.strip(), session["user_id"], val["studentname"])
             sweight = db.execute("SELECT weight FROM gradebook WHERE classname = ? and teacherid = ? AND studentname = ?", classesl.strip(), session["user_id"], val["studentname"])
             for (i,j) in zip(sgrade, sweight):
-                print (i,j)
+                print (i["grade"],j["weight"])
 
 
 
