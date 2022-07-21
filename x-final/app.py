@@ -312,14 +312,7 @@ def gradebook():
         students = db.execute("SELECT * FROM students where teacherid = ?", session["user_id"])
         assignments = db.execute("SELECT * FROM gradebook where teacherid = ?", session["user_id"])
 
-        studentslist = db.execute("SELECT studentname FROM students where teacherid = ? and classname = ?", session["user_id"], classesl.strip())
-        for i, val in enumerate(studentslist):
-            print (val)
-            print(val["studentname"])
-            name = db.execute("SELECT * FROM gradebook where teacherid = ? AND classname = ? AND studentname = ?", session["user_id"], classesl.strip(), val["studentname"])
-            print (name)
-
-        return render_template("fgradebook.html", classes=classes, students=students, selected=selected, classesl=classesl, assignments=assignments, name=name)
+        return render_template("fgradebook.html", classes=classes, students=students, selected=selected, classesl=classesl, assignments=assignments)
 
     else:
         classes = db.execute("SELECT * FROM classes WHERE teacherid = ?", session["user_id"])
