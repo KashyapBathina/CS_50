@@ -322,9 +322,8 @@ def gradebook():
             for (i,j) in zip(sgrade, sweight):
                 #print (i["grade"],j["weight"])
                 agrade = int(i["grade"] * (j["weight"]/100))
-                #print(agrade)
                 total += agrade
-                print(total)
+            print(total)
 
 
 
