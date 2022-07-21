@@ -116,9 +116,8 @@ h1{
 
     .expanded-row-content {
     border-top: none;
-    display: grid;
     grid-column: 1/-1;
-    justify-content: flex-start;
+
     color: #AEB1B3;
     font-size: 13px;
     background-color: #fff;
