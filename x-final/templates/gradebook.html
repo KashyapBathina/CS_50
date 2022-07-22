@@ -65,12 +65,13 @@
                     </tr>
                   </thead>
                     {% for a in assignments %}
-                      {% if class.classid}
+                      {% if class.classid == a.classid and }
                       <tr id="final" style="background-color: #D6EEEE;">
                         <td name="sname">Assignment Name</td>
                         <td name="cclass">Weight</td>
                         <th><i>Assignment Grade</i></th>
                       </tr>
+                      {% endif %}
                     {% endfor %}
                 </table>
               </div>
