@@ -300,9 +300,12 @@ def fgrading():
         grade = request.form.getlist("grade")
         classname = request.form.get("classname")
 
+        classid = db.execute("SELECT classid FROM classes WHERE classname = ?", classname.strip())
+        print(classid)
+
         for (i,j) in zip(sname, grade):
             print (i,j)
-            db.execute("INSERT INTO gradebook (assignmentname, weight, grade, studentname, classname, teacherid) VALUES(?, ?, ?, ?, ?, ?)", aname, weight, j, i, classname, session["user_id"])
+            db.execute("INSERT INTO gradebook (assignmentname, weight, grade, studentname, classname, teacherid) VALUES(?, ?, ?, ?, ?, ?)", aname, weight, j, i, classname.strip(), session["user_id"])
 
         return redirect("/gradebook")
 
