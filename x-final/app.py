@@ -258,7 +258,7 @@ def classes():
         if not cname:
             return apology("you must name your class", 400)
 
-        db.execute("INSERT INTO classes (teacherid, classname) VALUES(?, ?)", session["user_id"], cname.strip())
+        db.execute("INSERT INTO classes (teacherid, classname, teachername) VALUES(?, ?)", session["user_id"], cname.strip(), session["name"])
         return redirect("/classes")
 
     else:
