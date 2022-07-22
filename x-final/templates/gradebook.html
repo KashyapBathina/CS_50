@@ -44,7 +44,7 @@
           <h2 class="accordion-header" id="headingOne">
               <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 
-                <div class="w3-quarter" style="padding-top:20px;width:500px">
+                <div class="w3-quarter" style="padding-top:20px;width:1200px">
                   <div class="w3-container w3-teal w3-text-white w3-padding-16">
                   <div class="w3-left"><i class="fa fa-users w3-xlarge"></i></div>
                   <div class="w3-clear"></div>
@@ -64,11 +64,14 @@
                         <th><i>Assignment Grade</i></th>
                     </tr>
                   </thead>
-                    <tr id="final" style="background-color: #D6EEEE;">
-                      <td name="sname">Assignment Name</td>
-                      <td name="cclass">Weight</td>
-                      <th><i>Assignment Grade</i></th>
-                    </tr>
+                    {% for a in assignments %}
+                      {% if class.classid}
+                      <tr id="final" style="background-color: #D6EEEE;">
+                        <td name="sname">Assignment Name</td>
+                        <td name="cclass">Weight</td>
+                        <th><i>Assignment Grade</i></th>
+                      </tr>
+                    {% endfor %}
                 </table>
               </div>
             </div>
