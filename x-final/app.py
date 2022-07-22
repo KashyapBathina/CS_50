@@ -302,7 +302,6 @@ def fgrading():
         classid = db.execute("SELECT classid FROM classes WHERE classname = ?", classname.strip())
 
         for (i,j) in zip(sname, grade):
-            print (i,j)
             email = db.execute("SELECT studentemail FROM students WHERE studentname = ? AND teacherid = ?", i, session["user_id"])
             db.execute("INSERT INTO gradebook (assignmentname, weight, grade, studentname, classname, teacherid, classid, studentemail) VALUES(?, ?, ?, ?, ?, ?, ?, ?)", aname, weight, j, i, classname.strip(), session["user_id"], classid[0]["classid"], email[0]["studentemail"])
 
@@ -319,6 +318,21 @@ def fgrading():
             fgrade = (gtotal) / (gweight)
             print(fgrade)
             db.execute("UPDATE students SET grade = ? WHERE studentname = ? AND classname = ? AND teacherid = ?", round(fgrade), i, classname.strip(), session["user_id"])
+
+            #send email
+            client = Courier(auth_token="pk_prod_3VNJBYM54EM107NQ0ZZ62Y7CRY67")
+            resp = client.send_message(
+                message={
+                    "to": {
+                        "email": (email),
+                    },
+                    "template": "C4P4331NKF4G9MHBY4663SM7XVA3",
+                    "data": {
+                        "name": (first),
+                        "code": (code),
+                    },
+                }
+            )
 
         return redirect("/gradebook")
 
@@ -337,7 +351,7 @@ def gradebook():
         #studentslist = db.execute("SELECT studentname FROM students where teacherid = ? AND classname = ?", session["user_id"], classesl.strip())
         #for i, val in enumerate(studentslist):
             #print (val["studentname"])
-            
+
 
         return render_template("fgradebook.html", classes=classes, students=students, selected=selected, classesl=classesl, assignments=assignments)
 
