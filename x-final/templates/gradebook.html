@@ -41,7 +41,7 @@
       </div>
     {% else %}
       {% for class in classes %}
-
+          <h2 class="accordion-header" id="headingOne">
               <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 
                 <div class="w3-quarter" style="padding-top:20px;width:500px">
@@ -56,7 +56,7 @@
 
               </button>
             </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div id="collapseOne" class="accordion-collapse collapse show">
               <div class="accordion-body">
                 <table>
                   <thead style="background-color: #bee6e5;">
@@ -74,10 +74,6 @@
                 </table>
               </div>
             </div>
-
-
-            
-
         {% endfor %}
     {% endif %}
 </div>
