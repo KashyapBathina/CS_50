@@ -311,14 +311,14 @@ def fgrading():
             sweight = db.execute("SELECT weight FROM gradebook WHERE classname = ? and teacherid = ? AND studentname = ?", classname.strip(), session["user_id"], i)
             gweight = 0
             gtotal = 0
-            for (i,j) in zip(sgrade, sweight):
-                #print (i["grade"],j["weight"])
-                agrade = int(i["grade"] * (j["weight"]))
-                gweight += int(j["weight"])
+            for (k,l) in zip(sgrade, sweight):
+                #print (k["grade"],l["weight"])
+                agrade = int(k["grade"] * (l["weight"]))
+                gweight += int(l["weight"])
                 gtotal += agrade
             fgrade = (gtotal) / (gweight)
             print(fgrade)
-            # db.execute("UPDATE students SET grade = ? WHERE studentname = ? AND classname = ? AND teacherid = ?", round(fgrade), val["studentname"], classesl.strip(), session["user_id"])
+            db.execute("UPDATE students SET grade = ? WHERE studentname = ? AND classname = ? AND teacherid = ?", round(fgrade), i, classname.strip(), session["user_id"])
 
         return redirect("/gradebook")
 
@@ -347,7 +347,7 @@ def gradebook():
                 gweight += int(j["weight"])
                 gtotal += agrade
             fgrade = (gtotal) / (gweight)
-            db.execute("UPDATE students SET grade = ? WHERE studentname = ? AND classname = ? AND teacherid = ?", round(fgrade), i, classesl.strip(), session["user_id"])
+            db.execute("UPDATE students SET grade = ? WHERE studentname = ? AND classname = ? AND teacherid = ?", round(fgrade), val["studentname"], classesl.strip(), session["user_id"])
 
         return render_template("fgradebook.html", classes=classes, students=students, selected=selected, classesl=classesl, assignments=assignments)
 
