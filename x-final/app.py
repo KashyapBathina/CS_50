@@ -316,7 +316,6 @@ def fgrading():
                 gweight += int(l["weight"])
                 gtotal += agrade
             fgrade = (gtotal) / (gweight)
-            print(fgrade)
             db.execute("UPDATE students SET grade = ? WHERE studentname = ? AND classname = ? AND teacherid = ?", round(fgrade), i, classname.strip(), session["user_id"])
 
             #send email
