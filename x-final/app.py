@@ -306,6 +306,19 @@ def fgrading():
             email = db.execute("SELECT studentemail FROM students WHERE studentname = ? AND teacherid = ?", i, session["user_id"])
             db.execute("INSERT INTO gradebook (assignmentname, weight, grade, studentname, classname, teacherid, classid, studentemail) VALUES(?, ?, ?, ?, ?, ?, ?, ?)", aname, weight, j, i, classname.strip(), session["user_id"], classid[0]["classid"], email[0]["studentemail"])
 
+            #calculate gpa
+            sgrade = db.execute("SELECT grade FROM gradebook WHERE classname = ? and teacherid = ? AND studentname = ?", classesl.strip(), session["user_id"], val["studentname"])
+            sweight = db.execute("SELECT weight FROM gradebook WHERE classname = ? and teacherid = ? AND studentname = ?", classesl.strip(), session["user_id"], val["studentname"])
+            gweight = 0
+            gtotal = 0
+            for (i,j) in zip(sgrade, sweight):
+                #print (i["grade"],j["weight"])
+                agrade = int(i["grade"] * (j["weight"]))
+                gweight += int(j["weight"])
+                gtotal += agrade
+            fgrade = (gtotal) / (gweight)
+            db.execute("UPDATE students SET grade = ? WHERE studentname = ? AND classname = ? AND teacherid = ?", round(fgrade), val["studentname"], classesl.strip(), session["user_id"])
+
         return redirect("/gradebook")
 
 
