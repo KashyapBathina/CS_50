@@ -324,7 +324,7 @@ def fgrading():
             resp = client.send_message(
                 message={
                     "to": {
-                        "email": (email),
+                        "email": (email[0]["studentemail"]),
                     },
                     "template": "KYHBSTQQ4HM255P2TKN3EE7RKW74",
                     "data": {
