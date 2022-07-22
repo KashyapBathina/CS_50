@@ -97,14 +97,16 @@
     <hr>
 {% else %}
   {% for class in classes %}
+  <div>
   <div class="w3-quarter" style="padding-top:20px;">
-      <a href="/gradebook" style="text-decoration: none;">
-      <div class="w3-container w3-green w3-text-white w3-padding-16" style="width:500px">
+      <a href="/gradebook" style="text-decoration: none">
+      <div class="w3-container w3-green w3-text-white w3-padding-16" style="width:500px;">
       <div class="w3-left"><i class="fa fa-users w3-xlarge"></i></div>
       <div class="w3-clear"></div>
           <h4>{{class["classname"]}}</h4>
       </div>
       </a>
+  </div>
   </div>
   {% endfor %}
   <div class="w3-container">
