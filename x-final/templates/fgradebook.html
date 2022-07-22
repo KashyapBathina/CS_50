@@ -85,7 +85,7 @@
                                           </tr>
                                         </thead>
                                         {% for a in assignments %}
-                                        {% if a.studentname == student["studentname"] %}
+                                        {% if a.studentname == student["studentname"] and a.classname == student["classname"] %}
                                           <tr id="final" style="background-color: #D6EEEE;">
                                             <td name="sname">{{a["assignmentname"]}}</td>
                                             <td name="cclass">{{a["weight"]}}</td>
