@@ -240,7 +240,7 @@ def students():
         classes = db.execute("SELECT * FROM classes WHERE classname = ?", classesl.strip())
 
         #db.execute("INSERT INTO classes (teacherid, classname) VALUES(?, ?)", session["user_id"], cname)
-        db.execute("INSERT INTO students (teacherid, classname, classid, studentname, studentemail) VALUES(?, ?, ?, ?, ?)", session["user_id"], classesl.strip(), classes[0]["classid"], sname.strip(), semail.strip())
+        db.execute("INSERT INTO students (teacherid, classname, classid, studentname, studentemail, teachername) VALUES(?, ?, ?, ?, ?)", session["user_id"], classesl.strip(), classes[0]["classid"], sname.strip(), semail.strip(), session["name"])
         return redirect("/students")
 
     else:
@@ -268,7 +268,8 @@ def classes():
 
         else:
             classes = db.execute("SELECT * FROM students WHERE studentemail = ?", session["email"])
-            return render_template("classes.html", classes=classes)
+            teachers = db.execute("SELECT * FROM classes")
+            return render_template("classes.html", classes=classes, teachers=teachers)
 
 
 
