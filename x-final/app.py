@@ -345,10 +345,8 @@ def gradebook():
             assignments = db.execute("SELECT * FROM gradebook WHERE studentemail = ?", session["email"])
             classes = db.execute("SELECT * FROM students WHERE studentemail = ?", session["email"])
             print(session["email"])
-            print(assignments)
-            print("/n")
-            print(classes)
-            return render_template("gradebook.html", classes=classes)
+            print(assignments[0]["studentemail"])
+            return render_template("gradebook.html", classes=classes, assignments=assignments)
 
 
 @app.route("/fgradebook", methods=["Get"])

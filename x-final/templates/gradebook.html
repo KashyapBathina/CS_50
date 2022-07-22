@@ -65,10 +65,10 @@
                     </tr>
                   </thead>
                     {% for a in assignments %}
-                      {% if a["studentemail"] == session["email"] %}
+                      {% if class.classid == a.classid %}
                       <tr id="final" style="background-color: #D6EEEE;">
-                        <td name="sname">{{a["assignmentname"]}}</td>
-                        <td name="cclass">{{a["weight"]}}</td>
+                        <td>{{a["assignmentname"]}}</td>
+                        <td>{{a["weight"]}}</td>
                         <th><i>{{a["grade"]}}</i></th>
                       </tr>
                       {% endif %}
