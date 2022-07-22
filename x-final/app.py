@@ -303,7 +303,8 @@ def fgrading():
 
         for (i,j) in zip(sname, grade):
             print (i,j)
-            db.execute("INSERT INTO gradebook (assignmentname, weight, grade, studentname, classname, teacherid, classid) VALUES(?, ?, ?, ?, ?, ?, ?)", aname, weight, j, i, classname.strip(), session["user_id"], classid[0]["classid"])
+            email = db.execute("SELECT studentemail FROM students WHERE classname = ?", classname.strip())
+            db.execute("INSERT INTO gradebook (assignmentname, weight, grade, studentname, classname, teacherid, classid, studentemail) VALUES(?, ?, ?, ?, ?, ?, ?, ?)", aname, weight, j, i, classname.strip(), session["user_id"], classid[0]["classid"])
 
         return redirect("/gradebook")
 
