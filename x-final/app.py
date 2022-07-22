@@ -328,7 +328,7 @@ def fgrading():
                     },
                     "template": "C4P4331NKF4G9MHBY4663SM7XVA3",
                     "data": {
-                        "name": (first),
+                        "name": (i),
                         "code": (code),
                     },
                 }
