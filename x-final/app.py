@@ -371,3 +371,9 @@ def gradebook():
 def fgradebook():
     if request.method == "Get":
         print("hello")
+
+@app.route("/unfinished", methods=["Get"])
+@login_required
+def fgradebook():
+    if request.method == "Get":
+        return apology("not finished", 400)
