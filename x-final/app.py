@@ -334,20 +334,10 @@ def gradebook():
         assignments = db.execute("SELECT * FROM gradebook where teacherid = ?", session["user_id"])
 
 
-        studentslist = db.execute("SELECT studentname FROM students where teacherid = ? AND classname = ?", session["user_id"], classesl.strip())
-        for i, val in enumerate(studentslist):
-            print (val["studentname"])
-            sgrade = db.execute("SELECT grade FROM gradebook WHERE classname = ? and teacherid = ? AND studentname = ?", classesl.strip(), session["user_id"], val["studentname"])
-            sweight = db.execute("SELECT weight FROM gradebook WHERE classname = ? and teacherid = ? AND studentname = ?", classesl.strip(), session["user_id"], val["studentname"])
-            gweight = 0
-            gtotal = 0
-            for (i,j) in zip(sgrade, sweight):
-                #print (i["grade"],j["weight"])
-                agrade = int(i["grade"] * (j["weight"]))
-                gweight += int(j["weight"])
-                gtotal += agrade
-            fgrade = (gtotal) / (gweight)
-            db.execute("UPDATE students SET grade = ? WHERE studentname = ? AND classname = ? AND teacherid = ?", round(fgrade), val["studentname"], classesl.strip(), session["user_id"])
+        #studentslist = db.execute("SELECT studentname FROM students where teacherid = ? AND classname = ?", session["user_id"], classesl.strip())
+        #for i, val in enumerate(studentslist):
+            #print (val["studentname"])
+            
 
         return render_template("fgradebook.html", classes=classes, students=students, selected=selected, classesl=classesl, assignments=assignments)
 
