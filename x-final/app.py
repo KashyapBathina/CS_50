@@ -326,11 +326,10 @@ def fgrading():
                     "to": {
                         "email": (email),
                     },
-                    "template": "C4P4331NKF4G9MHBY4663SM7XVA3",
-                    "template": "C4P4331NKF4G9MHBY4663SM7XVA3"
+                    "template": "KYHBSTQQ4HM255P2TKN3EE7RKW74",
                     "data": {
                         "name": (i),
-                        "code": (code),
+                        "class": (classname.strip()),
                     },
                 }
             )
