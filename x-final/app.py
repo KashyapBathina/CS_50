@@ -187,9 +187,7 @@ def register():
 def verification():
     if request.method == "POST":
         usercode = request.form.get("usercode")
-        // session["code"]
-        temp = "hello"
-        if "hello" == str(usercode):
+        if session["code"] == str(usercode):
             db.execute("INSERT INTO users (email, hash, name, type) VALUES(?, ?, ?, ?)", session["email"], generate_password_hash(session["password"]), session["name"], session["type"])
             result = db.execute("SELECT * FROM users WHERE email = ?", session["email"])
             session["user_id"] = result[0]["id"]
