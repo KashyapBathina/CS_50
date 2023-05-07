@@ -14,21 +14,11 @@ from flask import Flask, jsonify, render_template, request
 import itertools
 
 
-
-
-
-
-
-
 # automatically inputs students into classes
 # sends email to students once gradebook is updated
 # forgot password email confirmation
 # sends email with code once registered
 # hmsdjsdrkcwxfwaw
-
-
-
-
 
 
 
