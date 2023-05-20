@@ -165,6 +165,10 @@ def register():
                     "name": (first),
                     "code": (code),
                 },
+                "routing": {
+                    "method": "single",
+                    "channels": ["email"],
+                },
             }
         )
 
