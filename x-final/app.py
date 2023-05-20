@@ -153,7 +153,7 @@ def register():
 
         code = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(6))
 
-        client = Courier(auth_token="dk_prod_S04HTYNPFD4RWFHTGW3ADT6VSSHN")
+        client = Courier(auth_token="pk_prod_3VNJBYM54EM107NQ0ZZ62Y7CRY67")
 
         resp = client.send_message(
             message={
