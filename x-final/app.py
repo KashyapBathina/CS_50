@@ -313,7 +313,7 @@ def fgrading():
             db.execute("UPDATE students SET grade = ? WHERE studentname = ? AND classname = ? AND teacherid = ?", round(fgrade), i, classname.strip(), session["user_id"])
 
             #send email
-            client = Courier(auth_token="pk_prod_3VNJBYM54EM107NQ0ZZ62Y7CRY67")
+            client = Courier(auth_token="<pk_prod_3VNJBYM54EM107NQ0ZZ62Y7CRY67>")
             resp = client.send_message(
                 message={
                     "to": {
