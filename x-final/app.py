@@ -314,7 +314,7 @@ def fgrading():
 
             #send email
             client = Courier(auth_token="dk_prod_S04HTYNPFD4RWFHTGW3ADT6VSSHN")
-            
+
             resp = client.send_message(
                 message={
                     "to": {
