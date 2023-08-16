@@ -18,7 +18,6 @@ import itertools
 # sends email to students once gradebook is updated
 # forgot password email confirmation
 # sends email with code once registered
-# hmsdjsdrkcwxfwaw
 
 
 
