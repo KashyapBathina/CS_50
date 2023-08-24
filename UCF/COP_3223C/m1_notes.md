@@ -11,4 +11,4 @@ machine cycle
 ============
 
 1.input-fetch
-2. decode=
+2.decode-
