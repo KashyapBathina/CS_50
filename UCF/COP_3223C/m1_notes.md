@@ -20,4 +20,4 @@ machine cycle
 3.execute-alu
 4.output-store
 
-compiler-translater
+compiler-translater source code-->object code
