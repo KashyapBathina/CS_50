@@ -21,3 +21,6 @@ machine cycle
 4.output-store
 
 compiler-translater source code-->object code
+
+128 =    1  0   0   0   0   0   0   0
+        128 64  32  16  8   4   2   1
