@@ -18,6 +18,7 @@ int main(void) {
     printf("How many miles did you run?\n");
     scanf("%d", &num_miles);
 
+    // /: escape sequence, must do // to get actual / in output
     printf("You ran a total of %d feet. \n", feet_in_mile*num_miles);
     return 0;
 }
