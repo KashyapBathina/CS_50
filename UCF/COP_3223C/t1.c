@@ -24,6 +24,7 @@ Order of precedence
 
 Assignment operators
     increment x=x+1 or x+=1
+    decrement x=x-1 or x-=1
 
 */
 
