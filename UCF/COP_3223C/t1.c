@@ -19,6 +19,9 @@ Rules for identifiers i.e. variables
     cannot be a key word like const, define, if, else
     when naming a function, make the name meaningful, printf()
 
+Order of precedence
+    
+
 */
 
 // constant, data type, name, value
