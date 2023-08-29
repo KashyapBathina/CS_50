@@ -23,8 +23,8 @@ Order of precedence
     *, /, (), and % take precedence, or go left to right if precedence equal
 
 Assignment operators
-    increment x=x+1 or x+=1
-    decrement x=x-1 or x-=1
+    increment x=x+1 or x+=1 or x++
+    decrement x=x-1 or x-=1 or x--
 
 */
 
