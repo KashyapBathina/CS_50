@@ -10,7 +10,7 @@ import re
 from trycourier import Courier
 import string
 import random
-from flask import Flask, jsonify, render_template, request
+from flask import Flask, jsoniwfy, render_template, request
 import itertools
 
 
