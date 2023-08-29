@@ -2,7 +2,8 @@
 
 // mkdir: makes folder
 // to make c file: "code file.c"
-// to compile: 
+// to compile: make file
+// to run ./file
 
 // constant, data type, name, value
 const int YARDS_IN_MILE = 1760;
