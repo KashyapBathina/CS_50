@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+// mkdir: makes folder
+// to make c file: "code file.c"
+// to compile: 
+
 // constant, data type, name, value
 const int YARDS_IN_MILE = 1760;
 
@@ -11,7 +15,7 @@ int main(void) {
     feet_in_mile = YARDS_IN_MILE * FEET_IN_YARD;
 
     printf("How many miles did you run?\n");
-    scanf("%d", &num_miles)
+    scanf("%d", &num_miles);
 
     printf("You ran a total of %d feet. \n", feet_in_mile*num_miles);
     return 0;
