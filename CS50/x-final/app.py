@@ -14,6 +14,11 @@ from flask import Flask, jsonify, render_template, request
 import itertools
 
 
+
+#Open the Command Palette by pressing Ctrl+Shift+P on your keyboard.
+#In the Command Palette, select Python: Clear Cache and Reload Window.
+
+
 # automatically inputs students into classes
 # sends email to students once gradebook is updated
 # forgot password email confirmation
