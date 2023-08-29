@@ -20,7 +20,10 @@ Rules for identifiers i.e. variables
     when naming a function, make the name meaningful, printf()
 
 Order of precedence
-    
+    *, /, (), and % take precedence, or go left to right if precedence equal
+
+Assignment operators
+    increment x=x+1 or x+=1
 
 */
 
