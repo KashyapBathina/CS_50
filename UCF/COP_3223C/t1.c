@@ -5,6 +5,22 @@
 // to compile: make file
 // to run ./file
 
+/*
+Programming Rules
+    use a header comment to list author, data, purpose
+    use comments on every major part
+    make variable names meaningful
+    use uppercase for constant, i.e. #define
+
+Rules for identifiers i.e. variables
+    must be comprissed of letters, didgits and or underscores
+    a letter or _ has to be the first characters
+    in some instances, casing matters when you name variables
+    cannot be a key word like const, define, if, else
+    when naming a function, make the name meaningful, printf()
+
+*/
+
 // constant, data type, name, value
 const int YARDS_IN_MILE = 1760;
 
