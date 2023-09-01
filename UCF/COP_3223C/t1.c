@@ -27,7 +27,7 @@ Assignment operators
     decrement x=x-1 or x-=1 or x--
     multip x*=2
     divid x/=2
-        x=x/(p+q); x/=(p+q)
+        x=x/(p+q); x/=(p+q) 
 
 */
 
