@@ -3,6 +3,10 @@
 There are some pre-written functions in C that we commonly
 use. All the functions that control standard input and output
 are included in the file stdio.h.
+# sign indicates a preprocessing directive. This means that
+sometime is done BEFORE the compiler runs. When we do a
+#include, this tells the compiler to include the given file before
+compilation
 */
 
 // mkdir: makes folder
