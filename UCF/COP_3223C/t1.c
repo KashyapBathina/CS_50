@@ -1,4 +1,9 @@
 #include <stdio.h>
+/*This line is a directive to include a standard C header file.
+There are some pre-written functions in C that we commonly
+use. All the functions that control standard input and output
+are included in the file stdio.h.
+*/
 
 // mkdir: makes folder
 // to make c file: "code file.c"
@@ -6,6 +11,25 @@
 // to run ./file
 
 /*
+1) Central Processing Unit: The "brains" of the computer that
+actually execute all the instructions the computer runs.
+2) Main Memory: All running programs and data they use
+must be stored here. This is only active when the computer is
+physically on.
+3) External Memory: This is more permanent memory, such as
+a hard-drive, floppy disk, CD, etc. In order for any programs
+stored on these medium to run, they have to be transferred into
+main memory.
+4) Operating System: Provides an interface between the
+machine and the user and allocates the computer's resources.
+5) Compiler: A "translator" which converts a program written
+in a high-level computer language into machine language, a set
+of 0s and 1s understood by the computer.
+6) Application Programs: Programs intended to be used by
+end-users on a computer.
+
+
+
 Programming Rules
     use a header comment to list author, data, purpose
     use comments on every major part
@@ -27,7 +51,7 @@ Assignment operators
     decrement x=x-1 or x-=1 or x--
     multip x*=2
     divid x/=2
-        x=x/(p+q); x/=(p+q) 
+        x=x/(p+q); x/=(p+q)
 
 */
 
