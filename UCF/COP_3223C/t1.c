@@ -80,7 +80,9 @@ int main(void) {
     /* when you read in information from the keyboard, you MUST read it into a variable, to do this
     must specify the type of information being read in, and the name of the variable you want the
     information read into*/
-    // & means address of, says to store whatever the user enters into the memory address where number is stored
+    // & means address of, says to store whatever the user enters into the memory address where num_miles is stored
+    /* Pointer operator (*) is used whenever you want to point to a variable. Address operator (&) is
+    used whenever you point to the memory address of a variable*/
     scanf("%d", &num_miles);
 
     // /: escape sequence, must do // to get actual / in output
