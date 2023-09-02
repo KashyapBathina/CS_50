@@ -80,6 +80,7 @@ int main(void) {
     scanf("%d", &num_miles);
 
     // /: escape sequence, must do // to get actual / in output
+    // to print a value, must specify format, %d is for int, %f for float, and %lf for double
     printf("You ran a total of %d feet. \n", feet_in_mile*num_miles);
 
     // for return type
