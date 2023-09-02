@@ -61,14 +61,27 @@ const int YARDS_IN_MILE = 1760;
 // another way to define constant
 #define FEET_IN_YARD 3
 
+/*This line signifies the beginning of the function main. All code
+in C resides in functions.A program
+may be made up on many functions, but the computer only
+DIRECTLY executes main. In order for the computer to
+execute any other function, main must give instructions to call
+those functions
+int=return type, main=function name, void=paramter*/
 int main(void) {
+    // in order to store data in a C computer program, you must store it one ofthe primitive data types
+    // declaring variable
+    // initializing would be to say int num=0, where you store the number into a variable
     int feet_in_mile, num_miles;
     feet_in_mile = YARDS_IN_MILE * FEET_IN_YARD;
 
+    // printf is another function, \n is an escpae sequence
     printf("How many miles did you run?\n");
     scanf("%d", &num_miles);
 
     // /: escape sequence, must do // to get actual / in output
     printf("You ran a total of %d feet. \n", feet_in_mile*num_miles);
+
+    // for return type
     return 0;
 }
