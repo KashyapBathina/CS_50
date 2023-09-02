@@ -1,7 +1,8 @@
 {
     "files.associations": {
         "string_view": "c",
-        "lecture_assignment1": "c"
+        "lecture_assignment1": "c",
+        "stdio.h": "c"
     },
     "gitdoc.enabled": true
 }
