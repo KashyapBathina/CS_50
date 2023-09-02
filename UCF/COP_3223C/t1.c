@@ -77,6 +77,10 @@ int main(void) {
 
     // printf is another function, \n is an escpae sequence
     printf("How many miles did you run?\n");
+    /* when you read in information from the keyboard, you MUST read it into a variable, to do this
+    must specify the type of information being read in, and the name of the variable you want the
+    information read into*/
+    // & means address of, says to store whatever the user enters into the memory address where number is stored
     scanf("%d", &num_miles);
 
     // /: escape sequence, must do // to get actual / in output
