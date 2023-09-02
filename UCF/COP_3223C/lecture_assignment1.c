@@ -3,8 +3,8 @@
 // Program 1
 int main(void) {
     // declaring variables, the sum, and the average
-    long int var1, var2, var3, var4, var5;
-    long int sum;
+    int var1, var2, var3, var4, var5;
+    int sum;
     double average;
 
     // reading in first input
