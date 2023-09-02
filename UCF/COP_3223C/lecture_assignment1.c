@@ -27,5 +27,5 @@ int main(void) {
     average = sum/5;
 
     printf("The sum of the numbers you entered is: %d", &sum);
-    printf("The sum of the numbers you entered is: %d", &sum);
+    printf("The average is: %d", &average);
 }
