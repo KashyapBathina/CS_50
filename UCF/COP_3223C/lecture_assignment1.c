@@ -8,19 +8,19 @@ int main(void) {
     double average;
 
     // reading in first input
-    scanf("%d", var1);
+    scanf("%d", &var1);
     printf("You entered: %d", &var1);
 
-    scanf("%d", var2);
+    scanf("%d", &var2);
     printf("You entered: %d", &var2);
 
-    scanf("%d", var3);
+    scanf("%d", &var3);
     printf("You entered: %d", &var3);
 
-    scanf("%d", var4);
+    scanf("%d", &var4);
     printf("You entered: %d", &var4);
 
-    scanf("%d", var5);
+    scanf("%d", &var5);
     printf("You entered: %d", &var5);
 
     sum = var1 + var2 + var3 + var4 + var5;
