@@ -62,7 +62,7 @@ Assignment operators
 // constant, data type, name, value
 const int YARDS_IN_MILE = 1760;
 
-// another way to define constant
+// another way to define constant What a #define does is replace a given variable name with avalue, before a program is compiled.
 #define FEET_IN_YARD 3
 
 /*This line signifies the beginning of the function main. All code
@@ -91,8 +91,10 @@ int main(void) {
 
     // /: escape sequence, must do // to get actual / in output
     // to print a value, must specify format, %d is for int, %f for float, and %lf for double
+    /* you can put %3 in a print statement, the 3 before the second c specifies to allocate three
+    spaces toprint out the second character*/
     printf("You ran a total of %d feet. \n", feet_in_mile*num_miles);
 
-    // for return type
+    // for return type so syntax is followed
     return 0;
 }
