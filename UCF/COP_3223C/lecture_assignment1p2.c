@@ -1,5 +1,13 @@
 #include <stdio.h>
 
+/*
+    name: Kashyap Bathina
+    date: 9/3/23
+    purpose: This program takes asks for the length, width, and height of
+    the box, and then finds the volume in cubic inches per the formula l*w*h
+    and then find the volume in cubic feet by didividng that number by 1728.
+*/
+
 int main(void) {
     double length, width, height;
     double volume_in_cubic_inches, volume_in_cubic_feet;
