@@ -96,7 +96,7 @@ int main(void) {
     printf("You ran a total of %d feet. \n", feet_in_mile*num_miles);
 
     /*
-    For floats, you can specify the number of digits before and after the decimal point:
+    For floats or doubles, you can specify the number of digits before and after the decimal point:
     float y = 3.12;
     printf("y = %1.2f", y);
     will print out
