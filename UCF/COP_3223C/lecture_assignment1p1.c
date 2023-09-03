@@ -1,5 +1,11 @@
 #include <stdio.h>
 
+/*
+    name: Kashyap Bathina
+    date: 9/3/23
+    
+*/
+
 int main(void) {
     // declaring variables, the sum, and the average
     long int var1, var2, var3, var4, var5;
@@ -31,7 +37,7 @@ int main(void) {
     // printing out what the user entered and storing it
     printf("You entered: %ld\n", var5);
 
-    // finding the sum of all the values entered
+    // adding all the variables to find the sum
     sum = var1 + var2 + var3 + var4 + var5;
     // dividing the sum of the values by the # of values (5) to find average
     average = sum/5;
