@@ -14,12 +14,11 @@ int main(void) {
     scanf("%lf", &height);
 
     volume_in_cubic_inches = length * width * height;
-    volume_in_cubic_feet = volume_in_cubic_inches/12;
+    volume_in_cubic_feet = volume_in_cubic_inches/1728;
 
     printf("The volume is %.2lf cubic inches\n", volume_in_cubic_inches);
     printf("The volume is %.2lf cubic feet\n", volume_in_cubic_feet);
 
-    //27785.126
     //
 
 
