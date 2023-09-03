@@ -9,6 +9,7 @@ int main(void) {
 
     // reading in first input
     scanf("%ld", &var1);
+    // printing out what the user entered and storing it
     printf("You entered: %ld\n", var1);
 
     scanf("%ld", &var2);
@@ -23,9 +24,13 @@ int main(void) {
     scanf("%ld", &var5);
     printf("You entered: %ld\n", var5);
 
+    // finding the sum of all the values entered
     sum = var1 + var2 + var3 + var4 + var5;
+    // dividing the sum of the values by the # of values (5) to find average
     average = sum/5;
 
+    // printing the sum of the values
     printf("The sum of the numbers you entered is: %ld\n", sum);
-    printf("The average is: %f\n", average);
+    // printing the average of the values
+    printf("The average is: %.2f\n", average);
 }
