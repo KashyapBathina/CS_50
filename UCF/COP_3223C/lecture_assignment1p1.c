@@ -14,29 +14,29 @@ int main(void) {
     long int sum;
     double average;
 
-    // reading in first input
+    // reading in first input and storing it in declared variable
     scanf("%ld", &var1);
-    // printing out what the user entered and storing it
+    // printing out what the user entered
     printf("You entered: %ld\n", var1);
 
-    // reading in second input
+    // reading in second input and storing it in declared variable
     scanf("%ld", &var2);
-    // printing out what the user entered and storing it
+    // printing out what the user entered
     printf("You entered: %ld\n", var2);
 
-    // reading in thrid input
+    // reading in thrid input and storing it in declared variable
     scanf("%ld", &var3);
-    // printing out what the user entered and storing it
+    // printing out what the user entered
     printf("You entered: %ld\n", var3);
 
-    // reading in fourth input
+    // reading in fourth input and storing it in declared variable
     scanf("%ld", &var4);
-    // printing out what the user entered and storing it
+    // printing out what the user entered
     printf("You entered: %ld\n", var4);
 
-    // reading in fifth input
+    // reading in fifth input and storing it in declared variable
     scanf("%ld", &var5);
-    // printing out what the user entered and storing it
+    // printing out what the user entered
     printf("You entered: %ld\n", var5);
 
     // adding all the variables to find the sum
