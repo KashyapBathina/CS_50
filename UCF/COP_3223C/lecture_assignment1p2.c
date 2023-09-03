@@ -29,14 +29,12 @@ int main(void) {
     // scans in input and stores in height variable
     scanf("%lf", &height);
 
-    // 
+    // calculates volunme in cubic inches by forumula l*w*h
     volume_in_cubic_inches = length * width * height;
+    // calculates volume in cubic feet by dividing by 12^3 as per forumla, which is = 1728
     volume_in_cubic_feet = volume_in_cubic_inches/1728;
 
+    // prints out calculated volumes
     printf("The volume is %.2lf cubic inches\n", volume_in_cubic_inches);
     printf("The volume is %.2lf cubic feet\n", volume_in_cubic_feet);
-
-    //
-
-
 }
