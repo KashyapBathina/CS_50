@@ -22,10 +22,10 @@ int main(void) {
     printf("Avg #1 = %d\n", average1);
     printf("Avg #2 = %d\n", average2);
     printf("Avg #3 = %d\n", average3);
-    printf("Avg #4 = %d\n", average4);
-    printf("Avg #5 = %d\n", average5);
-    printf("Avg #6 = %d\n", average6);
-    printf("Avg #7 = %d\n", average7);
+    printf("Avg #4 = %lf\n", average4);
+    printf("Avg #5 = %lf\n", average5);
+    printf("Avg #6 = %lf\n", average6);
+    printf("Avg #7 = %lf\n", average7);
     printf("Avg #8 = %d\n", average8);
 
 }
