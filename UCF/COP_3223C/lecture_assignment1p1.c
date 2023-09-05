@@ -42,6 +42,7 @@ int main(void) {
     // adding all the variables to find the sum
     sum = var1 + var2 + var3 + var4 + var5;
     // dividing the sum of the values by the # of values (5) to find average
+    // explicitly casting
     average = (double)sum/5;
 
     // printing the sum of the values
