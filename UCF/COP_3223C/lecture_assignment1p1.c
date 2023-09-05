@@ -47,7 +47,7 @@ int main(void) {
     // printing the sum of the values
     printf("The sum of the numbers you entered is: %ld\n", sum);
     // printing the average of the values
-    printf("The average is: %.2f\n", average);
+    printf("The average is: %.2lf\n", average);
 
     return 0;
 }
