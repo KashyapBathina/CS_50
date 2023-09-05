@@ -6,6 +6,7 @@
 */
 
 //driver code
+/*
 int main(void) {
     int grade1 = 75;
     int grade2 = 80;
@@ -28,5 +29,25 @@ int main(void) {
     printf("Avg #6 = %lf\n", average6);
     printf("Avg #7 = %lf\n", average7);
     printf("Avg #8 = %d\n", average8);
+
+}
+*/
+
+int main() {
+    int a=15, b=2;
+    char x = 'a';
+
+    double div
+
+    //explicit typecasting in double
+    div=(double)a/b;
+
+    //converting x implicity to a+3 i.e a+3=d
+    x=x+3
+
+    printf("The result of implicit typecasting is %c", x);
+    printf("The result of explicit typecasting is %f", div);
+
+    return 0;
 
 }
