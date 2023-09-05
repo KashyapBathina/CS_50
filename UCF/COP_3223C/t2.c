@@ -5,7 +5,7 @@
     Explicit Casting (manually) - converting a larger type to a smaller size type. double -> float -> long -> int -> char.
 */
 
-/*
+
 int main(void) {
     int grade1 = 75;
     int grade2 = 80;
@@ -29,16 +29,4 @@ int main(void) {
     printf("Avg #7 = %lf\n", average7);
     printf("Avg #8 = %d\n", average8);
 
-}
-*/
-
-int main(void) {
-    double tax_rate = 0.065;
-    double item_value = 10;
-
-    //correct calculation
-    printf("The total cost is $%.2lf.\n", itemvalue*(1+tax_rate));
-
-    //incorrect calculation
-    printf("The incorrect total cost is $%.2lf.\n")
 }
