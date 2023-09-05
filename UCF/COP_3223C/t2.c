@@ -36,6 +36,9 @@ int main(void) {
     double tax_rate = 0.065;
     double item_value = 10;
 
-    //
+    //correct calculation
     printf("The total cost is $%.2lf.\n", itemvalue*(1+tax_rate));
+
+    //incorrect calculation
+    printf("The incorrect total cost is $%.2lf.\n")
 }
