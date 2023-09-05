@@ -37,16 +37,16 @@ int main() {
     int a=15, b=2;
     char x = 'a';
 
-    double div
+    double div;
 
     //explicit typecasting in double
     div=(double)a/b;
 
     //converting x implicity to a+3 i.e a+3=d
-    x=x+3
+    x=x+3;
 
-    printf("The result of implicit typecasting is %c", x);
-    printf("The result of explicit typecasting is %f", div);
+    printf("The result of implicit typecasting is %c\n", x);
+    printf("The result of explicit typecasting is %f\n", div);
 
     return 0;
 
