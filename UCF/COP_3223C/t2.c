@@ -33,6 +33,7 @@ int main(void) {
 }
 */
 
+/*
 int main() {
     int a=15, b=2;
     char x = 'a';
@@ -50,4 +51,19 @@ int main() {
 
     return 0;
 
+}
+*/
+
+int main(){
+    int n;
+    printf("Enter an Integer.\n");
+    scanf("%d", &n);
+
+    // use mod to split out the units digits
+    int units = n%10;
+
+    // use integer division to get the rest of the number, then mod to get origial tens digit
+    int tens = (n/10)%10;
+
+    printf("Units digit is %d and tens diigit is %d\n", units, tens);
 }
