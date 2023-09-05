@@ -5,7 +5,7 @@
     Explicit Casting (manually) - converting a larger type to a smaller size type. double -> float -> long -> int -> char.
 */
 
-
+//driver code
 int main(void) {
     int grade1 = 75;
     int grade2 = 80;
