@@ -37,4 +37,6 @@ int main(void) {
     // prints out calculated volumes
     printf("The volume is %.2lf cubic inches\n", volume_in_cubic_inches);
     printf("The volume is %.2lf cubic feet\n", volume_in_cubic_feet);
+
+    return 0;
 }

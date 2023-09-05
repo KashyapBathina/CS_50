@@ -48,4 +48,6 @@ int main(void) {
     printf("The sum of the numbers you entered is: %ld\n", sum);
     // printing the average of the values
     printf("The average is: %.2f\n", average);
+
+    return 0;
 }
