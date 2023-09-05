@@ -10,8 +10,8 @@
 
 int main(void) {
     // declaring variables, the sum, and the average
-    long int var1, var2, var3, var4, var5;
-    long int sum;
+    long var1, var2, var3, var4, var5;
+    long sum;
     double average;
 
     // reading in first input and storing it in declared variable
