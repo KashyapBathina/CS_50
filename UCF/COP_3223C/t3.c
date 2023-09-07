@@ -39,5 +39,8 @@ Conditional expression-expression is true or false
 */
 
 int main(void) {
-    
+    int age;
+
+    printf("How old are you? \n");
+    scanf("%d", &age);
 }
