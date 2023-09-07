@@ -1,4 +1,7 @@
 #include <stdio.h>
+
+/*------------module 1------------------------------------------------------------------------------------------------------------/*
+
 /*This line is a directive to include a standard C header file.
 There are some pre-written functions in C that we commonly
 use. All the functions that control standard input and output
