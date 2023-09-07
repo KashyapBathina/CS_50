@@ -54,6 +54,7 @@ int main() {
 }
 */
 
+/*
 int main(){
     int n;
     printf("Enter an Integer.\n");
@@ -67,3 +68,4 @@ int main(){
 
     printf("Units digit is %d and tens diigit is %d\n", units, tens);
 }
+*/
