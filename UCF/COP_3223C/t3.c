@@ -26,7 +26,7 @@ Conditional expression-expression is true or false
         4. >=   greater than or equal to
         5. <    less than
         6. <=   less than or equal t
-    noting 'a' < 'b'
+    noting 'a' < 'b', also 10%12 is 10 bc 10 doesnt go into 12 so 10 is the remainder
 
 */
 
