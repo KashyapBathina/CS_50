@@ -42,25 +42,22 @@ int main(void) {
     //constants
     #define MIN_GPA 3.2
     #define MIN_SAT 1200
+    float gpa;
+    int sat;
 
-    int main(void) {
-        float gpa;
-        int sat;
+    printf("Enter your gpa\n.");
+    scanf("%f", &gpa);
 
-        printf("Enter your gpa\n.");
-        scanf("%f", &gpa);
+    printf("Enter your sat\n.");
+    scanf("%d", &sat);
 
-        printf("Enter your sat\n.");
-        scanf("%d", &sat);
+    //logical and to confirm both req. true
 
-        //logical and to confirm both req. true
-
-        if (gpa >= MIN_GPA && sat >= MIN_SAT) {
-            printf("Congrats, you're eligible for scholarship\n");
-        }
-        else {
-            printf("\n");
-        }
-
+    if (gpa >= MIN_GPA && sat >= MIN_SAT) {
+        printf("Congrats, you're eligible for scholarship\n");
     }
+    else if {
+        printf("Apologies, you have not met the requirements for the scholarhsip\n");
+    }
+    return 0;
 }
