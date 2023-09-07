@@ -11,7 +11,7 @@ Functions
 Printf, scanf
 Random number function-std library:
     int x=1+rand()%100;
-C math library:
+C math library = #include <math.h>:
     int=return type abs=function name, int=data type of paramater: int abs(int x)
     double pow(double x, double y)
     double sqrt(double x)
