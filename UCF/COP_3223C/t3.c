@@ -18,7 +18,10 @@ Functions:
         double sqrt(double x)
 
 Conditional expression-expression is true or false
-
+    test if condition is true or false . . . if true, then do something . . . if false, do something
+    six different orelational operators for comparison
+        1. == to compare
+        2. 
 */
 
 int main(void) {
