@@ -20,8 +20,14 @@ Functions:
 Conditional expression-expression is true or false
     test if condition is true or false . . . if true, then do something . . . if false, do something
     six different orelational operators for comparison
-        1. == -> is equal
-        2. != -> is not equal
+        1. ==   is equal
+        2. !=   is not equal
+        3. >    greater tham
+        4. >=   greater than or equal to
+        5. <    less than
+        6. <=   less than or equal t
+    noting 'a' < 'b'
+
 */
 
 int main(void) {
