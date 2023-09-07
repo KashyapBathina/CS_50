@@ -39,5 +39,11 @@ Conditional expression-expression is true or false
 */
 
 int main(void) {
-    
+    //constants
+    #define MIN_GPA 3.2
+    #define MIN_SAT 1200
+
+    int main(void) {
+        
+    }
 }
