@@ -29,6 +29,12 @@ Conditional expression-expression is true or false
         6. <=   less than or equal t
     logical or (||): at least two conditions and only one condition has to be true
     logical and (&&): both conditions must be true
+        if (statement) {
+            statement1;
+        }
+        else {
+            statement 2;
+        }
 
 */
 
