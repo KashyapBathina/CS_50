@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/*------------module 3------------------------------------------------------------------------------------------------------------/*
+/*------------module 3-----------------------------------------------------------------------------------------------------------/*
 
 /*
 Functions requirements
@@ -35,7 +35,6 @@ Conditional expression-expression is true or false
         else {
             statement 2;
         }
-
 */
 
 int main(void) {
@@ -56,11 +55,8 @@ int main(void) {
     if (gpa >= MIN_GPA && sat >= MIN_SAT) {
         printf("Congrats, you're eligible for scholarship\n");
     }
-    else if (gpa >= MIN_GPA && sat <= MIN_SAT){
-        printf("Apologies, you have not met the SAT requirements for the scholarhsip\n");
-    }
-    else if (gpa <= MIN_GPA && sat >= MIN_SAT){
-        printf("Apologies, you have not met the GPA requirements for the scholarhsip\n");
+    else if (gpa <= MIN_GPA || sat <= MIN_SAT){
+        printf("Apologies, you have not met the SAT or GPA requirements for the scholarhsip\n");
     }
     else {
         printf("Apologies, you have not met the requirements for the scholarhsip\n");
