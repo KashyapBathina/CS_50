@@ -1,4 +1,4 @@
-# API KEY
+# API KEY, do this before you run flask
 # export API_KEY=pk_63633ff467594e1c8e6823dee78a46a2
 
 import os

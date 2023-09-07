@@ -19,6 +19,7 @@ Functions:
 
 Conditional expression-expression is true or false
     test if condition is true or false . . . if true, then do something . . . if false, do something
+    noting 'a' < 'b', also 10%12 is 10 bc 10 doesnt go into 12 so 10 is the remainder
     six different orelational operators for comparison
         1. ==   is equal
         2. !=   is not equal
@@ -26,7 +27,8 @@ Conditional expression-expression is true or false
         4. >=   greater than or equal to
         5. <    less than
         6. <=   less than or equal t
-    noting 'a' < 'b', also 10%12 is 10 bc 10 doesnt go into 12 so 10 is the remainder
+    logical or (||): at least two conditions and only one condition has to be true
+    logical and (&&): both conditions must be true
 
 */
 
