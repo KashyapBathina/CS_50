@@ -38,6 +38,13 @@ Loops
 
 /* WHILE LOOP----------*/
 int main() {
+    char ans;
+
+    printf("Are u gae (y or n)?\n");
+    scanf("%c",&ans);
+    printf("%c",ans);
+
+    /*
     double value, total=0;
     char answer;
 
@@ -58,6 +65,7 @@ int main() {
     }
 
     printf("You have collected %.2lf!\n",total);
+    */
 }
 
 
