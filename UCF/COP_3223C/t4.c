@@ -36,7 +36,7 @@ Loops
                         while (bool expression);
 */
 
-/* WHILE LOOP----------
+/* WHILE LOOP----------*/
 int main() {
     double value, total=0;
     char answer;
@@ -50,13 +50,13 @@ int main() {
         scanf("%lf", &value);
         total += value;
 
-        printf("Does anyone have any money?\n");
-        scanf("%c%c",&dummy,&answer);
+        printf("Do you have any more?\n");
+        scanf("%c",&answer);
     }
 
     printf("You have collected %.2lf!\n",total);
 }
-*/
+
 
 /* For LOOP----------
 int main() {
