@@ -53,8 +53,8 @@ int main() {
         total += value;
 
         //See if there is any more money
-        printf("Do you have any more?\n");
-        scanf("%c",&answer);
+        printf("Does anyone have any money?\n");
+        scanf("%c%c",&dummy,&answer);
     }
 
     printf("You have collected %.2lf!\n",total);
