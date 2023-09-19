@@ -45,11 +45,14 @@ int main() {
     printf("Do you have money?\n");
     scanf("%c", &answer);
 
+
     while (answer == 'y' || answer == 'Y') {
+        //Read in amount
         printf("Enter amount of donation:\n");
         scanf("%lf", &value);
         total += value;
 
+        //See if there is any more money
         printf("Do you have any more?\n");
         scanf("%c",&answer);
     }
