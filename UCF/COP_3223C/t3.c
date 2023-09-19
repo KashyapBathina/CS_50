@@ -37,6 +37,7 @@ Conditional expression-expression is true or false
         }
 */
 
+/*
 int main(void) {
     //constants
     #define MIN_GPA 3.2
@@ -62,4 +63,81 @@ int main(void) {
         printf("Apologies, you have not met the requirements for the scholarhsip\n");
     }
     return 0;
+}
+*/
+
+/*
+int main() {
+    int roomlen, roomwid;
+    int desklen, deskwid;
+    int temp;
+
+    printf("Enter w and l of room\n");
+    scanf("%d%d", &roomlen, &roomwid);
+
+    printf("Enter w and l of desk\n");
+    scanf("%d%d", &desklen, &deskwid);
+
+    // adjust room length to be greater than or equal to its width
+    if (roomlen<roomwid) {
+        temp=roomlen;
+        roomlen=roomwid;
+        roomwid=temp;
+    }
+
+    // adjust deask length to be greater than or equal to its width
+    if (desklen<deskwid) {
+        temp=desklen;
+        desklen=deskwid;
+        deskwid=temp;
+    }
+
+    // compare correspoding dimesnions and output result
+    if (deskwid<=roomwid && desklen<=roomlen) {
+        printf("The desk will fit in the room\n");
+    }
+    else {
+        printf("The desk will NOT fit in the room\n");
+    }
+
+    return 0;
+}
+*/
+
+int main() {
+    char operator;
+    double n1, n2;
+
+    printf("Enter an opeartion (+,-,*,/): \n");
+    scanf("%c", &operator);
+
+    printf("Enter 2 operands: \n");
+    scanf("%lf%lf", &n1, &n2);
+
+    // switch is used for conditional statements, switch(expression): expression is variable being tested againt other cases
+    switch(operator) {
+        case '+':
+            printf("%.1lf + %.1lf = %.1lf\n", n1, n2, n1+n2);
+            // when break occurs, switch terminates, and the flow of control jumps to the next line following the switch statement
+            break;
+
+        case '-':
+            printf("%.1lf - %.1lf = %.1lf\n", n1, n2, n1-n2);
+            break;
+
+        case '*':
+            printf("%.1lf * %.1lf = %.1lf\n", n1, n2, n1*n2);
+            break;
+
+        case '/':
+            printf("%.1lf / %.1lf = %.1lf\n", n1, n2, n1/n2);
+            break;
+
+        // default when none of cases are true
+        default:
+            printf("Error! Operator is not correct\n");
+    }
+
+    return 0;
+
 }
