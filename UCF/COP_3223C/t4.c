@@ -41,7 +41,7 @@ int main() {
     char ans,temp;
 
     printf("Are u gae (y or n)?\n");
-    scanf("%c%c",&temp,&ans);
+    scanf("%c",&ans);
     printf("%c",ans);
 
     /*
