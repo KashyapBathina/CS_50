@@ -38,10 +38,10 @@ Loops
 
 /* WHILE LOOP----------*/
 int main() {
-    char ans;
+    char ans,temp;
 
     printf("Are u gae (y or n)?\n");
-    scanf("%c",&ans);
+    scanf("%c%c",&temp,&ans);
     printf("%c",ans);
 
     /*
