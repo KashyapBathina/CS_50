@@ -41,8 +41,8 @@ int main() {
     char ans,temp;
 
     printf("Are u gae (y or n)?\n");
-    scanf("%c",&ans);
-    printf("%c",ans);
+    scanf("%c%c", &temp, &ans);
+    printf("%c\n",ans);
 
     /*
     double value, total=0;
