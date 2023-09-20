@@ -39,7 +39,7 @@ Loops
 /* WHILE LOOP----------*/
 int main() {
     double value, total=0;
-    char answer;
+    char answer, dummy;
 
     //read in the input from the user
     printf("Do you have money?\n");
