@@ -135,7 +135,17 @@ int main() {
     return 0;
 }
 */
+void guess(int N) {
+    int number, guess, num_of_guess=0;
+
+    //seed random number
+    
+}
 
 int main() {
-    
+
+}
+
+int main() {
+
 }
