@@ -152,7 +152,21 @@ void guess(int N) {
             printf("\nYou Lose!\n");
             break;
         }
-        
+
+        scanf("%d", &guess);
+
+        //when user guesses lower number
+        if (guess<number) {
+            printf("Number is lower\n");
+            num_of_guess++;
+        }
+
+        //when user guesses higher number
+        else if {guess>number} {
+            printf("Number is higher\n");
+            num_of_guess++;
+        }
+
     }
 
 }
