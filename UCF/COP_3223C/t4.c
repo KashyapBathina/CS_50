@@ -114,6 +114,6 @@ int main() {
 */
 
 int main() {
-    // init 3-d array
+    // init 3-d array; indexes start with 0;
     int arr[2][3][2];
 }
