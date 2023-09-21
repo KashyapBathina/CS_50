@@ -92,5 +92,15 @@ int main() {
 }
 */
 int main() {
-    
+    int end=5;
+    printf("Patter printing using Nested while loop");
+
+    int i=1;
+    while(i<=end) {
+        printf("\n");
+        int j=1;
+        while(j<=i) {
+            printf("%d",j);
+        }
+    }
 }
