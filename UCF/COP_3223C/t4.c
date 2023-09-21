@@ -138,8 +138,14 @@ int main() {
 void guess(int N) {
     int number, guess, num_of_guess=0;
 
-    //seed random number
-    
+    //seed random number to prevent same number repeating
+    srand(time(NULL));
+
+    //generate rand num
+    number=rand()%N;
+
+    printf("Guess a number between 1 and %d\n",N);
+
 }
 
 int main() {
