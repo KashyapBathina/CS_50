@@ -91,6 +91,8 @@ int main() {
 
 }
 */
+
+/*
 int main() {
     int end=5;
     printf("Patter printing using Nested while loop");
@@ -100,7 +102,18 @@ int main() {
         printf("\n");
         int j=1;
         while(j<=i) {
-            printf("%d",j);
+            printf("%d ",j);
+            j++;
         }
+        i++;
     }
+
+    printf("\n----------\n");
+    return 0;
+}
+*/
+
+int main() {
+    // init 3-d array
+    int arr[2][3][2];
 }
