@@ -172,18 +172,18 @@ void guess(int N) {
         scanf("%d", &guess);
 
         //when user guesses lower number
-        if (guess<number) {
+        if (guess>number) {
             printf("Number is lower\n");
             num_of_guess++;
         }
 
         //when user guesses higher number
-        else if (guess>number) {
+        else if (guess<number) {
             printf("Number is higher\n");
             num_of_guess++;
         }
         else {
-            printf("You guessed the correct number in %d attempts", num_of_guess);
+            printf("You guessed the correct number in %d attempts\n", num_of_guess);
         }
     }
     while (guess!=number);
