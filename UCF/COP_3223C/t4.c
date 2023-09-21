@@ -166,15 +166,17 @@ void guess(int N) {
             printf("Number is higher\n");
             num_of_guess++;
         }
-
+        else {
+            printf("You guessed the correct number in %d attempts", num_of_guess);
+        }
     }
-
+    while (guess!=number);
 }
 
+//driver code
 int main() {
-
-}
-
-int main() {
-
+    int N=100
+    //funct call
+    guess(N);
+    return 0;
 }
