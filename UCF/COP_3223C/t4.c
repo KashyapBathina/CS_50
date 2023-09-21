@@ -146,6 +146,15 @@ void guess(int N) {
 
     printf("Guess a number between 1 and %d\n",N);
 
+    //do while loop that works until user guesses correct number
+    do {
+        if(number_of_guess>9) {
+            printf("\nYou Lose!\n");
+            break;
+        }
+        
+    }
+
 }
 
 int main() {
