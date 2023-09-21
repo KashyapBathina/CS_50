@@ -142,7 +142,7 @@ void guess(int N) {
     srand(time(NULL));
 
     //generate rand num
-    number=rand()%N;
+    number=rand() % N;
 
     printf("Guess a number between 1 and %d\n",N);
 
