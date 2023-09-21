@@ -36,7 +36,7 @@ Loops
                         while (bool expression);
 */
 
-/* WHILE LOOP----------*/
+/* WHILE LOOP----------
 int main() {
     double value, total=0;
     char answer, dummy;
@@ -60,6 +60,7 @@ int main() {
 
     printf("You have collected %.2lf!\n",total);
 }
+*/
 
 
 /* For LOOP----------
@@ -90,3 +91,6 @@ int main() {
 
 }
 */
+int main() {
+    
+}
