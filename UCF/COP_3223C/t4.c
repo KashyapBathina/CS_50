@@ -53,6 +53,7 @@ int main() {
         total += value;
 
         //See if there is any more money
+        //First %c consumes newline b/c c type does not take out whitespaces
         printf("Does anyone have any money?\n");
         scanf("%c%c",&dummy,&answer);
     }
