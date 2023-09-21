@@ -162,7 +162,7 @@ void guess(int N) {
         }
 
         //when user guesses higher number
-        else if {guess>number} {
+        else if (guess>number) {
             printf("Number is higher\n");
             num_of_guess++;
         }
@@ -175,7 +175,7 @@ void guess(int N) {
 
 //driver code
 int main() {
-    int N=100
+    int N=100;
     //funct call
     guess(N);
     return 0;
