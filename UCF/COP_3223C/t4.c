@@ -135,6 +135,9 @@ int main() {
     return 0;
 }
 */
+
+
+/*
 void guess(int N) {
     int number, guess, num_of_guess=0;
 
@@ -179,4 +182,18 @@ int main() {
     //funct call
     guess(N);
     return 0;
+}
+*/
+
+/**/
+int main() {
+    int N, number;
+
+    srand(time(NULL));
+
+    printf("What is the upperbound of random number: ");
+    scanf("%d", &N);
+
+    number=rand() % N;
+    printf("Your random number is %d\n", number);
 }
