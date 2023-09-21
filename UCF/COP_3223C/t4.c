@@ -148,7 +148,7 @@ void guess(int N) {
 
     //do while loop that works until user guesses correct number
     do {
-        if(number_of_guess>9) {
+        if(num_of_guess>9) {
             printf("\nYou Lose!\n");
             break;
         }
