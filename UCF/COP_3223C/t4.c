@@ -123,8 +123,10 @@ int main() {
         for(int j=0;j<3;j++) {
             for (int k=0;k<2;k++) {
                 //%i is placeholder for array; index
-                printf("Element at arr[%i][%i][%i]=%d\n", );
+                printf("Element at arr[%i][%i][%i]=%d\n", i,j,k,arr[i][j][k]);
             }
         }
     }
+    
+    return 0;
 }
