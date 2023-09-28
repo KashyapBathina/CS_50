@@ -10,7 +10,7 @@ Loops
     Function: to repeat set of statements multiple times
 
     Sometimes must use break or continue:
-        Break: break out of inner most loop in which break resides
+        Break: break out of inner most loop in which break resides, not if loop
         Continue: will skip following code within inner most loop with continue resides
 
     Types of loops:
