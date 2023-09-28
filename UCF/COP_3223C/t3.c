@@ -123,7 +123,7 @@ int main() {
         case '+':
             printf("%.1lf + %.1lf = %.1lf\n", n1, n2, n1+n2);
             // when break occurs, switch terminates, and the flow of control jumps to the next line following the switch statement
-            // if not break -> then all the cases after the matching case are executed, including default
+            // if not break -> then all the cases after the matching case are executed (EXCLUDING WHEN BREAK AGAIN), including default
             break;
 
         case '-':
