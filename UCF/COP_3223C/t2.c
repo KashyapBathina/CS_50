@@ -31,11 +31,11 @@ int main(void) {
     printf("Avg #6 = %lf\n", average6);
     printf("Avg #7 = %lf\n", average7);
     printf("Avg #8 = %d\n", average8);
-
 }
 */
 
-/*
+
+
 int main() {
     int a=15, b=2;
     char x = 'a';
@@ -54,9 +54,9 @@ int main() {
     return 0;
 
 }
-*/
 
 
+/*
 int main(){
     int n;
     printf("Enter an Integer.\n");
@@ -70,3 +70,4 @@ int main(){
 
     printf("Units digit is %d and tens diigit is %d\n", units, tens);
 }
+*/
