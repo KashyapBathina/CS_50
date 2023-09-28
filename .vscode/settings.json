@@ -3,7 +3,8 @@
         "string_view": "c",
         "lecture_assignment1": "c",
         "stdio.h": "c",
-        "lecture_assignment1p2": "c"
+        "lecture_assignment1p2": "c",
+        "stdlib.h": "c"
     },
     "gitdoc.enabled": true
 }
