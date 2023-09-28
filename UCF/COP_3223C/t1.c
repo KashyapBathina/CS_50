@@ -92,7 +92,7 @@ int main(void) {
     used whenever you point to the memory address of a variable*/
     scanf("%d", &num_miles);
 
-    // /: escape sequence, must do // to get actual / in output
+    // \: escape sequence, must do \\ to get actual \ in output
     // to print a value, must specify format, %d is for int, %f for float, and %lf for double; % indicates type of variable
     /* you can put %3 in a print statement, the 3 before the second c specifies to allocate three
     spaces toprint out the second character*/
