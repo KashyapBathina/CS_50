@@ -35,6 +35,10 @@ Conditional expression-expression is true or false
         else {
             statement 2;
         }
+
+        or
+
+        if (statement) statement 1;
 */
 
 /*
