@@ -22,8 +22,9 @@ The ability to read and write large datatstes to files
 
 Requirements:
     1. Find the file we hae to use a pointer - FILE *ifp;
-    2. Name of the file with mode: 'r' for read 'w' for writing data
-    3. 
+    2. Name of the file with mode: "r" for read "w" for writing data
+    3. Open file: ifp = fopen("input.txt", "r");
+    4. 
 
 */
 
