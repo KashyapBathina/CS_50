@@ -13,7 +13,7 @@ The ability to read and write large datatstes to files
                     pointer - tells the compiler to referece or look ata specific memory location for value
                     control string -
                     other arguments - read or write
-    fcanf--
+    fscanf--
         purpose:
         structure: fcanf(file_ptr, control_string, other arguments)
                     pointer - tells the compiler to referece or look ata specific memory location for value
@@ -21,10 +21,11 @@ The ability to read and write large datatstes to files
                     other arguments -
 
 Requirements:
-    1. Find the file we hae to use a pointer - FILE *ifp;
+    1. Find the file we have to use a pointer - FILE *ifp;
     2. Name of the file with mode: "r" for read "w" for writing data
     3. Open file: ifp = fopen("input.txt", "r");
-    4. 
+    4. Operate on file: fscanf(ifp, "%d", &num);
+    5. Close file fclose(ifp);
 
 */
 
