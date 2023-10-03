@@ -50,6 +50,9 @@ int main() {
 
         //read in data for case
         fscanf(ifp, "%d%d", &mph, &time);
+
+        radius = mph*time*60.0;
+        
     }
 
 
