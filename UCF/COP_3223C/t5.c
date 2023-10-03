@@ -52,8 +52,14 @@ int main() {
         fscanf(ifp, "%d%d", &mph, &time);
 
         radius = mph*time*60.0;
-        
+        area = .5*PI*radius*radius
+
+        printf("bla\n");
     }
+
+    //close file
+    fclose(ifp);
+    return 0;
 
 
 }
