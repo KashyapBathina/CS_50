@@ -43,7 +43,14 @@ int main() {
     fscanf(ifp, "%d", &numcases);
 
     //process each case
-    
+    for (day=0; day<numcases;day++) {
+        int mph; int time;
+        double radius;
+        double area;
+
+        //read in data for case
+        fscanf(ifp, "%d%d", &mph, &time);
+    }
 
 
 }
