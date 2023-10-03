@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include <time.h>
 
+#define PI 3.145926535898
+
 /*------------module 4------------------------------------------------------------------------------------------------------------*/
 
 /*
@@ -30,5 +32,18 @@ Requirements:
 */
 
 int main() {
+    //location in memory where our data is temp stored, pointer points to memory of file
+    FILE *ifp;
+
+    //open input file
+    ifp = fopen("input.in", "r");
+
+    int n;
+    int day;
+    fscanf(ifp, "%d", &numcases);
+
+    //process each case
+    
+
 
 }
