@@ -28,8 +28,8 @@ int main() {
     }
 
     printf("Here are the scores in revers order: ");
-    for (index=5;index>0;index--) {
-        printf("%d"m test_scores[index]);
+    for (index=4;index>=0;index--) {
+        printf("%d ", test_scores[index]);
     }
 
 }
