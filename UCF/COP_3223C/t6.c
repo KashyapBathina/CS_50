@@ -68,6 +68,23 @@ int main() {
 }
 */
 
+#define SIZE 10
 int main() {
+    int index, temp, numbers[SIZE];
+    srand(time(0));
+
+    for (index=0;index<SIZE;index++) {
+        numbers[index] = rand() % 100;
+    }
+
+    printf("Original values: ");
+    for (index=0;index<SIZE;index++) {
+        printf("%d ", numbers[index]);
+    }
+
+    int val;
+    printf("What is the # you want to serach for: ");
+    scanf("%d", &val);
+
     
 }
