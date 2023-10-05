@@ -25,8 +25,8 @@ int main() {
     int sec_in_months = sec_in_days * 30.42;
     int sec_in_years = sec_in_days * 365;
 
-    years = num / sec_in_years;
-    int t1 = (num % sec_in_years);
+    years = now / sec_in_years;
+    int t1 = (now % sec_in_years);
     months = t1/sec_in_months;
     int t2 = (t1 % sec_in_months);
     weeks = t2/sec_in_weeks;
@@ -35,7 +35,8 @@ int main() {
     int t4 = (t3 % sec_in_days);
     hours = t4/sec_in_hours;
 
-    printf("Time passed since Jan 1, 1970: %d years, %d months, %d weeks, %d days, and %d hours\n", years, months, weeks, days, hours);
+    printf("%d", now);
+    //printf("Time passed since Jan 1, 1970: %d years, %d months, %d weeks, %d days, and %d hours\n", years, months, weeks, days, hours);
 
     return 0;
 }
