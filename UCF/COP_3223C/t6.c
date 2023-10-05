@@ -36,6 +36,7 @@ int main() {
 }
 */
 
+/*
 #define SIZE 10
 int main() {
     int index, temp, numbers[SIZE];
@@ -64,5 +65,9 @@ int main() {
     }
     printf("\n");
 
+}
+*/
 
+int main() {
+    
 }
