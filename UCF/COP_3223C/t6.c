@@ -81,6 +81,7 @@ int main() {
     for (index=0;index<SIZE;index++) {
         printf("%d ", numbers[index]);
     }
+    printf("\n");
 
     int val;
     printf("What is the # you want to serach for: ");
@@ -93,6 +94,8 @@ int main() {
         }
     }
 
-    if (found==1) printf("%d was in the array", val);
-    else printf("%d was NOT in the array", val);
+    if (found==1) printf("%d was in the array\n", val);
+    else printf("%d was NOT in the array\n", val);
+
+    return 0;
 }
