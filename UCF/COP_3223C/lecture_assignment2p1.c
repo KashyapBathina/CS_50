@@ -23,7 +23,7 @@ int main() {
     int sec_in_days = sec_in_hours * 24;
     int sec_in_weeks = sec_in_days * 7;
     int sec_in_months = sec_in_days * 30.42;
-    int sec_in_years = sec_in_months * 12;
+    int sec_in_years = sec_in_days * 365;
 
     printf("%d\n", sec_in_hours);
     printf("%d\n", sec_in_days);
