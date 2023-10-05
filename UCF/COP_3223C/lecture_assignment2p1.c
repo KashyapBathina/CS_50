@@ -25,12 +25,8 @@ int main() {
     int sec_in_months = sec_in_days * 30.42;
     int sec_in_years = sec_in_days * 365;
 
-    printf("%d\n", sec_in_hours);
-    printf("%d\n", sec_in_days);
-    printf("%d\n", sec_in_weeks);
-    printf("%d\n", sec_in_months);
-    printf("%d\n", sec_in_years);
-
+    years = num / sec_in_years;
+    months = (num % sec_in_years)/
 
 
     return 0;
