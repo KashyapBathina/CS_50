@@ -26,7 +26,8 @@ int main() {
     int sec_in_years = sec_in_days * 365;
 
     years = num / sec_in_years;
-    months = (num % sec_in_years)/
+    int t1 = (num % sec_in_years);
+    months = t1/sec_in_months;
 
 
     return 0;
