@@ -27,7 +27,8 @@ int main() {
         scanf("%d", &test_scores[i]);
     }
 
-    for (index=0;index<5;index++) {
+    printf("Here are the scores in revers order: ");
+    for (index=5;index>0;index--) {
         
     }
 
