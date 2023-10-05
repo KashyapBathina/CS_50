@@ -46,6 +46,6 @@ int main() {
         index[i] = rand() % 100;
     }
 
-    
+    for ()
 
 }
