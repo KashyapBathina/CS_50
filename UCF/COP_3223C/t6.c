@@ -15,7 +15,7 @@ Arra:data struc that holds series of variables with the same datatype
                 numbers[1] = 2;
     Common Mistakes:
                 1. Out of bounds: happends when your index into array is invalid when yu try to reference it
-                2. 
+                2. Tyring to assign an entire array a valus such as test_scores=7;
 
 
 */
