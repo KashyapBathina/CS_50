@@ -20,6 +20,7 @@ Array:data struc that holds series of variables with the same datatype
 */
 
 int main() {
-    int 
+    int index, test_scores[50];
+    
 
 }
