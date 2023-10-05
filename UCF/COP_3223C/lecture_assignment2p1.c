@@ -28,6 +28,9 @@ int main() {
     years = num / sec_in_years;
     int t1 = (num % sec_in_years);
     months = t1/sec_in_months;
+    int t2 = (t1 % sec_in_months);
+    weeks = t2/sec_in_months;
+
 
 
     return 0;
