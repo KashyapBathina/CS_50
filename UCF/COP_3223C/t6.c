@@ -42,4 +42,10 @@ int main() {
 
     srand(time(0));
 
+    for (index=0;index<SIZE;index++) {
+        index[i] = rand() % 100;
+    }
+
+    
+
 }
