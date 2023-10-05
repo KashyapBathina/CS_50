@@ -19,6 +19,7 @@ Array:data struc that holds series of variables with the same datatype
                 3. Not recognizing the differnece between an array index and values stored in a particular index
 */
 
+/*
 int main() {
     int index, test_scores[50];
 
@@ -31,5 +32,14 @@ int main() {
     for (index=4;index>=0;index--) {
         printf("%d ", test_scores[index]);
     }
+
+}
+*/
+
+#define SIZE 10
+int main() {
+    int index numbers[SIZE];
+
+    srand(time(0));
 
 }
