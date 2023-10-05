@@ -51,6 +51,7 @@ int main() {
         printf("%d ", numbers[index]);
     }
 
+    printf("\n");
     for (index=0;index<SIZE/2;index++) {
         temp = numbers[index];
         numbers[index] = numbers[SIZE-1-index];
@@ -61,5 +62,7 @@ int main() {
         for (index=0;index<SIZE;index++) {
         printf("%d ", numbers[index]);
     }
+    printf("\n");
+
 
 }
