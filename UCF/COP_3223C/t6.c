@@ -21,6 +21,14 @@ Array:data struc that holds series of variables with the same datatype
 
 int main() {
     int index, test_scores[50];
-    
+
+    printf("Please enter 5 test scores: ");
+    for (index=0;index<5;index++) {
+        scanf("%d", &test_scores[i]);
+    }
+
+    for (index=0;index<5;index++) {
+        
+    }
 
 }
