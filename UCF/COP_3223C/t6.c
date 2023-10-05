@@ -13,6 +13,10 @@ Arra:data struc that holds series of variables with the same datatype
                 int numbers[10];
                 numbers[0] = 1;
                 numbers[1] = 2;
+    Common Mistakes:
+                1. Out of bounds: happends when your index into array is invalid when yu try to reference it
+                2. 
+
 
 */
 
