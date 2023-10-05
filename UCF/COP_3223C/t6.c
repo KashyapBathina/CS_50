@@ -86,5 +86,13 @@ int main() {
     printf("What is the # you want to serach for: ");
     scanf("%d", &val);
 
-    
+    int found = 0;
+    for (index=0;index<SIZE;index++) {
+        if (numbers[index]==val) {
+            found =1;
+        }
+    }
+
+    if (found==1) printf("%d was in the array", val);
+    else printf("%d was NOT in the array", val);
 }
