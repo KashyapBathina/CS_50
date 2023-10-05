@@ -38,14 +38,28 @@ int main() {
 
 #define SIZE 10
 int main() {
-    int index numbers[SIZE];
+    int index, temp, numbers[SIZE];
 
     srand(time(0));
 
     for (index=0;index<SIZE;index++) {
-        index[i] = rand() % 100;
+        numbers[index] = rand() % 100;
     }
 
-    for ()
+    printf("Original values: ");
+    for (index=0;index<SIZE;index++) {
+        printf("%d ", numbers[index]);
+    }
+
+    for (index=0;index<SIZE/2;index++) {
+        temp = numbers[index];
+        numbers[index] = numbers[SIZE-1-index];
+        numbers[SIZE-1-index] = temp;
+    }
+
+    printf("Array in reverse: ");
+        for (index=0;index<SIZE;index++) {
+        printf("%d ", numbers[index]);
+    }
 
 }
