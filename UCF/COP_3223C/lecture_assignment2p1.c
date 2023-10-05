@@ -35,7 +35,7 @@ int main() {
     int t4 = (t3 % sec_in_days);
     hours = t4/sec_in_hours;
 
-    printf("Time passed since Jan 1, 1970: %d years, %d months, %d weeks, %d days   , %d, )
+    printf("Time passed since Jan 1, 1970: %d years, %d months, %d weeks, %d days, and %d hours\n", years, months, weeks, days, hours);
 
     return 0;
 }
