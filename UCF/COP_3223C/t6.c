@@ -24,12 +24,12 @@ int main() {
 
     printf("Please enter 5 test scores: ");
     for (index=0;index<5;index++) {
-        scanf("%d", &test_scores[i]);
+        scanf("%d", &test_scores[index]);
     }
 
     printf("Here are the scores in revers order: ");
     for (index=5;index>0;index--) {
-        
+        printf("%d"m test_scores[index]);
     }
 
 }
