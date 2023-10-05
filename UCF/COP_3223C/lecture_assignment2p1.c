@@ -12,11 +12,12 @@
 int main() {
     //
     double now;
-    #define leap_years_since_1970 
+    #define leap_years_since_1970 13
 
     //
     now = time(NULL);
-    printf("%lf\n", now);
+
+    
 
     return 0;
 }
