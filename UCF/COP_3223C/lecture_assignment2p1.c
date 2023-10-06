@@ -6,7 +6,9 @@
 /*
     name: Kashyap Bathina
     date: 9/3/23
-    purpose: Lorem Ipsum Dolor
+    purpose: This program outputs the years, months, weeks,
+    days, hours, minutes, and seconds passed since Jan 1, 1970;
+    it does this by using dividing to get a 
 */
 
 int main() {

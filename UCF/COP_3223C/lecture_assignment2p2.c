@@ -6,18 +6,21 @@
 /*
     name: Kashyap Bathina
     date: 9/3/23
-    purpose: Lorem Ipsum Dolor
+    purpose: This program asks the user for an input in the
+    range of 1 to 20 and prints out the corresponding roman numeral;
+    the program prints out error and exits when int is out of range.
 */
 
 int main() {
-    //
+    // declaring variables
     int user_num;
 
-    //
+    // asking user for number in range and storing it
     printf("Please enter a number between 1 and 20: ");
     scanf("%d", &user_num);
 
-    //
+    // using a switch statement to ouput the roman numeral for said input
+    // default prints our error and exits when given int is out of range
     switch (user_num) {
         case 1: printf("The Roman Numeral For This Number is I\n");
                 break;
@@ -59,7 +62,6 @@ int main() {
                 break;
         case 20: printf("The Roman Numeral For This Number is XX\n");
                 break;
-        //
         default: printf("The Number You Entered is Out of Range!\n");
                  exit(-1);
     }
