@@ -54,7 +54,7 @@ int main() {
 
     // *NOTE*: I was also told by the professor to also ouput the minutes and seconds
     // printing out the years, months, weeks, days, hours, minutes, and seconds that passed since Jan 1, 1970
-    printf("Time passed since Jan 1, 1970: %d years, %d months, %d weeks, %d days, %d hours, %d minutes, and %d seconds\n", years, months, weeks, days, hours, minutes, seconds);
+    printf("Time passed since Jan 1, 1970:\n%d years, %d months, %d weeks, %d days, %d hours, %d minutes, and %d seconds\n", years, months, weeks, days, hours, minutes, seconds);
 
     return 0;
 }
