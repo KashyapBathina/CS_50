@@ -14,7 +14,7 @@
     alated from leap years.
 */
 
-/*
+
 int main() {
     // declaring variables and the constant of the leap years since 1970;
     int years, months, weeks, days, hours, minutes, seconds;
@@ -57,29 +57,4 @@ int main() {
     printf("Time passed since Jan 1, 1970: %d years, %d months, %d weeks, %d days, %d hours, %d minutes, and %d seconds\n", years, months, weeks, days, hours, minutes, seconds);
 
     return 0;
-}
-*/
-
-#define SEC_PER_MIN 60
-#define SEC_PER_HOUR (60*SEC_PER_MIN)
-#define SEC_PER_DAY (24L*SEC_PER_HOUR)
-#define SEC_PER_WEEK (7L*SEC_PER_DAY)
-#define SEC_PER_MONTH (3042LL*SEC_PER_DAY/100)
-#define SEC_PER_YEAR (365LL*SEC_PER_DAY)
-
-int main(void) {
-  time_t now = time(NULL);
-  printf("%s", ctime(&now));
-  long long t = now;
-  printf("Since Jan 1st, 1970:\n");
-  printf("%lld years have passed!\n", t / SEC_PER_YEAR);
-  t %= SEC_PER_YEAR;
-  printf("%lld months have passed!\n", t / SEC_PER_MONTH);
-  t %= SEC_PER_MONTH;
-  printf("%lld weeks have passed\n", t / SEC_PER_WEEK);
-  t %= SEC_PER_WEEK;
-  printf("%lld days have passed\n", t / SEC_PER_DAY);
-  t %= SEC_PER_DAY;
-  printf("%lld hours have passed\n", t / SEC_PER_HOUR);
-  t %= SEC_PER_HOUR;
 }
