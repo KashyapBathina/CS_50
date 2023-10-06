@@ -9,7 +9,6 @@
     purpose: Lorem Ipsum Dolor
 */
 
-/*
 int main() {
     //
     int years, months, weeks, days, hours, minutes, seconds;
@@ -49,47 +48,6 @@ int main() {
     // *NOTE*: I was also told by the professor to also ouput the minutes and seconds
     //
     printf("Time passed since Jan 1, 1970: %d years, %d months, %d weeks, %d days, %d hours, %d minutes, and %d seconds\n", years, months, weeks, days, hours, minutes, seconds);
-
-    return 0;
-}
-*/
-
-#include <stdio.h>
-#include <time.h>
-
-int main() {
-    time_t now = time(NULL);
-    time_t startTime = 0; // January 1, 1970, 00:00:00
-
-    double secondsSince1970 = difftime(now, startTime);
-    const int SECONDS_PER_MINUTE = 60;
-    const int MINUTES_PER_HOUR = 60;
-    const int HOURS_PER_DAY = 24;
-    const int DAYS_PER_YEAR = 365;
-    const double SECONDS_PER_MONTH = 30.42 * 24 * 60 * 60; // Accurate number of seconds in a month
-    const double SECONDS_PER_DAY = 24 * 60 * 60;
-
-    int years, months, weeks, days, hours;
-
-    years = secondsSince1970 / (SECONDS_PER_MONTH * 12);
-    secondsSince1970 -= years * (SECONDS_PER_MONTH * 12);
-
-    months = secondsSince1970 / SECONDS_PER_MONTH;
-    secondsSince1970 -= months * SECONDS_PER_MONTH;
-
-    weeks = secondsSince1970 / (SECONDS_PER_DAY * 7);
-    secondsSince1970 -= weeks * (SECONDS_PER_DAY * 7);
-
-    days = secondsSince1970 / SECONDS_PER_DAY;
-    secondsSince1970 -= days * SECONDS_PER_DAY;
-
-    hours = secondsSince1970 / (SECONDS_PER_MINUTE * MINUTES_PER_HOUR);
-
-    printf("Years: %d\n", years);
-    printf("Months: %d\n", months);
-    printf("Weeks: %d\n", weeks);
-    printf("Days: %d\n", days);
-    printf("Hours: %d\n", hours);
 
     return 0;
 }
