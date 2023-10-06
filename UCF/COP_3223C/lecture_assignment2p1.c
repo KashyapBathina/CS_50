@@ -21,7 +21,7 @@
 int main() {
     // declaring variables and the constant of the leap years since 1970;
     int years, months, weeks, days, hours, minutes, seconds;
-    int now;
+    long long int now;
     #define leap_years_since_1970 13
 
     // getting the number of seconds since Jan 1, 1970
