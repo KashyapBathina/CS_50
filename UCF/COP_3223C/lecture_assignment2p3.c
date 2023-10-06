@@ -10,17 +10,17 @@
 */
 
 int main() {
-    //
+    // declaring the random number and seeding the rand int to prevent repeated occurences
     int myRandomNumber;
     srand(time(NULL));
 
-    //
+    // generating a random number
     myRandomNumber = rand();
 
-    //
+    // printing that random number
     printf("%d\n", myRandomNumber);
 
-    //
+    // printing whether the number is even or odd by see if % 2 is = 0
     if ((myRandomNumber % 2) == 0) printf("The number is Even\n");
     else printf("The number is Odd\n");
 
