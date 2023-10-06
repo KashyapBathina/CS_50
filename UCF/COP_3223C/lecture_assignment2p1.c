@@ -54,6 +54,9 @@ int main() {
 }
 */
 
+#include <stdio.h>
+#include <time.h>
+
 int main() {
     time_t now = time(NULL);
     time_t startTime = 0; // January 1, 1970, 00:00:00
@@ -63,7 +66,8 @@ int main() {
     const int MINUTES_PER_HOUR = 60;
     const int HOURS_PER_DAY = 24;
     const int DAYS_PER_YEAR = 365;
-    const double SECONDS_PER_MONTH = 30.42 * SECONDS_PER_DAY; // Accurate number of seconds in a month
+    const double SECONDS_PER_MONTH = 30.42 * 24 * 60 * 60; // Accurate number of seconds in a month
+    const double SECONDS_PER_DAY = 24 * 60 * 60;
 
     int years, months, weeks, days, hours;
 
