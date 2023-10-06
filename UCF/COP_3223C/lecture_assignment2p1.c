@@ -9,6 +9,7 @@
     purpose: Lorem Ipsum Dolor
 */
 
+/*
 int main() {
     //
     int years, months, weeks, days, hours, minutes, seconds;
@@ -48,6 +49,48 @@ int main() {
     // *NOTE*: I was also told by the professor to also ouput the minutes and seconds
     //
     printf("Time passed since Jan 1, 1970: %d years, %d months, %d weeks, %d days, %d hours, %d minutes, and %d seconds\n", years, months, weeks, days, hours, minutes, seconds);
+
+    return 0;
+}
+*/
+
+int main() {
+    time_t now = time(NULL);
+    time_t elapsed = now;
+
+    // Constants for time units
+    const int SECONDS_PER_MINUTE = 60;
+    const int MINUTES_PER_HOUR = 60;
+    const int HOURS_PER_DAY = 24;
+    const double DAYS_PER_MONTH = 30.42;
+    const int MONTHS_PER_YEAR = 12;
+    const int DAYS_PER_YEAR = 365;
+
+    // Calculate years
+    int years = elapsed / (DAYS_PER_YEAR * HOURS_PER_DAY * MINUTES_PER_HOUR * SECONDS_PER_MINUTE);
+    elapsed %= (DAYS_PER_YEAR * HOURS_PER_DAY * MINUTES_PER_HOUR * SECONDS_PER_MINUTE);
+
+    // Calculate months
+    int months = elapsed / (DAYS_PER_MONTH * HOURS_PER_DAY * MINUTES_PER_HOUR * SECONDS_PER_MINUTE);
+    elapsed %= (DAYS_PER_MONTH * HOURS_PER_DAY * MINUTES_PER_HOUR * SECONDS_PER_MINUTE);
+
+    // Calculate weeks
+    int weeks = elapsed / (DAYS_PER_WEEK * HOURS_PER_DAY * MINUTES_PER_HOUR * SECONDS_PER_MINUTE);
+    elapsed %= (DAYS_PER_WEEK * HOURS_PER_DAY * MINUTES_PER_HOUR * SECONDS_PER_MINUTE);
+
+    // Calculate days
+    int days = elapsed / (HOURS_PER_DAY * MINUTES_PER_HOUR * SECONDS_PER_MINUTE);
+    elapsed %= (HOURS_PER_DAY * MINUTES_PER_HOUR * SECONDS_PER_MINUTE);
+
+    // Calculate hours
+    int hours = elapsed / (MINUTES_PER_HOUR * SECONDS_PER_MINUTE);
+
+    // Output the results
+    printf("Years: %d\n", years);
+    printf("Months: %d\n", months);
+    printf("Weeks: %d\n", weeks);
+    printf("Days: %d\n", days);
+    printf("Hours: %d\n", hours);
 
     return 0;
 }
