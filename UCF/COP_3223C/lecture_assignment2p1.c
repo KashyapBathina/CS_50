@@ -12,8 +12,9 @@
     years, months, etc.) and then using modulus to get the remaining seconds
     and repeat for all time variables. The program also adds the seconds accum-
     alated from leap years.
-    note: PLEASE understand that I included leap years because the professor told me
-    to when I asked him
+    note: *PLEASE UNDSERTAND* that I included leap years even though the assignment
+    doesn't delineate me to because the professor told me personally to when I asked him,
+    so if this is incorrect, just ignore the line with the leap years and accept it instead.
 */
 
 
