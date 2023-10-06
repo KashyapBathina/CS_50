@@ -17,7 +17,6 @@ int main() {
 
     //
     now = time(NULL);
-    printf("%d", now);
 
     //
     int sec_in_minutes = 60;
@@ -29,7 +28,7 @@ int main() {
 
     // *NOTE*: I was told by the professor to add the seconds accumulated from leap years
     // Since there are 13 leap years, there are 13 extra days; we can add the seconds from those days
-    now += 13*sec_in_days;
+    //now += 13*sec_in_days;
 
     //
     years = now / sec_in_years;
@@ -48,7 +47,7 @@ int main() {
 
     // *NOTE*: I was also told by the professor to also ouput the minutes and seconds
     //
-    //printf("Time passed since Jan 1, 1970: %d years, %d months, %d weeks, %d days, %d hours, %d minutes, and %d seconds\n", years, months, weeks, days, hours, minutes, seconds);
+    printf("Time passed since Jan 1, 1970: %d years, %d months, %d weeks, %d days, %d hours, %d minutes, and %d seconds\n", years, months, weeks, days, hours, minutes, seconds);
 
     return 0;
 }
