@@ -56,36 +56,31 @@ int main() {
 
 int main() {
     time_t now = time(NULL);
-    time_t elapsed = now;
+    time_t startTime = 0; // January 1, 1970, 00:00:00
 
-    // Constants for time units
+    double secondsSince1970 = difftime(now, startTime);
     const int SECONDS_PER_MINUTE = 60;
     const int MINUTES_PER_HOUR = 60;
     const int HOURS_PER_DAY = 24;
-    const double DAYS_PER_MONTH = 30.42;
-    const int MONTHS_PER_YEAR = 12;
     const int DAYS_PER_YEAR = 365;
+    const double SECONDS_PER_MONTH = 30.42 * SECONDS_PER_DAY; // Accurate number of seconds in a month
 
-    // Calculate years
-    int years = elapsed / (DAYS_PER_YEAR * HOURS_PER_DAY * MINUTES_PER_HOUR * SECONDS_PER_MINUTE);
-    elapsed %= (DAYS_PER_YEAR * HOURS_PER_DAY * MINUTES_PER_HOUR * SECONDS_PER_MINUTE);
+    int years, months, weeks, days, hours;
 
-    // Calculate months
-    int months = elapsed / (DAYS_PER_MONTH * HOURS_PER_DAY * MINUTES_PER_HOUR * SECONDS_PER_MINUTE);
-    elapsed %= (DAYS_PER_MONTH * HOURS_PER_DAY * MINUTES_PER_HOUR * SECONDS_PER_MINUTE);
+    years = secondsSince1970 / (SECONDS_PER_MONTH * 12);
+    secondsSince1970 -= years * (SECONDS_PER_MONTH * 12);
 
-    // Calculate weeks
-    int weeks = elapsed / (DAYS_PER_WEEK * HOURS_PER_DAY * MINUTES_PER_HOUR * SECONDS_PER_MINUTE);
-    elapsed %= (DAYS_PER_WEEK * HOURS_PER_DAY * MINUTES_PER_HOUR * SECONDS_PER_MINUTE);
+    months = secondsSince1970 / SECONDS_PER_MONTH;
+    secondsSince1970 -= months * SECONDS_PER_MONTH;
 
-    // Calculate days
-    int days = elapsed / (HOURS_PER_DAY * MINUTES_PER_HOUR * SECONDS_PER_MINUTE);
-    elapsed %= (HOURS_PER_DAY * MINUTES_PER_HOUR * SECONDS_PER_MINUTE);
+    weeks = secondsSince1970 / (SECONDS_PER_DAY * 7);
+    secondsSince1970 -= weeks * (SECONDS_PER_DAY * 7);
 
-    // Calculate hours
-    int hours = elapsed / (MINUTES_PER_HOUR * SECONDS_PER_MINUTE);
+    days = secondsSince1970 / SECONDS_PER_DAY;
+    secondsSince1970 -= days * SECONDS_PER_DAY;
 
-    // Output the results
+    hours = secondsSince1970 / (SECONDS_PER_MINUTE * MINUTES_PER_HOUR);
+
     printf("Years: %d\n", years);
     printf("Months: %d\n", months);
     printf("Weeks: %d\n", weeks);
