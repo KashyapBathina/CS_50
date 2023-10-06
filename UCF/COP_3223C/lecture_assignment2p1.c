@@ -21,6 +21,7 @@
 int main() {
     // declaring variables and the constant of the leap years since 1970;
     int years, months, weeks, days, hours, minutes, seconds;
+    // use a long long int type for now just in case even thought it's not wholly necessary 
     long long int now;
     #define leap_years_since_1970 13
 
