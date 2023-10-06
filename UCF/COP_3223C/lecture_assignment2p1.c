@@ -33,7 +33,7 @@ int main() {
 
     // *NOTE*: I was told by the professor to add the seconds accumulated from leap years
     // since there are 13 leap years, there are 13 extra days; we can add the seconds from those days
-    //now += 13*sec_in_days;
+    now += 13*sec_in_days;
 
     // finding out the years, months, etc. by dividing to get a quotient and using the remaining with modulus
     // and then repeating for every time types
