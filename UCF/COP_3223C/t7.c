@@ -46,6 +46,19 @@ int main() {
 }
 */
 
+void pointer() {
+    int var=10;
+    // dec pointer variables
+    int* ptr;
+    ptr = &var;
+
+    printf("Value at ptr = %p\n", ptr);
+    printf("Value at ptr = %d\n", var);
+    printf("Value at ptr = %d\n", *ptr);
+
+}
+
 int main() {
-    
+    pointer();
+    return 0;
 }
