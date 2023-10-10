@@ -25,4 +25,13 @@ int main() {
             grid[i][j]=grid[i-1][j-1] + grid[i-1][j];
         }
     }
+
+    for(i=0;i<11;i++) {
+        for(j=0;j<11;j++) {
+            printf("%4d", grid[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
 }
