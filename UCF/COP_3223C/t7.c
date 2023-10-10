@@ -89,7 +89,7 @@ int main() {
     void (*ptr_func)(int,int) = &func;
     void* ptr_vn = NULL;
 
-    printf("Size of integer pointer  \t:\t&d bytes\n", sizeof(ptr_int));
+    printf("Size of integer pointer\t\t:\t&d bytes\n", sizeof(ptr_int));
     printf("Size of char pointer\t\t:\t&d bytes\n", sizeof(ptr_char));
     printf("Size of struct pointer\t\t:\t&d bytes\n", sizeof(ptr_strct));
     printf("Size of function pointer\t\t:\t&d bytes\n", sizeof(ptr_func));
