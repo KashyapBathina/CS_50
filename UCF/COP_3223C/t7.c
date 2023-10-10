@@ -19,6 +19,7 @@ Pointers: store memory addresses of other variables
     Call by reference: pointer to reference or point to memory address that has data we need
 */
 
+/*
 int main() {
     int grid[11][11];
     int i, j;
@@ -42,4 +43,9 @@ int main() {
     }
 
     return 0;
+}
+*/
+
+int main() {
+    
 }
