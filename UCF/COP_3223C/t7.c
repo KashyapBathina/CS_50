@@ -11,12 +11,16 @@
                 var[0][0] = 2;
 
 Pointers: store memory addresses of other variables
-    Gen struct: datatype *ptr; where * is dereferencing operator, dereference the pointer (or, get the referent of the pointer) to get the object pointed-to
+    Gen struct: datatype *ptr; where * is dereferencing operator, dereference the pointer (or, get the referent of the pointer) to get the object pointed-to; used to access or manipulate data contained in memory location pointed to by a pointer
                 int * ptr;
                 int var = 10;
                 ptr = &var;
     Call by value: copy contents of one memory adress and place in another
     Call by reference: pointer to reference or point to memory address that has data we need
+    Types of pointers:
+        1. integer pointer = int *ptr;
+        2. array poineter = char *ptr = &array_name;
+        3. function pointer = int (*ptr)(int, char);
 */
 
 /*
