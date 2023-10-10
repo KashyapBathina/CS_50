@@ -12,8 +12,8 @@
 
 Pointers: store memory addresses of other variables
     Gen struct: datatype *ptr; where * is dereferencing operator
-                int var=10;
                 int * ptr;
+                int var = 10;
                 ptr = &var;
 */
 
