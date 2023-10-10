@@ -18,6 +18,11 @@ int main() {
     for(i=0;i<11;i++) {
         grid[i][0] = 1;
         grid[i][1] = 1;
+    }
 
+    for(i=2;i<11;i++) {
+        for(j=1;j<i;j++) {
+            grid[i][j]=grid[i-1][j-1] + grid[i-1][j];
+        }
     }
 }
