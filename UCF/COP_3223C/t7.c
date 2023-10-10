@@ -12,5 +12,12 @@
 */
 
 int main() {
-    int 
+    int grid[11][11];
+    int i, j;
+
+    for(i=0;i<11;i++) {
+        grid[i][0] = 1;
+        grid[i][1] = 1;
+
+    }
 }
