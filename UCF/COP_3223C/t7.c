@@ -27,7 +27,7 @@ int main() {
     }
 
     for(i=0;i<=11;i++) {
-        for(j=0;j<11;j++) {
+        for(j=0;j<i;j++) {
             printf("%4d", grid[i][j]);
         }
         printf("\n");
