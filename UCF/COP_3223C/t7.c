@@ -16,7 +16,7 @@ Pointers: store memory addresses of other variables
                 int var = 10;
                 ptr = &var;
     Call by value: copy contents of one memory adress and place in another
-    Call by reference:
+    Call by reference: pointer to reference or point to memory address that has data we need
 */
 
 int main() {
