@@ -11,6 +11,10 @@
                 var[0][0] = 2;
 
 Pointers: store memory addresses of other variables
+    Gen struct: datatype *ptr; where * is dereferencing operator
+                int var=10;
+                int * ptr;
+                ptr = &var;
 */
 
 int main() {
