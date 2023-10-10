@@ -54,6 +54,7 @@ int main() {
 }
 */
 
+/*
 void pointer() {
     int var=10;
     // dec pointer variables
@@ -69,4 +70,18 @@ void pointer() {
 int main() {
     pointer();
     return 0;
+}
+*/
+
+// struct: variables w/o same data type
+struct str {
+
+}
+
+void funct(int a, int b) {};
+
+int main() {
+    int a = 10;
+    char c = 'G'
+    struct str x;
 }
