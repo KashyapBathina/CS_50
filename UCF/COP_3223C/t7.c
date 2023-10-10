@@ -74,15 +74,13 @@ int main() {
 */
 
 // struct: variables w/o same data type
-struct str {
-
-}
+struct str {};
 
 void funct(int a, int b) {};
 
 int main() {
     int a = 10;
-    char c = 'G'
+    char c = 'G';
     struct str x;
 
     int* ptr_int = &a;
