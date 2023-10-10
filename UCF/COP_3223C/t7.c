@@ -21,6 +21,7 @@ Pointers: store memory addresses of other variables
         1. integer pointer = int *ptr;
         2. array poineter = char *ptr = &array_name;
         3. function pointer = int (*ptr)(int, char);
+        4. double pointer = *pointer_name; **pointer_name;
 */
 
 /*
