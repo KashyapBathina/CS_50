@@ -76,7 +76,7 @@ int main() {
 // struct: variables w/o same data type
 struct str {};
 
-void funct(int a, int b) {};
+void func(int a, int b) {};
 
 int main() {
     int a = 10;
@@ -86,7 +86,7 @@ int main() {
     int* ptr_int = &a;
     char* ptr_char = &c;
     struct str* ptr_strct = &x;
-    void (*ptr_func)(iny,int) = &func;
+    void (*ptr_func)(int,int) = &func;
     void* ptr_vn = NULL;
 
     printf("Size of integer pointer\t\t:\t&d bytes\n", sizeof(ptr_int));
