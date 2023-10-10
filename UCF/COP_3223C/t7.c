@@ -85,7 +85,7 @@ int main() {
 
     int* ptr_int = &a;
     char* ptr_char = &c;
-    struct str* = ptr_strct = &x;
+    struct str* ptr_strct = &x;
     void (*ptr_func)(iny,int) = &func;
     void* ptr_vn = NULL;
 
@@ -94,4 +94,6 @@ int main() {
     printf("Size of struct pointer\t\t:\t&d bytes\n", sizeof(ptr_strct));
     printf("Size of function pointer\t\t:\t&d bytes\n", sizeof(ptr_func));
     printf("Size of null pointer\t\t:\t&d bytes\n", sizeof(ptr_vn));
+
+    return 0;
 }
