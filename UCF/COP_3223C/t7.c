@@ -86,4 +86,6 @@ int main() {
     struct str x;
 
     int* ptr_int = &a;
+    char* ptr_char = &c;
+    
 }
