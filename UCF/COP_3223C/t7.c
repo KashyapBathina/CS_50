@@ -84,4 +84,6 @@ int main() {
     int a = 10;
     char c = 'G'
     struct str x;
+
+    int* ptr_int = &a;
 }
