@@ -73,6 +73,7 @@ int main() {
 }
 */
 
+/*
 // struct: variables w/o same data type
 struct str {};
 
@@ -96,4 +97,10 @@ int main() {
     printf("Size of null pointer\t\t:\t%lu bytes\n", sizeof(ptr_vn));
 
     return 0;
+}
+*/
+
+void main() {
+    int val[3] = {5,10,15};
+    int* ptr;
 }
