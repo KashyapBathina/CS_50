@@ -167,7 +167,7 @@ int main() {
         scanf("%d", &c_hours);
 
         total_hours += c_hours*comp_grade(my_grade);
-        total_hours += c_hours + total_hours;
+        total_hours += c_hours;
 
         printf("Do you have any more grades: ");
         ans = read_char();
