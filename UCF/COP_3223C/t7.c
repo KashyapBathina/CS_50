@@ -177,5 +177,8 @@ int main() {
 }
 
 int comp_grade(char grade) {
-    
+    if (Grade=='A") return 4;
+    else if (Grade=='B") return 3;
+    else if (Grade=='C") return 2;
+    else if (Grade=='D") return 1;
 }
