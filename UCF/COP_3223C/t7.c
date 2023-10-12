@@ -172,4 +172,7 @@ int main() {
         printf("Do you have any more grades: ");
         ans = readChar();
     }
+
+    printf("Your GPA is %.2lf\n", (double)total_points/total_hours);
 }
+
