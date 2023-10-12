@@ -152,8 +152,8 @@ int main() {
 */
 
 //declare function
-int compGrade(char grade);
-char readChar();
+int comp_grade(char grade);
+char read_char();
 
 int main() {
     int total_points = 0; total_hours=0;c_hours;
@@ -162,17 +162,20 @@ int main() {
 
     while(ans='Y' || ans='y') {
         printf("Letter grade: ");
-        my_grade = readChar();
+        my_grade = read_char();
         printf("Enter # of credit hours: ");
         scanf("%d", &c_hours);
 
-        total_hours += c_hours*compGrade(my_grade);
+        total_hours += c_hours*comp_grade(my_grade);
         total_hours += c_hours + total_hours;
 
         printf("Do you have any more grades: ");
-        ans = readChar();
+        ans = read_char();
     }
 
     printf("Your GPA is %.2lf\n", (double)total_points/total_hours);
 }
 
+int comp_grade(char grade) {
+    
+}
