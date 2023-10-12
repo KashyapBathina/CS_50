@@ -167,5 +167,7 @@ int main() {
         scanf("%d", &c_hours);
 
         total_hours += c_hours*comp_grade(my_grade);
+        total_hours +=
+
     }
 }
