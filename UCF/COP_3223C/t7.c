@@ -25,6 +25,15 @@ Pointers: store memory addresses of other variables
         5. null pointer = pointer_name = null
         6. void pointer = void* ptr;
         7. constant pointer = int* const ptr;
+
+Functions: sub program within main that carries out a task
+    Gen struct: return_type name(parameters) {}
+    Requirements:
+        1. Give funct what it needs to finihsh the task--pre test, pre-condition, parameter
+        2. Use info so function retrurns properly--post tes, post condition, ouput
+    Types of parameters:
+        1. Formal paramaeters--listed in definition, local variables
+        2. Actual parramaters--values/expressions that are calling/invoking the function in main so it passed data to function to be called
 */
 
 /*
@@ -120,6 +129,7 @@ int main(){
 }
 */
 
+/*
 int main() {
     int var = 7;
     //ptr to var
@@ -139,3 +149,4 @@ int main() {
 
     return 0;
 }
+*/
