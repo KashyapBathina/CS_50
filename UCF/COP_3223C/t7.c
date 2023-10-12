@@ -150,3 +150,11 @@ int main() {
     return 0;
 }
 */
+
+//declare function
+int comp_grade(char grade);
+char readChar();
+
+int main() {
+
+}
