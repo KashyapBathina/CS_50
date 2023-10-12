@@ -159,4 +159,9 @@ int main() {
     int total_points = 0; total_hours=0;c_hours;
     char ans = 'Y';
     char my_grade;
+
+    while(ans='Y' || ans='y') {
+        printf("Letter grade: ");
+        my_grade
+    }
 }
