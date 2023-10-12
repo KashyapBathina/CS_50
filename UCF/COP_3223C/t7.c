@@ -156,11 +156,11 @@ int comp_grade(char grade);
 char read_char();
 
 int main() {
-    int total_points = 0; total_hours=0;c_hours;
+    int total_points = 0, total_hours=0, c_hours;
     char ans = 'Y';
     char my_grade;
 
-    while(ans='Y' || ans='y') {
+    while (ans=='Y' || ans=='y') {
         printf("Letter grade: ");
         my_grade = read_char();
         printf("Enter # of credit hours: ");
@@ -177,8 +177,20 @@ int main() {
 }
 
 int comp_grade(char grade) {
-    if (Grade=='A") return 4;
-    else if (Grade=='B") return 3;
-    else if (Grade=='C") return 2;
-    else if (Grade=='D") return 1;
+    if (grade=='A') return 4;
+    else if (grade=='B') return 3;
+    else if (grade=='C') return 2;
+    else if (grade=='D') return 1;
+    return 0;
+}
+
+char read_char() {
+    char ans;
+    scanf("%c", &ans);
+
+    while (ans==' ' || ans == '\n' || ans == '\t') {
+        scanf("%c", &ans);
+    }
+
+    return ans;
 }
