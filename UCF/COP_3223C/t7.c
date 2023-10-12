@@ -100,7 +100,20 @@ int main() {
 }
 */
 
-void main() {
+void ptr() {
     int val[3] = {5,10,15};
     int* ptr;
+
+    // can also use ptr=&val[0];
+    ptr = val;
+
+    printf("Elements of array: ");
+    printf("%d,%d,%d\n", ptr[0],ptr[1],ptr[2]);
+
+    return;
+}
+
+int main(){
+    ptr();
+    return 0;
 }
