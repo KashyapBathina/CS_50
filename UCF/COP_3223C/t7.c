@@ -100,6 +100,7 @@ int main() {
 }
 */
 
+/*
 void ptr() {
     int val[3] = {5,10,15};
     int* ptr;
@@ -115,5 +116,26 @@ void ptr() {
 
 int main(){
     ptr();
+    return 0;
+}
+*/
+
+int main() {
+    int var = 7;
+    //ptr to var
+    int* ptr2;
+    //double poingter to ptr2
+    int** ptr1;
+
+    // storing address of var in ptr2
+    ptr2=&var;
+
+    // storying adress of pt2 in ptr1
+    ptr1 = &ptr2;
+
+    printf("Value of var %d\n", var);
+    printf("Value of var using single pointer = %d\n", *ptr2);
+    printf("Value of var using double pointer = %d\n", **ptr1);
+
     return 0;
 }
