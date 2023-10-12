@@ -156,5 +156,7 @@ int comp_grade(char grade);
 char readChar();
 
 int main() {
-
+    int total_points = 0; total_hours=0;c_hours;
+    char ans = 'Y';
+    char my_grade;
 }
