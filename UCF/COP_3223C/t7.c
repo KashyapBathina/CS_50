@@ -130,7 +130,7 @@ int main() {
     // storing address of var in ptr2
     ptr2=&var;
 
-    // storying adress of pt2 in ptr1
+    // storying adress of ptr2 in ptr1
     ptr1 = &ptr2;
 
     printf("Value of var %d\n", var);
