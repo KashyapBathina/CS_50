@@ -152,7 +152,7 @@ int main() {
 */
 
 //declare function
-int comp_grade(char grade);
+int compGrade(char grade);
 char readChar();
 
 int main() {
@@ -166,8 +166,10 @@ int main() {
         printf("Enter # of credit hours: ");
         scanf("%d", &c_hours);
 
-        total_hours += c_hours*comp_grade(my_grade);
-        total_hours +=
+        total_hours += c_hours*compGrade(my_grade);
+        total_hours += c_hours + total_hours;
 
+        printf("Do you have any more grades: ");
+        ans = readChar();
     }
 }
