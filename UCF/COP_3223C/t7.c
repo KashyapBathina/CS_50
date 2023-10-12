@@ -162,6 +162,10 @@ int main() {
 
     while(ans='Y' || ans='y') {
         printf("Letter grade: ");
-        my_grade
+        my_grade = readChar();
+        printf("Enter # of credit hours: ");
+        scanf("%d", &c_hours);
+
+        total_hours += c_hours*comp_grade(my_grade);
     }
 }
