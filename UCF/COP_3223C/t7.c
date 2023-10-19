@@ -243,6 +243,10 @@ int main() {
         dRoll2 = temp;
     }
 
+    if (aRoll1>dRoll1) sum++;
+    if (aRoll2>dRoll2) sum++;
+
+    printf("The attacker killed %d enemies\n", sum);
 
 
     return 0;
