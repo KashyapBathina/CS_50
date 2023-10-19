@@ -22,7 +22,7 @@ int main(void) {
         if (index % 10 == 0) {
             printf("\n");
         }
-        printf("%lf", arr[index]);
+        printf("%.2lf      ", arr[index]);
     }
 
     return 0;
