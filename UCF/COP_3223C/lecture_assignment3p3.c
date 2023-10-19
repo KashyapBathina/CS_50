@@ -13,7 +13,7 @@
 int main(void) {
     // declaring vars and array of size 100
     int index, total=0, arr[100];
-    // double average;
+    double average;
 
     // seeding the rand number to prevent repeated occurences
     srand(time(NULL));
@@ -27,7 +27,7 @@ int main(void) {
 
     // finds and prints the average of the elements in the array by dividing total by 100 (total num)
     average = (double) total / 100;
-    printf("Average of 100 Random Numbers: %d\n", average);
+    printf("Average of 100 Random Numbers: %lf\n", average);
 
     return 0;
 }
