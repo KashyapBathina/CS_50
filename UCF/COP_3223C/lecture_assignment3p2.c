@@ -14,12 +14,16 @@ int main(void) {
     int index;
     double arr[100];
 
+    //
+    srand(time(NULL));
+
     for (index = 0; index < 100; index++) {
         arr[index] = (double)(rand() % 100 + 1) / 2;
     }
 
     //
     for (index = 0; index < 100; index++) {
+        //
         if (index % 10 == 0) {
             printf("\n");
         }

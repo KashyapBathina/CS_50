@@ -157,7 +157,7 @@ void guess(int N) {
     //seed random number to prevent same number repeating
     srand(time(NULL));
 
-    //generate rand num
+    //generate rand num where 0<=x<N
     number=rand() % N;
 
     printf("Guess a number between 1 and %d\n",N);
