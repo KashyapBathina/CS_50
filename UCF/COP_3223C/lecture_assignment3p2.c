@@ -15,7 +15,7 @@ int main(void) {
     double arr[100];
 
     for (index = 0; index<100; index++) {
-        
+        arr[i] = (double)(rand() % 100 + 1) / 2;
     }
 
 
