@@ -231,6 +231,12 @@ int main() {
     printf("Attacker's rolls are %d and %d\n", aRoll1, aRoll2);
     printf("Defender's rolls are %d and %d\n", dRoll1, dRoll2);
 
+    if (aRoll1 < aRoll2) {
+        temp = aRoll1;
+        aRoll1 = aRoll2;
+        aRoll2 = temp;
+    }
+
 
     return 0;
 }
