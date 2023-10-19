@@ -11,22 +11,23 @@
 
 int main(void) {
     //
-    int arr[10];
+    int index, arr[10];
 
     //
-    arr[0] = x;
-    arr[0] = x;
-    arr[0] = x;
-    arr[0] = x;
-    arr[0] = x;
-    arr[0] = x;
-    arr[0] = x;
-    arr[0] = x;
-    arr[0] = x;
-    arr[0] = x;
+    arr[0] = 10;
+    arr[1] = 20;
+    arr[2] = 30;
+    arr[3] = 40;
+    arr[4] = 50;
+    arr[5] = 60;
+    arr[6] = 70;
+    arr[7] = 80;
+    arr[8] = 90;
+    arr[9] = 100;
 
     //
-    for (int i=0;i<10;i++) {
-        
+    printf("Values in array: ");
+    for (index = 0; index < 10; index++) {
+        printf("%d ", arr[index]);
     }
 }
