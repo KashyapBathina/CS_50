@@ -7,7 +7,7 @@
     name: Kashyap Bathina
     date: 10/18/23
     purpose: This program declares and array of 100 ints and assigns them random
-    values using a ran() funct and then totals them and divides by 100 to find average.
+    values using a rand() funct and then totals them and divides by 100 to find average.
 */
 
 int main(void) {
