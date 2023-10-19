@@ -1,11 +1,14 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <math.h>
 
 /*
     name: Kashyap Bathina
-    date: 9/3/23
-    purpose: This program takes in five values from the user and then
-    outputs the sum, by adding all the numbers and the average, by dividing
-    the sum by the number of values--5.
+    date: 10/18/23
+    purpose: Lorem ipsum dolor sit amet
 */
 
 int main(void) {
+
+}
