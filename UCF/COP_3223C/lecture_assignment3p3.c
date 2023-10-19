@@ -26,8 +26,9 @@ int main(void) {
     }
 
     // finds and prints the average of the elements in the array by dividing total by 100 (total num)
+    // also casting double to make assure no type loss
     average = (double) total / 100;
-    printf("Average of 100 Random Numbers: %lf\n", average);
+    printf("Average of 100 Random Numbers: %.2lf\n", average);
 
     return 0;
 }
