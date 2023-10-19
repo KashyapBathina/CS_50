@@ -30,4 +30,6 @@ int main(void) {
     for (index = 0; index < 10; index++) {
         printf("%d ", arr[index]);
     }
+
+    return 0;
 }

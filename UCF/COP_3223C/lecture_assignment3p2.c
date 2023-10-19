@@ -19,9 +19,11 @@ int main(void) {
     }
 
     for (index = 0; index < 100; index++) {
-        
+        if (index % 10 == 0) {
+            printf("\n");
+        }
+        printf("%lf", arr[index]);
     }
 
-
-
+    return 0;
 }
