@@ -6,7 +6,9 @@
 /*
     name: Kashyap Bathina
     date: 10/18/23
-    purpose: Lorem ipsum dolor sit amet
+    purpose: This program creates and individually and manually
+    declares and initializes an array of size ten and the prints them
+    using a for loop.
 */
 
 int main(void) {

@@ -5,8 +5,13 @@
 
 /*
     name: Kashyap Bathina
-    date: 9/3/23
-    purpose: Lorem ipsum dolor sit amet
+    date: 10/18/23
+    purpose: This program makes and array of size 100 and assigns
+    the elements random numbers using a ran() function and then
+    prints them in a 10 by 10 grid by using a for loop to print
+    out ten values and then creating a new line (using if) after 10th
+    value (using % to find div by 10).
+
 */
 
 int main(void) {

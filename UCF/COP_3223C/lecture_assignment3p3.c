@@ -5,8 +5,8 @@
 
 /*
     name: Kashyap Bathina
-    date: 9/3/23
-    purpose: Lorem ipsum dolor sit amet
+    date: 10/18/23
+    purpose: This program 
 */
 
 int main(void) {
