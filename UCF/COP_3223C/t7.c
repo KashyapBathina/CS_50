@@ -197,6 +197,8 @@ char read_char() {
     return ans;
 }
 */
+
+/*
 int addNum();
 
 int main() {
@@ -214,5 +216,19 @@ int main() {
 int addNum(int a, int b) {
     int result = a + b;
     return result;
+}
+*/
+
+int main() {
+    int aRoll1, aRoll2, dRoll1, dRoll2, temp, sum=0;
+    srand(time(0));
+
+    aRoll1 = rand() % 6 + 1;
+    aRoll2 = rand() % 6 + 1;
+    dRoll1 = rand() % 6 + 1;
+    dRoll2 = rand() % 6 + 1;
+
+
+    return 0;
 }
 
