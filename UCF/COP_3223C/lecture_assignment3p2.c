@@ -14,7 +14,9 @@ int main(void) {
     int index;
     double arr[100];
 
-    for (index = 0;i<)
+    for (index = 0; index<100; index++) {
+        
+    }
 
 
 }
