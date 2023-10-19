@@ -12,20 +12,20 @@
 */
 
 int main(void) {
-    //
-    int index, arr[10], count[6] = {};
+    // declaring index, array of size 1000, and array of size 6 to keep track of counts
+    // initializing count with empty curly braces to ensure each element starts at 0
+    int index, arr[1000], count[6] = {};
 
     // seeding the rand number to prevent repeated occurences
     srand(time(NULL));
 
-    //
-    for (index = 0; index < 10; index++) {
+    // creating for loop to iterate over array and assign index values between 1 and 6
+    for (index = 0; index < 1000; index++) {
         arr[index] = rand() % 6 + 1;
-        printf("%d", arr[index]);
     }
 
-    //
-    for (index = 0; index < 10; index++) {
+    // using a for loop and if statement to iterate over array and keep track of how many 
+    for (index = 0; index < 1000; index++) {
         if (arr[index] == 1) count[arr[index]-1]++;
         else if (arr[index] == 2) count[arr[index]-1]++;
         else if (arr[index] == 3) count[arr[index]-1]++;
