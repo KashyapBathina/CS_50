@@ -237,6 +237,13 @@ int main() {
         aRoll2 = temp;
     }
 
+    if (dRoll1 < dRoll2) {
+        temp = dRoll1;
+        dRoll1 = dRoll2;
+        dRoll2 = temp;
+    }
+
+
 
     return 0;
 }
