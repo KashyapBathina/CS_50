@@ -206,7 +206,7 @@ int main() {
 
     // funct call or invoke
     sum = addNum(n1,n2);
-    prinft("Sum=%d", sum);
+    printf("Sum=%d", sum);
 }
 
 int addNum(int a, int b) {
