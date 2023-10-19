@@ -10,7 +10,7 @@
 */
 
 int main(void) {
-    // declaring array of size 10
+    // declaring int array of size 10
     int index, arr[10];
 
     // assigning values to indexes in array using 10 assignment operators

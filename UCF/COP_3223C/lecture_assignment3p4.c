@@ -13,7 +13,7 @@ int main(void) {
     //
     int index, arr[1000], count[6] = {};
 
-    //
+    // seeding the rand number to prevent repeated occurences
     srand(time(NULL));
 
     //
@@ -23,11 +23,11 @@ int main(void) {
 
     //
     for (index = 0; index < 1000; index++) {
-        if (arr[index] == 1) count[0]++;
-        else if (arr[index] == 2) count[1]++;
-        else if (arr[index] == 3) count[2]++;
-        else if (arr[index] == 4) count[3]++;
-        else if (arr[index] == 5) count[4]++;
+        if (arr[index] == 1) count[arr[index]-1]++;
+        else if (arr[index] == 2) count[arr[index]-1]++;
+        else if (arr[index] == 3) count[arr[index]-1]++;
+        else if (arr[index] == 4) count[arr[index]-1]++;
+        else if (arr[index] == 5) count[arr[index]-1]++;
         else count[5]++;
     }
 

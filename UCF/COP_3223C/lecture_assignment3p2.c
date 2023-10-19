@@ -10,11 +10,11 @@
 */
 
 int main(void) {
-    //
+    // declaring index and double array of size 100
     int index;
     double arr[100];
 
-    //
+    // seeding the rand number to prevent repeated occurences
     srand(time(NULL));
 
     for (index = 0; index < 100; index++) {

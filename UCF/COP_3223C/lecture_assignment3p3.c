@@ -13,7 +13,7 @@ int main(void) {
     //
     int index, average, total=0, arr[100];
 
-    //
+    // seeding the rand number to prevent repeated occurences
     srand(time(NULL));
 
     //
