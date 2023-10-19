@@ -197,9 +197,11 @@ char read_char() {
     return ans;
 }
 */
+int addNum();
 
 int main() {
     int n1, n2, sum;
+    printf("Enter 2 numbers: ");
     scanf("%d, %d", &n1, &n2);
 
     // funct call or invoke
