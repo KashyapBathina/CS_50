@@ -34,6 +34,7 @@ Functions: sub program within main that carries out a task
     Types of parameters:
         1. Formal paramaeters--listed in definition, local variables
         2. Actual parramaters--values/expressions that are calling/invoking the function in main so it passed data to function to be called
+    Void: i.e. void funct(int grade), void is return type that returns nothing
 */
 
 /*
@@ -151,6 +152,7 @@ int main() {
 }
 */
 
+/*
 //declare function
 int comp_grade(char grade);
 char read_char();
@@ -194,3 +196,5 @@ char read_char() {
 
     return ans;
 }
+*/
+
