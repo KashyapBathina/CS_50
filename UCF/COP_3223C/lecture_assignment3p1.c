@@ -10,10 +10,10 @@
 */
 
 int main(void) {
-    //
+    // declaring array of size 10
     int index, arr[10];
 
-    //
+    // assigning values to indexes in array using 10 assignment operators
     arr[0] = 10;
     arr[1] = 20;
     arr[2] = 30;
@@ -25,7 +25,7 @@ int main(void) {
     arr[8] = 90;
     arr[9] = 100;
 
-    //
+    // using a for loop to iterate over array and print value in each index
     printf("Values in array: ");
     for (index = 0; index < 10; index++) {
         printf("%d ", arr[index]);
