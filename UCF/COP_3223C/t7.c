@@ -228,6 +228,9 @@ int main() {
     dRoll1 = rand() % 6 + 1;
     dRoll2 = rand() % 6 + 1;
 
+    printf("Attacker's rolls are %d and %d\n", aRoll1, aRoll2);
+    printf("Defender's rolls are %d and %d\n", dRoll1, dRoll2);
+
 
     return 0;
 }
