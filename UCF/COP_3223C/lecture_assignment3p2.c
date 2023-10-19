@@ -22,16 +22,18 @@ int main(void) {
     // seeding the rand number to prevent repeated occurences
     srand(time(NULL));
 
+    // using a for loop to iterate over array and assign each index a random values from 1 to 50
     for (index = 0; index < 100; index++) {
         arr[index] = (double)(rand() % 100 + 1) / 2;
     }
 
-    //
+    // using a for loop to print out the values
     for (index = 0; index < 100; index++) {
-        //
-        if (index % 10 == 0) {
+        //creating new line every ten iterations using % 10 so that each row has ten elements to create a 10X10 grid.
+        if ((index!=0) && (index % 10 == 0)) {
             printf("\n");
         }
+        // spacing out the elements with 6 spaces between each with each num rounded to the 100th decimal place
         printf("%.2lf      ", arr[index]);
     }
 
