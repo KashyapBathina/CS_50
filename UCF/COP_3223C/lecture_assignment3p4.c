@@ -6,7 +6,9 @@
 /*
     name: Kashyap Bathina
     date: 10/18/23
-    purpose: Lorem ipsum dolor sit amet
+    purpose: This programs makes an array of 1000 elements and assigns them random numbers
+    between 1-6 representing sides of a die; then uses array, for loop, and if statements to find how many
+    counts of each number there is (1,2,3..etc.) and then prints # of times each side appears in array.
 */
 
 int main(void) {
