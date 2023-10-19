@@ -1,7 +1,7 @@
+#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <math.h>
 
 /*------------module 6------------------------------------------------------------------------------------------------------------*/
 
@@ -69,16 +69,19 @@ int main() {
 */
 
 #define SIZE 10
-int main() {
+int main()
+{
     int index, temp, numbers[SIZE];
     srand(time(0));
 
-    for (index=0;index<SIZE;index++) {
+    for (index = 0; index < SIZE; index++)
+    {
         numbers[index] = rand() % 100;
     }
 
     printf("Original values: ");
-    for (index=0;index<SIZE;index++) {
+    for (index = 0; index < SIZE; index++)
+    {
         printf("%d ", numbers[index]);
     }
     printf("\n");
@@ -88,14 +91,18 @@ int main() {
     scanf("%d", &val);
 
     int found = 0;
-    for (index=0;index<SIZE;index++) {
-        if (numbers[index]==val) {
-            found =1;
+    for (index = 0; index < SIZE; index++)
+    {
+        if (numbers[index] == val)
+        {
+            found = 1;
         }
     }
 
-    if (found==1) printf("%d was in the array\n", val);
-    else printf("%d was NOT in the array\n", val);
+    if (found == 1)
+        printf("%d was in the array\n", val);
+    else
+        printf("%d was NOT in the array\n", val);
 
     return 0;
 }

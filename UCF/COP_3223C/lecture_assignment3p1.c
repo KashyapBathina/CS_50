@@ -10,6 +10,9 @@
 */
 
 int main(void) {
-    int arr[];
+    //
+    int arr[10];
+
+    // 
 
 }
