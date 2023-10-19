@@ -22,10 +22,9 @@ int main(void) {
     // creating for loop to iterate over array and assign index values between 1 and 6
     for (index = 0; index < 1000; index++) {
         arr[index] = rand() % 6 + 1;
-    }
 
-    // using a for loop and if statement to iterate over array and keep track of how many 
-    for (index = 0; index < 1000; index++) {
+        // using same for loop and if statement to iterate over array and checking what value the random number is
+        // and then adding it to the count array to keep track of how many of each side of die there is
         if (arr[index] == 1) count[arr[index]-1]++;
         else if (arr[index] == 2) count[arr[index]-1]++;
         else if (arr[index] == 3) count[arr[index]-1]++;
@@ -34,7 +33,7 @@ int main(void) {
         else count[5]++;
     }
 
-    //
+    // iterating over count array and printing out how many times the particular side of die was rolled
     for (index = 0; index < 6; index++) {
         printf("%d occurs %d times\n", (index + 1), count[index]);
     }
