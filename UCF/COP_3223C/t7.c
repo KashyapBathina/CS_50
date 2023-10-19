@@ -198,3 +198,17 @@ char read_char() {
 }
 */
 
+int main() {
+    int n1, n2, sum;
+    scanf("%d, %d", &n1, &n2);
+
+    // funct call or invoke
+    sum = addNum(n1,n2);
+    prinft("Sum=%d", sum);
+}
+
+int addNum(int a, int b) {
+    int result = a + b;
+    return result;
+}
+
