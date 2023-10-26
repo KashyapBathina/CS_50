@@ -6,6 +6,9 @@
 /*------------module 7------------------------------------------------------------------------------------------------------------*/
 
 /*
+NOTES: x = *&y – z; means find address of y, go into it, subtract by z, and assign val to x
+       returning a value exits out of a function and does not do lines after that return
+       if the function ends without printing
 2-d Arrays:
     Gen struct: type var[y][x]; where y is row and x is column
                 var[0][0] = 2;
