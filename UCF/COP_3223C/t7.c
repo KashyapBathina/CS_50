@@ -35,8 +35,8 @@ Functions: sub program within main that carries out a task
         1. Give funct what it needs to finihsh the task--pre test, pre-condition, parameter
         2. Use info so function retrurns properly--post tes, post condition, ouput
     Types of parameters:
-        1. Formal paramaeters--listed in definition, local variables
-        2. Actual parramaters--values/expressions that are calling/invoking the function in main so it passed data to function to be called
+        1. Formal paramaeters--listed in definition, local variables, i.e. func(int i)
+        2. Actual parramaters--values/expressions that are calling/invoking the function in main so it passed data to function to be called, i.e. func(6)
     Void: i.e. void funct(int grade), void is return type that returns nothing
 */
 
