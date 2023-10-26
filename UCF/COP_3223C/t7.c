@@ -6,6 +6,8 @@
 /*------------module 7------------------------------------------------------------------------------------------------------------*/
 
 /*
+IMPORTANT: when using a formal paramater--func(int i)--func recieves a copy of the variable, so when you change value of i inside func, only changes copy and not original
+           however, can bypass by passing a "pass by reference" operator or a pointer. Passing a pointer in function can now see memory address of original value and change it using *
 NOTES: x = *&y – z; means find address of y, go into it, subtract by z, and assign val to x
        returning a value exits out of a function and does not do lines after that return
        if the function ends without printing
@@ -35,7 +37,7 @@ Functions: sub program within main that carries out a task
         1. Give funct what it needs to finihsh the task--pre test, pre-condition, parameter
         2. Use info so function retrurns properly--post tes, post condition, ouput
     Types of parameters:
-        1. Formal paramaeters--listed in definition, local variables, i.e. func(int i)
+        1. Formal paramaeters--listed in definition, local variables, i.e. func(int i), look at IMPORTANT, as paramter is just a copy and !affect original
         2. Actual parramaters--values/expressions that are calling/invoking the function in main so it passed data to function to be called, i.e. func(6)
     Void: i.e. void funct(int grade), void is return type that returns nothing
 */
