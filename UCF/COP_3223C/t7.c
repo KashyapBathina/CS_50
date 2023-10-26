@@ -9,8 +9,7 @@
 IMPORTANT: when using a formal paramater--func(int i)--func recieves a copy of the variable, so when you change value of i inside func, only changes copy and not original
            however, can bypass by passing a "pass by reference" operator or a pointer. Passing a pointer in function can now see memory address of original value and change it using *
 NOTES: x = *&y – z; means find address of y, go into it, subtract by z, and assign val to x
-       returning a value exits out of a function and does not do lines after that return
-       if the function ends without printing
+       returning a value exits out of a function and does not do lines after that return 
 2-d Arrays:
     Gen struct: type var[y][x]; where y is row and x is column
                 var[0][0] = 2;
