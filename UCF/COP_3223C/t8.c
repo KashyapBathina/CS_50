@@ -53,7 +53,14 @@ void simpleSort(int vals[], int size) {
 }
 
 void bubbleSort(int vals[], int size) {
+    int i, j;
 
+    // i is slot we are filling to max
+    for (i=length; i>0; i++) {
+
+    }
+
+    
 }
 
 
