@@ -15,6 +15,7 @@
             strlen = returns # of characters
 */
 
+/*
 #define SIZE 20
 #define TESTBUBBLE 0
 void Print_Array(int values[], int length);
@@ -91,4 +92,21 @@ void Fill_Array(int values[], int length, int max) {
     int i;
     for (i=0; i<length; i++)
         values[i] = (rand()%max) + 1;
+}
+*/
+
+int main() {
+    char first[30], last[30];
+    char wholeName[60];
+
+    printf("Enter first name: ");
+    scanf("%s", first);
+    printf("Enter last name: ");
+    scanf("%s", last);
+
+    //print alphabetical first
+    if strcmp(first, last) < 0
+    printf("Your first name comes first alphabetically\n");
+    else printf("Your last name comes first alphabetically\n");
+
 }
