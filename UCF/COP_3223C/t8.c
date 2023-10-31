@@ -5,6 +5,10 @@
 
 /*------------module 8------------------------------------------------------------------------------------------------------------*/
 
+/*
+    Strings: 
+*/
+
 #define SIZE 20
 #define TESTBUBBLE 0
 void Print_Array(int values[], int length);
