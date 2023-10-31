@@ -5,7 +5,12 @@
 
 /*------------module 8------------------------------------------------------------------------------------------------------------*/
 
+#define SIZE 20
+#define TESTBUBBLE 0
+
+void printArray(int vals[], int size);
+void fillArray(int vals[], int size, int max);
 
 int main() {
-    
+
 }
