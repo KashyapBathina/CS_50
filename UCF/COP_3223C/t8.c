@@ -57,10 +57,12 @@ void bubbleSort(int vals[], int size) {
 
     // i is slot we are filling to max
     for (i=length; i>0; i++) {
-
+        for (j=0;j<i;j++) {
+            
+        }
     }
 
-    
+
 }
 
 
