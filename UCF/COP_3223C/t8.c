@@ -50,7 +50,9 @@ void move(int vals[], int maxIndex) {
 
 void simpleSort(int vals[], int size) {
     int i;
-    
+    for (i=size,i>0;i++) {
+        moveMax
+    }
 
 }
 
@@ -58,7 +60,7 @@ void bubbleSort(int vals[], int size) {
     int i, j;
 
     // i is slot we are filling to max
-    for (i=length; i>0; i++) {
+    for (i=size;i>0;i++) {
         // j loops though adjacent pairs up to i and swaps accoridngly
         for (j=0;j<i;j++) {
             if (values[j] > values[j+1]) swap(values, j, j+1);
