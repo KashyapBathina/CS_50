@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <math.h>
+#include <string.h>
 
 /*------------module 8------------------------------------------------------------------------------------------------------------*/
 
@@ -105,13 +106,22 @@ int main() {
     scanf("%s", last);
 
     //print alphabetical first
-    if strcmp(first, last) < 0
+    if (strcmp(first, last) < 0)
     printf("Your first name comes first alphabetically\n");
-    else if strcmp(first, last) == 0
-    printf("Interesting!);
+    else if (strcmp(first, last) == 0)
+    printf("Interesting!");
     else printf("Your last name comes first alphabetically\n");
 
-    printf("first = )
+    printf("first = %s, last = %s\n", first, last);
+
+    strcat(first, last);
+    printf("first = %s, last = %s\n", first, last);
+
+    strcpy(wholeName, first);
+    printf("first = %s, wholename = %s\n", first, wholeName);
+    printf("Your whole name is %d characters.\n", strlen(wholeName));
+
+    return 0;
 
 
 }
