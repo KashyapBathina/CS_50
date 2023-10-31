@@ -49,6 +49,8 @@ void move(int vals[], int maxIndex) {
 }
 
 void simpleSort(int vals[], int size) {
+    int i;
+    
 
 }
 
@@ -63,5 +65,4 @@ void bubbleSort(int vals[], int size) {
         }
     }
 }
-
 
