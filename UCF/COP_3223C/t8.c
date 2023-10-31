@@ -17,4 +17,10 @@ void bubbleSort(int vals[], int size);
 
 int main() {
     int myVals[SIZE];
+    srand(time(NULL));
+
+    fillArray(myVals, SIZE, 100);
+    printf("Original Array: ");
+    printArray(myVals, SIZE);
+
 }
