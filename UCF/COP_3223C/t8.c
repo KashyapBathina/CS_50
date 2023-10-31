@@ -16,5 +16,5 @@ void simpleSort(int vals[], int size);
 void bubbleSort(int vals[], int size);
 
 int main() {
-
+    int myVals[SIZE];
 }
