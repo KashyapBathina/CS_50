@@ -6,7 +6,13 @@
 /*------------module 8------------------------------------------------------------------------------------------------------------*/
 
 /*
-    Strings: 
+    Strings:
+        Char Array: char arr[20]; word[0] = 'h' . . . word[5] = '\0';
+        String.h Library:
+            strcat = string concatenate; append words together using +;
+            strcmp = compare whether 2 strings are same and have same values
+            syrcpy = add a string to another as a copy
+            strlen = returns # of characters
 */
 
 #define SIZE 20
