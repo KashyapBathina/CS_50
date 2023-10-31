@@ -107,6 +107,11 @@ int main() {
     //print alphabetical first
     if strcmp(first, last) < 0
     printf("Your first name comes first alphabetically\n");
+    else if strcmp(first, last) == 0
+    printf("Interesting!);
     else printf("Your last name comes first alphabetically\n");
+
+    printf("first = )
+
 
 }
