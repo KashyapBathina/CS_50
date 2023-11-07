@@ -53,7 +53,7 @@ int main() {
 
 void setUp(struct block *b) {
     printf("Enter number, letter, and color\n");
-    scanf("%d %c %s:m &b-)
+    scanf("%d %c %s", &(b->number), &(b->letter), &(b->color));
 }
 
 void printBlock(struct block b) {
