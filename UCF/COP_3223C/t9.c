@@ -22,12 +22,17 @@ struct block {
 
 // where a & b are instances of the block type
 #define SIZE 3
-void setup(struct block *b);
-void print_block(struct block b);
+void setUp(struct block *b);
+void printBlock(struct block b);
 int equal(struct block a, struct block b);
 
 
 int main() {
     int i, j;
     struct block mySet[SIZE];
+
+    for (i=0;i<SIZE;i++) {
+        setUp(&mySet[i]);
+        printBlock(mySet[i]);
+    }
 }
