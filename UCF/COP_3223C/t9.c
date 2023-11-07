@@ -43,4 +43,25 @@ int main() {
             }
         }
     }
+
+    for (i=0;i<SIZE;i++) {
+        printBlock(mySet[i]);
+    }
+
+    return 0;
 }
+
+void setUp(struct block *b) {
+    
+}
+
+void printBlock(struct block b) {
+
+}
+
+int equal(struct block a, struct block b) {
+
+}
+
+
+
