@@ -7,7 +7,13 @@
 /*------------module 8------------------------------------------------------------------------------------------------------------*/
 
 /*
-    Struct: array that allows you to store related variables of the same type in same struct
+    Struct: array that allows you to store related variables of the same type in same struct, usually put a declaration after #defines
         Gen struct: struct <struct> {
-                
-        }
+                dataType var1;
+                dataType var2;
+            }
+*/
+
+int main() {
+
+}
