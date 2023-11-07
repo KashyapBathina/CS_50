@@ -79,7 +79,8 @@ void fun() {
 }
 
 int main() {
-
+    int b;
+    int c[10];
 }
 
 
