@@ -18,6 +18,7 @@
         2. When we want data structs w/o any limits on upper memory
         3. When you want to use memorry space more efficently
         4. Dynamic allocation creates list of insertions and deletions by manipulatinng adresses: linked lists
+        5. Important to concepts of structs and linked lists
 
 */
 
