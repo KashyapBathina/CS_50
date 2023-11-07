@@ -18,7 +18,7 @@ struct block {
     int num;
     char letter;
     char color[15];
-}
+};
 
 // where a & b are instances of the block type
 #define SIZE 3
@@ -38,7 +38,7 @@ int main() {
 
     for (i=0;i<SIZE;i++) {
         for (j=i+1;j<SIZE;j++) {
-            if (equal(mySet[i],myset[j])) {
+            if (equal(mySet[i], mySet[j])) {
                 printf("Blocks %d and %d are identical\n", i, j);
             }
         }
@@ -53,11 +53,11 @@ int main() {
 
 void setUp(struct block *b) {
     printf("Enter number, letter, and color\n");
-    scanf("%d %c %s", &(b->number), &(b->letter), &(b->color));
+    scanf("%d %c %s", &(b->num), &(b->letter), &(b->color));
 }
 
 void printBlock(struct block b) {
-    printf("%d %c %s", b.number, b.letter, b.color);
+    printf("%d %c %s", b.num, b.letter, b.color);
 }
 
 int equal(struct block a, struct block b) {
