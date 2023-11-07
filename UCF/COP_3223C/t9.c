@@ -12,6 +12,8 @@
                 dataType var1;
                 dataType var2;
             }
+
+    Dynamic Memory Allocation: more productive and efficient
 */
 
 struct block {
