@@ -57,11 +57,12 @@ void setUp(struct block *b) {
 }
 
 void printBlock(struct block b) {
-
+    printf("%d %c %s", b.number, b.letter, b.color);
 }
 
 int equal(struct block a, struct block b) {
-
+    if (a.number == b.number && a.letter == b.letter && !strcmp(a.color, b.color)) return 1;
+    else return 0;
 }
 
 
