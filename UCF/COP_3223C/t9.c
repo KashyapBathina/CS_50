@@ -20,10 +20,14 @@ struct block {
     char color[15];
 }
 
+// where a & b are instances of the block type
+#define SIZE 3
 void setup(struct block *b);
 void print_block(struct block b);
+int equal(struct block a, struct block b);
 
 
 int main() {
-
+    int i, j;
+    struct block mySet[SIZE];
 }
