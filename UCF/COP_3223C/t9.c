@@ -35,4 +35,10 @@ int main() {
         setUp(&mySet[i]);
         printBlock(mySet[i]);
     }
+
+    for (i=0;i<SIZE;i++) {
+        for (j=i+1;j<SIZE;j++) {
+            
+        }
+    }
 }
