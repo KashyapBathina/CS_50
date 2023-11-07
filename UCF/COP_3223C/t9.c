@@ -20,7 +20,9 @@ struct block {
     char color[15];
 }
 
-void setup(struct block *);
+void setup(struct block *b);
+void print_block(struct block b);
+
 
 int main() {
 
