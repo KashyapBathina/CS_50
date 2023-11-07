@@ -13,9 +13,15 @@
                 dataType var2;
             }
 
-    Dynamic Memory Allocation: more productive and efficient
+    Dynamic Memory Allocation: more productive and efficient and has many advantages:
+        1. For when we do not know how much memory we need beforehard
+        2. When we want data structs w/o any limits on upper memory
+        3. When you want to use memorry space more efficently
+        4. Dynamic allocation creates list of insertions and deletions by manipulatinng adresses
+
 */
 
+/*
 struct block {
     int num;
     char letter;
@@ -66,6 +72,14 @@ int equal(struct block a, struct block b) {
     if (a.number == b.number && a.letter == b.letter && !strcmp(a.color, b.color)) return 1;
     else return 0;
 }
+*/
 
+void fun() {
+    int a;
+}
+
+int main() {
+
+}
 
 
