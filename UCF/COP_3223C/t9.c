@@ -38,7 +38,9 @@ int main() {
 
     for (i=0;i<SIZE;i++) {
         for (j=i+1;j<SIZE;j++) {
-            
+            if (equal(mySet[i],myset[j])) {
+                printf("Blocks %d and %d are identical\n", i, j);
+            }
         }
     }
 }
