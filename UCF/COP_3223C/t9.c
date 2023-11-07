@@ -21,7 +21,7 @@
             4. Dynamic allocation creates list of insertions and deletions by manipulatinng adresses: linked lists
             5. Important to concepts of structs and linked lists
         Malloc: used to dynamically assign a single block of memory with a certain size
-            EX: ptr = (cast-type*) malloc(size of bytes);
+            Gen Struct: ptr = (cast-type*) malloc(size of bytes);
 */
 
 /*
