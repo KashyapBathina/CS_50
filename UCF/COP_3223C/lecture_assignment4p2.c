@@ -7,8 +7,8 @@
     name: Kashyap Bathina
     date: 11/6/23
     purpose: This programs takes in a numerical grade from the user and then passes the
-    grade into a function, which determines the alphabetic equivalent per our syllabus.
-    Then outputs
+    grade into a function, which determines the alphabetic--char--equivalent  as per our
+    syllabus. The function returns that to main which prints the letter grade.
 */
 
 //
@@ -36,5 +36,6 @@ char letter_grade(double grade) {
     else if (grade >= 80 && grade <= 89.99) return 'B';
     else if (grade >= 70 && grade <= 79.99) return 'C';
     else if (grade >= 60 && grade <= 69.99) return 'D';
-    else return 'F';
+    else if (grade >=0 && grade <= 59.99) return 'F';
+    else return '?';
 }
