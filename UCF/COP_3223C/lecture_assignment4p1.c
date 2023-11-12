@@ -19,7 +19,7 @@ int main(void) {
     //
     printf("How many elements in array: ");
     scanf("%d", arraySize);
-    array[arraySize];
+    int array[arraySize];
 
     printf("Enter elements with spaces: ");
     for (int i = 0; i < arraySize; i++) {
