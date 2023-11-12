@@ -12,11 +12,11 @@
     size, and returns that double back to main to be outputted.
 */
 
-// declaring our function
+// declaring function average
 double average(int arr[], int size);
 
 int main(void) {
-    // declaring our variables, will declare array after we know size
+    // declaring variables, will declare array after we know size
     int arraySize;
 
     // asking user for size of array, saving it, and declaring array of said size
