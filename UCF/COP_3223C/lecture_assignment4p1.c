@@ -13,16 +13,17 @@
 double average(int arr[], int size);
 
 int main(void) {
-    int arraySize
+    //
+    int arraySize;
 
     //
     printf("How many elements in array: ");
-    scanf("%d", arraySize);
+    scanf("%d", &arraySize);
     int array[arraySize];
 
     printf("Enter elements with spaces: ");
     for (int i = 0; i < arraySize; i++) {
-        scanf("%d", array[i]);
+        scanf("%d", &array[i]);
     }
 
     //
