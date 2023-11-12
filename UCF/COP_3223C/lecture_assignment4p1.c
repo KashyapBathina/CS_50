@@ -37,7 +37,7 @@ int main(void) {
     return 0;
 }
 
-//
+// this function takes in a array and size of array and returns the average of the values in array
 double average(int arr[], int size) {
     // declaring and intialing a variable to zero and then use for loop to find sum of all elements in array
     double avrg = 0;

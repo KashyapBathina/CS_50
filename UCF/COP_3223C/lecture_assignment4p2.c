@@ -29,7 +29,7 @@ int main(void) {
     return 0;
 }
 
-//
+// this function takes in a grade and outputs the letter grade equivalent
 char letter_grade(double grade) {
     // using if statements to determine which letter grade the number falls under as per
     // our syllabus, returns a ? if out of range 0-100
