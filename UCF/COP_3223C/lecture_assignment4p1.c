@@ -14,10 +14,20 @@ double average(int arr[], int size);
 
 int main(void) {
     //
-    int array[] = {78, 90, 56, 99, 88, 68, 92};
+    int array[], arraySize,
 
     //
-    double avrg = average(array, sizeof(array)/sizeof(array[0]));
+    printf("How many elements in array: ");
+    scanf("%d", arraySize);
+    array[arraySize];
+
+    printf("Enter elements with spaces: ");
+    for (int i = 0; i < arraySize; i++) {
+        scanf("%d", array[i]);
+    }
+
+    //
+    double avrg = average(array, arraySize);
 
     //
     printf("Average of Array is: %.2lf\n", avrg);
