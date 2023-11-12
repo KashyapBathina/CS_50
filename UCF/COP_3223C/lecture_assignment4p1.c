@@ -13,8 +13,7 @@
 double average(int arr[], int size);
 
 int main(void) {
-    //
-    int array[], arraySize,
+    int arraySize
 
     //
     printf("How many elements in array: ");
