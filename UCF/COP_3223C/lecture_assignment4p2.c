@@ -6,7 +6,9 @@
 /*
     name: Kashyap Bathina
     date: 11/6/23
-    purpose: This programs lorem ipsum
+    purpose: This programs takes in a numerical grade from the user and then passes the
+    grade into a function, which determines the alphabetic equivalent per our syllabus.
+    Then outputs
 */
 
 //

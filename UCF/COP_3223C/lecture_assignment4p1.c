@@ -19,17 +19,18 @@ int main(void) {
     // declaring our variables, will declare array after we know size
     int arraySize;
 
-    // asking user for size of array and declaring array of said size
+    // asking user for size of array, saving it, and declaring array of said size
     printf("How many elements in array: ");
     scanf("%d", &arraySize);
     int array[arraySize];
 
+    // intializing array through user input for each index
     printf("Enter elements with spaces: ");
     for (int i = 0; i < arraySize; i++) {
         scanf("%d", &array[i]);
     }
 
-    //
+    // calling function average with paramater array and the size of array and the printing it
     double avrg = average(array, arraySize);
     printf("Average of Array is: %.2lf\n", avrg);
 
@@ -38,11 +39,12 @@ int main(void) {
 
 //
 double average(int arr[], int size) {
-    //
+    // declaring and intialing a variable to zero and then use for loop to find sum of all elements in array
     double avrg = 0;
     for (int index = 0; index < size; index++) {
         avrg += arr[index];
     }
 
+    // returning the total sum of the array divided by size of array to get average
     return avrg/size;
 }
