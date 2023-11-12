@@ -28,8 +28,6 @@ int main(void) {
 
     //
     double avrg = average(array, arraySize);
-
-    //
     printf("Average of Array is: %.2lf\n", avrg);
 
     return 0;
