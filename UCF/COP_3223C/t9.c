@@ -30,12 +30,15 @@
             Gen Struct: ptr = realloc(ptr, newSize); where ptr is reallocated with new size 'newSize'
         Linked List: linear data struct in which elements are not stored in a contiguous location, rather they are linkked using pointers
         and forms a series where each nodes stores the data and address of next node.
-            Visualization: Head -> Data/next (node) -> Data/next (node) -> NULL
+            Visualization:
+                Single ll: head -> data/next (node) -> data/next (node) -> NULL
+                Double ll: head -> prev/data/next (node) -> prev/data/next (node) -> NULL
             Benefits:
                 1. dynamic data struct-with size that can be allocated/deallocated in run time for insertion/deletion
                 2. ease of insertion/deletion-elements are simpler than arrays since no elements need to be shifted or deleted, just update adress
                 3. efficient memory utilization-no wasting memory
                 4. implementation-various datat structs can be implemented: stack or que
+                5. for certain data points
 
 */
 
