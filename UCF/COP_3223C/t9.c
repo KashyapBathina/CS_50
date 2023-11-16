@@ -30,7 +30,7 @@
             Gen Struct: ptr = realloc(ptr, newSize); where ptr is reallocated with new size 'newSize'
         Linked List: linear data struct in which elements are not stored in a contiguous location, rather they are linkked using pointers
         and forms a series where each nodes stores the data and address of next node.
-            Head -> Data/next (node) ->
+            Head -> Data/next (node) -> Data/next (node) -> NULL
 */
 
 /*
