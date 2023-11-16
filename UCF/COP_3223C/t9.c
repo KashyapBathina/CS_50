@@ -178,5 +178,7 @@ int main() {
 
     one->next = two;
     two->next = three;
-    
+
+    head = one
+    printLinkedList(head);
 }
