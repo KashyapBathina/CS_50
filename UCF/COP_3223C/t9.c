@@ -28,6 +28,9 @@
             Gen Struct: free(ptr);
         Realloc: used to add or append more memory to whhat is already set aside;
             Gen Struct: ptr = realloc(ptr, newSize); where ptr is reallocated with new size 'newSize'
+        Linked List: linear data struct in which elements are not stored in a contiguous location, rather they are linkked using pointers
+        and forms a series where each nodes stores the data and address of next node.
+            Head -> Data/next (node) ->
 */
 
 /*
@@ -134,4 +137,5 @@ int main()
 For Memory Allocation, Malloc, Calloc, and Free Code/Explanation, use:
 https://www.geeksforgeeks.org/dynamic-memory-allocation-in-c-using-malloc-calloc-free-and-realloc/#
 */
+
 
