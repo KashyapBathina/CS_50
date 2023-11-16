@@ -157,6 +157,14 @@ struct node {
 void printLinkedList(struct node *p) {
     while (p!=NULL) {
         printf("%d", p->value);
-        
+        p = p->next;
     }
+}
+
+int main() {
+    struct node *head;
+    struct node *one = NULL;
+    struct node *two = NULL;
+    struct node *three = NULL;
+
 }
