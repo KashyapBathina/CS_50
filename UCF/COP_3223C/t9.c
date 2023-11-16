@@ -149,4 +149,7 @@ For Memory Allocation, Malloc, Calloc, and Free Code/Explanation, use:
 https://www.geeksforgeeks.org/dynamic-memory-allocation-in-c-using-malloc-calloc-free-and-realloc/#
 */
 
-
+struct node {
+    int value;
+    struct node *next;
+}
