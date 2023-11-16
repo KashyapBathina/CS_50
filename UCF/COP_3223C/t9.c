@@ -152,14 +152,15 @@ https://www.geeksforgeeks.org/dynamic-memory-allocation-in-c-using-malloc-calloc
 struct node {
     int value;
     struct node *next;
-}
+};
 
 void printLinkedList(struct node *p) {
     while (p!=NULL) {
         // -> used to access struct using pointers, . used to access regularly
-        printf("%d", p->value);
+        printf("%d ", p->value);
         p = p->next;
     }
+    printf("\n");
 }
 
 int main() {
@@ -179,6 +180,6 @@ int main() {
     one->next = two;
     two->next = three;
 
-    head = one
+    head = one;
     printLinkedList(head);
 }
