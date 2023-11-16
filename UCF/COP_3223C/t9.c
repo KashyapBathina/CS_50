@@ -38,8 +38,10 @@
                 2. ease of insertion/deletion-elements are simpler than arrays since no elements need to be shifted or deleted, just update adress
                 3. efficient memory utilization-no wasting memory
                 4. implementation-various datat structs can be implemented: stack or que
-                5. for certain data points
-
+                5. uses-good for searching for certain data points
+            Disadvantages:
+                1. random acess-do not allow direct acess to a stored data value, must go through entire list until find
+                2. require more memory to store pointers than array
 */
 
 /*
