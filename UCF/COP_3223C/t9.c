@@ -153,3 +153,7 @@ struct node {
     int value;
     struct node *next;
 }
+
+void printLinkedList(struct node *p);
+
+
