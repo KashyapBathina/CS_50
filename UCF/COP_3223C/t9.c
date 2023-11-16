@@ -154,6 +154,9 @@ struct node {
     struct node *next;
 }
 
-void printLinkedList(struct node *p);
-
-
+void printLinkedList(struct node *p) {
+    while (p!=NULL) {
+        printf("%d", p->value);
+        
+    }
+}
