@@ -20,5 +20,10 @@ void declareHand(int a, int b, int c);
 
 // main function
 int main (void) {
+    
+
+}
+
+void createHand(int a, int b, int c) {
 
 }
