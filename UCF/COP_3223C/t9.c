@@ -11,7 +11,7 @@
         Gen struct: struct name {
                 dataType var1;
                 dataType var2;
-            }
+            };
 
     Dynamic Memory Allocation: more productive and efficient and has many advantages:
         Many Advantages:

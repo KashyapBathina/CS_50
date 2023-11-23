@@ -17,6 +17,13 @@ void createHand(int a, int b, int c);
 void analyzeHand(int a, int b, int c);
 void declareHand(int a, int b, int c);
 
+// creating struct for hand
+struct hand {
+    int num;
+    char letter;
+    char color[15];
+};
+
 
 // main function
 int main (void) {
