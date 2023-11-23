@@ -20,8 +20,8 @@ void declareHand(int a, int b, int c);
 // creating struct for hand
 struct hand {
     int num;
-    char letter;
-    char color[15];
+        char letter;
+        char color[15];
 };
 
 
