@@ -16,11 +16,9 @@
 void createHand(int a, int b, int c);
 void analyzeHand(int a, int b, int c);
 void declareHand(int a, int b, int c);
-int largest_int(int a, int b, int c);
-int largest_int(int a, int b, int c);
 
 
 // main function
 int main (void) {
-    
+
 }
