@@ -20,7 +20,7 @@ void declareHand(int a, int b, int c);
 
 // main function
 int main (void) {
-    
+    ptr = (int*)malloc(n * sizeof(int));
 
 }
 
