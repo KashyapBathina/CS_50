@@ -22,10 +22,11 @@ void declareHand(int a, int b, int c);
 
 // main function
 int main (void) {
-    ptr = (int*)malloc(n * sizeof(int));
-
+    suitsInHand = (int*) malloc(4*sizeof(int));
+    facesInHand = (int*) malloc(14*sizeof(int));
+    
 }
 
 void dealHand(int a, int b, int c) {
-    
+
 }
