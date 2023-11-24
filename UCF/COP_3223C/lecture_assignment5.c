@@ -24,7 +24,7 @@ void declareHand(int a, int b, int c);
 int main (void) {
     suitsInHand = (int*) malloc(4*sizeof(int));
     facesInHand = (int*) malloc(14*sizeof(int));
-    
+
 }
 
 void dealHand(int a, int b, int c) {
