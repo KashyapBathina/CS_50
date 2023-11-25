@@ -70,7 +70,7 @@ void analyzeHand(struct hand *set) {
 
         // check for straight – eg. One each of 5,6,7,8,9
         // locate the first card
-        facae = 0;
+        face = 0;
         while (set[i].facesInHand[face] == 0)
             face++;
 
