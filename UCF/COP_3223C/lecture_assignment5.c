@@ -4,6 +4,9 @@
 #include <math.h>
 #include <string.h>
 #define SIZE 2
+
+
+
 /*
     name: Kashyap Bathina
     date: 11/6/23
@@ -11,9 +14,12 @@
     a function which returns the largest of the three using if statements.
     Then returns that number to main and prints it.
 */
+
+
+
 // creating struct for hand
 struct hand {
-    int suitsInHand[3], facesInHand[13];
+    int suitsInHand[4], facesInHand[13];
 };
 
 // declaring functions
@@ -24,13 +30,12 @@ void declareHand(int a, int b, int c);
 
 // main function
 int main (void) {
-    //
-    struct hand *set;
-    set = (struct hand*) malloc(SIZE * sizeof(struct hand));
+    struct hand set = (struct hand*) malloc(SIZE * sizeof(struct hand));
 
     for (int i=0;i<SIZE;i++) {
         dealHand(set);
     }
+
 }
 
 void dealHand(struct hand *set) {
@@ -47,6 +52,16 @@ void dealHand(struct hand *set) {
             set[i].facesInHand[faceNum-1]++;
             printf("%s of %s\n", suits[suitNum-1], faces[faceNum-1]);
         }
+
+        for (int i=0;i<4;i++) {
+            printf("%d", suitsInHand[i]);
+        }
+        printf("\n");
+        for (int i=0;i<13;i++) {
+            printf("%d", suitsInHand[i]);
+        }
+
+
         printf("\n");
     }
 }
