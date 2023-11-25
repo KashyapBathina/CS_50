@@ -35,13 +35,15 @@ int main (void) {
 
     dealHand(set);
 
-    for (int i=0;i)
-    for (int k=0;k<4;k++) {
-        printf("%d", set[k].suitsInHand[k]);
-    }
-    printf("\n");
-    for (int k=0;k<13;k++) {
-        printf("%d", set[k].facesInHand[k]);
+    for (int i=0;i<SIZE;i++) {
+        for (int j=0;j<4;j++) {
+            printf("%d", set[i].suitsInHand[j]);
+        }
+        printf("\n");
+        for (int j=0;j<13;j++) {
+            printf("%d", set[i].facesInHand[j]);
+        }
+        printf("\n");
     }
 
 
