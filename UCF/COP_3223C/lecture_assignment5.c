@@ -61,9 +61,6 @@ void dealHand(struct hand *set) {
 }
 
 void analyzeHand(struct hand *set, int *straight, int *flush, int *four, int *three, int *pairs) {
-    *straight = TRUE;
-    *pairs = TRUE;
-    /*
     for (int i=0;i<SIZE;i++) {
         int num_consec = 0;
         int suit, face;
