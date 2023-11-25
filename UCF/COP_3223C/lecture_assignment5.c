@@ -37,6 +37,16 @@ int main (void) {
         dealHand(set);
     }
 
+    /*
+    for (int k=0;k<4;k++) {
+        printf("%d", set[k].suitsInHand[k]);
+    }
+    printf("\n");
+    for (int k=0;k<13;k++) {
+        printf("%d", set[k].facesInHand[k]);
+    }
+    */
+
 }
 
 void dealHand(struct hand *set) {
@@ -45,7 +55,6 @@ void dealHand(struct hand *set) {
 
     srand(time(NULL));
     for (int i=0;i<SIZE;i++) {
-        //set[i] = (struct hand) {.suitsInHand = {0}, .facesInHand = {0}};
         printf("Hand #%d: \n", i+1);
         for (int j=0;j<5;j++) {
             int suitNum = rand() % 4 + 1;
@@ -54,16 +63,6 @@ void dealHand(struct hand *set) {
             set[i].facesInHand[faceNum-1]++;
             printf("%s of %s\n", suits[suitNum-1], faces[faceNum-1]);
         }
-
-        for (int k=0;k<4;k++) {
-            printf("%d", set[k].suitsInHand[k]);
-        }
-        printf("\n");
-        for (int k=0;k<13;k++) {
-            printf("%d", set[k].facesInHand[k]);
-        }
-
-
         printf("\n");
     }
 }
