@@ -33,7 +33,7 @@ int main (void) {
     struct hand = (int*) malloc(SIZE * sizeof(struct hand));
 
     for (int i=0;i<SIZE;i++) {
-        dealHand(suitsInHand, facesInHand);
+        dealHand(hand);
     }
 }
 
