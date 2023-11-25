@@ -3,8 +3,9 @@
 #include <time.h>
 #include <math.h>
 #include <string.h>
-#include <stdbool.h>
 #define SIZE 2
+#define TRUE 1
+#define FALSE 0
 
 
 
@@ -19,14 +20,14 @@ struct hand {
 
 // declaring functions
 void dealHand(struct hand *set);
-void analyzeHand(struct hand *set, bool *straight, bool *flush, bool *four, bool *three, bool *pairs);
+void analyzeHand(struct hand *set, int *straight, int *flush, int *four, int *three, int *pairs);
 void declareHand(struct hand *set);
 void announceWinner(struct hand *set);
 
 
 // main function
 int main (void) {
-    bool straight=false, flush=false, four=false, three=false, pairs=false;
+    int straight=0, flush=0, four=0, three=0, pairs=0;
     struct hand *set = (struct hand*) malloc(SIZE * sizeof(struct hand));
 
     dealHand(set);
@@ -59,9 +60,9 @@ void dealHand(struct hand *set) {
     }
 }
 
-void analyzeHand(struct hand *set, bool *straight, bool *flush, bool *four, bool *three, bool *pairs) {
-    straight = true;
-    pairs = true;
+void analyzeHand(struct hand *set, int *straight, int *flush, int *four, int *three, int *pairs) {
+    *straight = TRUE;
+    *pairs = TRUE;
     /*
     for (int i=0;i<SIZE;i++) {
         int num_consec = 0;
