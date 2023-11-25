@@ -6,7 +6,9 @@
         "lecture_assignment1p2": "c",
         "stdlib.h": "c",
         "math.h": "c",
-        "type_traits": "c"
+        "type_traits": "c",
+        "*.tcc": "c",
+        "ostream": "c"
     },
     "gitdoc.enabled": true
 }

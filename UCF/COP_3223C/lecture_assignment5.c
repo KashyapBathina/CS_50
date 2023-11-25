@@ -3,6 +3,7 @@
 #include <time.h>
 #include <math.h>
 #include <string.h>
+#include <stdbool.h>
 #define SIZE 2
 
 
@@ -18,20 +19,26 @@ struct hand {
 
 // declaring functions
 void dealHand(struct hand *set);
-void analyzeHand(struct hand *set);
+void analyzeHand(struct hand *set, bool *straight, bool *flush, bool *four, bool *three, bool *pairs);
 void declareHand(struct hand *set);
 void announceWinner(struct hand *set);
 
 
 // main function
 int main (void) {
-    bool straight, flush, four, three, pairs;
+    bool straight=false, flush=false, four=false, three=false, pairs=false;
     struct hand *set = (struct hand*) malloc(SIZE * sizeof(struct hand));
 
     dealHand(set);
-    analyzeHand(set, straight, flush, four, three, pairs);
-    declareHand(set);
-    announceWinner(set);
+    analyzeHand(set, &straight, &flush, &four, &three, &pairs);
+
+    printf("%d", straight);
+    printf("%d", flush);
+    printf("%d", four);
+    printf("%d", three);
+    printf("%d", pairs);
+    //declareHand(set);
+    //announceWinner(set);
 }
 
 void dealHand(struct hand *set) {
@@ -52,7 +59,10 @@ void dealHand(struct hand *set) {
     }
 }
 
-void analyzeHand(struct hand *set) {
+void analyzeHand(struct hand *set, bool *straight, bool *flush, bool *four, bool *three, bool *pairs) {
+    straight = TRUE;
+    pairs = TRUE;
+    /*
     for (int i=0;i<SIZE;i++) {
         int num_consec = 0;
         int suit, face;
@@ -83,7 +93,7 @@ void analyzeHand(struct hand *set) {
             return;
         }
 
-        /* check for 4-of-a-kind, 3-of-a-kind, and pairs */
+        // check for 4-of-a-kind, 3-of-a-kind, and pairs
         for (face = 0; face < NUM_RANKS; face++) {
             if (set[i].facesInHand[face] == 4)
                 four = TRUE;
@@ -93,5 +103,6 @@ void analyzeHand(struct hand *set) {
                 pairs++;
         }
     }
+*/
 }
 
