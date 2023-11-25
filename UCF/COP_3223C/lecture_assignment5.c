@@ -11,43 +11,42 @@
     a function which returns the largest of the three using if statements.
     Then returns that number to main and prints it.
 */
-
-
-// declaring functions
-void dealHand(struct *set);
-void analyzeHand(int a, int b, int c);
-void declareHand(int a, int b, int c);
-
-
 // creating struct for hand
 struct hand {
-    int suitsInHand[], facesInHand[];
+    int suitsInHand[3], facesInHand[13];
 };
+
+// declaring functions
+void dealHand(struct hand *set);
+void analyzeHand(int a, int b, int c);
+void declareHand(int a, int b, int c);
 
 
 // main function
 int main (void) {
     //
-    struct hand set = (struct*) malloc(SIZE * sizeof(struct hand));
+    struct hand *set;
+    set = (struct hand*) malloc(SIZE * sizeof(struct hand));
 
     for (int i=0;i<SIZE;i++) {
         dealHand(set);
     }
 }
 
-void dealHand(struct *set) {
+void dealHand(struct hand *set) {
     char suits[4][10] = {"Hearts", "Clubs", "Diamonds", "Spades"};
     char faces[13][10] = {"Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King", "Ace"};
 
     srand(time(NULL));
     for (int i=0;i<SIZE;i++) {
-        printf("Hand #%d: \n", i);
+        printf("Hand #%d: \n", i+1);
         for (int j=0;j<5;j++) {
             int suitNum = rand() % 4 + 1;
-            suitsInHand.[suitNum-1]++;
+            set[i].suitsInHand[suitNum-1]++;
             int faceNum = rand() % 13 + 1;
-            facesInHand[faceNum-1]++;
+            set[i].facesInHand[faceNum-1]++;
             printf("%s of %s\n", suits[suitNum-1], faces[faceNum-1]);
         }
+        printf("\n");
     }
 }
