@@ -3,7 +3,7 @@
 #include <time.h>
 #include <math.h>
 #include <string.h>
-
+#define SIZE 2
 /*
     name: Kashyap Bathina
     date: 11/6/23
@@ -12,10 +12,12 @@
     Then returns that number to main and prints it.
 */
 
+
 // declaring functions
 void dealHand(int *suitsInHand, int *facesInHand);
 void analyzeHand(int a, int b, int c);
 void declareHand(int a, int b, int c);
+
 
 // creating struct for hand
 struct hand {
@@ -27,8 +29,11 @@ struct hand {
 // main function
 int main (void) {
     //
-    struct hand set[2];
+    struct hand set[SIZE];
 
+    for (int i=0;i<SIZE;i++) {
+
+    }
     int *suitsInHand, *facesInHand;
     suitsInHand = (int*) malloc(4*sizeof(int));
     facesInHand = (int*) malloc(13*sizeof(int));
