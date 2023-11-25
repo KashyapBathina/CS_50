@@ -29,7 +29,7 @@ int main (void) {
     struct hand *set = (struct hand*) malloc(SIZE * sizeof(struct hand));
 
     dealHand(set);
-    analyzeHand(set);
+    analyzeHand(set, straight, flush, four, three, pairs);
     declareHand(set);
     announceWinner(set);
 }
