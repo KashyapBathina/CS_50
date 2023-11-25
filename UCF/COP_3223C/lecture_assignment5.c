@@ -7,14 +7,7 @@
 
 
 
-/*
-    name: Kashyap Bathina
-    date: 11/6/23
-    purpose: This programs takes in three integers and passes them through
-    a function which returns the largest of the three using if statements.
-    Then returns that number to main and prints it.
-*/
-
+/*Purpose:*/
 
 
 // creating struct for hand
