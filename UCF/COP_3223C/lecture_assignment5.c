@@ -28,10 +28,10 @@ struct hand {
 // main function
 int main (void) {
     //
-    struct hand = (int*) malloc(SIZE * sizeof(struct hand));
+    struct hand set = (int*) malloc(SIZE * sizeof(struct hand));
 
     for (int i=0;i<SIZE;i++) {
-        dealHand(hand);
+        dealHand(set);
     }
 }
 
