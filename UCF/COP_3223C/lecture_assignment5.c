@@ -29,7 +29,7 @@ struct hand {
 // main function
 int main (void) {
     //
-    struct hand set[SIZE];
+    struct hand = m;
 
     for (int i=0;i<SIZE;i++) {
 
