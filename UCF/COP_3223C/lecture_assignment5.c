@@ -72,7 +72,7 @@ void analyzeHand(struct hand *set, int *straight, int *flush, int *four, int *th
         pairs = 0;
 
         // check for flush – 5 cards of the same suit
-        for (suit = 0; suit < SUITS; suit++)
+        for (suit = 0; suit < 4; suit++)
             if (set[i].suitsInHand[suit] == 5)
             flush = TRUE;
 
@@ -83,7 +83,7 @@ void analyzeHand(struct hand *set, int *straight, int *flush, int *four, int *th
             face++;
 
         // count the consecutive non-zero faces
-        for (; face < FACES && set[i].facesInHand[face]; face++)
+        for (; face < 13 && set[i].facesInHand[face]; face++)
             num_consec++;
 
         if (num_consec == 5) {
