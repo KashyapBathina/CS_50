@@ -29,11 +29,11 @@ int main (void) {
     dealHand(suitsInHand, facesInHand);
 
     for (int i=0;i<4;i++) {
-        printf(suitsInHand[i]);
+        printf("%d", suitsInHand[i]);
     }
     printf("\n");
     for (int i=0;i<13;i++) {
-        printf(suitsInHand[facesInHand]);
+        printf("%d", suitsInHand[i]);
     }
 }
 
