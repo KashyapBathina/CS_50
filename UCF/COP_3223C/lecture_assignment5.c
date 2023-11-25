@@ -27,14 +27,7 @@ int main (void) {
     facesInHand = (int*) malloc(13*sizeof(int));
 
     dealHand(suitsInHand, facesInHand);
-
-    for (int i=0;i<4;i++) {
-        printf("%d", suitsInHand[i]);
-    }
-    printf("\n");
-    for (int i=0;i<13;i++) {
-        printf("%d", suitsInHand[i]);
-    }
+    
 }
 
 void dealHand(int *suitsInHand, int *facesInHand) {
