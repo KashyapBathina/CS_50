@@ -34,19 +34,7 @@ int main (void) {
     struct hand *set = (struct hand*) malloc(SIZE * sizeof(struct hand));
 
     dealHand(set);
-
-    /*
-    for (int i=0;i<SIZE;i++) {
-        for (int j=0;j<4;j++) {
-            printf("%d", set[i].suitsInHand[j]);
-        }
-        printf("\n");
-        for (int j=0;j<13;j++) {
-            printf("%d", set[i].facesInHand[j]);
-        }
-        printf("\n");
-    }
-    */
+    
 
 }
 
@@ -64,15 +52,6 @@ void dealHand(struct hand *set) {
             set[i].facesInHand[faceNum-1]++;
             printf("%s of %s\n", suits[suitNum-1], faces[faceNum-1]);
         }
-        printf("\n");
-        for (int j=0;j<4;j++) {
-            printf("%d", set[i].suitsInHand[j]);
-        }
-        printf("\n");
-        for (int j=0;j<13;j++) {
-            printf("%d", set[i].facesInHand[j]);
-        }
-        printf("\n");
         printf("\n");
     }
 }
