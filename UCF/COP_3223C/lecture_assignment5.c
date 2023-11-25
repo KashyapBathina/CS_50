@@ -45,8 +45,8 @@ void dealHand(struct hand *set) {
 
     srand(time(NULL));
     for (int i=0;i<SIZE;i++) {
-        set[i] = {.suitsInHand = {0}};
-        set[i] = {.facesInHand = {0}};
+        set->suitsInHand[i] = {0};
+        set->facesInHand[i] = {0};
         printf("Hand #%d: \n", i+1);
         for (int j=0;j<5;j++) {
             int suitNum = rand() % 4 + 1;
