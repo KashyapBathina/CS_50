@@ -25,8 +25,9 @@ struct hand {
 
 // declaring functions
 void dealHand(struct hand *set);
-void analyzeHand(int a, int b, int c);
-void declareHand(int a, int b, int c);
+void analyzeHand(struct hand *set);
+void declareHand(struct hand *set);
+void announceWinner(struct hand *set);
 
 
 // main function
@@ -34,8 +35,9 @@ int main (void) {
     struct hand *set = (struct hand*) malloc(SIZE * sizeof(struct hand));
 
     dealHand(set);
-
-
+    analyzeHand(set);
+    declareHand(set);
+    announceWinner(set);
 }
 
 void dealHand(struct hand *set) {
@@ -57,43 +59,45 @@ void dealHand(struct hand *set) {
 }
 
 void analyzeHand() {
-    int num_consec = 0;
-    int rank, suit;
+    for (int i=0;i<SIZE;i++) {
+        int num_consec = 0;
+        int rank, suit;
 
-    straight = FALSE;
-    flush = FALSE;
-    four = FALSE;
-    three = FALSE;
-    pairs = 0;
+        straight = FALSE;
+        flush = FALSE;
+        four = FALSE;
+        three = FALSE;
+        pairs = 0;
 
-    // check for flush – 5 cards of the same suit
-    for (suit = 0; suit < SUITS; suit++)
-        if (suitsInHand[suit] == 5)
-        flush = TRUE;
+        // check for flush – 5 cards of the same suit
+        for (suit = 0; suit < SUITS; suit++)
+            if (suitsInHand[suit] == 5)
+            flush = TRUE;
 
-    // check for straight – eg. One each of 5,6,7,8,9
-    // locate the first card
-    rank = 0;
-    while (facesInHand[rank] == 0)
-        rank++;
+        // check for straight – eg. One each of 5,6,7,8,9
+        // locate the first card
+        rank = 0;
+        while (facesInHand[rank] == 0)
+            rank++;
 
-    // count the consecutive non-zero faces
-    for (; rank < FACES && facesInHand[rank]; rank++)
-        num_consec++;
+        // count the consecutive non-zero faces
+        for (; rank < FACES && facesInHand[rank]; rank++)
+            num_consec++;
 
-    if (num_consec == 5) {
-        straight = TRUE;
-        return;
-    }
+        if (num_consec == 5) {
+            straight = TRUE;
+            return;
+        }
 
-    /* check for 4-of-a-kind, 3-of-a-kind, and pairs */
-    for (rank = 0; rank < NUM_RANKS; rank++) {
-        if (facesInHand[rank] == 4)
-            four = TRUE;
-        if (facesInHand[rank] == 3)
-            three = TRUE;
-        if (facesInHand[rank] == 2)
-            pairs++;
+        /* check for 4-of-a-kind, 3-of-a-kind, and pairs */
+        for (rank = 0; rank < NUM_RANKS; rank++) {
+            if (facesInHand[rank] == 4)
+                four = TRUE;
+            if (facesInHand[rank] == 3)
+                three = TRUE;
+            if (facesInHand[rank] == 2)
+                pairs++;
+        }
     }
 }
 
