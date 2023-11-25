@@ -92,7 +92,7 @@ void analyzeHand(struct hand *set, int *straight, int *flush, int *four, int *th
         }
 
         // check for 4-of-a-kind, 3-of-a-kind, and pairs
-        for (face = 0; face < NUM_RANKS; face++) {
+        for (face = 0; face < 13; face++) {
             if (set[i].facesInHand[face] == 4)
                 four = TRUE;
             if (set[i].facesInHand[face] == 3)
