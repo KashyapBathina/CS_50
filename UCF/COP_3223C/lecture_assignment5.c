@@ -55,7 +55,7 @@ void dealHand(struct hand *set) {
 void analyzeHand(struct hand *set) {
     for (int i=0;i<SIZE;i++) {
         int num_consec = 0;
-        int rank, suit;
+        int suit, face;
 
         straight = FALSE;
         flush = FALSE;
@@ -70,12 +70,12 @@ void analyzeHand(struct hand *set) {
 
         // check for straight – eg. One each of 5,6,7,8,9
         // locate the first card
-        rank = 0;
-        while (set[i].facesInHand[rank] == 0)
-            rank++;
+        facae = 0;
+        while (set[i].facesInHand[face] == 0)
+            face++;
 
         // count the consecutive non-zero faces
-        for (; rank < FACES && set[i].facesInHand[rank]; rank++)
+        for (; face < FACES && set[i].facesInHand[face]; face++)
             num_consec++;
 
         if (num_consec == 5) {
@@ -84,12 +84,12 @@ void analyzeHand(struct hand *set) {
         }
 
         /* check for 4-of-a-kind, 3-of-a-kind, and pairs */
-        for (rank = 0; rank < NUM_RANKS; rank++) {
-            if (set[i].facesInHand[rank] == 4)
+        for (face = 0; face < NUM_RANKS; face++) {
+            if (set[i].facesInHand[face] == 4)
                 four = TRUE;
-            if (set[i].facesInHand[rank] == 3)
+            if (set[i].facesInHand[face] == 3)
                 three = TRUE;
-            if (set[i].facesInHand[rank] == 2)
+            if (set[i].facesInHand[face] == 2)
                 pairs++;
         }
     }

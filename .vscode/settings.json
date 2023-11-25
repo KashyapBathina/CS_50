@@ -5,7 +5,8 @@
         "stdio.h": "c",
         "lecture_assignment1p2": "c",
         "stdlib.h": "c",
-        "math.h": "c"
+        "math.h": "c",
+        "type_traits": "c"
     },
     "gitdoc.enabled": true
 }
