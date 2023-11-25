@@ -22,9 +22,7 @@ void declareHand(int a, int b, int c);
 // creating struct for hand
 struct hand {
     int *suitsInHand, *facesInHand;
-    suitsInHand = (int*) malloc(4*sizeof(int));
-    facesInHand = (int*) malloc(13*sizeof(int));
-}
+};
 
 
 // main function
