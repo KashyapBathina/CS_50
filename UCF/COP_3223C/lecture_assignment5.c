@@ -18,6 +18,10 @@ void analyzeHand(int a, int b, int c);
 void declareHand(int a, int b, int c);
 
 // creating struct for hand
+struct hand {
+    int *suitsInHand;
+    int *facesInHand;
+}
 
 
 // main function
@@ -27,7 +31,7 @@ int main (void) {
     facesInHand = (int*) malloc(13*sizeof(int));
 
     dealHand(suitsInHand, facesInHand);
-    
+
 }
 
 void dealHand(int *suitsInHand, int *facesInHand) {
