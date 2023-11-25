@@ -25,6 +25,7 @@ void announceWinner(struct hand *set);
 
 // main function
 int main (void) {
+    bool straight, flush, four, three, pairs;
     struct hand *set = (struct hand*) malloc(SIZE * sizeof(struct hand));
 
     dealHand(set);
