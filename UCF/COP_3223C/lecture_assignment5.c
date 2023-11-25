@@ -14,7 +14,7 @@
 
 
 // declaring functions
-void dealHand(int *suitsInHand, int *facesInHand);
+void dealHand(struct *set);
 void analyzeHand(int a, int b, int c);
 void declareHand(int a, int b, int c);
 
@@ -35,19 +35,19 @@ int main (void) {
     }
 }
 
-void dealHand(int *suitsInHand, int *facesInHand) {
+void dealHand(struct *set) {
     char suits[4][10] = {"Hearts", "Clubs", "Diamonds", "Spades"};
     char faces[13][10] = {"Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King", "Ace"};
 
     srand(time(NULL));
-    printf("Hand #1: \n");
-
-    for (int i=0;i<5;i++) {
-        //generate rand num where 0<=x<N
-        int suitNum = rand() % 4 + 1;
-        suitsInHand[suitNum-1]++;
-        int faceNum = rand() % 13 + 1;
-        facesInHand[faceNum-1]++;
-        printf("%s of %s\n", suits[suitNum-1], faces[faceNum-1]);
+    for (int i=0;i<SIZE;i++) {
+        printf("Hand #%d: \n", i);
+        for (int j=0;j<5;j++) {
+            int suitNum = rand() % 4 + 1;
+            suitsInHand[suitNum-1]++;
+            int faceNum = rand() % 13 + 1;
+            facesInHand[faceNum-1]++;
+            printf("%s of %s\n", suits[suitNum-1], faces[faceNum-1]);
+        }
     }
 }
