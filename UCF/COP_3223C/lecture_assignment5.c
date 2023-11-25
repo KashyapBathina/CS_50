@@ -21,8 +21,9 @@ void declareHand(int a, int b, int c);
 
 // creating struct for hand
 struct hand {
-    int suitsInHand = (int*) malloc(4*sizeof(int));
-    int facesInHand = (int*) malloc(13*sizeof(int));
+    int *suitsInHand, *facesInHand;
+    suitsInHand = (int*) malloc(4*sizeof(int));
+    facesInHand = (int*) malloc(13*sizeof(int));
 }
 
 
@@ -30,10 +31,6 @@ struct hand {
 int main (void) {
     //
     struct hand = (int*) malloc(SIZE * sizeof(int));
-
-    int *suitsInHand, *facesInHand;
-    suitsInHand = (int*) malloc(4*sizeof(int));
-    facesInHand = (int*) malloc(13*sizeof(int));
 
     dealHand(suitsInHand, facesInHand);
 
