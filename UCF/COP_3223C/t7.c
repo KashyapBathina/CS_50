@@ -223,6 +223,7 @@ int addNum(int a, int b) {
 }
 */
 
+/*
 int main() {
     int aRoll1, aRoll2, dRoll1, dRoll2, temp, sum=0;
     srand(time(0));
@@ -252,6 +253,38 @@ int main() {
 
     printf("The attacker killed %d enemies\n", sum);
 
+
+    return 0;
+}
+*/
+
+// Pass by reference
+int global_Var = 42;
+
+// function to change pointer value
+
+/* Passing by value would be below and value ! change b/c value duplicated in void function and doesn't change original value
+void changePointerValue(int var)
+{
+    var = &global_Var;
+}
+*/
+void changePointerValue(int* p)
+{
+    p = &global_Var;
+}
+
+int main()
+{
+    int var = 23;
+    int* ptr_to_var = &var;
+
+
+    printf("Before : %d", *ptr_to_var);
+
+    changePointerValue(ptr_to_var);
+
+    printf("After : %d", *ptr_to_var);
 
     return 0;
 }

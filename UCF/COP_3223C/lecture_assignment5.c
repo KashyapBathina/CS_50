@@ -13,7 +13,7 @@
 */
 
 // declaring functions
-void dealHand(int a, int b, int c);
+void dealHand(int *suitsInHand, int *facesInHand);
 void analyzeHand(int a, int b, int c);
 void declareHand(int a, int b, int c);
 
@@ -22,11 +22,34 @@ void declareHand(int a, int b, int c);
 
 // main function
 int main (void) {
+    int *suitsInHand, *facesInHand;
     suitsInHand = (int*) malloc(4*sizeof(int));
-    facesInHand = (int*) malloc(14*sizeof(int));
+    facesInHand = (int*) malloc(13*sizeof(int));
 
+    dealHand(suitsInHand, facesInHand);
+
+    for (int i=0;i<4;i++) {
+        printf(suitsInHand[i]);
+    }
+    printf("\n");
+    for (int i=0;i<13;i++) {
+        printf(suitsInHand[facesInHand]);
+    }
 }
 
-void dealHand(int a, int b, int c) {
+void dealHand(int *suitsInHand, int *facesInHand) {
+    char suits[4][10] = {"Hearts", "Clubs", "Diamonds", "Spades"};
+    char faces[13][10] = {"Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King", "Ace"};
 
+    srand(time(NULL));
+    printf("Hand #1: \n");
+
+    for (int i=0;i<5;i++) {
+        //generate rand num where 0<=x<N
+        int suitNum = rand() % 4 + 1;
+        suitsInHand[suitNum-1]++;
+        int faceNum = rand() % 13 + 1;
+        facesInHand[faceNum-1]++;
+        printf("%s of %s\n", suits[suitNum-1], faces[faceNum-1]);
+    }
 }
