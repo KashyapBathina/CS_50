@@ -19,8 +19,7 @@
 
 // creating struct for hand
 struct hand {
-    int suitsInHand[4] = {};
-    facesInHand[13] = {};
+    int suitsInHand[4], facesInHand[13];
 };
 
 // declaring functions
@@ -54,12 +53,12 @@ void dealHand(struct hand *set) {
             printf("%s of %s\n", suits[suitNum-1], faces[faceNum-1]);
         }
 
-        for (int k=0;i<4;i++) {
-            printf("%d", set[i].suitsInHand[k]);
+        for (int k=0;k<4;k++) {
+            printf("%d", set[k].suitsInHand[k]);
         }
         printf("\n");
-        for (int k=0;i<13;i++) {
-            printf("%d", set[i].facesInHand[k]);
+        for (int k=0;k<13;k++) {
+            printf("%d", set[k].facesInHand[k]);
         }
 
 
