@@ -29,11 +29,8 @@ struct hand {
 // main function
 int main (void) {
     //
-    struct hand = m;
+    struct hand = (int*) malloc(SIZE * sizeof(int));
 
-    for (int i=0;i<SIZE;i++) {
-
-    }
     int *suitsInHand, *facesInHand;
     suitsInHand = (int*) malloc(4*sizeof(int));
     facesInHand = (int*) malloc(13*sizeof(int));
