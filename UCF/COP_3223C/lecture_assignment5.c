@@ -21,7 +21,7 @@ void declareHand(int a, int b, int c);
 
 // creating struct for hand
 struct hand {
-    int *suitsInHand, *facesInHand;
+    int suitsInHand[], facesInHand[];
 };
 
 
@@ -44,7 +44,7 @@ void dealHand(struct *set) {
         printf("Hand #%d: \n", i);
         for (int j=0;j<5;j++) {
             int suitNum = rand() % 4 + 1;
-            suitsInHand[suitNum-1]++;
+            suitsInHand.[suitNum-1]++;
             int faceNum = rand() % 13 + 1;
             facesInHand[faceNum-1]++;
             printf("%s of %s\n", suits[suitNum-1], faces[faceNum-1]);
