@@ -19,7 +19,8 @@
 
 // creating struct for hand
 struct hand {
-    int suitsInHand[4], facesInHand[13];
+    int suitsInHand[4] = {};
+    facesInHand[13] = {};
 };
 
 // declaring functions
