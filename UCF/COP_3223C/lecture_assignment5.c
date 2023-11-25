@@ -19,8 +19,8 @@
 
 // creating struct for hand
 struct hand {
-    int suits[4] = {0};
-    int faces[13] = {0};
+    int suits[4];
+    int faces[13];
 };
 
 // declaring functions
@@ -45,6 +45,8 @@ void dealHand(struct hand *set) {
 
     srand(time(NULL));
     for (int i=0;i<SIZE;i++) {
+        set[i].suitsInHand[] = {0};
+        set[i].facesInHand[] = {0};
         printf("Hand #%d: \n", i+1);
         for (int j=0;j<5;j++) {
             int suitNum = rand() % 4 + 1;
