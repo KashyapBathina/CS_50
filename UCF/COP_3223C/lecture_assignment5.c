@@ -134,40 +134,48 @@ void declareHand(struct hand *set) {
             printf("You have a %s!", hands[set[i].handValue]);
         }
         // straight flush
-        else if (set[i].straight==TRUE && set[i].flush==TRUE) {
+        else if (set[i].straight==TRUE && set[i].flush==TRUE)
             set[i].handValue = 9;
-        }
+            printf("You have a %s!", hands[set[i].handValue]);
+
         // four of a kind
-        else if (set[i].four==TRUE) {
+        else if (set[i].four==TRUE)
             set[i].handValue = 8;
-        }
+            printf("You have a %s!", hands[set[i].handValue]);
+
         // full house
-        else if () {
+        else if (set[i].three==TRUE && set[i].pair==1) {
             set[i].handValue = 7;
-        }
+            printf("You have a %s!", hands[set[i].handValue]);
+
         // flush
-        else if (set[i].flush==TRUE) {
+        else if (set[i].flush==TRUE)
             set[i].handValue = 6;
-        }
+            printf("You have a %s!", hands[set[i].handValue]);
+
         // straight
-        else if (set[i].straight==TRUE) {
+        else if (set[i].straight==TRUE)
             set[i].handValue = 5;
-        }
+            printf("You have a %s!", hands[set[i].handValue]);
+
         // three of a kind
-        else if (set[i].three==TRUE) {
+        else if (set[i].three==TRUE)
             set[i].handValue = 4;
-        }
+            printf("You have a %s!", hands[set[i].handValue]);
+
         // two pair
-        else if (set[i].pairs==2) {
+        else if (set[i].pairs==2)
             set[i].handValue = 3;
-        }
+            printf("You have a %s!", hands[set[i].handValue]);
+
         // pair
-        else if (set[i].pairs==1) {
+        else if (set[i].pairs==1)
             set[i].handValue = 2;
-        }
+            printf("You have a %s!", hands[set[i].handValue
+
         // high card
-        else {
+        else
             set[i].handValue = 1;
-        }
+            printf("You have a %s!", hands[set[i].handValue]);
     }
 }
