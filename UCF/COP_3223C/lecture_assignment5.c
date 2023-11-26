@@ -16,7 +16,7 @@
 struct hand {
     int suitsInHand[4];
     int facesInHand[13];
-    int royal, straight, flush, four, three, pairs;
+    int straight, flush, four, three, pairs;
     int handValue;
 };
 
@@ -81,9 +81,8 @@ void dealHand(struct hand *set) {
 void analyzeHand(struct hand *set) {
     for (int i=0;i<SIZE;i++) {
         int num_consec = 0;
-        int suit, face, start;
+        int suit, face,
 
-        set[i].royal = FALSE;
         set[i].straight = FALSE;
         set[i].flush = FALSE;
         set[i].four = FALSE;
@@ -101,14 +100,11 @@ void analyzeHand(struct hand *set) {
         while (set[i].facesInHand[face] == 0)
             face++;
 
-        start = face;
         // count the consecutive non-zero faces
         for (; face < 13 && set[i].facesInHand[face]; face++)
             num_consec++;
 
         if (num_consec == 5) {
-            if (start=8)
-                set[i].royal = TRUE;
             set[i].straight = TRUE;
             return;
         }
@@ -133,9 +129,10 @@ void declareHand(struct hand *set) {
         set[i].handValue = 0;
 
         // royal flush
-        if (set && set[i].straight==TRUE && set[i].flush==TRUE) {
+        if (set[i].straight==TRUE && set[i].flush==TRUE) {
             set[i].handValue = 10;
             printf("You have a %s!", hands[set[i].handValue]);
+            break;
         }
         // straight flush
         else if (set[i].straight==TRUE && set[i].flush==TRUE)
@@ -181,5 +178,6 @@ void declareHand(struct hand *set) {
         else
             set[i].handValue = 1;
             printf("You have a %s!", hands[set[i].handValue]);
+        }
     }
 }
