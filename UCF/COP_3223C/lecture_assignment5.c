@@ -105,6 +105,8 @@ void analyzeHand(struct hand *set) {
             num_consec++;
 
         if (num_consec == 5) {
+            if ()
+
             set[i].straight = TRUE;
             return;
         }
