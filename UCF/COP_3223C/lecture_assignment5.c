@@ -129,7 +129,7 @@ void declareHand(struct hand *set) {
         set[i].handValue = 0;
 
         // royal flush
-        if () {
+        if (set && set[i].straight==TRUE && set[i].flush==TRUE) {
             set[i].handValue = 10;
             printf("You have a %s!", hands[set[i].handValue]);
         }
