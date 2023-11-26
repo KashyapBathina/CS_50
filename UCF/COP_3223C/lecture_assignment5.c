@@ -7,7 +7,7 @@
 #define TRUE 1
 #define FALSE 0
 
-
+// PROBLEM: GETTING TWO OF SAME CARDS: IE SPADES OF SIX SPADES OF SIX  . . .
 
 /*Purpose:*/
 
