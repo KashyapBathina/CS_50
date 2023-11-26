@@ -122,7 +122,7 @@ void analyzeHand(struct hand *set) {
 }
 
 void declareHand(struct hand *set) {
-    char hands[10][20] = {"High Card", "Pair", "Two Pair", "Three of a Kind", "Straight", "Flush",
+    char hands[10][20] = {"High Card", "PAIR", "Two Pair", "Three of a Kind", "Straight", "Flush",
                         "Full House", "Four of a Kind", "Straight Flush", "Royal Flush"};
 
     for (int i=0;i<SIZE;i++) {
@@ -131,13 +131,14 @@ void declareHand(struct hand *set) {
         // royal flush
         if () {
             set[i].handValue = 10;
+            printf("You have a %s card" )
         }
         // straight flush
         else if (set[i].straight==TRUE && set[i].flush==TRUE) {
             set[i].handValue = 9;
         }
         // four of a kind
-        else if (set[i].four=TRUE) {
+        else if (set[i].four==TRUE) {
             set[i].handValue = 8;
         }
         // full house
@@ -145,27 +146,27 @@ void declareHand(struct hand *set) {
             set[i].handValue = 7;
         }
         // flush
-        else if (set[i].flush=TRUE) {
+        else if (set[i].flush==TRUE) {
             set[i].handValue = 6;
         }
         // straight
-        else if (set[i].straight=TRUE) {
+        else if (set[i].straight==TRUE) {
             set[i].handValue = 5;
         }
         // three of a kind
-        else if (set[i].three=TRUE) {
+        else if (set[i].three==TRUE) {
             set[i].handValue = 4;
         }
         // two pair
-        else if (set[i].straight=TRUE) {
+        else if (set[i].pairs==2) {
             set[i].handValue = 3;
         }
         // pair
-        else if () {
+        else if (set[i].pairs==1) {
             set[i].handValue = 2;
         }
         // high card
-        else () {
+        else {
             set[i].handValue = 1;
         }
     }
