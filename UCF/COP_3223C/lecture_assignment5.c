@@ -130,7 +130,7 @@ void declareHand(struct hand *set) {
 
         // royal flush
         if () {
-            printf
+            set[i].handValue = 10;
         }
         // straight flush
         else if (set[i].straight==TRUE && set[i].flush==TRUE) {
@@ -142,31 +142,31 @@ void declareHand(struct hand *set) {
         }
         // full house
         else if () {
-
+            set[i].handValue = 7;
         }
         // flush
-        else if () {
-
+        else if (set[i].flush=TRUE) {
+            set[i].handValue = 6;
         }
         // straight
-        else if () {
-
+        else if (set[i].straight=TRUE) {
+            set[i].handValue = 5;
         }
         // three of a kind
-        else if () {
-
+        else if (set[i].three=TRUE) {
+            set[i].handValue = 4;
         }
         // two pair
-        else if () {
-
+        else if (set[i].straight=TRUE) {
+            set[i].handValue = 3;
         }
         // pair
         else if () {
-
+            set[i].handValue = 2;
         }
         // high card
         else () {
-            
+            set[i].handValue = 1;
         }
     }
 }
