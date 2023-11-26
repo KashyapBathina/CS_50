@@ -33,6 +33,7 @@ int main (void) {
     dealHand(set);
     analyzeHand(set);
 
+    /*
     for (int i=0;i<SIZE;i++) {
         for (int j=0;j<4;j++) {
             printf("%d", set[i].suitsInHand[j]);
@@ -53,6 +54,7 @@ int main (void) {
         printf("%d ", set[i].pairs);
         printf("\n");
     }
+    */
     //declareHand(set);
     //announceWinner(set);
 }
