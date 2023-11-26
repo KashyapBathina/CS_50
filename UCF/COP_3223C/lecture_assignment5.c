@@ -122,8 +122,8 @@ void analyzeHand(struct hand *set) {
 }
 
 void declareHand(struct hand *set) {
-    char hands[10][20] = {"High Card", "PAIR", "Two Pair", "Three of a Kind", "Straight", "Flush",
-                        "Full House", "Four of a Kind", "Straight Flush", "Royal Flush"};
+    char hands[10][20] = {"HIGH CARD", "PAIR", "TWO PAIR", "THREE OF A KIND", "STRAIGHT", "FLUSH",
+                        "FULL HOUSE", "FOUR OF A KIND", "STRAIGHT FLUSH", "ROYAL FLUSH"};
 
     for (int i=0;i<SIZE;i++) {
         set[i].handValue = 0;
@@ -131,7 +131,7 @@ void declareHand(struct hand *set) {
         // royal flush
         if () {
             set[i].handValue = 10;
-            printf("You have a %s card" )
+            printf("You have a %s!", hands[set[i].handValue]);
         }
         // straight flush
         else if (set[i].straight==TRUE && set[i].flush==TRUE) {
