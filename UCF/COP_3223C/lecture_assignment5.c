@@ -81,7 +81,7 @@ void dealHand(struct hand *set) {
 void analyzeHand(struct hand *set) {
     for (int i=0;i<SIZE;i++) {
         int num_consec = 0;
-        int suit, face,
+        int suit, face;
 
         set[i].straight = FALSE;
         set[i].flush = FALSE;
@@ -132,8 +132,8 @@ void declareHand(struct hand *set) {
         // royal flush
         if (set[i].straight==TRUE && set[i].flush==TRUE) {
             int royalFlush = 0;
-            for (int i=8;i<13;i++) {
-                if (set[i].facesInHand[i]==1)
+            for (int j=8;j<13;j++) {
+                if (set[j].facesInHand[j]==1)
                     royalFlush++;
             }
 
