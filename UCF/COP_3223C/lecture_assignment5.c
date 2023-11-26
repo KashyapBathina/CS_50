@@ -121,5 +121,5 @@ void analyzeHand(struct hand *set) {
 }
 
 void declareHand(struct hand *set) {
-    
+    char hands[4][20] = {"High Card", "Clubs", "Diamonds", "Spades"};
 }
