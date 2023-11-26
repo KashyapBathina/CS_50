@@ -34,6 +34,18 @@ int main (void) {
     analyzeHand(set);
 
     for (int i=0;i<SIZE;i++) {
+        for (int j=0;j<4;j++) {
+            printf("%d", set[i].suitsInHand[j]);
+        }
+        printf("\n");
+        for (int j=0;j<13;j++) {
+            printf("%d", set[i].facesInHand[j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+
+    for (int i=0;i<SIZE;i++) {
         printf("%d ", set[i].straight);
         printf("%d ", set[i].flush);
         printf("%d ", set[i].four);
