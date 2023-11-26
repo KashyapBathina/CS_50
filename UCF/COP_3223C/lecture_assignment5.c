@@ -17,6 +17,7 @@ struct hand {
     int suitsInHand[4];
     int facesInHand[13];
     int straight, flush, four, three, pairs;
+    int handValue;
 };
 
 // declaring functions
@@ -124,6 +125,14 @@ void declareHand(struct hand *set) {
     char hands[10][20] = {"High Card", "Pair", "Two Pair", "Three of a Kind", "Straight", "Flush",
                         "Full House", "Four of a Kind", "Straight Flush", "Royal Flush"};
 
-    set[i].straight, set[i].flush, set[i].four, set[i].three, set[i].pairs;
-    if ()
+    for (int i=0;i<SIZE;i++) {
+        set[i].handValue = 0;
+
+        if () {
+            printf
+        }
+        else if (set[i].straight==TRUE && set[i].flush==TRUE) {
+            set[i].handValue = 9;
+        }
+    }
 }
