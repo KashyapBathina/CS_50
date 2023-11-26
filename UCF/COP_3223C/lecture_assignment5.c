@@ -142,6 +142,7 @@ void declareHand(struct hand *set) {
                 printf("You have a %s!\n", hands[set[i].handValue]);
                 return;
             }
+            else continue;
         }
         // straight flush
         else if (set[i].straight==TRUE && set[i].flush==TRUE)
