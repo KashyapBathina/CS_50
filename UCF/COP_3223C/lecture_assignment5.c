@@ -7,7 +7,12 @@
 #define TRUE 1
 #define FALSE 0
 
-// PROBLEM: GETTING TWO OF SAME CARDS: IE SPADES OF SIX SPADES OF SIX  . . .
+/*
+TO-DO:
+    1. PROBLEM: GETTING TWO OF SAME CARDS: IE SPADES OF SIX SPADES OF SIX  . . .
+    2. Implement case for tie in announceWinner function
+*/
+
 
 /*Purpose:*/
 
@@ -141,71 +146,81 @@ void declareHand(struct hand *set) {
 
             if (royalFlush==5) {
                 set[i].handValue = 10;
-                printf("You have a %s!\n", hands[set[i].handValue]);
+                printf("You have a %s!\n", hands[set[i].handValue-1]);
                 continue;
             }
         }
         // straight flush
         else if (set[i].straight==TRUE && set[i].flush==TRUE) {
             set[i].handValue = 9;
-            printf("You have a %s!\n", hands[set[i].handValue]);
+            printf("You have a %s!\n", hands[set[i].handValue-1]);
             continue;
         }
 
         // four of a kind
         else if (set[i].four==TRUE) {
             set[i].handValue = 8;
-            printf("You have a %s!\n", hands[set[i].handValue]);
+            printf("You have a %s!\n", hands[set[i].handValue-1]);
             continue;
         }
 
         // full house
         else if (set[i].three==TRUE && set[i].pairs==1) {
             set[i].handValue = 7;
-            printf("You have a %s!\n", hands[set[i].handValue]);
+            printf("You have a %s!\n", hands[set[i].handValue-1]);
             continue;
         }
 
         // flush
         else if (set[i].flush==TRUE) {
             set[i].handValue = 6;
-            printf("You have a %s!\n", hands[set[i].handValue]);
+            printf("You have a %s!\n", hands[set[i].handValue-1]);
             continue;
         }
 
         // straight
         else if (set[i].straight==TRUE) {
             set[i].handValue = 5;
-            printf("You have a %s!\n", hands[set[i].handValue]);
+            printf("You have a %s!\n", hands[set[i].handValue-1]);
             continue;
         }
 
         // three of a kind
         else if (set[i].three==TRUE) {
             set[i].handValue = 4;
-            printf("You have a %s!\n", hands[set[i].handValue]);
+            printf("You have a %s!\n", hands[set[i].handValue-1]);
             continue;
         }
 
         // two pair
         else if (set[i].pairs==2) {
             set[i].handValue = 3;
-            printf("You have a %s!\n", hands[set[i].handValue]);
+            printf("You have a %s!\n", hands[set[i].handValue-1]);
             continue;
         }
 
         // pair
         else if (set[i].pairs==1) {
             set[i].handValue = 2;
-            printf("You have a %s!\n", hands[set[i].handValue]);
+            printf("You have a %s!\n", hands[set[i].handValue-1]);
             continue;
         }
 
         // high card
         else {
             set[i].handValue = 1;
-            printf("You have a %s!\n", hands[set[i].handValue]);
+            printf("You have a %s!\n", hands[set[i].handValue-1]);
             continue;
         }
     }
+}
+
+void announceWinner(struct hand *set) {
+    if (set[0].handValue==set[1].handValue) {
+        printf("TIE, will implement later\n");
+    }
+    else if (set[0].handValue > set[1].handValue)
+        printf("Hand #1 Wins!\n");
+    else
+        printf("Hand #2 Wins!\n");
 }
