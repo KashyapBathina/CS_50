@@ -134,5 +134,6 @@ void declareHand(struct hand *set) {
         else if (set[i].straight==TRUE && set[i].flush==TRUE) {
             set[i].handValue = 9;
         }
+        else if (set[i].straight=)
     }
 }
