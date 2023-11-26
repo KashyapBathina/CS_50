@@ -32,6 +32,7 @@ int main (void) {
 
     dealHand(set);
     analyzeHand(set);
+    declareHand(set);
 
     /*
     for (int i=0;i<SIZE;i++) {
@@ -55,7 +56,6 @@ int main (void) {
         printf("\n");
     }
     */
-    //declareHand(set);
     //announceWinner(set);
 }
 
@@ -120,3 +120,6 @@ void analyzeHand(struct hand *set) {
     }
 }
 
+void declareHand(struct hand *set) {
+    
+}
