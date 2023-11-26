@@ -33,9 +33,9 @@ int main (void) {
 
     dealHand(set);
     analyzeHand(set);
-    declareHand(set);
+    //declareHand(set);
 
-    /*
+
     for (int i=0;i<SIZE;i++) {
         for (int j=0;j<4;j++) {
             printf("%d", set[i].suitsInHand[j]);
@@ -56,7 +56,7 @@ int main (void) {
         printf("%d ", set[i].pairs);
         printf("\n");
     }
-    */
+
     //announceWinner(set);
 }
 
@@ -121,6 +121,7 @@ void analyzeHand(struct hand *set) {
     }
 }
 
+/*
 void declareHand(struct hand *set) {
     char hands[10][20] = {"HIGH CARD", "PAIR", "TWO PAIR", "THREE OF A KIND", "STRAIGHT", "FLUSH",
                         "FULL HOUSE", "FOUR OF A KIND", "STRAIGHT FLUSH", "ROYAL FLUSH"};
@@ -207,3 +208,4 @@ void declareHand(struct hand *set) {
         }
     }
 }
+*/
