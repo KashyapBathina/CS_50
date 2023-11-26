@@ -130,6 +130,11 @@ void declareHand(struct hand *set) {
 
         // royal flush
         if (set[i].straight==TRUE && set[i].flush==TRUE) {
+            int royalFlush = 0;
+            for (int i=8;i<13;i++) {
+                if (set[i].facesInHand[i]==1)
+                    royalFlush++;
+            }
             set[i].handValue = 10;
             printf("You have a %s!", hands[set[i].handValue]);
             break;
