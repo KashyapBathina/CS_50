@@ -121,5 +121,9 @@ void analyzeHand(struct hand *set) {
 }
 
 void declareHand(struct hand *set) {
-    char hands[4][20] = {"High Card", "One Pair", "Two Pair", "Three of a Kind", };
+    char hands[10][20] = {"High Card", "Pair", "Two Pair", "Three of a Kind", "Straight", "Flush",
+                        "Full House", "Four of a Kind", "Straight Flush", "Royal Flush"};
+
+    set[i].straight, set[i].flush, set[i].four, set[i].three, set[i].pairs;
+    if ()
 }
