@@ -68,16 +68,23 @@ int main (void) {
 void dealHand(struct hand *set) {
     char suits[4][10] = {"Hearts", "Clubs", "Diamonds", "Spades"};
     char faces[13][10] = {"Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King", "Ace"};
+    int usedCards[4][13] = {0};
 
     srand(time(NULL));
     for (int i=0;i<SIZE;i++) {
         printf("Hand #%d: \n", i+1);
+        int suitNum, faceNum;
         for (int j=0;j<5;j++) {
-            int suitNum = rand() % 4 + 1;
-            set[i].suitsInHand[suitNum-1]++;
-            int faceNum = rand() % 13 + 1;
-            set[i].facesInHand[faceNum-1]++;
-            printf("%s of %s\n", suits[suitNum-1], faces[faceNum-1]);
+            do {
+                // random int 0-3 and 0-13
+                suitNum = rand() % 4;
+                faceNum = rand() % 13;
+            }
+            while (usedCards[suitNum][faceNum] == 1);
+            usedCards[suitNum][faceNum] = 1;
+            set[i].suitsInHand[suitNum]++;
+            set[i].facesInHand[faceNum]++;
+            printf("%s of %s\n", suits[suitNum], faces[faceNum]);
         }
         printf("\n");
     }
@@ -216,7 +223,17 @@ void declareHand(struct hand *set) {
 
 void announceWinner(struct hand *set) {
     if (set[0].handValue==set[1].handValue) {
-        printf("TIE, will implement later\n");
+        for (int i=12;i>=0;i--) {
+            if (set[0].facesInHand[i]>set[1].facesInHand[i]) {
+                printf("Hand #1 Wins!\n");
+                return;
+            }
+            else if (set[0].facesInHand[i]>set[1].facesInHand[i]) {
+                printf("Hand #2 Wins!\n");
+                return;
+            }
+        }
+        printf("It's a Tie!\n");
     }
     else if (set[0].handValue > set[1].handValue)
         printf("Hand #1 Wins!\n");
