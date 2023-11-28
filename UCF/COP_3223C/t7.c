@@ -6,7 +6,7 @@
 /*------------module 7------------------------------------------------------------------------------------------------------------*/
 
 /*
-NOTES: 1. return, 2. 
+NOTES: 1. return breaks out of func switch, 2. int x = func(x+1);
 IMPORTANT: when using a formal paramater--func(int i)--func recieves a copy of the variable, so when you change value of i inside func, only changes copy and not original
            however, can bypass by passing a "pass by reference" operator or a pointer. Passing a pointer in function can now see memory address of original value and change it using *
 NOTES: x = *&y – z; means find address of y, go into it, subtract by z, and assign val to x
