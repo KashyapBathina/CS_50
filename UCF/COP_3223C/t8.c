@@ -12,7 +12,7 @@
         String.h Library:
             strcat = string concatenate; append words together using +;
             strcmp = compare whether 2 strings are same and have same values
-            syrcpy = add a string to another as a copy
+            syrcpy = add a string to another as a copy *understand for test
             strlen = returns # of characters
 */
 
