@@ -3,7 +3,6 @@
 /*------------module 3------------------------------------------------------------------------------------------------------------*/
 
 /*
-Important: break
 Functions requirements
     1. name of a function
     2. the data type of paramaters
