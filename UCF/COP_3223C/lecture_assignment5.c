@@ -147,70 +147,70 @@ void declareHand(struct hand *set) {
                     royalFlush++;
             }
 
-            // if 
+            // if all five of the top highest cards (and from initial if, straight and flush), then royal flush then setting hand value and printing hand
             if (royalFlush==5) {
                 set[i].handValue = 10;
                 printf("You have a %s!\n", hands[set[i].handValue-1]);
                 continue;
             }
         }
-        // checking if straight flush
+        // checking if straight flush by seeing if straight and flush then setting hand value and printing hand
         else if (set[i].straight==TRUE && set[i].flush==TRUE) {
             set[i].handValue = 9;
             printf("You have a %s!\n", hands[set[i].handValue-1]);
             continue;
         }
 
-        // checking if four of a kind
+        // checking if four of a kind by seeing if four then setting hand value and printing hand
         else if (set[i].four==TRUE) {
             set[i].handValue = 8;
             printf("You have a %s!\n", hands[set[i].handValue-1]);
             continue;
         }
 
-        // checking if full house
+        // checking if full house by seeing if three of a kind and a pair then setting hand value and printing hand
         else if (set[i].three==TRUE && set[i].pairs==1) {
             set[i].handValue = 7;
             printf("You have a %s!\n", hands[set[i].handValue-1]);
             continue;
         }
 
-        // checking if flush
+        // checking if flush by seeing if flush then setting hand value and printing hand
         else if (set[i].flush==TRUE) {
             set[i].handValue = 6;
             printf("You have a %s!\n", hands[set[i].handValue-1]);
             continue;
         }
 
-        // checking if straight
+        // checking if straight by seeing if straight then setting hand value and printing hand
         else if (set[i].straight==TRUE) {
             set[i].handValue = 5;
             printf("You have a %s!\n", hands[set[i].handValue-1]);
             continue;
         }
 
-        // checking if three of a kind
+        // checking if three of a kind by seeing if three then setting hand value and printing hand
         else if (set[i].three==TRUE) {
             set[i].handValue = 4;
             printf("You have a %s!\n", hands[set[i].handValue-1]);
             continue;
         }
 
-        // checking if two pair
+        // checking if two pair by seeing if 2 pairs then setting hand value and printing hand
         else if (set[i].pairs==2) {
             set[i].handValue = 3;
             printf("You have a %s!\n", hands[set[i].handValue-1]);
             continue;
         }
 
-        // checking if pair
+        // checking if pair by seeing if 1 pair then setting hand value and printing hand
         else if (set[i].pairs==1) {
             set[i].handValue = 2;
             printf("You have a %s!\n", hands[set[i].handValue-1]);
             continue;
         }
 
-        // if not above, high card
+        // if not above, high card then setting hand value and printing hand
         else {
             set[i].handValue = 1;
             printf("You have a %s!\n", hands[set[i].handValue-1]);
@@ -219,22 +219,32 @@ void declareHand(struct hand *set) {
     }
 }
 
+// this function compares the hands and also compares when there is TIE, or TWO OF SAME HAND
 void announceWinner(struct hand *set) {
+    // checking if same hand
+    // NOTE: this program deals with TIES based on who has a higher ranked card, there are other poker rules that have different dealbreakers based
+    // on each hand, but this is the tiebreaker function the PROFFESSOR said was good for this assignment when asked.
     if (set[0].handValue==set[1].handValue) {
+        // doing a for loop from the last index that iterates over faces/ranks arrary and sees which hand has a higher ranked card
         for (int i=12;i>=0;i--) {
+            // checking if hand 1 has more of that specific face card than hand 2
             if (set[0].facesInHand[i]>set[1].facesInHand[i]) {
                 printf("Hand #1 Wins!\n");
                 return;
             }
+            // checking if hand 2 has more of that specific face card than hand 1
             else if (set[0].facesInHand[i]>set[1].facesInHand[i]) {
                 printf("Hand #2 Wins!\n");
                 return;
             }
         }
+        // if gone through entire face/ranks array and both hands have the exact same faces/ranks, then it is an actual tie
         printf("It's a Tie!\n");
     }
+    // checking if hand 1 greater than hand 2 value
     else if (set[0].handValue > set[1].handValue)
         printf("Hand #1 Wins!\n");
+    // else hand 2 greater than hand 1 value
     else
         printf("Hand #2 Wins!\n");
 }
