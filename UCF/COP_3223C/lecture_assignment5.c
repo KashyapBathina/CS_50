@@ -35,43 +35,26 @@ void announceWinner(struct hand *set);
 
 // main function
 int main (void) {
-    //
+    // initializing struct array with malloc of size declared SIZE x size of our hand struct
     struct hand *set = (struct hand*) malloc(SIZE * sizeof(struct hand));
 
+    // calling functions for dealing, analyze, declaring, and annoucning by passing in pointer to struct array
     dealHand(set);
     analyzeHand(set);
     declareHand(set);
     announceWinner(set);
 
-    
-    for (int i=0;i<SIZE;i++) {
-        for (int j=0;j<4;j++) {
-            printf("%d", set[i].suitsInHand[j]);
-        }
-        printf("\n");
-        for (int j=0;j<13;j++) {
-            printf("%d", set[i].facesInHand[j]);
-        }
-        printf("\n");
-    }
-    printf("\n");
-
-    for (int i=0;i<SIZE;i++) {
-        printf("%d ", set[i].straight);
-        printf("%d ", set[i].flush);
-        printf("%d ", set[i].four);
-        printf("%d ", set[i].three);
-        printf("%d ", set[i].pairs);
-        printf("\n");
-    }
-
 }
 
+// this function deals a random hand such that it cannot be repeated and only 4 cards per rank, each with a differnt face
 void dealHand(struct hand *set) {
+    // creating a string array for the available suits and the available faces
     char suits[4][10] = {"Hearts", "Clubs", "Diamonds", "Spades"};
     char faces[13][10] = {"Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King", "Ace"};
+    // creating an array that is a, sort-of, cross product of the two past arrays to graph the total # of cards available
     int usedCards[4][13] = {0};
 
+    // 
     srand(time(NULL));
     for (int i=0;i<SIZE;i++) {
         printf("Hand #%d: \n", i+1);
