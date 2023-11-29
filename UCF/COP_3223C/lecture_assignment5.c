@@ -235,7 +235,7 @@ void announceWinner(struct hand *set) {
                 return;
             }
             // checking if hand 2 has more of that specific face card than hand 1
-            else if (set[0].facesInHand[i]>set[1].facesInHand[i]) {
+            else if (set[1].facesInHand[i]>set[0].facesInHand[i]) {
                 printf("Hand #2 Wins!\n");
                 return;
             }
