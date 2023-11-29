@@ -54,18 +54,23 @@ void dealHand(struct hand *set) {
     // creating an array that is a, sort-of, cross product of the two past arrays to graph the total # of cards available
     int usedCards[4][13] = {0};
 
-    // 
+    // seeding the rand number to prevent repeated occurences
     srand(time(NULL));
     for (int i=0;i<SIZE;i++) {
+        // printing hand # and declaring variables, then creating a for loop to iterate function over all hands in the struct array
+
         printf("Hand #%d: \n", i+1);
         int suitNum, faceNum;
         for (int j=0;j<5;j++) {
+            // a do-while loop that creates a random suit and face array index that HAS NOT been dealt yet by checking if value in index
             do {
                 // random int 0-3 and 0-13
                 suitNum = rand() % 4;
                 faceNum = rand() % 13;
             }
             while (usedCards[suitNum][faceNum] == 1);
+
+            // marking usedCards array to signal that card is dealt, so not repeated, and updating array in struct to indicate which face and suit and printing
             usedCards[suitNum][faceNum] = 1;
             set[i].suitsInHand[suitNum]++;
             set[i].facesInHand[faceNum]++;
@@ -75,8 +80,11 @@ void dealHand(struct hand *set) {
     }
 }
 
+// this function does the intermediary checks to establish what the hand is
 void analyzeHand(struct hand *set) {
+    // creating a for loop to iterate function over all hands in the struct array
     for (int i=0;i<SIZE;i++) {
+        // initializing variables and setting our indicators in struct hand to base/default values
         int num_consec = 0;
         int suit, face;
 
@@ -118,12 +126,15 @@ void analyzeHand(struct hand *set) {
     }
 }
 
-
+// this function declares what type of hand the players have
 void declareHand(struct hand *set) {
+    // creating a string array that stores the names of all types of hands in poker
     char hands[10][20] = {"HIGH CARD", "PAIR", "TWO PAIR", "THREE OF A KIND", "STRAIGHT", "FLUSH",
                         "FULL HOUSE", "FOUR OF A KIND", "STRAIGHT FLUSH", "ROYAL FLUSH"};
 
+    // creating a for loop to iterate function over all hands in the struct array
     for (int i=0;i<SIZE;i++) {
+        // printing hand # and intializing hand value (the total ) to zero
         printf("Hand #%d: ", i+1);
         set[i].handValue = 0;
 
