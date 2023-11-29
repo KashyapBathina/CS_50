@@ -140,13 +140,14 @@ void declareHand(struct hand *set) {
 
         // checking if royal flush
         if (set[i].straight==TRUE && set[i].flush==TRUE) {
-            // royal flush has all of top 
+            // royal flush is ten, J, Q, K, & A; checking faces array and seeing if hand contains all 5 of these faces
             int royalFlush = 0;
             for (int j=8;j<13;j++) {
                 if (set[j].facesInHand[j]==1)
                     royalFlush++;
             }
 
+            // if 
             if (royalFlush==5) {
                 set[i].handValue = 10;
                 printf("You have a %s!\n", hands[set[i].handValue-1]);
