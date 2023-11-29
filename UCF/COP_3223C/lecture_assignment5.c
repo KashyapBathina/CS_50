@@ -134,12 +134,13 @@ void declareHand(struct hand *set) {
 
     // creating a for loop to iterate function over all hands in the struct array
     for (int i=0;i<SIZE;i++) {
-        // printing hand # and intializing hand value (the total ) to zero
+        // printing hand # and intializing hand value (way to measure worth of hands) to zero
         printf("Hand #%d: ", i+1);
         set[i].handValue = 0;
 
-        // royal flush
+        // checking if royal flush
         if (set[i].straight==TRUE && set[i].flush==TRUE) {
+            // royal flush has all of top 
             int royalFlush = 0;
             for (int j=8;j<13;j++) {
                 if (set[j].facesInHand[j]==1)
@@ -152,63 +153,63 @@ void declareHand(struct hand *set) {
                 continue;
             }
         }
-        // straight flush
+        // checking if straight flush
         else if (set[i].straight==TRUE && set[i].flush==TRUE) {
             set[i].handValue = 9;
             printf("You have a %s!\n", hands[set[i].handValue-1]);
             continue;
         }
 
-        // four of a kind
+        // checking if four of a kind
         else if (set[i].four==TRUE) {
             set[i].handValue = 8;
             printf("You have a %s!\n", hands[set[i].handValue-1]);
             continue;
         }
 
-        // full house
+        // checking if full house
         else if (set[i].three==TRUE && set[i].pairs==1) {
             set[i].handValue = 7;
             printf("You have a %s!\n", hands[set[i].handValue-1]);
             continue;
         }
 
-        // flush
+        // checking if flush
         else if (set[i].flush==TRUE) {
             set[i].handValue = 6;
             printf("You have a %s!\n", hands[set[i].handValue-1]);
             continue;
         }
 
-        // straight
+        // checking if straight
         else if (set[i].straight==TRUE) {
             set[i].handValue = 5;
             printf("You have a %s!\n", hands[set[i].handValue-1]);
             continue;
         }
 
-        // three of a kind
+        // checking if three of a kind
         else if (set[i].three==TRUE) {
             set[i].handValue = 4;
             printf("You have a %s!\n", hands[set[i].handValue-1]);
             continue;
         }
 
-        // two pair
+        // checking if two pair
         else if (set[i].pairs==2) {
             set[i].handValue = 3;
             printf("You have a %s!\n", hands[set[i].handValue-1]);
             continue;
         }
 
-        // pair
+        // checking if pair
         else if (set[i].pairs==1) {
             set[i].handValue = 2;
             printf("You have a %s!\n", hands[set[i].handValue-1]);
             continue;
         }
 
-        // high card
+        // if not above, high card
         else {
             set[i].handValue = 1;
             printf("You have a %s!\n", hands[set[i].handValue-1]);
