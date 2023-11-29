@@ -10,10 +10,12 @@
 
 /*
     name: Kashyap Bathina
-    date: 11/6/23
-    purpose: This programs takes in three integers and passes them through
-    a function which returns the largest of the three using if statements.
-    Then returns that number to main and prints it.
+    date: 11/29/23
+    purpose: This programs does 4 things. 1. It randomly creates a hand that is not a duplicate and prints it out while
+    storing the arrangement of suits and faces. 2. Then analyzes that hand to ascertain how many pairs, consecutive there are
+    and whether it is a flush, straight, etc. 3. Next declares what type of hand the player holds using past function for help.
+    4. Lastly, the function compares the hands and declares whose is greater, if both hands are the same, checks which hands
+    has a higher face card and declares that to be the winner. If both hands have exact same rank cards, then it's an actual tie.
 */
 
 
