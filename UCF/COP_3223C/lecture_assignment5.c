@@ -7,17 +7,18 @@
 #define TRUE 1
 #define FALSE 0
 
+
 /*
-TO-DO:
-    1. PROBLEM: GETTING TWO OF SAME CARDS: IE SPADES OF SIX SPADES OF SIX  . . .
-    2. Implement case for tie in announceWinner function
+    name: Kashyap Bathina
+    date: 11/6/23
+    purpose: This programs takes in three integers and passes them through
+    a function which returns the largest of the three using if statements.
+    Then returns that number to main and prints it.
 */
 
 
-/*Purpose:*/
-
-
-// creating struct for hand
+// creating struct for hand includes: array for suits and faces,
+// and whether hand straight, flush, four, three, # pairs, and the total value respect to other hands
 struct hand {
     int suitsInHand[4];
     int facesInHand[13];
@@ -25,7 +26,7 @@ struct hand {
     int handValue;
 };
 
-// declaring functions
+// declaring functions that all take in a pointer to struct hand
 void dealHand(struct hand *set);
 void analyzeHand(struct hand *set);
 void declareHand(struct hand *set);
@@ -34,6 +35,7 @@ void announceWinner(struct hand *set);
 
 // main function
 int main (void) {
+    //
     struct hand *set = (struct hand*) malloc(SIZE * sizeof(struct hand));
 
     dealHand(set);
@@ -41,7 +43,7 @@ int main (void) {
     declareHand(set);
     announceWinner(set);
 
-    /*
+    
     for (int i=0;i<SIZE;i++) {
         for (int j=0;j<4;j++) {
             printf("%d", set[i].suitsInHand[j]);
@@ -62,7 +64,7 @@ int main (void) {
         printf("%d ", set[i].pairs);
         printf("\n");
     }
-    */
+
 }
 
 void dealHand(struct hand *set) {
