@@ -11,7 +11,7 @@
     Strings:
         Char Array: char arr[20]; word[0] = 'h' . . . word[5] = '\0';
         String.h Library:
-            strcat = string concatenate; append words together using +;
+            strcat = append words together using + and resultant stored in string1
             strcmp = compare whether 2 strings are same and have same values
             strcpy = add a string to another as a copy
             strlen = returns # of characters
