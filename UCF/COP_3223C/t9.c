@@ -12,6 +12,7 @@
                 dataType var1;
                 dataType var2;
             };
+    Typedef: keyword that is used to provide existing data types with a new named
 
     Dynamic Memory Allocation: more productive and efficient and has many advantages:
         Many Advantages:
