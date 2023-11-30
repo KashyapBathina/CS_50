@@ -68,7 +68,7 @@ int main() {
 
 /* For LOOP----------
 int main() {
-
+    // ++i different from i++, ++i increments first, so when i=0 and printing (++i)=1, (i++)=0;
     // “++i” is known as the pre-increment operator, which increments the value of 'i' immediately and returns the incremented value
     for (int i=1;i<=11;++i) {
         printf("%d ", i);
