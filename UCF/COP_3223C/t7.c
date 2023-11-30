@@ -6,40 +6,40 @@
 /*------------module 7------------------------------------------------------------------------------------------------------------*/
 
 /*
-NOTES: 1. return breaks out of func switch, 2. int x = func(x+1);
-IMPORTANT: when using a formal paramater--func(int i)--func recieves a copy of the variable, so when you change value of i inside func, only changes copy and not original
-           however, can bypass by passing a "pass by reference" operator or a pointer. Passing a pointer in function can now see memory address of original value and change it using *
-NOTES: x = *&y – z; means find address of y, go into it, subtract by z, and assign val to x
-       returning a value exits out of a function and does not do lines after that return
-2-d Arrays:
-    Gen struct: type var[y][x]; where y is row and x is column
-                var[0][0] = 2;
+    NOTES: 1. return breaks out of func switch, 2. int x = func(x+1);
+    IMPORTANT: when using a formal paramater--func(int i)--func recieves a copy of the variable, so when you change value of i inside func, only changes copy and not original
+            however, can bypass by passing a "pass by reference" operator or a pointer. Passing a pointer in function can now see memory address of original value and change it using *
+    NOTES: x = *&y – z; means find address of y, go into it, subtract by z, and assign val to x
+        returning a value exits out of a function and does not do lines after that return
+    2-d Arrays:
+        Gen struct: type var[y][x]; where y is row and x is column
+                    var[0][0] = 2;
 
-Pointers: store memory addresses of other variables
-    Gen struct: datatype *ptr; where * is dereferencing operator, dereference the pointer (or, get the referent of the pointer) to get the object pointed-to; used to access or manipulate data contained in memory location pointed to by a pointer
-                int * ptr;
-                int var = 10;
-                ptr = &var;
-    Call by value: copy contents of one memory adress and place in another
-    Call by reference: pointer to reference or point to memory address that has data we need
-    Types of pointers:
-        1. integer pointer = int *ptr;
-        2. array pointer = char *ptr = &array_name;
-        3. function pointer = int (*ptr)(int, char);
-        4. double pointer = *pointer_name; **pointer_name;
-        5. null pointer = pointer_name = null
-        6. void pointer = void* ptr;
-        7. constant pointer = int* const ptr;
+    Pointers: store memory addresses of other variables
+        Gen struct: datatype *ptr; where * is dereferencing operator, dereference the pointer (or, get the referent of the pointer) to get the object pointed-to; used to access or manipulate data contained in memory location pointed to by a pointer
+                    int * ptr;
+                    int var = 10;
+                    ptr = &var;
+        Call by value: copy contents of one memory adress and place in another
+        Call by reference: pointer to reference or point to memory address that has data we need
+        Types of pointers:
+            1. integer pointer = int *ptr;
+            2. array pointer = char *ptr = &array_name;
+            3. function pointer = int (*ptr)(int, char);
+            4. double pointer = *pointer_name; **pointer_name;
+            5. null pointer = pointer_name = null
+            6. void pointer = void* ptr;
+            7. constant pointer = int* const ptr;
 
-Functions: sub program within main that carries out a task
-    Gen struct: return_type name(parameters) {}
-    Requirements:
-        1. Give funct what it needs to finihsh the task--pre test, pre-condition, parameter
-        2. Use info so function retrurns properly--post tes, post condition, ouput
-    Types of parameters:
-        1. Formal paramaeters--listed in definition, local variables, i.e. func(int i), look at IMPORTANT, as paramter is just a copy and !affect original
-        2. Actual parramaters--values/expressions that are calling/invoking the function in main so it passed data to function to be called, i.e. func(6)
-    Void: i.e. void funct(int grade), void is return type that returns nothing
+    Functions: sub program within main that carries out a task
+        Gen struct: return_type name(parameters) {}
+        Requirements:
+            1. Give funct what it needs to finihsh the task--pre test, pre-condition, parameter
+            2. Use info so function retrurns properly--post tes, post condition, ouput
+        Types of parameters:
+            1. Formal paramaeters--listed in definition, local variables, i.e. func(int i), look at IMPORTANT, as paramter is just a copy and !affect original
+            2. Actual parramaters--values/expressions that are calling/invoking the function in main so it passed data to function to be called, i.e. func(6)
+        Void: i.e. void funct(int grade), void is return type that returns nothing
 */
 
 /*

@@ -7,6 +7,7 @@
 /*------------module 8------------------------------------------------------------------------------------------------------------*/
 
 /*
+    Important: p--, where p is a pointer, decreases the pointers adress by the size of type it points too, so when p=a[1], then p=[0] b/c decreasing adress exactly to past index
     Struct: array that allows you to store related variables of the same type in same struct, usually put a declaration after #defines
         Gen struct: struct name {
                 dataType var1;
