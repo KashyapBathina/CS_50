@@ -272,7 +272,7 @@ void changePointerValue(int var)
 */
 void changePointerValue(int* p)
 {
-    p = &global_Var;
+    *p = global_Var;
 }
 
 int main()
