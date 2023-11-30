@@ -8,7 +8,7 @@
 /*
 Important: array is a pointer to an int, that is why int arr[]; printf(arr) only results in memory adress, can do printf(*arr) to go to first element
 or just do arr[i];
-Important: when making array int A[10] = { 3,2,1,0,4}, 
+Important: when making array int A[10] = { 3,2,1,0,4}, when you don't initialize ALL, can do some, the elements, rest elements are initialized to zero
 Array:data struc that holds series of variables with the same datatype
     Gen Struct: type var name[size];
                 char colors[5];
