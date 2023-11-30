@@ -140,7 +140,7 @@ int main() {
     int var = 7;
     //ptr to var
     int* ptr2;
-    //double poingter to ptr2
+    //double pointer to ptr2
     int** ptr1;
 
     // storing address of var in ptr2
