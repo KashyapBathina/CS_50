@@ -18,9 +18,10 @@
                         ll var = 20;
                     }
         Can combine with struct to where a new data type can be created and used to define the structure variable
-            Gen struct: typedef struct students {
+            Gen struct: typedef struct {
                             char name[50];
-                        } hand;
+                        } student;
+                        int main () { student s1; . . .s1.name="..."}
 
 
     Dynamic Memory Allocation: more productive and efficient and has many advantages:
