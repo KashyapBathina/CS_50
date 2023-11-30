@@ -3,8 +3,6 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define PI 3.145926535898
-
 /*------------module 4------------------------------------------------------------------------------------------------------------*/
 
 /*
@@ -31,6 +29,7 @@ Requirements:
 
 */
 
+#define PI 3.145926535898
 int main() {
     //location in memory where our data is temp stored, pointer points to memory of file
     FILE *ifp;
