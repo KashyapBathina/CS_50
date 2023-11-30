@@ -13,6 +13,15 @@
                 dataType var2;
             };
     Typedef: keyword that is used to provide existing data types with a new named
+        Gen struct: typedef long long ll;
+                    int main() {
+                        ll var = 20;
+                    }
+        Can combine with struct to where a new data type can be created and used to define the structure variable
+            Gen struct: typedef struct students {
+                            char name[50];
+                        } hand;
+
 
     Dynamic Memory Allocation: more productive and efficient and has many advantages:
         Many Advantages:
