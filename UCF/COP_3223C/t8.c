@@ -7,7 +7,7 @@
 /*------------module 8------------------------------------------------------------------------------------------------------------*/
 
 /*
-Important: strcpy, ie 
+Important: strcpy, ie strcpy(dest, src), copies src to dest, so dest has same value as src
 Strings:
     Char Array: char arr[20]; word[0] = 'h' . . . word[5] = '\0';
     String.h Library:
