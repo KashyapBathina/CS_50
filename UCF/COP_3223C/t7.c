@@ -260,7 +260,7 @@ int main() {
 */
 
 // Pass by reference
-int global_Var = 42;
+//int global_Var = 42;
 
 // function to change pointer value
 
