@@ -6,6 +6,8 @@
 /*------------module 6------------------------------------------------------------------------------------------------------------*/
 
 /*
+Important: array is a pointer to an int, that is why int arr[]; printf(arr) only results in memory adress, can do printf(*arr) to go to first element
+or just do arr[i];
 Array:data struc that holds series of variables with the same datatype
     Gen Struct: type var name[size];
                 char colors[5];
