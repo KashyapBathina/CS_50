@@ -11,7 +11,7 @@ Loops
 
     Sometimes must use break or continue:
         Break: break out of inner most loop in which break resides, not if loop
-        Continue: will skip following code within inner most loop with continue resides, not if loop (meaning that a continue will not continue immediately after if loop, goes to end of loop)
+        Continue: will skip following code within inner most loop where continue resides, not if loop (meaning that a continue will not continue immediately after if loop, goes to end of loop)
 
     Types of loops:
         1. While Loop
