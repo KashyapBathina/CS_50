@@ -9,6 +9,12 @@ pointers:
     int *p, *q, *r--all pointers
     * only affects variable directly after it
 
+segmentation fault:
+    1. access memory out of bounds (portion memory segmented for it when run program)
+    2. dereferencing an unitialized pointer
+        int *p;
+        *p = 56;
+
 basics:
     bit-single 0 or 1,  bytye-8 consec digits,  word-4 bytes
 
