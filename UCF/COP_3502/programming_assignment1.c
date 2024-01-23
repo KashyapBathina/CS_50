@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 
-int main {
-    system.out.printf("hello\n");
+int main () {
+    printf("hello\n");
+    return 0;
 }
