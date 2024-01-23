@@ -3,5 +3,5 @@
 
 
 int main {
-    
+    system.out.printf("hello\n");
 }
