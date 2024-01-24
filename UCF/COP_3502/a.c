@@ -14,6 +14,8 @@ pointers:
         2. allow you to share data efficiently among functions
         3. allow you to dynamically reserve memory
         4. allow you to record relationships between data
+    call by value:
+    
 
 segmentation fault:
     1. access memory out of bounds (portion memory segmented for it when run program)
