@@ -18,8 +18,11 @@ segmentation fault:
         int *p = NULL; (same as above)
         *p = 56;
     4. memory leaks
+        when program allocates memory and doesn't free b/c loses pointer to it, then program uses
+        exess space; exhausts system memory as application runs; memory no longer needed not released
 
-    Solution: programming defensively
+    solution: programming defensively
+        initialize variables; initialize pointers to null
 
 basics:
     bit-single 0 or 1,  bytye-8 consec digits,  word-4 bytes
