@@ -74,6 +74,11 @@ struct:
     access: regularly=officeworker.empID = 1; with pointer=officeworker->empID=1
         typedef: way to avoid writing struct everytime: typedef struct bookRec{float price;char name[7];}Book; initialization thus: Book temp
 
+file i/o:
+    fprintf: fprintf(file_ptr, ctrl_str, other_arguments), where f stands for file
+    fscanf: fscanf(file_ptr, ctrl_str, other_arguments), both same as printf and scanf but 1st parameter
+    declaratopn: must write a pointer to file=FILE *fp;
+
 */
 
 
