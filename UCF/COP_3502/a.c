@@ -77,7 +77,8 @@ struct:
 file i/o:
     fprintf: fprintf(file_ptr, ctrl_str, other_arguments), where f stands for file
     fscanf: fscanf(file_ptr, ctrl_str, other_arguments), both same as printf and scanf but 1st parameter
-    declaratopn: must write a pointer to file=FILE *fp;
+    declaration: must write a pointer to file=FILE *fp;
+    initialization: fp = fopen("input.txt", "r") opens file and returns pointer to it
 
 */
 
