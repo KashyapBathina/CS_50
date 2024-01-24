@@ -43,7 +43,8 @@ data and memory:
     integer would be stored over 4 consec bytes, and address storing integer is first memory address var was stored in--sizeof()
 
 arrays:
-    items stored in consecutive memory locations
+    pointer to where items stored in consecutive memory locations; array is equivalent to &arr[0]; arr+ increments to next element and
+    jump up/down 4 bytes if int; arr[0] = *arr; arr[n] * (arr+n)
 
 */
 
