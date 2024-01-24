@@ -87,6 +87,7 @@ file i/o:
         when "a+": append or create file for r/w and
     reading input: ch=fgetc(fp) reads char from current pointer position & advances pointer position so that it now points to the next character
     and returns character that is read which we collect to the variable ch
+    closing: int fclose(FILE *fp) closes stream, writes any data remaining in disk buffer to file and frees, returns 0 if success
 */
 
 
