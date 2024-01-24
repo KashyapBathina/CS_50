@@ -44,7 +44,7 @@ data and memory:
 
 arrays:
     pointer to where items stored in consecutive memory locations; array is equivalent to &arr[0]; arr+ increments to next element and
-    jump up/down 4 bytes if int; arr[0] = *arr; arr[n] * (arr+n)
+    jump up/down 4 bytes if int; arr[0] = *arr; arr[n] = (arr+n)
 
 */
 
