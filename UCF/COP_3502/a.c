@@ -8,6 +8,7 @@ pointers:
     int* p, q, r--p pointer
     int *p, *q, *r--all pointers
     * only affects variable directly after it
+    *p derefrences p; &x is address x stored; pointer stores memory adress of another variable
 
 segmentation fault:
     1. access memory out of bounds (portion memory segmented for it when run program)
