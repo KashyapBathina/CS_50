@@ -12,8 +12,14 @@ pointers:
 segmentation fault:
     1. access memory out of bounds (portion memory segmented for it when run program)
     2. dereferencing an unitialized pointer
-        int *p;
+        int *p; (assiging a value to a memory location not allocated)
+        *p = 56; (like trying to store 56 in undefined location)
+    3. dereferencing a null pointer
+        int *p = NULL; (same as above)
         *p = 56;
+    4. memory leaks
+
+    Solution: programming defensively
 
 basics:
     bit-single 0 or 1,  bytye-8 consec digits,  word-4 bytes
