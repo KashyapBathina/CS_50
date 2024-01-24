@@ -71,7 +71,7 @@ strings:
 
 struct:
     predefined type with multiple types; syntax: struct employee {char[20] name; double salary; int empID;}; and declaration struct employee officeworker;
-    access: officeworker.empID = 1;
+    access: regularly=officeworker.empID = 1; with pointer=officeworker->empID=1
 */
 
 
