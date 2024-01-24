@@ -72,6 +72,8 @@ strings:
 struct:
     predefined type with multiple types; syntax: struct employee {char[20] name; double salary; int empID;}; and declaration struct employee officeworker;
     access: regularly=officeworker.empID = 1; with pointer=officeworker->empID=1
+        typedef: way to avoid writing struct everytime: typedef struct bookRec{float price;char name[7];}Book; initialization thus: Book temp
+
 */
 
 
