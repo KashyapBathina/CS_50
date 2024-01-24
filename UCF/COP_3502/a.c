@@ -49,7 +49,7 @@ arrays:
     multidimensional array:
         int grid[4][2] = 4 rows and 2 collum; int grid[y][x]; array of 4 elements, with each holding 2 elements
         memory: looks like grid[0][0] grid[0][1] grid[1][0] grid[1][1] . . . = { {0,1},{1,2},{3,4},{4,5} }
-        access: s[2][1] = 
+        access: s[2][1] = *(s[2]+1) = *(*(s+2)+1)
 */
 
 
