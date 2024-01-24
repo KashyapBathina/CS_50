@@ -97,7 +97,6 @@ file i/o:
     fseek:
         int fseek(FILE *pointer, long int offset, int position) used to move cursor/pointer to diff places. offset is # bytes to move from position, can be -
         position from where offset added (SEEK_END-end of file, SEEK_SET-start of ile, SEEK_CUR-file's current position), returns 0 if success else non zero
-
     closing: int fclose(FILE *fp) closes stream, writes any data remaining in disk buffer to file and frees, returns 0 if success;
 */
 
