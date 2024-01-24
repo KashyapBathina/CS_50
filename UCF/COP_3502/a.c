@@ -23,9 +23,15 @@ segmentation fault:
 
     solution: programming defensively
         initialize variables; initialize pointers to null
+        int *p = NULL;
+        if (p != NULL)
+        *p = 56;
+        else
+        printf("WARNING! It looks like you forgot to give p a valid integer address!\n");
 
-basics:
-    bit-single 0 or 1,  bytye-8 consec digits,  word-4 bytes
+data and memory:
+    bit-single 0 or 1,  bytye-8 consec digits (char),  word-2 or 4 bytes (int); memory long array of numbered cells
+    integer would be stored over 4 consec bytes, and address storing integer is first memory address var was stored in--sizeof()
 
 */
 
