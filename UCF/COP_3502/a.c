@@ -92,6 +92,10 @@ file i/o:
         n is max # characters to be read including null, stream is pointer to file; fgets keeps \n in str and you can remove withstr[strcspn(str, "\n")] = 0
     writing output:
         fscanf & fprintf: noting most files have 1 integer at top that reps # cases; same syntax as regular but with 1st paramter as file*
+    rewind:
+        when doing search operation mult times, have to move to begining: rewind(*pointer to file) is funct that moves file pointer to begining
+    fseek:
+        when 
 
     closing: int fclose(FILE *fp) closes stream, writes any data remaining in disk buffer to file and frees, returns 0 if success;
 */
