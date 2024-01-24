@@ -80,7 +80,9 @@ file i/o:
     declaration: must write a pointer to file=FILE *fp; must keep txt file in same directory as code
     initialization: fp = fopen("input.txt", "r") opens file and returns pointer to it
         when "r": reading mode, returns null if ! file else returns pointer
-
+        when "w": creates file to write, replaces old if already have same name
+        when "a": appends to a file
+        
 */
 
 
