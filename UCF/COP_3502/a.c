@@ -55,6 +55,8 @@ arrays:
 strings:
     char array and terminated by '\0' that ! part of string; strlen() returns length of string, part of string.h
     syntax: char s[10] = "cat" or char *s = "cat" (but cannot change content in latter w/o dma)
+        scanf:
+        
 */
 
 
