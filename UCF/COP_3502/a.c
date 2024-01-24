@@ -9,6 +9,11 @@ pointers:
     int *p, *q, *r--all pointers
     * only affects variable directly after it
     *p derefrences p; &x is address x stored; pointer stores memory adress of another variable
+    benefits:
+        1. allow you to refer to a large data structure in a compact way
+        2. allow you to share data efficiently among functions
+        3. allow you to dynamically reserve memory
+        4. allow you to record relationships between data
 
 segmentation fault:
     1. access memory out of bounds (portion memory segmented for it when run program)
