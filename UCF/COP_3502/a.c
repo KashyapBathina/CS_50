@@ -43,7 +43,7 @@ data and memory:
     integer would be stored over 4 consec bytes, and address storing integer is first memory address var was stored in--sizeof()
 
 arrays:
-    
+    items stored in consecutive memory locations
 
 */
 
