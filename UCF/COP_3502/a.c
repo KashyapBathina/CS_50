@@ -46,7 +46,10 @@ arrays:
     pointer to where items stored in consecutive memory locations; array is equivalent to &arr[0]; arr+ increments to next element and
     jump up/down 4 bytes if int; arr[0] = *arr; arr[n] = (arr+n)
     while double arr[10] allocates 10 locations for doubles, double *p only allocates the memory to store a single location in memory
-
+    multidimensional array:
+        int grid[4][2] = 4 rows and 2 collum; int grid[y][x]; array of 4 elements, with each holding 2 elements
+        memory: looks like grid[0][0] grid[0][1] grid[1][0] grid[1][1] . . . = { {0,1},{1,2},{3,4},{4,5} }
+        access: s[2][1] = 
 */
 
 
