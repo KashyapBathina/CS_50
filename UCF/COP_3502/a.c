@@ -51,6 +51,9 @@ arrays:
         memory: looks like grid[0][0] grid[0][1] grid[1][0] grid[1][1] . . . = { {0,1},{1,2},{3,4},{4,5} }
         access: s[2][1] = *(s[2]+1) = *(*(s+2)+1); also when q[][], then (q+i*col+j) accesses each, where i*col is i'th row and + j moves collum
     2d-arrays as paramters: only first subscript may be left unspecified: void f1(int grid[][10]) okay; void f3(int grid[][]) wrong
+
+strings:
+    char array and terminated by '\0' that ! part of string; strlen() returns length of string, part of string.h
 */
 
 
