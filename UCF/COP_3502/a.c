@@ -45,6 +45,7 @@ data and memory:
 arrays:
     pointer to where items stored in consecutive memory locations; array is equivalent to &arr[0]; arr+ increments to next element and
     jump up/down 4 bytes if int; arr[0] = *arr; arr[n] = (arr+n)
+    while double arr[10] allocates 10 locations for doubles, double *p only allocates the memory to store a single location in memory
 
 */
 
