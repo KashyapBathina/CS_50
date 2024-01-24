@@ -14,7 +14,8 @@ pointers:
         2. allow you to share data efficiently among functions
         3. allow you to dynamically reserve memory
         4. allow you to record relationships between data
-    call by value: 
+    call by value: when func(int a, int b), function makes new variables x,y and copies a,b, so ! change ab in function
+    call by reference: when func(int *a, int *b), function uses address of variables a and b and can access og vars
 
 
 segmentation fault:
@@ -40,6 +41,9 @@ segmentation fault:
 data and memory:
     bit-single 0 or 1,  bytye-8 consec digits (char),  word-2 or 4 bytes (int); memory long array of numbered cells
     integer would be stored over 4 consec bytes, and address storing integer is first memory address var was stored in--sizeof()
+
+arrays:
+    
 
 */
 
