@@ -61,7 +61,7 @@ strings:
             problems: when getting string input after another input, like "printf("\nEnter id: "); scanf("%d",&id); printf("\nEnter name: "); scanf("%[^\n]s",name);
             then, issue with getting name b/c after integer, string input skipped: b/c when press enter, scanf("%c",&ch); reads the character entered, but the newline character
             from pressing enter is still in the input buffer; when loop comes again and scanf("%c",&ch); reads that leftover newline character instead of waiting for your input
-            solution: 1. adding space before %c scanf: scanf(" %c",&ch); 2. adding while ((c = getchar()) != '\n' && c != EOF);
+            solution: 1. adding space before %c scanf: scanf(" %c",&ch); 2. adding before the string input and after other scanf: while ((c = getchar()) != '\n' && c != EOF);
 */
 
 
