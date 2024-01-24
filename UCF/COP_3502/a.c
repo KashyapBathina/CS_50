@@ -62,6 +62,16 @@ strings:
             then, issue with getting name b/c after integer, string input skipped: b/c when press enter, scanf("%c",&ch); reads the character entered, but the newline character
             from pressing enter is still in the input buffer; when loop comes again and scanf("%c",&ch); reads that leftover newline character instead of waiting for your input
             solution: 1. adding space before %c scanf: scanf(" %c",&ch); 2. adding before the string input and after other scanf: while ((c = getchar()) != '\n' && c != EOF);
+            no need for brackets around while loop b/c calling getchar() func again and again until new line or EOF
+    strcpy: char *strcpy(char *dst, char const *src); copies src string to the dst string
+    strcat: char *strcat(char *dest, const char *src); takes two strings and stores resultant concatenated string in the first string specified in the argument
+    strlen: size_t strlen(const char *str); the length of the passed string
+    strstr: char *strstr(const char *haystack, const char *needle); searches for needle string inside haystack string and returns a pointer to the first occurrence in  haystack; or null if !
+    strcmp: int strcmp(char const *s1, char const *s2); compares two strings and returns: 0=if both identical; - int if ASCII 1st < than 2nd, + int if 1st > 2nd
+
+struct:
+    predefined type with multiple types; syntax: struct employee {char[20] name; double salary; int empID;}; and declaration struct employee officeworker;
+    access: officeworker.empID = 1;
 */
 
 
