@@ -82,7 +82,10 @@ file i/o:
         when "r": reading mode, returns null if ! file else returns pointer
         when "w": creates file to write, replaces old if already have same name
         when "a": appends to a file
-        
+        when "r+": open file for r/w but file must exist
+        when "w+": create file for r/w, if file exists, 
+        when "a+": append or create file for r/w and
+
 */
 
 
