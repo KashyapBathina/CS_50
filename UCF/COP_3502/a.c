@@ -91,7 +91,8 @@ file i/o:
         fgets: char *fgets(char *str, int n, FILE *stream) reads data one line at a time until null termination; str is pointer to array of char,
         n is max # characters to be read including null, stream is pointer to file; fgets keeps \n in str and you can remove withstr[strcspn(str, "\n")] = 0
     writing output:
-        x
+        fscanf & fprintf
+
     closing: int fclose(FILE *fp) closes stream, writes any data remaining in disk buffer to file and frees, returns 0 if success;
 */
 
