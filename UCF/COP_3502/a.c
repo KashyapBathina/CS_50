@@ -57,7 +57,7 @@ strings:
     syntax: char s[10] = "cat" or char *s = "cat" (but cannot change content in latter w/o dma)
         scanf: however, issue b/c scanf stop reading input on whitespace, so ! scan fully "kash bath", only scans kash
         gets: char name[]; printf("name?"); gets(name); can actually take spaces but bad b/c ! care about size and can take in more than size array
-        alternatives: scanf("%[^\n]s",name);
+        alternatives: scanf("%[^\n]s",name); or fgets(name, sizeof(name),  stdin) and remove \n by adding name[strcspn(name, "\n")] = 0;
 
 */
 
