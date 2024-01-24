@@ -88,7 +88,8 @@ file i/o:
     reading input:
         fgetc: ch=fgetc(fp) reads char from current pointer position & advances pointer position so that it now points to the next character
         and returns character that is read which we collect to the variable ch; feof() checks whether EOF;
-        fgets: fgets(str, 100,  ifp) reads data one line at a time 
+        fgets: fgets(str, 100,  ifp) reads data one line at a time until null termination; str is pointer to array of char, 100 is max # characters
+        to be read
 
     closing: int fclose(FILE *fp) closes stream, writes any data remaining in disk buffer to file and frees, returns 0 if success;
 */
