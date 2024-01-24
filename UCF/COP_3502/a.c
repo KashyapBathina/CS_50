@@ -58,7 +58,8 @@ strings:
         scanf: however, issue b/c scanf stop reading input on whitespace, so ! scan fully "kash bath", only scans kash
         gets: char name[]; printf("name?"); gets(name); can actually take spaces but bad b/c ! care about size and can take in more than size array
         alternatives: scanf("%[^\n]s",name); or fgets(name, sizeof(name),  stdin) and remove \n by adding name[strcspn(name, "\n")] = 0;
-
+            problems: when getting string input after another input, like "printf("\nEnter id: "); scanf("%d",&id); printf("\nEnter name: "); scanf("%[^\n]s",name);
+            then, issue with getting name b/c after integer, string input skipped: 
 */
 
 
