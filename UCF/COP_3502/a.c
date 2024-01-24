@@ -83,9 +83,10 @@ file i/o:
         when "w": creates file to write, replaces old if already have same name
         when "a": appends to a file
         when "r+": open file for r/w but file must exist
-        when "w+": create file for r/w, if file exists, 
+        when "w+": create file for r/w, if file exists, truncated first before overwriting and old data lost
         when "a+": append or create file for r/w and
-
+    reading input: ch=fgetc(fp) reads char from current pointer position & advances pointer position so that it now points to the next character
+    and returns character that is read which we collect to the variable ch
 */
 
 
