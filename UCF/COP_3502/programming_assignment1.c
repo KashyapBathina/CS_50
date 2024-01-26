@@ -26,6 +26,8 @@ int main () {
         letters_required += freq2[i] - freq1[i];
     }
 
+    free(string1);
+    free(string2);
     printf("%d", letters_required);
 
     return 0;
