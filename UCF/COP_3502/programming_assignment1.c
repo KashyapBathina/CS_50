@@ -18,7 +18,7 @@ int main () {
         freq1[string1[i]-'A']++;
     }
 
-    for (int i=0; i<strlen(string2);i++) {
+    for (int i=0; i<strlen(string2)-2;i++) {
         freq2[string2[i]-'A']++;
     }
 
