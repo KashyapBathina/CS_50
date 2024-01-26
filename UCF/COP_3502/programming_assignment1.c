@@ -4,6 +4,8 @@
 
 
 int main () {
-    printf("hello\n");
+    char string1 = (char*) malloc(100002 * sizeof(char))
+
+    scanf(")
     return 0;
 }
