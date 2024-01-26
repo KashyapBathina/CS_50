@@ -10,16 +10,16 @@ struct Node{
 
 // This function updates a singly linked list into a circular singly linked list
 struct Node* makeListCircular(struct Node* pHead){
-// Start of your implementation
-// End of your implementation
+    sdad
 }
 
 
 // This function prints "numNodes" number of nodes in a circular linked list
 void printCircularLinkedList(struct Node* pHead, int numNodes){
     printf("Circular linked list %d items\n",numNodes);
-    // Start of your implementation
-    // End of your implementation
+
+    asd
+
     printf("\n`");
 }
 
