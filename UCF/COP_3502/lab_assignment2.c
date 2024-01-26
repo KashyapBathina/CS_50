@@ -12,7 +12,7 @@ struct Node{
 struct Node* makeListCircular(struct Node* pHead){
     if (pHead != NULL) {
         struct Node* pTemp = pHead;
-        
+
         while (pTemp->mNext != NULL) {
             pTemp = pTemp->mNext;
         }
@@ -26,10 +26,12 @@ struct Node* makeListCircular(struct Node* pHead){
 void printCircularLinkedList(struct Node* pHead, int numNodes){
     printf("Circular linked list %d items\n",numNodes);
 
-    struct Node* pTemp = pHead;
-    for (int i=0; i<numNodes; i++) {
-        printf("%d", pTemp->mData);
-        pTemp = pTemp->mNext;
+    if (pHead != NULL) {
+        struct Node* pTemp = pHead;
+        for (int i=0; i<numNodes; i++) {
+            printf("%d", pTemp->mData);
+            pTemp = pTemp->mNext;
+        }
     }
 
     printf("\n`");
