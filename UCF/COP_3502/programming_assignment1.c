@@ -23,14 +23,14 @@ int main () {
     }
 
     for (int i=0; i<26; i++) {
-        if (freq[1]<freq[2]) {
+        if (freq1[i]<freq2[i]) {
             letters_required += freq2[i] - freq1[i];
         }
     }
 
     free(string1);
     free(string2);
-    printf("%d", letters_required);
+    printf("%d\n", letters_required);
 
     return 0;
 }
