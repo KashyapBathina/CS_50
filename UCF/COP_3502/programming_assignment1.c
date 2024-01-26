@@ -4,6 +4,7 @@
 
 
 int main () {
+    int[] freq = 
     char* string1 = (char*) malloc(100002 * sizeof(char));
     char* string2 = (char*) malloc(100002 * sizeof(char));
 
@@ -12,6 +13,7 @@ int main () {
 
     printf("%s", string1);
     printf("%s", string2);
+
 
 
     return 0;
