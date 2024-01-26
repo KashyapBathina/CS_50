@@ -56,7 +56,8 @@ strings:
     char array and terminated by '\0' that ! part of string; strlen() returns length of string, part of string.h
     syntax: char s[10] = "cat" or char *s = "cat" (but cannot change content in latter w/o dma)
         scanf: however, issue b/c scanf stop reading input on whitespace, so ! scan fully "kash bath", only scans kash
-        gets: char name[]; printf("name?"); gets(name); can actually take spaces but bad b/c ! care about size and can take in more than size array
+        gets: char name[]; printf("name?"); gets(name); can actually take spaces but bad b/c ! care about size and can take in more than size array, reads until /n
+        fgets: can also use fgets w/o file by doing fgets(string,20,stdin);
         alternatives: scanf("%[^\n]s",name); or fgets(name, sizeof(name),  stdin) and remove \n by adding name[strcspn(name, "\n")] = 0;
             problems: when getting string input after another input, like "printf("\nEnter id: "); scanf("%d",&id); printf("\nEnter name: "); scanf("%[^\n]s",name);
             then, issue with getting name b/c after integer, string input skipped: b/c when press enter, scanf("%c",&ch); reads the character entered, but the newline character

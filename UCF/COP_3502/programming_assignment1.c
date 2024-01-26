@@ -7,6 +7,6 @@ int main () {
     char string1 = (char*) malloc(100002 * sizeof(char))
     char string2 = (char*) malloc(100002 * sizeof(char))
 
-    gets("%c");
+    fgets(string1,20,stdin);
     return 0;
 }
