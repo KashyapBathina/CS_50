@@ -4,7 +4,7 @@
 
 
 int main () {
-    int freq1[26], freq2[26], letters_required = 0;
+    int freq1[26] = {0}, freq2[26] = {0}, letters_required = 0;
     char* string1 = (char*) malloc(100002 * sizeof(char));
     char* string2 = (char*) malloc(100002 * sizeof(char));
 
@@ -19,11 +19,13 @@ int main () {
     }
 
     for (int i=0; i<strlen(string1)-1;i++) {
-        freq1[string2[i]-'A']++;
+        freq2[string2[i]-'A']++;
     }
 
     for (int i=0; i<26; i++) {
-        letters_required += freq2[i] - freq1[i];
+        if (freq[1]<freq[2]) {
+            letters_required += freq2[i] - freq1[i];
+        }
     }
 
     free(string1);
