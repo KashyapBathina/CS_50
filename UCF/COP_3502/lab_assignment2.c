@@ -10,7 +10,7 @@ struct Node{
 
 // This function updates a singly linked list into a circular singly linked list
 struct Node* makeListCircular(struct Node* pHead){
-    sdad
+    
 }
 
 
