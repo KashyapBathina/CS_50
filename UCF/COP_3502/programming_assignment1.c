@@ -4,7 +4,8 @@
 
 
 int main () {
-    int freq[26];
+    int freq1[26];
+    int freq2[26];
     char* string1 = (char*) malloc(100002 * sizeof(char));
     char* string2 = (char*) malloc(100002 * sizeof(char));
 
