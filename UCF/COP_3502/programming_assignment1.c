@@ -5,7 +5,8 @@
 
 int main () {
     char string1 = (char*) malloc(100002 * sizeof(char))
+    char string2 = (char*) malloc(100002 * sizeof(char))
 
-    scanf(")
+    gets("%c");
     return 0;
 }
