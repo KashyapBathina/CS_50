@@ -15,6 +15,8 @@ struct Node* makeListCircular(struct Node* pHead){
         pTemp = pTemp->mNext;
     }
     pTemp->mNext = pHead;
+
+    return pHead;
 }
 
 
