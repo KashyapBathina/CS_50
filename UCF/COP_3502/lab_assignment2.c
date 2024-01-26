@@ -10,10 +10,11 @@ struct Node{
 
 // This function updates a singly linked list into a circular singly linked list
 struct Node* makeListCircular(struct Node* pHead){
-    struct Node* ptemp = pHead;
-    while (ptemp->mNext != null) {
-        ptemp = mNext;
+    struct Node* pTemp = pHead;
+    while (pTemp->mNext != null) {
+        pTemp = pTemp->mNext;
     }
+    pTemp->next = pHead;
 }
 
 
@@ -21,8 +22,10 @@ struct Node* makeListCircular(struct Node* pHead){
 void printCircularLinkedList(struct Node* pHead, int numNodes){
     printf("Circular linked list %d items\n",numNodes);
 
+    struct Node* pTemp = pHead;
     for (int i=0; i<numNodes; i++) {
-
+        printf("%d", pTemp->mData);
+        pTemp = pTemp->mNext;
     }
 
     printf("\n`");
