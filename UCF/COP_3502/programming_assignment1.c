@@ -22,7 +22,7 @@ int main () {
 
     for (int i=0; i<strlen(string2)-1;i++) {
         if (string2[i] != '\n') {
-            freq1[string2[i]-'A']++;
+            freq2[string2[i]-'A']++;
         }
     }
 
