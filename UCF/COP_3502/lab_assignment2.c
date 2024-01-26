@@ -11,7 +11,9 @@ struct Node{
 // This function updates a singly linked list into a circular singly linked list
 struct Node* makeListCircular(struct Node* pHead){
     struct Node* ptemp = pHead;
-    while (pHead)
+    while (ptemp->mNext != null) {
+        ptemp = mNext;
+    }
 }
 
 
