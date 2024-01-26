@@ -14,12 +14,16 @@ int main () {
     printf("%s", string1);
     printf("%s", string2);
 
-    for (int i=0; i<strlen(string1);i++) {
-        freq1[string1[i]-'A']++;
+    for (int i=0; i<strlen(string1)-1;i++) {
+        if (string1[i] != '\n') {
+            freq1[string1[i]-'A']++;
+        }
     }
 
-    for (int i=0; i<strlen(string2)-2;i++) {
-        freq2[string2[i]-'A']++;
+    for (int i=0; i<strlen(string2)-1;i++) {
+        if (string2[i] != '\n') {
+            freq1[string2[i]-'A']++;
+        }
     }
 
     for (int i=0; i<26; i++) {
