@@ -29,12 +29,12 @@ void printCircularLinkedList(struct Node* pHead, int numNodes){
     if (pHead != NULL) {
         struct Node* pTemp = pHead;
         for (int i=0; i<numNodes; i++) {
-            printf("%d", pTemp->mData);
+            printf("%d ", pTemp->mData);
             pTemp = pTemp->mNext;
         }
     }
 
-    printf("\n`");
+    printf("\n");
 }
 
 
