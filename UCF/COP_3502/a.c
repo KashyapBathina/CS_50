@@ -69,6 +69,7 @@ strings:
     strlen: size_t strlen(const char *str); the length of the passed string
     strstr: char *strstr(const char *haystack, const char *needle); searches for needle string inside haystack string and returns a pointer to the first occurrence in  haystack; or null if !
     strcmp: int strcmp(char const *s1, char const *s2); compares two strings and returns: 0=if both identical; - int if ASCII 1st < than 2nd, + int if 1st > 2nd
+    extra note: if char ch stores character, then ch - 'A' equals the 0 to 25 equivalent of the letter ch is storing
 
 struct:
     predefined type with multiple types; syntax: struct employee {char[20] name; double salary; int empID;}; and declaration struct employee officeworker;
