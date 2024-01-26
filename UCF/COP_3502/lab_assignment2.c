@@ -18,7 +18,9 @@ struct Node* makeListCircular(struct Node* pHead){
 void printCircularLinkedList(struct Node* pHead, int numNodes){
     printf("Circular linked list %d items\n",numNodes);
 
-    asd
+    for (int i=0; i<numNodes; i++) {
+
+    }
 
     printf("\n`");
 }
