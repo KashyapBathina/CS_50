@@ -18,13 +18,13 @@ int main () {
         freq1[string1[i]-'A']++;
     }
 
-    for (int i=0; i<strlen(string1)-1;i++) {
+    for (int i=0; i<strlen(string2)-1;i++) {
         freq2[string2[i]-'A']++;
     }
 
     for (int i=0; i<26; i++) {
         if (freq1[i]<freq2[i]) {
-            letters_required += freq2[i] - freq1[i];
+            letters_required += (freq2[i] - freq1[i]);
         }
     }
 
