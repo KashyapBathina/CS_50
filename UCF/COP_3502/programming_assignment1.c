@@ -15,7 +15,7 @@ int main () {
     printf("%s", string1);
     printf("%s", string2);
 
-
+    for (int i=0; i<strlen(string1))
 
     return 0;
 }
