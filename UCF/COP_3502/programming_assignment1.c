@@ -10,9 +10,10 @@
     Then returns that number to main and prints it.
 */
 
+const int LTTRS_IN_ALPHABET = 26;
 
 int main () {
-    int freq1[26] = {0}, freq2[26] = {0}, letters_required = 0;
+    int freq1[LTTRS_IN_ALPHABET] = {0}, freq2[LTTRS_IN_ALPHABET] = {0}, letters_required = 0;
     char* string1 = (char*) malloc(100002 * sizeof(char));
     char* string2 = (char*) malloc(100002 * sizeof(char));
 
