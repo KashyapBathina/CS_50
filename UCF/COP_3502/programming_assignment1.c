@@ -23,13 +23,13 @@ int main () {
     printf("%s", string1);
     printf("%s", string2);
 
-    for (int i=0; i<strlen(string1)-2;i++) {
+    for (int i=0; i<strlen(string1)-1;i++) {
         if (string1[i] != '\n' && string1[i] >= 'A' && string1[i] <= 'Z') {
             freq1[string1[i]-'A']++;
         }
     }
 
-    for (int i=0; i<strlen(string2)-2;i++) {
+    for (int i=0; i<strlen(string2)-1;i++) {
         if (string2[i] != '\n' && string2[i] >= 'A' && string2[i] <= 'Z') {
             freq2[string2[i]-'A']++;
         }
