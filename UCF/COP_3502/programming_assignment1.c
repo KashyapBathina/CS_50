@@ -7,7 +7,7 @@
     date: 1/25/24\
     purpose: after taking in two strings, the program calculates how many new letters are needed for the second
     message, subtracting the letters from the 1st message. with a frequency array of both strings noting how many
-    of each alphabet there are, the program subtracts
+    of each alphabet there are, the program subtracts 
 */
 
 const int LTTRS_IN_ALPHABET = 26;
