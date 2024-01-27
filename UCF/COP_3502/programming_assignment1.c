@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-/*
-*/
 
 const int LTTRS_IN_ALPHABET = 26;
 const int STRING_SIZE = 100002;
