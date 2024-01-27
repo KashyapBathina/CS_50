@@ -4,7 +4,7 @@
 
 /*
     name: Kashyap Bathina
-    date: 1/25/24\
+    date: 1/25/24
     purpose: after taking in two strings, the program calculates how many new letters are needed for the second
     message, subtracting the letters from the 1st message. after reading each character of the array through a
     frequency array of both strings noting how many of each alphabet there are, the program subtracts string 2's
