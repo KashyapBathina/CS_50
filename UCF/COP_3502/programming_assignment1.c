@@ -6,11 +6,12 @@
 */
 
 const int LTTRS_IN_ALPHABET = 26;
+const int STRING_SIZE = 100002;
 
 int main () {
     int freq1[LTTRS_IN_ALPHABET] = {0}, freq2[LTTRS_IN_ALPHABET] = {0}, letters_required = 0;
-    char* string1 = (char*) malloc(100002 * sizeof(char));
-    char* string2 = (char*) malloc(100002 * sizeof(char));
+    char* string1 = (char*) malloc(STRING_SIZE * sizeof(char));
+    char* string2 = (char*) malloc(STRING_SIZE * sizeof(char));
 
     fgets(string1, 100002, stdin);
     fgets(string2, 100002, stdin);
