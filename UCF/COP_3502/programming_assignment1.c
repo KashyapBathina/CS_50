@@ -30,27 +30,29 @@ int main () {
 
     // for each character in string1, noting which alphabet it is by updating freq array
     for (int i=0; i<strlen(string1)-1;i++) {
-        if (string1[i] != " ") {
-        //if (string1[i] >= 'A' && string1[i] <= 'Z') {
+        // using if statement to ensure char at i is not a space, then updating freq to note alphabet
+        if (string1[i] >= 'A' && string1[i] <= 'Z') {
             freq1[string1[i]-'A']++;
-        //}
         }
     }
 
+    // for each character in string1, noting which alphabet it is by updating freq array
     for (int i=0; i<strlen(string2)-1;i++) {
-        if (string2[i] != " ") {
-        //if (string2[i] >= 'A' && string2[i] <= 'Z') {
+        // using if statement to ensure char at i is not a space, then updating freq to note alphabet
+        if (string2[i] >= 'A' && string2[i] <= 'Z') {
             freq2[string2[i]-'A']++;
-        //}
         }
     }
 
+    // iterating over freq array that indicates alphabets
     for (int i=0; i<26; i++) {
+        // if the letter appears more in string 2 than 1, updating letters required to note # of new letters
         if (freq1[i]<freq2[i]) {
             letters_required += (freq2[i] - freq1[i]);
         }
     }
 
+    // freeing dynamically allocated strings then printing # of letters required
     free(string1);
     free(string2);
     printf("%d\n", letters_required);
