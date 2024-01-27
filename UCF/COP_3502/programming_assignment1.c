@@ -31,7 +31,7 @@ int main () {
     // for each character in string1, noting which alphabet it is by updating freq array
     for (int i=0; i<strlen(string1)-1;i++) {
         // using if statement to ensure char at i is not a space, then updating freq to note alphabet
-        if (string1[i] != ' ') {
+        if (string1[i]!=' ') {
             freq1[string1[i]-'A']++;
         }
     }
@@ -39,7 +39,7 @@ int main () {
     // for each character in string1, noting which alphabet it is by updating freq array
     for (int i=0; i<strlen(string2)-1;i++) {
         // using if statement to ensure char at i is not a space, then updating freq to note alphabet
-        if (string1[i] != ' ') {
+        if (string2[i]!=' ') {
             freq2[string2[i]-'A']++;
         }
     }
