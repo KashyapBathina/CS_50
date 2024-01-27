@@ -2,6 +2,12 @@
 #include <stdlib.h>
 #include <string.h>
 
+/*
+    name: Kashyap Bathina
+    date: 1/25/24\
+    purpose: this code determines the number of letters needed after considering orignal message. does
+    this by 
+*/
 
 const int LTTRS_IN_ALPHABET = 26;
 const int STRING_SIZE = 100002;
