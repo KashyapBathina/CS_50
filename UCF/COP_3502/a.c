@@ -66,7 +66,7 @@ strings:
             no need for brackets around while loop b/c calling getchar() func again and again until new line or EOF
     strcpy: char *strcpy(char *dst, char const *src); copies src string to the dst string
     strcat: char *strcat(char *dest, const char *src); takes two strings and stores resultant concatenated string in the first string specified in the argument
-    strlen: size_t strlen(const char *str); the length of the passed string
+    strlen: size_t strlen(const char *str); the length of the passed string, does include newline but no null character
     strstr: char *strstr(const char *haystack, const char *needle); searches for needle string inside haystack string and returns a pointer to the first occurrence in  haystack; or null if !
     strcmp: int strcmp(char const *s1, char const *s2); compares two strings and returns: 0=if both identical; - int if ASCII 1st < than 2nd, + int if 1st > 2nd
     extra note: if char ch stores character, then ch - 'A' equals the 0 to 25 equivalent of the letter ch is storing
