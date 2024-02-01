@@ -17,7 +17,7 @@ dynamic:
         values is an int pointer and already allocated to numVals size, then realloc with values = (int*)realloc(values,(numVals+EXTRA)*sizeof(int));
     array returning: now can return array with dynamically allocated memory to first address, no longer destroyed after funct, can free from main
     struct: to make dynamiaclly allocated struct point: struct point * temp; temp = (struct point*)malloc(sizeof(struct point)); scanf(“%d %d”, &(temp->x), &(temp->y));
-        dynamic struct array: struct point* temp; temp = (struct point*)malloc(size*sizeof(struct point));
+        dynamic struct array: struct point* temp; temp = (struct point*)malloc(size*sizeof(struct point)); for (loop) {initialize} 
 
 
 */
