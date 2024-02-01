@@ -40,7 +40,7 @@ linked list:
             2. inserting @ end: two cases: same as above; if empty (head==null) head=temp; else make traversal node, set=head, while (t->next!=null ) t=t->next; [just traversing] then outside
             while loop: [in this case, the item current is last b/c next null, then] t->next=temp; [where temp is new node]
             3. inserting btwn nodes: many cases whether @ begin, end, or actlly btwn; can use this for ordering; when case for beginig, If (head == NULL or head->info >= item) insert begin;
-            for scenarios when @ end or btwn, can combine: t = head; while (t->Next != NULL && t->next->info < item); then join by {temp->next = t->next; t->next = temp}
+            for scenarios when @ end or btwn, can combine: t = head; while (t->Next != NULL && t->next->info < item); then join by {temp->next = t->next; t->next = temp} where temp new node
 t = t->Next;
         deletion: deletes a given item from the list
         display: displays the complete list in a forward manner
