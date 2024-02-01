@@ -39,6 +39,7 @@ linked list:
             head=temp} (this links our node next to 1st elmnt (head points to this 1st elmnt), then set head to new node) return head;
             2. inserting @ end: two cases: same as above; if empty (head==null) head=temp; else make traversal node, set=head, while (t->next!=null ) t=t->next; [just traversing] then outside
             while loop: [in this case, the item current is last b/c next null, then] t->next=temp; [where temp is new node]
+            3. inserting btwn nodes: many cases whether @ begin, end, or actlly btwn; 
 
         deletion: deletes a given item from the list
         display: displays the complete list in a forward manner
