@@ -42,7 +42,10 @@ linked list:
             3. inserting btwn nodes: many cases whether @ begin, end, or actlly btwn; can use this for ordering; when case for beginig, If (head == NULL or head->info >= item) insert begin;
             for scenarios when @ end or btwn, can combine: t = head; while (t->Next != NULL && t->next->info < item); then join by {temp->next = t->next; t->next = temp} where temp new node
 t = t->Next;
-        deletion: deletes a given item from the list; can be @ begin, end, or btwn; most often used when deleting specfc item, so must search
+        deletion: deletes a given item from the list; can be @ begin, end, or btwn; most used when delting specfc item: must search; if @ begin: temp = head; head = head->next; free(temp);
+        else: t = head; while (t->next != NULL && t->next->info != item) t = t->next; If(t->next == NULL ) return head; [item was not found]; temp = t->next; t->next = t->next->next;
+free(temp)
+return head;
         display: displays the complete list in a forward manner
         search: search for a given item
 
