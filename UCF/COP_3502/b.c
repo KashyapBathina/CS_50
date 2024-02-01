@@ -40,10 +40,9 @@ linked list:
             2. inserting @ end: two cases: same as above; if empty (head==null) head=temp; else make traversal node, set=head, while (t->next!=null ) t=t->next; [just traversing] then outside
             while loop: [in this case, the item current is last b/c next null, then] t->next=temp; [where temp is new node]
             3. inserting btwn nodes: many cases whether @ begin, end, or actlly btwn; can use this for ordering; when case for beginig, If (head == NULL or head->info >= item) insert begin;
-            for scenarios when @ end or btwn, can combine: t = head; while (t->Next != NULL && t->next->info < item); then join by {temp->next = t->next; t->next = temp} where temp new node
-t = t->Next;
+            for scenarios when @ end or btwn, can combine: t = head; while (t->Next != NULL && t->next->info < item) t = t->Next; then join by {temp->next = t->next; t->next = temp} [temp new node]
         deletion: deletes a given item from the list; can be @ begin, end, or btwn; most used when delting specfc item: must search; if @ begin: temp = head; head = head->next; free(temp);
-        else: t = head; while (t->next != NULL && t->next->info != item) t = t->next; If(t->next == NULL ) return head; [item was not found]; temp = t->next; t->next = t->next->next; free(temp)
+            else: t = head; while (t->next != NULL && t->next->info != item) t = t->next; If(t->next == NULL ) return head; [item was not found]; temp = t->next; t->next = t->next->next; free(temp)
         display: displays the complete list in a forward manner
         search: search for a given item
 
