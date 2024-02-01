@@ -16,7 +16,7 @@ dynamic:
         ptr is old pointer and size is new size. realloc allocates size amount of bytes and copies the content from the allocated data in ptr and returns void pointer, for example, if
         values is an int pointer and already allocated to numVals size, then realloc with values = (int*)realloc(values,(numVals+EXTRA)*sizeof(int));
     array returning: now can return array with dynamically allocated memory to first address, no longer destroyed after funct, can free from main
-    struct:
+    struct: to make dynamiaclly allocated array of structs: struct point * temp; temp = (struct point*)malloc(sizeof(struct point)); scanf(“%d %d”, &(temp->x), &(temp->y));
 
 
 */
