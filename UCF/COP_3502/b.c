@@ -43,9 +43,7 @@ linked list:
             for scenarios when @ end or btwn, can combine: t = head; while (t->Next != NULL && t->next->info < item); then join by {temp->next = t->next; t->next = temp} where temp new node
 t = t->Next;
         deletion: deletes a given item from the list; can be @ begin, end, or btwn; most used when delting specfc item: must search; if @ begin: temp = head; head = head->next; free(temp);
-        else: t = head; while (t->next != NULL && t->next->info != item) t = t->next; If(t->next == NULL ) return head; [item was not found]; temp = t->next; t->next = t->next->next;
-free(temp)
-return head;
+        else: t = head; while (t->next != NULL && t->next->info != item) t = t->next; If(t->next == NULL ) return head; [item was not found]; temp = t->next; t->next = t->next->next; free(temp)
         display: displays the complete list in a forward manner
         search: search for a given item
 
