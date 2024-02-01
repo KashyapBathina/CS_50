@@ -29,7 +29,7 @@ linked list:
     difficult b/c if want to shift 5th element in 1000n array, must shift 995 indexes after 5; linked lists dynamic with length increase and decrease possible, !!contiguos, and inser/del only
     req few node changes; many types:
         simple/singly linked list: navigation is forward only: node two parts 1. info 2. link--pointer next that holds add of next: typedef struct node{int info;struct node *next;}node;
-        doubly linked list: items can be navigated forward and backward
+        doubly linked list: items can be navigated forward and backward: makes inserting and deleting easier; typedef struct nod {int info;struct nod *prev, *next;} node; 
         circular linked list: list item contains link of the first element as next and the first element has a link to the last element as previous
     basic concepts: head: first node with seperate node type pointer used to keep track of head; IMPORTANT as if lose adrs head, lose all list; empty list if head=null (p* points to nothin)
     basic operations of linked lists:
@@ -43,8 +43,9 @@ linked list:
             for scenarios when @ end or btwn, can combine: t = head; while (t->Next != NULL && t->next->info < item) t = t->Next; then join by {temp->next = t->next; t->next = temp} [temp new node]
         deletion: deletes a given item from the list; can be @ begin, end, or btwn; most used when delting specfc item: must search; if @ begin: temp = head; head = head->next; free(temp);
             else: t = head; while (t->next != NULL && t->next->info != item) t = t->next; If(t->next == NULL ) return head; [item was not found]; temp = t->next; t->next = t->next->next; free(temp)
+            imagine temp here is just node of item looking for, then t->next = t->next->next sets node previos from item's next to node after item and frees the item
         display: displays the complete list in a forward manner
-        search: search for a given item
+        search: search for a given item, can use double linked list for optimal performance
 
 
 
