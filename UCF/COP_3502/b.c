@@ -25,6 +25,18 @@ dynamic:
             free(array[i]); free(array);
 
 linked list:
+    seq of connected nodes containing data items, each node contains connection to next link; use in lieu of array b/c array stores in contiguous spaces, fixed size, and insertion/deletion
+    difficult b/c if want to shift 5th element in 1000n array, must shift 995 indexes after 5; linked lists dynamic with length increase and decrease possible, !!contiguos, and inser/del only
+    req few node changes; many types:
+        simple/singly linked list: navigation is forward only: node two parts 1. info 2. link--pointer next that holds add of next: typedef struct node{int info;struct node *next;}node;
+        doubly linked list: items can be navigated forward and backward
+        circular linked list: list item contains link of the first element as next and the first element has a link to the last element as previous
+    basic operations of linked lists:
+        insertion: adds element to list
+        deletion: deletes a given item from the list
+        display: displays the complete list in a forward manner
+        search: search for a given item
+        traverse: going through nodes
 
 
 
@@ -139,7 +151,7 @@ int main()
     node *root=NULL; //very important line. Otherwise all function will fail
     node *t;
     int ch,ele,v, del;
-    
+
     while(1) {
         printf("\nMenu: 1. insert at front, 2. insert at end, 3. Delete 4.exit: ");
         scanf("%d",&ch);
