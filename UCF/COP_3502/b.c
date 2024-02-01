@@ -11,7 +11,7 @@ dynamic:
         void *malloc(size_t size) allocates unused space; space contains garbadge vals; returns a pointer to the beginning of the memory allocated; if memory ! found, null returned
         syntax: int *p = (int *) malloc(sizeof(int)); casting null pointer to int pointer that points to that address
     calloc:
-        
+        void *calloc(size_t nelem, size_t elsize); allocates array of size nelem with each element of size elsize; unlike malloc, each space initialized to 0
 
 
 */
