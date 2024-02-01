@@ -100,11 +100,9 @@ node* DelList(node *root, int item)
 
     if(root->data==item) {//if root contains the item, remove the current root and change it to the next node
         temp=root; //put existing root to temp so that we can free it. Otherwise, there will be memory leak
-        
-    root=root->next; //change the root by the next node of the current
-    root.
-    free(temp);
-    return root;
+        root=root->next; //change the root by the next node of the current root.
+        free(temp);
+        return root;
     }
     //the code will reach here if the item is not in the root. So, we need to traverse.
     t=root;
@@ -114,12 +112,13 @@ node* DelList(node *root, int item)
     */
     while(t->next!=NULL && t->next->data != item)
         t=t->next;
-        if(t->next==NULL) //if the above loop breaks for this reason, it means the item does not exist. So, return from the function
-            return root;
+
+    if(t->next==NULL) //if the above loop breaks for this reason, it means the item does not exist. So, return from the function
+        return root;
     /*if the code reach here, it indicates the loop exited as the item was found
     now, the node we want to delete is in t->next.*/
-        temp=t->next; //we will delete t->next. So, putting it in temp
-        t->next=t->next->next; //change the t->next to the the next of the node we will be deleting
+    temp=t->next; //we will delete t->next. So, putting it in temp
+    t->next=t->next->next; //change the t->next to the the next of the node we will be deleting
     free(temp);
     return root;
 }
@@ -128,10 +127,9 @@ node* DelList(node *root, int item)
 void display(node* t)
 {
     printf("\nPrinting your linked list.......");
-    while(t!=NULL)
-    {
-    printf("%d ",t->data);
-    t=t->next;
+    while(t!=NULL) {
+        printf("%d ",t->data);
+        t=t->next;
     }
 }
 
@@ -141,37 +139,36 @@ int main()
     node *root=NULL; //very important line. Otherwise all function will fail
     node *t;
     int ch,ele,v, del;
-    while(1)
-    {
-    printf("\nMenu: 1. insert at front, 2. insert at end, 3. Delete 4.
-    exit: ");
-    scanf("%d",&ch);
-    if(ch==4)
-    {
-    printf("\nGOOD BYE>>>>\n");
-    break;
-    }
-    if(ch==1)
-    {
-    printf("\nEnter data(an integer): ");
-    scanf("%d",&ele);
-    root = insert_front(root, ele);
-    display(root);
-    }
-    if(ch==2)
-    {
-    printf("\nEnter information(an integer): ");
-    scanf("%d",&ele);
-    root = insert_end(root, ele);
-    display(root);
-    }
-    if(ch==3)
-    {
-    printf("\nEnter info which u want to DELETE: ");
-    scanf("%d",&del);
-    root=DelList(root, del);
-    display(root);
-    }
+    
+    while(1) {
+        printf("\nMenu: 1. insert at front, 2. insert at end, 3. Delete 4.exit: ");
+        scanf("%d",&ch);
+
+        if(ch==4) {
+            printf("\nGOOD BYE>>>>\n");
+            break;
+        }
+
+        if(ch==1) {
+            printf("\nEnter data(an integer): ");
+            scanf("%d",&ele);
+            root = insert_front(root, ele);
+            display(root);
+        }
+
+        if(ch==2) {
+            printf("\nEnter information(an integer): ");
+            scanf("%d",&ele);
+            root = insert_end(root, ele);
+            display(root);
+        }
+
+        if(ch==3) {
+            printf("\nEnter info which u want to DELETE: ");
+            scanf("%d",&del);
+            root=DelList(root, del);
+            display(root);
+        }
     }
     return 0;
 }
