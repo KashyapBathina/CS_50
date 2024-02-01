@@ -35,7 +35,11 @@ linked list:
     basic operations of linked lists:
         traversal: going from head to other node: node *t; t = head; while (t->NEXT != NULL) t = t->; create new pointer t so ! change head and lose prev items when traversing
         insertion: adds element to list: create temp node and fill data and next, look for position to insert, link temp node appropriately; IMPORTANT: draw out and visualize; 3 cases:
-            1. inserting @ begining: 
+            1. inserting @ begining: two cases: list empty or existing (who is head and who after head now); first check if (head==null) head=temp; if list empty, then else { temp->next = head;
+            head=temp} (this links our node next to 1st elmnt (head points to this 1st elmnt), then set head to new node) return head;
+            2. inserting @ end: two cases: same as above; if empty (head==null) head=temp; else make traversal node, set=head, while (t->next!=null ) t=t->next; [just traversing] then outside
+            while loop: [in this case, the item current is last b/c next null, then] t->next=temp; [where temp is new node]
+
         deletion: deletes a given item from the list
         display: displays the complete list in a forward manner
         search: search for a given item
