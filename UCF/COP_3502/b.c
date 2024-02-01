@@ -1,5 +1,6 @@
 /*
-    
+stack:
+    allocated space not moving, memory requirements are known at compile time,
 */
 
 
