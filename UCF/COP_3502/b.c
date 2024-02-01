@@ -18,7 +18,9 @@ dynamic:
     array returning: now can return array with dynamically allocated memory to first address, no longer destroyed after funct, can free from main
     struct: to make dynamiaclly allocated struct point: struct point * temp; temp = (struct point*)malloc(sizeof(struct point)); scanf(“%d %d”, &(temp->x), &(temp->y));
         dynamic struct array: struct point* temp; temp = (struct point*)malloc(size*sizeof(struct point)); for (loop) {initialize}
-        when dynamic memory in dynamic memory: ex. in struct* temp malloc, there is int* digits malloc, then do inward to out: free(temp->digits) then free(temp)
+        when dynamic struct with dynamic array inside: ex. in struct* temp malloc, there is int* digits malloc, then do inward to out: free(temp->digits) then free(temp)
+        when dynamic pointer with dynamic struct inside: allocated array elements will only store a POINTER to the struct; temp p* canot hold address of other p*, so double pointer:
+        struct point** temp; temp = (struct point**)malloc(size*sizeof(struct point*)); each temp[i] = (struct point*)malloc(sizeof(struct point));
 
 
 */
