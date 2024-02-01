@@ -34,7 +34,8 @@ linked list:
     basic concepts: head: first node with seperate node type pointer used to keep track of head; IMPORTANT as if lose adrs head, lose all list; empty list if head=null (p* points to nothin)
     basic operations of linked lists:
         traversal: going from head to other node: node *t; t = head; while (t->NEXT != NULL) t = t->; create new pointer t so ! change head and lose prev items when traversing
-        insertion: adds element to list, 3 places to add
+        insertion: adds element to list: create temp node and fill data and next, look for position to insert, link temp node appropriately; IMPORTANT: draw out and visualize; 3 cases:
+            1. inserting @ begining: 
         deletion: deletes a given item from the list
         display: displays the complete list in a forward manner
         search: search for a given item
