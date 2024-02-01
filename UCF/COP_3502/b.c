@@ -29,8 +29,9 @@ linked list:
     difficult b/c if want to shift 5th element in 1000n array, must shift 995 indexes after 5; linked lists dynamic with length increase and decrease possible, !!contiguos, and inser/del only
     req few node changes; many types:
         simple/singly linked list: navigation is forward only: node two parts 1. info 2. link--pointer next that holds add of next: typedef struct node{int info;struct node *next;}node;
-        doubly linked list: items can be navigated forward and backward: makes inserting and deleting easier; typedef struct nod {int info;struct nod *prev, *next;} node; initialze with
-            temp->info = item; Temp->prev = NULL; temp->next = head; 
+        doubly linked list: items can be navigated forward and backward: makes inserting and deleting easier; typedef struct nod {int info;struct nod *prev, *next;} node;
+            1. insert @ begin:
+
         circular linked list: list item contains link of the first element as next and the first element has a link to the last element as previous
     basic concepts: head: first node with seperate node type pointer used to keep track of head; IMPORTANT as if lose adrs head, lose all list; empty list if head=null (p* points to nothin)
     basic operations of linked lists:
