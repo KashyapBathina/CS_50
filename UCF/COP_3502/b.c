@@ -33,6 +33,7 @@ linked list:
             important, note head points to 1st item, but 1st item previous == null and ! head
             1. insert @ begin: new temp node for insertion: temp->info = item; temp->prev = NULL; temp->next = head; then, if head null: head=temp, else head->prev=temp then head=temp;
             2. insert @ end: if head=null, (temp->prev=null;head=temp); else, set t=head and traverse until (t->next=null), then t->next=temp; temp->prev=t
+            3. insert in btwn: create new temp node and fill fields, traverse where to insert, assign prev and next of temp based on t and t->next, adjust t-next; adjust prev of t->next (if ! null)
         circular linked list: list item contains link of the first element as next and the first element has a link to the last element as previous: look @ lab_assignment2
     basic concepts: head: first node with seperate node type pointer used to keep track of head; IMPORTANT as if lose adrs head, lose all list; empty list if head=null (p* points to nothin)
     basic operations of linked lists:
