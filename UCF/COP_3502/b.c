@@ -30,6 +30,7 @@ linked list:
     req few node changes; many types:
         simple/singly linked list: navigation is forward only: node two parts 1. info 2. link--pointer next that holds add of next: typedef struct node{int info;struct node *next;}node;
         doubly linked list: items can be navigated forward and backward: makes inserting and deleting easier; typedef struct nod {int info;struct nod *prev, *next;} node; imagine null bfore head
+            important, note head points to 1st item, but 1st item previous == null and ! head; 
             1. insert @ begin: new temp node for insertion: temp->info = item; temp->prev = NULL; temp->next = head; then, if head null: head=temp, else head->prev=temp then head=temp;
             2. insert @ end: if head=null, temp->prev=null;head=temp
         circular linked list: list item contains link of the first element as next and the first element has a link to the last element as previous: look @ lab_assignment2
