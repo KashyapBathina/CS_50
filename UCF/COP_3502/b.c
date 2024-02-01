@@ -20,8 +20,9 @@ dynamic:
         dynamic struct array: struct point* temp; temp = (struct point*)malloc(size*sizeof(struct point)); for (loop) {initialize}
         when dynamic struct with dynamic array inside: ex. in struct* temp malloc, there is int* digits malloc, then do inward to out: free(temp->digits) then free(temp)
         when dynamic pointer with dynamic struct inside: allocated array elements will only store a POINTER to the struct; temp p* canot hold address of other p*, so double pointer:
-        struct point** temp = (struct point**)malloc(size*sizeof(struct point*)); each temp[i] = (struct point*)malloc(sizeof(struct point)), dealloc: free(my_pts[i]) then free(my_pts);
-        
+            struct point** temp = (struct point**)malloc(size*sizeof(struct point*)); each temp[i] = (struct point*)malloc(sizeof(struct point)), dealloc: free(my_pts[i]) then free(my_pts);
+        when dynamicaly allocate 2-dim arr: int** array = (int**)malloc(sizeof(int*)*n); int i; for (i=0; i<n; i++) array[i] = (int*)malloc(sizeof(int)*m); dealloc: for (i=0; i<n; i++)
+            free(array[i]); free(array);
 
 
 */
