@@ -10,7 +10,7 @@ void markEven(node* head) {
     node* tmp = head;
 
     while (tmp != NULL) {
-        while (tmp != NULL && ((tmp->data) % 2) == 0) {
+        while (tmp != NULL && ((tmp->data) % 2) != 0) {
             tmp = tmp->next;
         }
 
