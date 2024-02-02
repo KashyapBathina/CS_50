@@ -11,7 +11,7 @@ void markEven(node* head) {
         node *newNode;
         node * tmp = head;
 
-        while (1) {
+        while (tmp != NULL) {
             if ((tmp->data) %  2 == 0) {
                 if (tmp->next == NULL) {
                     newNode = (node*) malloc(sizeof(node));
