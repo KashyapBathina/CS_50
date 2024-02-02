@@ -21,7 +21,7 @@ void markEven(node* head) {
 
             newNode->next = tmp->next;
             tmp->next = newNode;
-            tmp = newNode;
+            tmp = newNode->next;
         }
     }
 }
