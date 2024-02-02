@@ -7,32 +7,12 @@ typedef struct node {
 } node;
 
 void markEven(node* head) {
-    if (head != NULL) {
-        node *newNode;
-        node * tmp = head;
+    node* tmp = head;
 
-        while (tmp != NULL) {
-            if ((tmp->data) %  2 == 0) {
-                if (tmp->next == NULL) {
-                    newNode = (node*) malloc(sizeof(node));
-                    newNode->data = -1;
-                    newNode->next = NULL;
+    while (tmp != NULL) {
+        while ()
 
-                    tmp->next = newNode;
-                    break;
-                }
-
-                newNode = (node*) malloc(sizeof(node));
-                newNode->data = -1;
-                newNode->next = NULL;
-
-                newNode->next = tmp->next;
-                tmp->next = newNode;
-                tmp = tmp->next;
-            }
-            tmp = tmp->next;
-        }
-
+        x
     }
 }
 
