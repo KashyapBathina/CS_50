@@ -12,15 +12,16 @@ void markEven(node* head) {
         node * tmp = head;
 
         while (1) {
-            if (tmp->next == NULL) {
-                newNode = (node*) malloc(sizeof(node));
-                newNode->data = -1;
-                newNode->next = NULL;
-
-                tmp->next = newNode;
-            }
-
             if ((tmp->data) %  2 == 0) {
+                if (tmp->next == NULL) {
+                    newNode = (node*) malloc(sizeof(node));
+                    newNode->data = -1;
+                    newNode->next = NULL;
+
+                    tmp->next = newNode;
+                    break;
+                }
+
                 newNode = (node*) malloc(sizeof(node));
                 newNode->data = -1;
                 newNode->next = NULL;
@@ -29,8 +30,9 @@ void markEven(node* head) {
                 tmp->next = newNode;
                 tmp = tmp->next;
             }
+            tmp = tmp->next;
         }
-        
+
     }
 }
 
