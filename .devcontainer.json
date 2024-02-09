@@ -215,7 +215,7 @@
     8082,
     8787
   ],
-  "image": "ghcr.io/cs50/codespace:32601f8f9e7931d25d8577af8b6a4aade8e4de9c",
+  "image": "ghcr.io/cs50/codespace:143c97e718aa01a0b4f9305285bb3647b976daa5",
   "mounts": [
     {
       "source": "/var/run/docker.sock",
