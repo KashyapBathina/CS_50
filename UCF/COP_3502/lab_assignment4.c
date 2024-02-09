@@ -24,7 +24,7 @@ int length(node* head) {
 //  then toCString function wil return "abc"
 char* toCString(node* head) {
 	int size = length(head);
-	char* str = (char*) malloc((size+1) * sizeof(char));
+	char* str = (char*) malloc((size) * sizeof(char));
 	node* temp = head;
 
 	int i = 0;
