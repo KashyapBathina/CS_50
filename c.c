@@ -5,6 +5,10 @@ stack:
         inside [] still icrements top and is the same as ++top; stack[top]); what push does is set increase index and set index = x
     pop: return stack[top--]; returns value before -- and sets top--; note doesn't remove element at past top, just changes refrnce point so can be overwritten by push
     peek: return stack[top]; returns top item in the stack
+    many ways to implement:
+        array with global variables:
+        
+        linked list: insert at the head while pushing, and remove from the head while popping
 
 
 */
