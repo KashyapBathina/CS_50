@@ -14,7 +14,30 @@ stack:
         linked list: insert at the head while pushing, and remove from the head while popping
     many uses for this data type:
         balance of parenthesis: ie whether "(([))) makes sense: solution=read string char left to right, if (,[,{, then push on stack -> if ),],}, pop and check if get corres-
-        ponding closer -> when reach end, check if stack empty:
+            ponding closer -> when reach end, check if stack empty:
+        infix/postfix expression evaluation:
 
 
 */
+
+#include<stdio.h>
+#include<stdlib.h>
+
+void push(int x) {
+
+}
+
+void pop() {
+
+}
+
+void isempty() {
+
+}
+
+int main() {
+    char* str
+
+    print("Enter parenthesis expression: ");
+    scanf("")
+}
