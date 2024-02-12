@@ -68,6 +68,7 @@ int isbalanced (char* str) {
             }
         }
     }
+    
     return 1;
 }
 
