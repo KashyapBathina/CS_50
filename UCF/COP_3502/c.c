@@ -46,9 +46,10 @@ void pop() {
 
 int isempty() {
     if (stack[top]<0) {
-        return(0);
+        return 1;
     }
-
+    else
+        return 0;
 }
 
 int main() {
