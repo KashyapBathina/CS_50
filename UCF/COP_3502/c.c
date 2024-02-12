@@ -36,12 +36,12 @@ void push(int x) {
     }
 }
 
-void pop() {
+int pop() {
     if (top<0) {
         printf("stack underflow");
     }
     else
-        stack[--top];
+        return stack[--top];
 }
 
 int isempty() {
@@ -60,6 +60,9 @@ int main() {
     printf("Input: %s\n", str);
 
     for (int i=0; i<strlen(str);i++) {
-        if ()
+        if (str[i] == "(" || str[i] == "[" || str[i] == "{" ) {
+            push(str[i]);
+        }
+        
     }
 }
