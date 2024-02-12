@@ -29,7 +29,7 @@ int stack[maxSize];
 int top;
 
 
-void push(int x) {
+void push(char x) {
     if (top>= maxSize-1) {
         printf("stack overflow");
     }
@@ -44,7 +44,7 @@ int pop() {
         return -999;
     }
     else
-        return stack[--top];
+        return stack[top--];
 }
 
 int isempty() {
