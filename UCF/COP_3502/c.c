@@ -36,8 +36,9 @@ void isempty() {
 }
 
 int main() {
-    char* str
+    char* str[100];
 
-    print("Enter parenthesis expression: ");
-    scanf("")
+    printf("Enter parenthesis expression: ");
+    scanf("%s", str);
+    printf("Input: %s", *str);
 }
