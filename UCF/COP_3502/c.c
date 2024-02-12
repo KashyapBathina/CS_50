@@ -44,7 +44,10 @@ void pop() {
         stack[--top];
 }
 
-void isempty() {
+int isempty() {
+    if (stack[top]<0) {
+        return(0);
+    }
 
 }
 
