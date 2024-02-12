@@ -55,14 +55,7 @@ int isempty() {
         return 0;
 }
 
-
-int main() {
-    char str[100];
-
-    printf("Enter parenthesis expression: ");
-    scanf("%s", str);
-    printf("Input: %s\n", str);
-
+int isbalanced (char* str) {
     for (int i=0; i<strlen(str);i++) {
         // note "(" double quotes is a string literal with null \0, '(' is single char
         if (str[i] == '(' || str[i] == '[' || str[i] == '{' ) {
@@ -71,14 +64,27 @@ int main() {
         else {
             char x = pop();
             if (str[i] !=x) {
-                printf("not balanced!\n");
-                break;
+                return 0;
             }
         }
     }
+    return 1;
+}
 
-    if (isempty()==0)
-        printf("not balanced!\n");
+int main() {
+    char str[100];
+
+    printf("Enter parenthesis expression: ");
+    scanf("%s", str);
+    printf("Input: %s\n", str);
+    int result = isbalanced(str);
+
+    if (result == 1) {
+        if (isempty()==0)
+            printf("not balanced!\n");
+        else
+            printf("balanced :)\n");
+    }
     else
-        printf("balanced :)\n");
+        printf("not balanced!\n");
 }
