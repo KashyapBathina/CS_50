@@ -22,8 +22,10 @@ stack:
 
 #include<stdio.h>
 #include<stdlib.h>
+#include<string.h>
 
-int stack[100];
+#define maxSize 100
+int stack[maxSize];
 int top;
 
 
@@ -39,6 +41,7 @@ void push(int x) {
 int pop() {
     if (top<0) {
         printf("stack underflow");
+        return -999;
     }
     else
         return stack[--top];
@@ -65,7 +68,14 @@ int main() {
         }
         else {
             char x = pop();
-            if (str[i])
+            if (strcmp(str[i], x) == 0) {
+                printf("not balanced!\n");
+            }
         }
     }
+
+    if (isempty()==0)
+        printf("not balanced!\n");
+    else
+        printf("balanced :)\n");
 }
