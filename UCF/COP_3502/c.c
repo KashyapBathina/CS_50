@@ -63,12 +63,19 @@ int isbalanced (char* str) {
         }
         else {
             char x = pop();
-            if (str[i] != x) {
+
+            if (str[i] == "(") {
+                return 0;
+            }
+            if (str[i] == "(") {
+                return 0;
+            }
+            if (str[i] == "(") {
                 return 0;
             }
         }
     }
-    
+
     return 1;
 }
 
