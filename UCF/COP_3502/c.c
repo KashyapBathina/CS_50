@@ -49,10 +49,10 @@ int pop() {
 
 int isempty() {
     if (stack[top]<0) {
-        return 1;
+        return 0;
     }
     else
-        return 0;
+        return 1;
 }
 
 int isbalanced (char* str) {
