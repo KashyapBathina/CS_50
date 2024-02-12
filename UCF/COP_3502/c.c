@@ -64,14 +64,17 @@ int isbalanced (char* str) {
         else {
             char x = pop();
 
-            if (str[i] == "(") {
-                return 0;
+            if (str[i] == ')') {
+                if (x != '(')
+                    return 0;
             }
-            if (str[i] == "(") {
-                return 0;
+            if (str[i] == ']') {
+                if (x != '[')
+                    return 0;
             }
-            if (str[i] == "(") {
-                return 0;
+            if (str[i] == '}') {
+                if (x != '{')
+                    return 0;
             }
         }
     }
