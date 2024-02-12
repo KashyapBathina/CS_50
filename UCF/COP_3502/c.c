@@ -25,7 +25,7 @@ stack:
 #include<string.h>
 
 #define maxSize 100
-int stack[maxSize];
+char stack[maxSize];
 int top;
 
 
