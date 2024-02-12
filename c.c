@@ -7,8 +7,13 @@ stack:
     peek: return stack[top]; returns top item in the stack
     many ways to implement:
         array with global variables:
-        
+            push: if (top >= maxSize -1) {printf(stack overflow)}  else {stack[++top]=x}
+            pop: if (top<0) {printf(stack overflow)} else {return stack[top--]}
+            isempty: if (stack<0) {printf(stack empty)} else {printf(! empty)}
+            isfull: if (top>=maxSize-1)
         linked list: insert at the head while pushing, and remove from the head while popping
+    many uses for this data type:
+        balance of parenthesis:
 
 
 */
