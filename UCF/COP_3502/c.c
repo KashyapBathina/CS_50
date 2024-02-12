@@ -63,7 +63,8 @@ int main() {
     printf("Input: %s\n", str);
 
     for (int i=0; i<strlen(str);i++) {
-        if (str[i] == "(" || str[i] == "[" || str[i] == "{" ) {
+        // note "(" double quotes is a string literal with null \0, '(' is single char
+        if (str[i] == '(' || str[i] == '[' || str[i] == '{' ) {
             push(str[i]);
         }
         else {
