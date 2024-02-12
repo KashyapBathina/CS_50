@@ -23,12 +23,25 @@ stack:
 #include<stdio.h>
 #include<stdlib.h>
 
-void push(int x) {
+int stack[100];
+int top;
 
+
+void push(int x) {
+    if (top>= maxSize-1) {
+        printf("stack overflow");
+    }
+    else {
+        stack[++top] = x;
+    }
 }
 
 void pop() {
-
+    if (top<0) {
+        printf("stack underflow");
+    }
+    else
+        stack[--top];
 }
 
 void isempty() {
@@ -36,9 +49,13 @@ void isempty() {
 }
 
 int main() {
-    char* str[100];
+    char str[100] = "";
 
     printf("Enter parenthesis expression: ");
     scanf("%s", str);
-    printf("Input: %s", *str);
+    printf("Input: %s\n", str);
+
+    for (int i=0; i<strlen(str);i++) {
+        if ()
+    }
 }
