@@ -55,6 +55,7 @@ int isempty() {
         return 0;
 }
 
+
 int main() {
     char str[100];
 
@@ -69,8 +70,9 @@ int main() {
         }
         else {
             char x = pop();
-            if (strcmp(str[i], x) == 0) {
+            if (str[i] !=x) {
                 printf("not balanced!\n");
+                break;
             }
         }
     }
