@@ -63,6 +63,6 @@ int main() {
         if (str[i] == "(" || str[i] == "[" || str[i] == "{" ) {
             push(str[i]);
         }
-        
+        if 
     }
 }
