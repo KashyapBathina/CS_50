@@ -40,7 +40,6 @@ void push(char x) {
 
 int pop() {
     if (top<0) {
-        printf("stack underflow");
         return -999;
     }
     else
