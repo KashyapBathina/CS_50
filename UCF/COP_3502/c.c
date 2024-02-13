@@ -46,7 +46,8 @@ queues:
         circular queue: can reuse empty slots from front; solution to above problem with size limit: utilizing empty spaces after deleting, can use % mod operator
             must keep track elements so can see whether queue full or empty slot: to find circular index (ie if no space end of que, go back front), at (f+noe) % size, where
             noe=num of elmnts, size=size of queue then increase noe++; do this if noe<size (if there is capacity), in this case, can stop, or make more memory
-            realloc: 
+            realloc: b/c challenges using (f+noe) % size formula, solution-after realloc, copy all data before final, to index starting from old size and afterwards, then
+            finally add item to next slot-> then can use spaces in front again with (f+noe) % size formula
 
 */
 
