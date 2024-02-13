@@ -40,8 +40,8 @@ queues:
     first in first out, anyting added goes to rear, removed from front; removed from order they were inserted (ie checkout line). implemented w array || linked list
     enqueue: add new item    dequeue: get and remove item from front of queue    isempty: determine if empty    isfull: determine if full    peek: get elmnt @ front w/o remov
     array implementation:
-        linear queue: 
-        circular queue:
+        linear queue: cannot reuse empty spaces after deleting
+        circular queue: can reuse empty slots from front
 
 */
 
