@@ -18,8 +18,10 @@ stack:
             when reach end, check if stack empty:
         infix/postfix expression evaluation:
             infix--a + b *c or (a + b) * c - d * e; postfix--operators after operand: a + b -> ab+ && a + b * c = abc*+; operators are always in correct evaluation order
-            can use stack to express and evaluate; solution=1. read infix left to right -> if operator (ie +, b/c operand ! go in stack), append to postfix string -> if current
-            operatro
+            can use stack to express and evaluate; solution=1. read infix left to right -> 2. if operator (ie +, b/c operand ! go in stack), append to postfix string -> 3.
+            comparing current operator read in vs operator on top of stack -> if current priority higher, current pushed to top stack; -> if same or lower, popping operators
+            from stack until priority current higher than operator at top of stack -> popped appended to postfix in order popped -> current pushed to stack; if closing parenth,
+            pop until open parenth found in stack, then append popped items to postfix expect parenthesis; priority: 1. power 2. /*% 3. +-
 
 
 */
