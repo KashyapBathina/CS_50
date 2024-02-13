@@ -34,7 +34,7 @@ stack:
                 9. postfix = 4 2 * 3 + 8 4      stack: + /
                 10. postfix = 4 2 * 3 + 8 4 / + stack: since finished reading infix, pop everything out of stack / first and then + and append
             evaluation from postfix: 1. read expression left to right 2. if operand (ie a, no longer if operator), push to stack 3. if operator, pop two operands from stack,
-            evaluate two operands with operator, push evaluation into stack 4. repeat until end of expression
+            evaluate two operands with operator, push evaluation, or result, into stack 4. repeat until end of expression
 
 
 
