@@ -48,8 +48,9 @@ queues:
             noe=num of elmnts, size=size of queue then increase noe++; do this if noe<size (if there is capacity), in this case, can stop, or make more memory
             realloc: b/c challenges using (f+noe) % size formula, solution-after realloc, copy all data before final, to index starting from old size and afterwards, then
             finally add item to next slot-> then can use spaces in front again with (f+noe) % size formula
-            summary: 1. get item wanna insert 2. check if que full by comparing noe and size -> if not full, add item @ index (f+noe)%size; noe++ -> if full, realloc, copy
-            data from left of front to right side, add item after that, noe++, increase capacity
+            summary enque: 1. get item wanna insert 2. check if que full by comparing noe and size -> if not full, add item @ index (f+noe)%size; noe++ -> if full, realloc,
+            copy data from left of front to right side, add item after that, noe++, increase capacity;
+            summary deque: remove data from front 1. check que empty (noe==0) 2. copy data data from front into val 3. increase front = (front+1)%size;noe--;return val
 
 */
 
