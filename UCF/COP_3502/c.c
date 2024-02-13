@@ -40,7 +40,8 @@ queues:
     first in first out, anyting added goes to rear, removed from front; removed from order they were inserted (ie checkout line). implemented w array || linked list
     enqueue: add new item    dequeue: get and remove item from front of queue    isempty: determine if empty    isfull: determine if full    peek: get elmnt @ front w/o remov
     array implementation:
-        maxsize = 6; queue[maxsize]rear = 0; front = 0; enqueue(char x) = if (rear<maxsize) {queue[rear++] = x,}; dequeue() = if (front==rear){return Queue[Front++]}; peek() = return queue[front]
+        maxsize = 6; queue[maxsize]rear = 0; front = 0; enqueue(char x) = if (rear<maxsize) {queue[rear++] = x,} else {printf(full)} dequeue() = if (front==rear)print(empty)
+        else {return Queue[Front++]}; peek() = return queue[front]
         linear queue: cannot reuse empty spaces after deleting; problem with linear is that b/c doing front++ and rear++ eventually causes to go out of bounds->stack overflow
         circular queue: can reuse empty slots from front
 
