@@ -37,7 +37,10 @@ stack:
             evaluate two operands with operator, push evaluation, or result, into stack 4. repeat until end of expression
 
 queues:
-    first in first out, anyting added goes to rear, removed from front; removed from order they were inserted (ie checkout line)
+    first in first out, anyting added goes to rear, removed from front; removed from order they were inserted (ie checkout line). implemented w array || linked list
+    enqueue: add new item    dequeue: get and remove item from front of queue    isempty:
+    isfull:
+    peek:
 
 */
 
