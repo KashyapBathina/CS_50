@@ -52,7 +52,10 @@ queues:
                 copy data from left of front to right side, add item after that, noe++, increase capacity;
             summary deque: remove data from front 1. check que empty (noe==0) 2. copy data data from front into val 3. increase front = (front+1)%size;noe--;return val
             struct implementation: struct que {int* elements; int front; int noe; int quesize}; code on canvas
-            linked list implementation: maintain 2 pointers--front and back; 
+            linked list implementation: maintain 2 pointers--front and back; struct to store que will store two pointers to linked list structs:struct que{stuct node* front;
+            struct node* back;} and struct node{int data; struct node* next}
+                init: make front and rear of que null
+                enque: create new node and store inserted val in it, link back node's next pointer to this new node
 
 */
 
