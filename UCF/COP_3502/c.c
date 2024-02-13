@@ -13,9 +13,11 @@ stack:
             isfull: if (top>=maxSize-1) {printf(full)}
         linked list: insert at the head while pushing, and remove from the head while popping
     many uses for this data type:
-        balance of parenthesis: ie whether "(([))) makes sense: solution=read string char left to right, if (,[,{, then push on stack -> if ),],}, pop and check if get corres-
-            ponding closer -> when reach end, check if stack empty:
-        infix/postfix expression evaluation: infix = a + b *c or (a + b) * c - d * e; postfix
+        balance of parenthesis:
+            ie whether "(([))) makes sense: solution=read string char left to right, if (,[,{, then push on stack -> if ),],}, pop and check if get corresponding closer ->
+            when reach end, check if stack empty:
+        infix/postfix expression evaluation:
+            infix--a + b *c or (a + b) * c - d * e; postfix--operators after operand: a + b -> ab+ && a + b * c = abc*+
 
 
 */
