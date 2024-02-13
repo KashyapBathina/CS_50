@@ -51,7 +51,8 @@ queues:
             summary enque: 1. get item wanna insert 2. check if que full by comparing noe and size -> if not full, add item @ index (f+noe)%size; noe++ -> if full, realloc,
                 copy data from left of front to right side, add item after that, noe++, increase capacity;
             summary deque: remove data from front 1. check que empty (noe==0) 2. copy data data from front into val 3. increase front = (front+1)%size;noe--;return val
-            linked list implementation: struct que {int* elements; int front; int noe; int quesize}; code on canvas, maintain 2 pointers--front and back
+            struct implementation: struct que {int* elements; int front; int noe; int quesize}; code on canvas
+            linked list implementation: maintain 2 pointers--front and back; 
 
 */
 
