@@ -15,7 +15,7 @@ stack:
     many uses for this data type:
         balance of parenthesis: ie whether "(([))) makes sense: solution=read string char left to right, if (,[,{, then push on stack -> if ),],}, pop and check if get corres-
             ponding closer -> when reach end, check if stack empty:
-        infix/postfix expression evaluation:
+        infix/postfix expression evaluation: infix = a + b *c or (a + b) * c - d * e; postfix
 
 
 */
