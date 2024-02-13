@@ -23,13 +23,17 @@ stack:
             from stack until priority current higher than operator at top of stack -> popped appended to postfix in order popped -> current pushed to stack; if closing parenth,
             pop until open parenth found in stack, then append popped items to postfix expect parenthesis; priority: 1. power 2. /*% 3. +-
             ex: 4 * 2 + 3 + 8/4: solution:
-                1. postfix = 4              stack: empty
-                2. postfix = 4              stack: *
-                3. postfix = 4 2            stack: *
-                4. postfix = 4 2 *          stack: +, current is +, since current < top, pop until priority current higher and append popped to postfix
-                5. postfix = 4 2 * 3        stack: +
-                6. postfix = 4 2 * 3 +      stack: +, current is next +, since current same as top (+), pop until priority current higher and append + to post
-                7. postfix = 4 2 * 3 + 8    stack: *
+                1. postfix = 4                  stack: empty
+                2. postfix = 4                  stack: *
+                3. postfix = 4 2                stack: *
+                4. postfix = 4 2 *              stack: +, current is +, since current < top, pop until priority current higher and append popped to postfix
+                5. postfix = 4 2 * 3            stack: +
+                6. postfix = 4 2 * 3 +          stack: +, current is next +, since current same as top (+), pop until priority current higher and append + to post
+                7. postfix = 4 2 * 3 + 8        stack: +
+                8. postfix = 4 2 * 3 + 8        stack: + /, current is > top (+), push / to top stack
+                9. postfix = 4 2 * 3 + 8 4      stack: + /
+                10. postfix = 4 2 * 3 + 8 4 / + stack: since finished reading infix, pop everything out of stack / first and then + and append
+
 
 
 */
