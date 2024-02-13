@@ -49,13 +49,15 @@ int pop() {
 
 int isempty() {
     if (stack[top]<0) {
-        return 0;
+        return 1;
     }
     else
         return 1;
 }
 
 int isbalanced (char* str) {
+    int result = 1;
+
     for (int i=0; i<strlen(str);i++) {
         // note "(" double quotes is a string literal with null \0, '(' is single char
         if (str[i] == '(' || str[i] == '[' || str[i] == '{' ) {
@@ -79,7 +81,10 @@ int isbalanced (char* str) {
         }
     }
 
-    return 1;
+    if (isempty()==0)
+        return 0;
+    else
+        return 1;
 }
 
 int main() {
@@ -90,12 +95,9 @@ int main() {
     printf("Input: %s\n", str);
     int result = isbalanced(str);
 
-    if (result == 1) {
-        if (isempty()==0)
-            printf("not balanced!\n");
-        else
-            printf("balanced :)\n");
+    if (result == 0) {
+        printf("not balanced!\n");
     }
     else
-        printf("not balanced!\n");
+        printf("balanced!\n");
 }
