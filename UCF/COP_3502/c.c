@@ -33,6 +33,7 @@ stack:
                 8. postfix = 4 2 * 3 + 8        stack: + /, current is > top (+), push / to top stack
                 9. postfix = 4 2 * 3 + 8 4      stack: + /
                 10. postfix = 4 2 * 3 + 8 4 / + stack: since finished reading infix, pop everything out of stack / first and then + and append
+            evaluation from postfix: 1. read expression left to right 2. 
 
 
 
