@@ -44,7 +44,9 @@ queues:
         else {return Queue[Front++]}; peek() = return queue[front]; note, not actually deleting data when deque, just hiding
         linear queue: cannot reuse empty spaces after deleting; problem with linear is that b/c doing front++ and rear++ eventually causes to cap @ maxsize as size decreses
         circular queue: can reuse empty slots from front; solution to above problem with size limit: utilizing empty spaces after deleting, can use % mod operator
-            must keep track elements so can see whether queue full or empty slot
+            must keep track elements so can see whether queue full or empty slot: to find circular index (ie if no space end of que, go back front), at (f+noe) % size, where
+            noe=num of elmnts, size=size of queue then increase noe++; do this if noe<size (if there is capacity), in this case, can stop, or make more memory
+            realloc: 
 
 */
 
