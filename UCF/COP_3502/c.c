@@ -36,7 +36,8 @@ stack:
             evaluation from postfix: 1. read expression left to right 2. if operand (ie a, no longer if operator), push to stack 3. if operator, pop two operands from stack,
             evaluate two operands with operator, push evaluation, or result, into stack 4. repeat until end of expression
 
-
+queues:
+    first in first out, anyting added goes to rear, removed from front; removed from order they were inserted (ie checkout line)
 
 */
 
