@@ -52,7 +52,7 @@ int isempty() {
         return 1;
     }
     else
-        return 1;
+        return 0;
 }
 
 int isbalanced (char* str) {
