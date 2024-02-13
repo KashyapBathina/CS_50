@@ -22,6 +22,9 @@ stack:
             comparing current operator read in vs operator on top of stack -> if current priority higher, current pushed to top stack; -> if same or lower, popping operators
             from stack until priority current higher than operator at top of stack -> popped appended to postfix in order popped -> current pushed to stack; if closing parenth,
             pop until open parenth found in stack, then append popped items to postfix expect parenthesis; priority: 1. power 2. /*% 3. +-
+            ex: 4 * 2 + 3 + 8/4: solution:
+                1. postfix = 4          stack: empty
+                2. postfix = 4          stack:  
 
 
 */
