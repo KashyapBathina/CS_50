@@ -26,7 +26,7 @@ stack:
 
 #define maxSize 100
 char stack[maxSize];
-int top;
+int top = -1;
 
 
 void push(char x) {
