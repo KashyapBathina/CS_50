@@ -21,7 +21,7 @@ stack:
             can use stack to express and evaluate; solution=1. read infix left to right -> 2. if operand (ie +, b/c operand ! go in stack), append to postfix string -> 3.
             comparing current operator read in vs operator on top of stack -> if current priority higher, current pushed to top stack; -> if same or lower, popping operators
             from stack until priority current higher than operator at top of stack -> popped appended to postfix in order popped -> current pushed to stack; if closing parenth,
-            pop until open parenth found in stack, then append popped items to postfix expect parenthesis; priority: 1. power 2. /*% 3. +-
+            pop until open parenth found in stack, then append popped items to postfix expect parenthesis; priority: 1. power 2. /%* 3. +-
             ex: 4 * 2 + 3 + 8/4: solution:
                 1. postfix = 4                  stack: empty
                 2. postfix = 4                  stack: *
@@ -55,7 +55,10 @@ queues:
             linked list implementation: maintain 2 pointers--front and back; struct to store que will store two pointers to linked list structs:struct que{stuct node* front;
             struct node* back;} and struct node{int data; struct node* next}
                 init: make front and rear of que null
-                enque: create new node and store inserted val in it, link back node's next pointer to this new node
+                enque: create new node and store inserted val in it, link back node's next pointer to this new node, move back node to point to newly added node
+                dequeue: store temp pointer to begin, move front pointer to next node on list, free mem pointed by temp pointer
+                front: access the data stored in the first node through the front pointer to the  list
+                empty: check if both pointers (front, back) are null
 
 */
 
