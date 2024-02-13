@@ -48,9 +48,8 @@ int pop() {
 }
 
 int isempty() {
-    if (stack[top]<0) {
+    if (top<0)
         return 1;
-    }
     else
         return 0;
 }
