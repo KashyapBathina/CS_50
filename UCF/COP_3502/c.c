@@ -17,7 +17,8 @@ stack:
             ie whether "(([))) makes sense: solution=read string char left to right, if (,[,{, then push on stack -> if ),],}, pop and check if get corresponding closer ->
             when reach end, check if stack empty:
         infix/postfix expression evaluation:
-            infix--a + b *c or (a + b) * c - d * e; postfix--operators after operand: a + b -> ab+ && a + b * c = abc*+
+            infix--a + b *c or (a + b) * c - d * e; postfix--operators after operand: a + b -> ab+ && a + b * c = abc*+; operators are always in correct evaluation order
+            can use stack to express and evaluate; solution=read infix left to right
 
 
 */
