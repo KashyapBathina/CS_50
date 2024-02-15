@@ -33,9 +33,9 @@ int powerB(int base, int exp) {
 
 int main() {
     int base, exponent;
-    printf("Input base and exponent (2 3): \n");
-    scanf("%d%d", base, exponent);
-    printf("%d", powerB(base,exponent));
+    printf("Input base and exponent (2 3): ");
+    scanf("%d%d", &base, &exponent);
+    printf("%d\n", powerB(base,exponent));
 
     return 0;
 }
