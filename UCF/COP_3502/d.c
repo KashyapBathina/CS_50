@@ -5,5 +5,6 @@ recursion:
         handle func calls; when funct called, new frame pushed onto call stack that contains info about funct, params, vars, and return adress, when funct returned, frame popped
         in above example, printfs added to stack for each recursion until x==0, then returns and pops backwards until all printfs; other way to visualize, when==0, returns allows
         to go back and finish code, which means past recursion, which was waiting for finish of current can now operate, then prints, which allows past past . . . until all popp
-    example: power calculation-b^e
+    example: power calculation-b^e: int power(int base, int exponent) { if (exponent==0) return 1;    else return (base*power(base,exponent-1))}, ie, (5,2), return 5 * power(5,1)
+        -> (5,1), return 5 power(5,0) -> (5,0) return 1; therfore (5,1) return 5 * 1 = 5 and (5,2) return 5 * 5 = 25
 */
